@@ -28,8 +28,8 @@ jobs:
       - name: Unit Test
         run: ./build.ps1 RunUnitTests --skip LintCheck
 
-      - name: Publish Web project
-        run: dotnet publish ./src/2-Clients/Web/Web.csproj -c Release -o ./output/Web
+      - name: Publish WebApp project
+        run: dotnet publish ./src/2-Clients/WebApp/WebApp.csproj -c Release -o ./output/WebApp
 
       - name: Publish AdminPanel project
         run: dotnet publish ./src/2-Clients/AdminPanel/AdminPanel.csproj -c Release -o ./output/AdminPanel
@@ -37,9 +37,9 @@ jobs:
       - name: Publish Api project
         run: dotnet publish ./src/2-Clients/Api/Api.csproj -c Release -o ./output/Api
 
-      - name: Create Web.zip
+      - name: Create WebApp.zip
         run: |
-          Compress-Archive -Path ./output/Web/* -DestinationPath ./output/Web.zip
+          Compress-Archive -Path ./output/WebApp/* -DestinationPath ./output/WebApp.zip
 
       - name: Create AdminPanel.zip
         run: |
