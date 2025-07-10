@@ -1,0 +1,46 @@
+﻿@using CodeBlock.DevKit.AIChatBot.UI.Models
+@inject LocalizationSettings LocalizationSettings
+@inherits LayoutComponentBase
+@inject ApplicationSettings ApplicationSettings
+
+<HeadContent>
+    <link href="css/cb.website.spa.@(LocalizationSettings.GetCurrentLanguageDirection().ToLower()).min.css" rel="stylesheet" asp-append-version="true" />
+</HeadContent>
+
+<SplashScreen BrandName="@ApplicationSettings.Localized.Name" BackgroundCssClass="simple-layout-dark-bg" ProgressBarCssClass="simple-layout-title-color" OnStarted="HandleSplashStarted" LogoUrl="@ApplicationSettings.Localized.LogoUrl" />
+
+@if (SplashScreenStarted)
+{
+    <div class="website-wrapper">
+        <BlazoredToasts Position="ToastPosition.BottomCenter"
+                        Timeout="5"
+                        IconType="IconType.Material"
+                        ErrorIcon=""
+                        InfoIcon=""
+                        SuccessIcon=""
+                        WarningIcon=""
+                        ShowProgressBar="true" />
+
+        <NavMenu />
+
+        <main>
+            @Body
+        </main>
+
+        <Footer />
+
+        <div class="chat-widget">
+            <ChatBotWidget Theme="ChatBotWidgetTheme.Dark" />
+        </div>
+    </div>
+
+}
+
+@code {
+    bool SplashScreenStarted = false;
+
+    private void HandleSplashStarted()
+    {
+        SplashScreenStarted = true;
+    }
+}

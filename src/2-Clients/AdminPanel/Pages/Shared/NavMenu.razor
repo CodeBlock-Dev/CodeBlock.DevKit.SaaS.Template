@@ -1,0 +1,9 @@
+﻿@using CodeBlock.DevKit.Web.Blazor.Server.Attributes
+@inherits CustomNavMenu
+@attribute [ReplaceBaseComponent]
+
+<div class="nav-item">
+    <NavLink @onclick="base.HandleNavItemClicked" class="nav-link ms-1" href="/test">
+        <span class="bi bi-plugin p-1" aria-hidden="true"></span> @AdminPanelLocalizer[AdminPanelResource.Nav_Menu_Custom]
+    </NavLink>
+</div>

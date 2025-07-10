@@ -6,24 +6,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="CodeBlock.DevKit.Core" Version="1.3.3" />
-		<PackageReference Include="CodeBlock.DevKit.Application" Version="1.3.3" />
-		<PackageReference Include="CodeBlock.DevKit.Authorization" Version="1.3.3" />
-		<PackageReference Include="CodeBlock.DevKit.Authorization.UI" Version="1.3.3" />
-		<PackageReference Include="CodeBlock.DevKit.Web" Version="1.3.3" />
-		<PackageReference Include="CodeBlock.DevKit.Web.Blazor.Server" Version="1.3.3" />
-		<PackageReference Include="CodeBlock.DevKit.Licensing" Version="1.3.3" />
-		<PackageReference Include="CodeBlock.DevKit.Licensing.UI" Version="1.3.3" />
-		<PackageReference Include="CodeBlock.DevKit.Clients.Website" Version="1.3.3" />
+		<PackageReference Include="CodeBlock.DevKit.Clients.WebApp" Version="1.3.3" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\..\1-Libraries\Infrastructure\Infrastructure.csproj" />
-	</ItemGroup>
-	<ItemGroup>
-		<Content Update="wwwroot\site.webmanifest">
-			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-		</Content>
 	</ItemGroup>
 	<ItemGroup>
 		<Content Include="..\..\..\codeblock.dev.license.lic">

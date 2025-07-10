@@ -1,10 +1,12 @@
 ﻿@page "/"
 @namespace CanBeYours.AdminPanel.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using CodeBlock.DevKit.Contracts.Models
 @using CodeBlock.DevKit.Web.Blazor.Server.Components
 @using CodeBlock.DevKit.Web.Localization
 @using Microsoft.AspNetCore.Components.Web
 @inject LocalizationSettings LocalizationSettings
+@inject ApplicationSettings ApplicationSettings
 @{
     Layout = null;
 }
@@ -13,9 +15,8 @@
 <html dir="@LocalizationSettings.GetCurrentLanguageDirection()" lang="@LocalizationSettings.GetCurrentLanguageCode()" style="font-family: @LocalizationSettings.GetCurrentLanguageFont() !important">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+    <component type="typeof(HeadTags)" render-mode="ServerPrerendered" />
+    <meta name="description" content="@ApplicationSettings.Localized.Description">
     <base href="~/" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>

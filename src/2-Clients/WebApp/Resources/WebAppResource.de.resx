@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Hero_Title" xml:space="preserve">
+    <value>Verwandeln Sie Ihre SaaS-Idee in die Realität</value>
+  </data>
+  <data name="Hero_Tagline" xml:space="preserve">
+    <value>Es Kann Deins Sein!</value>
+  </data>
+  <data name="Hero_Subtitle" xml:space="preserve">
+    <value>Dies ist ein Beispiel-Startup, das mit &lt;strong&gt;CodeBlock.DevKit&lt;/strong&gt; erstellt wurde. Alles, was Sie hier sehen, stammt aus integrierten Modulen - keine Programmierung erforderlich. Passen Sie einfach Design, Inhalt und Funktionen an Ihre Vision an und starten Sie dann Ihr eigenes Startup.</value>
+  </data>
+  <data name="System_Access_Title" xml:space="preserve">
+    <value>Erkunden Sie das Komplette System:</value>
+  </data>
+  <data name="System_Access_Subtitle" xml:space="preserve">
+    <value>Führen Sie zuerst die Web-Apps aus src/3-clients aus und klicken Sie dann auf eine beliebige Komponente unten, um zu sehen, was CodeBlock.DevKit bietet</value>
+  </data>
+  <data name="System_Website" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="System_Website_Status" xml:space="preserve">
+    <value>Aktuell</value>
+  </data>
+  <data name="System_UserPanel" xml:space="preserve">
+    <value>Benutzer-Panel</value>
+  </data>
+  <data name="System_UserPanel_Status" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="System_AdminPanel" xml:space="preserve">
+    <value>Admin-Panel</value>
+  </data>
+  <data name="System_AdminPanel_Status" xml:space="preserve">
+    <value>Verwaltung</value>
+  </data>
+  <data name="System_API" xml:space="preserve">
+    <value>API-Dokumentation</value>
+  </data>
+  <data name="System_API_Status" xml:space="preserve">
+    <value>Entwickler</value>
+  </data>
+  <data name="System_ChatBot" xml:space="preserve">
+    <value>KI-ChatBot</value>
+  </data>
+  <data name="System_ChatBot_Status" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="Feature_EnterpriseSecurity" xml:space="preserve">
+    <value>Unternehmenssicherheit</value>
+  </data>
+  <data name="CTA_TryAI" xml:space="preserve">
+    <value>Probieren Sie Unseren KI-Assistenten</value>
+  </data>
+  <data name="CTA_GetDevKit" xml:space="preserve">
+    <value>Holen Sie Sich Ihr Eigenes DevKit</value>
+  </data>
+  <data name="AI_Section_Title" xml:space="preserve">
+    <value>Erleben Sie Unseren Intelligenten KI-Assistenten</value>
+  </data>
+  <data name="AI_Section_Description" xml:space="preserve">
+    <value>Bei "Es Kann Deins Sein" haben wir modernste KI-Technologie integriert, um sofortigen, intelligenten Support zu bieten. Unser KI-Assistent wurde mit unserer Wissensdatenbank trainiert und kann Fragen zu unseren Dienstleistungen, Preisen und mehr beantworten.</value>
+  </data>
+  <data name="AI_Status_Online" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="AI_Service_Info" xml:space="preserve">
+    <value>Service-Informationen und Preise</value>
+  </data>
+  <data name="AI_Integration_Options" xml:space="preserve">
+    <value>Integrations- und Anpassungsoptionen</value>
+  </data>
+  <data name="AI_User_Question" xml:space="preserve">
+    <value>Wie können Sie meinem Unternehmen beim Skalieren helfen?</value>
+  </data>
+  <data name="AI_Response" xml:space="preserve">
+    <value>Großartige Frage! Ich kann Sie durch unsere digitalen Transformationsdienste führen, den richtigen Plan basierend auf Ihren Bedürfnissen empfehlen und erklären, wie sich unsere Plattform in Ihre bestehenden Systeme integriert. Möchten Sie mehr über einen bestimmten Bereich erfahren?</value>
+  </data>
+  <data name="AI_Start_Conversation" xml:space="preserve">
+    <value>Live-Gespräch Starten</value>
+  </data>
+  <data name="AI_Feature_DocumentProcessing" xml:space="preserve">
+    <value>Intelligente Dokumentenverarbeitung</value>
+  </data>
+  <data name="AI_Feature_DocumentProcessing_Desc" xml:space="preserve">
+    <value>KI trainiert auf unserer gesamten Wissensbasis und Dokumentation</value>
+  </data>
+  <data name="AI_Feature_NaturalConversations" xml:space="preserve">
+    <value>Natürliche Gespräche</value>
+  </data>
+  <data name="AI_Feature_24x7_Availability_Desc" xml:space="preserve">
+    <value>Sofortige Antworten jederzeit, mit Eskalation an menschliche Agenten</value>
+  </data>
+  <data name="AI_Feature_ContinuousLearning_Desc" xml:space="preserve">
+    <value>Wird mit der Zeit intelligenter basierend auf Interaktionen und Feedback</value>
+  </data>
+  <data name="AI_DevKit_Integration_Alert" xml:space="preserve">
+    <value>&lt;strong&gt;DevKit KI-Integration:&lt;/strong&gt; Diese KI-Funktionalität ist in CodeBlock.DevKit integriert! Geben Sie einfach Ihren KI-Modell-API-Schlüssel (OpenAI, Claude, Gemini, etc.) an, betten Sie Ihre Dokumente ein und erhalten Sie einen voll funktionsfähigen KI-Assistenten für Ihr Startup. Keine komplexe Einrichtung erforderlich!</value>
+  </data>
+  <data name="Pricing_Section_Title" xml:space="preserve">
+    <value>Beispiel-Preispläne für Ihr Startup</value>
+  </data>
+  <data name="Pricing_Section_Description" xml:space="preserve">
+    <value>Dies sind Beispiel-Preispläne, um zu demonstrieren, wie Sie die Monetarisierung Ihres Startups strukturieren können. Definieren Sie einfach Preispläne, die zu Ihren Zielen und Ihrer Vision passen - die Plattform macht es einfach, jedes Preismodell für Ihr Unternehmen anzupassen.</value>
+  </data>
+  <data name="Pricing_Demo_Alert" xml:space="preserve">
+    <value>&lt;strong&gt;Preis-Demo:&lt;/strong&gt; Dies sind Beispiel-Preispläne für dieses Demo-Startup. Mit CodeBlock.DevKit können Sie jede Preisstruktur, Funktionen und jedes Geschäftsmodell erstellen, das zu Ihrer Startup-Idee passt.</value>
+  </data>
+  <data name="Features_Section_Description" xml:space="preserve">
+    <value>Bei "Es Kann Deins Sein" bieten wir alles, was Unternehmen brauchen, um ihre digitale Präsenz aufzubauen und zu erweitern. Unsere umfassende Plattform deckt alle Aspekte moderner Geschäftsabläufe ab.</value>
+  </data>
+  <data name="Feature_WebsiteCreation_Title" xml:space="preserve">
+    <value>Website-Erstellung</value>
+  </data>
+  <data name="Feature_CustomerManagement_Title" xml:space="preserve">
+    <value>Kundenverwaltung</value>
+  </data>
+  <data name="Feature_CustomerManagement_Description" xml:space="preserve">
+    <value>Erweiterte Kundenbeziehungsverwaltung mit Benutzer-Dashboards, Kontoverwaltung und personalisierten Erfahrungen für Ihre Kunden.</value>
+  </data>
+  <data name="Feature_BusinessAnalytics_Title" xml:space="preserve">
+    <value>Geschäftsanalytik</value>
+  </data>
+  <data name="Feature_BusinessAnalytics_Description" xml:space="preserve">
+    <value>Umfassendes Analyse- und Berichts-Dashboard zur Verfolgung Ihrer Geschäftsleistung, des Kundenverhaltens und der Wachstumsmetriken in Echtzeit.</value>
+  </data>
+  <data name="Feature_PaymentProcessing_Title" xml:space="preserve">
+    <value>Zahlungsabwicklung</value>
+  </data>
+  <data name="Feature_AIPoweredSupport_Title" xml:space="preserve">
+    <value>KI-gestützter Support</value>
+  </data>
+  <data name="Feature_SystemIntegration_Title" xml:space="preserve">
+    <value>Systemintegration</value>
+  </data>
+  <data name="Testimonial_3_Name" xml:space="preserve">
+    <value>David Kim</value>
+  </data>
+  <data name="CTA_Final_Title" xml:space="preserve">
+    <value>Bereit, Ihre Eigene Erfolgsgeschichte zu Schreiben?</value>
+  </data>
+  <data name="CTA_Final_Description" xml:space="preserve">
+    <value>Sie haben erkundet, was mit "Es Kann Deins Sein" möglich ist - ein komplettes SaaS-Geschäft, das vollständig mit CodeBlock.DevKit erstellt wurde. Stellen Sie sich nun vor, &lt;strong&gt;Ihr eigenes Startup&lt;/strong&gt; mit derselben mächtigen Grundlage zu erstellen, angepasst an Ihre einzigartige Vision und Ziele.</value>
+  </data>
+  <data name="CTA_GetDevKit_Button" xml:space="preserve">
+    <value>CodeBlock.DevKit Erhalten</value>
+  </data>
+  <data name="CTA_ExploreDemo_Button" xml:space="preserve">
+    <value>Diese Demo Erkunden</value>
+  </data>
+  <data name="CTA_DevKit_Info" xml:space="preserve">
+    <value>&lt;strong&gt;Was ist CodeBlock.DevKit?&lt;/strong&gt; Ein umfassendes SaaS-Entwicklungs-Framework, das Unternehmern hilft, ihre Startups schneller zu starten. Dokumentation und alles, was Sie brauchen, um Ihre eigene "Es Kann Deins Sein" Erfolgsgeschichte zu schreiben.</value>
+  </data>
+  <data name="CTA_Features_Info" xml:space="preserve">
+    <value>Vollständige Dokumentation &amp; Support | Produktionsbereit</value>
+  </data>
+  <data name="Nav_Home" xml:space="preserve">
+    <value>Startseite</value>
+  </data>
+  <data name="Nav_Services" xml:space="preserve">
+    <value>Dienstleistungen</value>
+  </data>
+  <data name="Nav_Pricing" xml:space="preserve">
+    <value>Preise</value>
+  </data>
+  <data name="Nav_SuccessStories" xml:space="preserve">
+    <value>Erfolgsgeschichten</value>
+  </data>
+  <data name="Nav_Contact" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="Nav_Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Nav_GetStarted" xml:space="preserve">
+    <value>Loslegen</value>
+  </data>
+  <data name="Steps_Section_Title" xml:space="preserve">
+    <value>Befolgen Sie Diese 6 Schritte zum Start Ihres Startups</value>
+  </data>
+  <data name="Step_1_Title" xml:space="preserve">
+    <value>DevKit-Dokumentation Überprüfen</value>
+  </data>
+  <data name="Step_1_Button" xml:space="preserve">
+    <value>Dokumentation Lesen</value>
+  </data>
+  <data name="Step_2_Title" xml:space="preserve">
+    <value>Eine Website Entwerfen</value>
+  </data>
+  <data name="Step_2_Description" xml:space="preserve">
+    <value>Verwenden Sie KI-Agenten wie Cursor, ChatGPT, etc., um Ihre Website zu entwerfen und folgen Sie der Dokumentation, um sie durch die aktuelle Website zu ersetzen.</value>
+  </data>
+  <data name="Step_3_Title" xml:space="preserve">
+    <value>Ihre Logik Implementieren</value>
+  </data>
+  <data name="Step_3_Description" xml:space="preserve">
+    <value>Verwenden Sie unsere Dokumentation, um die Architektur und Muster für die Implementierung hochwertiger Geschäftslogik zu erlernen. Entdecken Sie, wie einfach es ist, Ihre Geschäftslogik in bestehende DevKit-Module zu integrieren.</value>
+  </data>
+  <data name="Step_4_Title" xml:space="preserve">
+    <value>Preispläne Erstellen</value>
+  </data>
+  <data name="Step_4_Description" xml:space="preserve">
+    <value>Verwenden Sie einfach den Preisbereich des Admin-Panels, um Ihre Pläne und Rabatte zu definieren. Alles ist bereit, um Ihre Monetarisierungsstrategie mühelos einzurichten.</value>
+  </data>
+  <data name="Step_5_Title" xml:space="preserve">
+    <value>KI-Chatbot Erstellen</value>
+  </data>
+  <data name="Step_5_Description" xml:space="preserve">
+    <value>Geben Sie einfach einen API-Schlüssel von OpenAI, Google oder anderen KI-Anbietern plus einige Geschäftsdokumente an, und Sie haben einen gut gestalteten Chatbot und Widget für Benutzerinteraktion.</value>
+  </data>
+  <data name="Step_6_Title" xml:space="preserve">
+    <value>Ihr Startup Bereitstellen</value>
+  </data>
+  <data name="Step_6_Description" xml:space="preserve">
+    <value>Stellen Sie bereit, wo immer Sie möchten. Es ist eine plattformübergreifende .NET-Anwendung, die einfach auf Windows, Linux und anderen Plattformen bereitgestellt werden kann.</value>
+  </data>
+  <data name="Video_Section_Title" xml:space="preserve">
+    <value>Möchten Sie Sehen, Wie Es Gemacht Wird?</value>
+  </data>
+  <data name="Video_Section_Description" xml:space="preserve">
+    <value>Schauen Sie sich eine vollständige Anleitung zum Aufbau eines Startups von Grund auf an und folgen Sie dann demselben Prozess für Ihr eigenes Unternehmen.</value>
+  </data>
+  <data name="Video_Button_Text" xml:space="preserve">
+    <value>Sehen Sie Einen Beispiel-Startup-Launch mit CodeBlock DevKit</value>
+  </data>
+  <data name="Video_Section_Subtitle" xml:space="preserve">
+    <value>Vollständiger End-to-End-Entwicklungsprozess</value>
+  </data>
+  <data name="Step_1_Description" xml:space="preserve">
+    <value>CodeBlock verfügt über umfassende Dokumentation, die alles abdeckt, was Sie über den Start eines Startups mit dem DevKit wissen müssen.</value>
+  </data>
+</root> 

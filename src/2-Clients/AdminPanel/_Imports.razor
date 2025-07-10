@@ -1,4 +1,7 @@
 ﻿@using CanBeYours.AdminPanel.Pages
+@using CanBeYours.AdminPanel.Pages.Shared
+@using CodeBlock.DevKit.Clients.AdminPanel.Pages
+@using CodeBlock.DevKit.Clients.AdminPanel.Pages.Shared
 @using System.Net.Http
 @using Blazored.Modal.Services
 @using Blazored.Toast.Services
@@ -15,10 +18,12 @@
 @using CodeBlock.DevKit.Core.Extensions
 @using CodeBlock.DevKit.Web.Blazor.Server.Extensions
 @using CodeBlock.DevKit.Web.Blazor.Server.Components
-@using CodeBlock.DevKit.Web.Blazor.Server.Resources
+@using CodeBlock.DevKit.Core.Resources
 @using Microsoft.Extensions.Localization
+@using CanBeYours.AdminPanel.Resources
 @using CodeBlock.DevKit.Web.Security;
-@using CodeBlock.DevKit.Infrastructure.Settings
+@using CodeBlock.DevKit.Contracts.Models
 
 @attribute [Authorize(Policy = Policies.ADMIN_ROLE)]
-@inject IStringLocalizer<BlazorServerResource> BlazorServerLocalizer
+@inject IStringLocalizer<AdminPanelResource> AdminPanelLocalizer
+@inject IStringLocalizer<CoreResource> CoreLocalizer

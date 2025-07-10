@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Hero_Title" xml:space="preserve">
+    <value>حوّل فكرتك للبرمجيات كخدمة إلى واقع</value>
+  </data>
+  <data name="Hero_Tagline" xml:space="preserve">
+    <value>يمكن أن يكون لك!</value>
+  </data>
+  <data name="Hero_Subtitle" xml:space="preserve">
+    <value>هذه شركة ناشئة نموذجية مبنية بـ &lt;strong&gt;CodeBlock.DevKit&lt;/strong&gt;. كل ما تراه هنا يأتي من وحدات مدمجة - لا تحتاج لبرمجة. ببساطة خصص التصميم والمحتوى والميزات لتتناسب مع رؤيتك، ثم أطلق شركتك الناشئة.</value>
+  </data>
+  <data name="System_Access_Title" xml:space="preserve">
+    <value>استكشف النظام الكامل:</value>
+  </data>
+  <data name="System_Access_Subtitle" xml:space="preserve">
+    <value>أولاً قم بتشغيل تطبيقات الويب من src/3-clients، ثم انقر على أي مكون أدناه لترى ما يوفره CodeBlock.DevKit</value>
+  </data>
+  <data name="System_Website" xml:space="preserve">
+    <value>الموقع الإلكتروني</value>
+  </data>
+  <data name="System_Website_Status" xml:space="preserve">
+    <value>الحالي</value>
+  </data>
+  <data name="System_UserPanel" xml:space="preserve">
+    <value>لوحة المستخدم</value>
+  </data>
+  <data name="System_UserPanel_Status" xml:space="preserve">
+    <value>لوحة القيادة</value>
+  </data>
+  <data name="System_AdminPanel" xml:space="preserve">
+    <value>لوحة الإدارة</value>
+  </data>
+  <data name="System_AdminPanel_Status" xml:space="preserve">
+    <value>الإدارة</value>
+  </data>
+  <data name="System_API" xml:space="preserve">
+    <value>وثائق API</value>
+  </data>
+  <data name="System_API_Status" xml:space="preserve">
+    <value>مطور</value>
+  </data>
+  <data name="System_ChatBot" xml:space="preserve">
+    <value>روبوت المحادثة بالذكاء الاصطناعي</value>
+  </data>
+  <data name="System_ChatBot_Status" xml:space="preserve">
+    <value>الدعم</value>
+  </data>
+  <data name="Feature_EnterpriseSecurity" xml:space="preserve">
+    <value>أمان على مستوى المؤسسات</value>
+  </data>
+  <data name="CTA_TryAI" xml:space="preserve">
+    <value>جرب مساعدنا الذكي</value>
+  </data>
+  <data name="CTA_GetDevKit" xml:space="preserve">
+    <value>احصل على DevKit الخاص بك</value>
+  </data>
+  <data name="AI_Section_Title" xml:space="preserve">
+    <value>اختبر مساعدنا الذكي المتقدم</value>
+  </data>
+  <data name="AI_Section_Description" xml:space="preserve">
+    <value>في "يمكن أن يكون لك"، دمجنا تقنية ذكاء اصطناعي متطورة لتوفير دعم فوري وذكي. تم تدريب مساعدنا الذكي على قاعدة معرفتنا ويمكنه الإجابة على أسئلة حول خدماتنا وأسعارنا والمزيد.</value>
+  </data>
+  <data name="AI_Status_Online" xml:space="preserve">
+    <value>متصل</value>
+  </data>
+  <data name="AI_Service_Info" xml:space="preserve">
+    <value>معلومات الخدمات والأسعار</value>
+  </data>
+  <data name="AI_Integration_Options" xml:space="preserve">
+    <value>خيارات التكامل والتخصيص</value>
+  </data>
+  <data name="AI_User_Question" xml:space="preserve">
+    <value>كيف يمكنكم مساعدة عملي على النمو؟</value>
+  </data>
+  <data name="AI_Response" xml:space="preserve">
+    <value>سؤال رائع! يمكنني إرشادك عبر خدمات التحول الرقمي لدينا، والتوصية بالخطة المناسبة بناءً على احتياجاتك، وشرح كيف تتكامل منصتنا مع أنظمتك الحالية. هل تود معرفة المزيد عن أي مجال محدد؟</value>
+  </data>
+  <data name="AI_Start_Conversation" xml:space="preserve">
+    <value>بدء محادثة مباشرة</value>
+  </data>
+  <data name="AI_Feature_DocumentProcessing" xml:space="preserve">
+    <value>معالجة ذكية للوثائق</value>
+  </data>
+  <data name="AI_Feature_DocumentProcessing_Desc" xml:space="preserve">
+    <value>ذكاء اصطناعي مدرب على كامل قاعدة معرفتنا ووثائقنا</value>
+  </data>
+  <data name="AI_Feature_NaturalConversations" xml:space="preserve">
+    <value>محادثات طبيعية</value>
+  </data>
+  <data name="AI_Feature_24x7_Availability_Desc" xml:space="preserve">
+    <value>ردود فورية في أي وقت، مع تصعيد للوكلاء البشريين</value>
+  </data>
+  <data name="AI_Feature_ContinuousLearning_Desc" xml:space="preserve">
+    <value>يصبح أذكى مع الوقت بناءً على التفاعلات والملاحظات</value>
+  </data>
+  <data name="AI_DevKit_Integration_Alert" xml:space="preserve">
+    <value>&lt;strong&gt;تكامل الذكاء الاصطناعي DevKit:&lt;/strong&gt; هذه الوظيفة للذكاء الاصطناعي مدمجة مع CodeBlock.DevKit! ببساطة قدم مفتاح API لنموذج الذكاء الاصطناعي (OpenAI، Claude، Gemini، إلخ)، واستضف وثائقك واحصل على مساعد ذكي يعمل بشكل كامل لشركتك الناشئة. لا حاجة لإعداد معقد!</value>
+  </data>
+  <data name="Pricing_Section_Title" xml:space="preserve">
+    <value>خطط أسعار نموذجية لشركتك الناشئة</value>
+  </data>
+  <data name="Pricing_Section_Description" xml:space="preserve">
+    <value>هذه خطط أسعار نموذجية لتوضيح كيف يمكنك هيكلة تحقيق الإيرادات لشركتك الناشئة. ببساطة حدد خطط أسعار تناسب أهدافك ورؤيتك - المنصة تجعل من السهل تخصيص أي نموذج تسعير لعملك.</value>
+  </data>
+  <data name="Pricing_Demo_Alert" xml:space="preserve">
+    <value>&lt;strong&gt;عرض الأسعار:&lt;/strong&gt; هذه خطط أسعار نموذجية لهذه الشركة التوضيحية. مع CodeBlock.DevKit، يمكنك إنشاء أي هيكل تسعير وميزات ونموذج عمل يناسب فكرة شركتك الناشئة.</value>
+  </data>
+  <data name="Features_Section_Description" xml:space="preserve">
+    <value>في "يمكن أن يكون لك"، نوفر كل ما تحتاجه الشركات لإنشاء وتنمية حضورها الرقمي. منصتنا الشاملة تغطي جميع جوانب العمليات التجارية الحديثة.</value>
+  </data>
+  <data name="Feature_WebsiteCreation_Title" xml:space="preserve">
+    <value>إنشاء المواقع الإلكترونية</value>
+  </data>
+  <data name="Feature_CustomerManagement_Title" xml:space="preserve">
+    <value>إدارة العملاء</value>
+  </data>
+  <data name="Feature_CustomerManagement_Description" xml:space="preserve">
+    <value>إدارة متقدمة لعلاقات العملاء مع لوحات قيادة المستخدمين وإدارة الحسابات وتجارب مخصصة لعملائك.</value>
+  </data>
+  <data name="Feature_BusinessAnalytics_Title" xml:space="preserve">
+    <value>تحليلات الأعمال</value>
+  </data>
+  <data name="Feature_BusinessAnalytics_Description" xml:space="preserve">
+    <value>لوحة قيادة شاملة للتحليلات والتقارير لتتبع أداء عملك وسلوك العملاء ومؤشرات النمو في الوقت الفعلي.</value>
+  </data>
+  <data name="Feature_PaymentProcessing_Title" xml:space="preserve">
+    <value>معالجة المدفوعات</value>
+  </data>
+  <data name="Feature_AIPoweredSupport_Title" xml:space="preserve">
+    <value>دعم مدعوم بالذكاء الاصطناعي</value>
+  </data>
+  <data name="Feature_SystemIntegration_Title" xml:space="preserve">
+    <value>تكامل الأنظمة</value>
+  </data>
+  <data name="Testimonial_3_Name" xml:space="preserve">
+    <value>ديفيد كيم</value>
+  </data>
+  <data name="CTA_Final_Title" xml:space="preserve">
+    <value>مستعد لبناء قصة نجاحك الخاصة؟</value>
+  </data>
+  <data name="CTA_Final_Description" xml:space="preserve">
+    <value>لقد استكشفت ما هو ممكن مع "يمكن أن يكون لك" - عمل برمجيات كخدمة مكتمل مبني بالكامل مع CodeBlock.DevKit. الآن تخيل إنشاء &lt;strong&gt;شركتك الناشئة الخاصة&lt;/strong&gt; بنفس الأساس القوي، مخصص لرؤيتك وأهدافك الفريدة.</value>
+  </data>
+  <data name="CTA_GetDevKit_Button" xml:space="preserve">
+    <value>الحصول على CodeBlock.DevKit</value>
+  </data>
+  <data name="CTA_ExploreDemo_Button" xml:space="preserve">
+    <value>استكشاف هذا العرض</value>
+  </data>
+  <data name="CTA_DevKit_Info" xml:space="preserve">
+    <value>&lt;strong&gt;ما هو CodeBlock.DevKit؟&lt;/strong&gt; إطار عمل شامل لتطوير البرمجيات كخدمة يساعد رواد الأعمال على إطلاق شركاتهم الناشئة بشكل أسرع. وثائق وكل ما تحتاجه لبناء قصة نجاح "يمكن أن يكون لك" الخاصة بك.</value>
+  </data>
+  <data name="CTA_Features_Info" xml:space="preserve">
+    <value>وثائق كاملة ودعم | جاهز للإنتاج</value>
+  </data>
+  <data name="Nav_Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="Nav_Services" xml:space="preserve">
+    <value>الخدمات</value>
+  </data>
+  <data name="Nav_Pricing" xml:space="preserve">
+    <value>الأسعار</value>
+  </data>
+  <data name="Nav_SuccessStories" xml:space="preserve">
+    <value>قصص النجاح</value>
+  </data>
+  <data name="Nav_Contact" xml:space="preserve">
+    <value>اتصل بنا</value>
+  </data>
+  <data name="Nav_Dashboard" xml:space="preserve">
+    <value>لوحة القيادة</value>
+  </data>
+  <data name="Nav_GetStarted" xml:space="preserve">
+    <value>ابدأ</value>
+  </data>
+  <data name="Steps_Section_Title" xml:space="preserve">
+    <value>اتبع هذه الخطوات الـ6 لإطلاق شركتك الناشئة</value>
+  </data>
+  <data name="Step_1_Title" xml:space="preserve">
+    <value>مراجعة وثائق DevKit</value>
+  </data>
+  <data name="Step_1_Button" xml:space="preserve">
+    <value>قراءة الوثائق</value>
+  </data>
+  <data name="Step_2_Title" xml:space="preserve">
+    <value>تصميم موقع إلكتروني</value>
+  </data>
+  <data name="Step_2_Description" xml:space="preserve">
+    <value>استخدم وكلاء الذكاء الاصطناعي مثل Cursor وChatGPT وغيرها لتصميم موقعك واتبع الوثائق لاستبداله بالموقع الحالي.</value>
+  </data>
+  <data name="Step_3_Title" xml:space="preserve">
+    <value>تطبيق منطقك</value>
+  </data>
+  <data name="Step_3_Description" xml:space="preserve">
+    <value>استخدم وثائقنا لتعلم الهندسة المعمارية والأنماط لتطبيق منطق أعمال عالي الجودة. اكتشف مدى بساطة دمج منطق أعمالك مع وحدات DevKit الموجودة.</value>
+  </data>
+  <data name="Step_4_Title" xml:space="preserve">
+    <value>إنشاء خطط الأسعار</value>
+  </data>
+  <data name="Step_4_Description" xml:space="preserve">
+    <value>ببساطة استخدم قسم الأسعار في لوحة الإدارة لتحديد خططك وخصوماتك. كل شيء جاهز لإعداد استراتيجية تحقيق الإيرادات بدون عناء.</value>
+  </data>
+  <data name="Step_5_Title" xml:space="preserve">
+    <value>إنشاء روبوت محادثة ذكي</value>
+  </data>
+  <data name="Step_5_Description" xml:space="preserve">
+    <value>فقط قدم مفتاح API من OpenAI أو Google أو مقدمي ذكاء اصطناعي آخرين، بالإضافة لبعض وثائق الأعمال، وستحصل على روبوت محادثة مصمم جيداً وأداة للتفاعل مع المستخدمين.</value>
+  </data>
+  <data name="Step_6_Title" xml:space="preserve">
+    <value>نشر شركتك الناشئة</value>
+  </data>
+  <data name="Step_6_Description" xml:space="preserve">
+    <value>انشر أينما تريد. إنه تطبيق .NET متعدد المنصات يمكن نشره على Windows وLinux ومنصات أخرى بسهولة.</value>
+  </data>
+  <data name="Video_Section_Title" xml:space="preserve">
+    <value>تريد أن ترى كيف يتم ذلك؟</value>
+  </data>
+  <data name="Video_Section_Description" xml:space="preserve">
+    <value>شاهد دليلاً كاملاً لبناء شركة ناشئة من الصفر، ثم اتبع نفس العملية لمشروعك الخاص.</value>
+  </data>
+  <data name="Video_Button_Text" xml:space="preserve">
+    <value>شاهد إطلاق شركة ناشئة نموذجية مع CodeBlock DevKit</value>
+  </data>
+  <data name="Video_Section_Subtitle" xml:space="preserve">
+    <value>عملية تطوير كاملة من البداية للنهاية</value>
+  </data>
+  <data name="Step_1_Description" xml:space="preserve">
+    <value>CodeBlock لديه وثائق شاملة تغطي كل ما تحتاج لمعرفته حول إطلاق شركة ناشئة باستخدام DevKit.</value>
+  </data>
+</root> 

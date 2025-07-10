@@ -1,0 +1,237 @@
+﻿@page "/"
+@inject ApplicationSettings ApplicationSettings
+@inject IConfiguration Configuration
+
+<PageTitle>@ApplicationSettings.Localized.Name</PageTitle>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+    <div class="hero-background"> 
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center hero-content">
+
+                <h1 class="hero-title fade-in">@WebAppLocalizer[WebAppResource.Hero_Tagline]</h1>
+                <p class="hero-tagline fade-in">@WebAppLocalizer[WebAppResource.Hero_Title]</p>
+
+                <p class="hero-subtitle fade-in">
+                    @((MarkupString)string.Format(WebAppLocalizer[WebAppResource.Hero_Subtitle]))
+                </p>
+
+                <!-- System Access Cards -->
+                <div class="row g-3 mb-4 fade-in justify-content-center">
+                    <div class="col-12 mb-2">
+                        <small class="text-info"><i class="bi bi-cursor"></i> <strong>@WebAppLocalizer[WebAppResource.System_Access_Title]</strong> @WebAppLocalizer[WebAppResource.System_Access_Subtitle]</small>
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <div class="system-access-card">
+                            <a href="/" class="text-decoration-none">
+                                <div class="access-icon">
+                                    <i class="bi bi-globe"></i>
+                                </div>
+                                <div class="access-label">@WebAppLocalizer[WebAppResource.System_Website]</div>
+                                <div class="access-status">@WebAppLocalizer[WebAppResource.System_Website_Status]</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <div class="system-access-card">
+                            <a href="/dashboard" target="_blank" class="text-decoration-none">
+                                <div class="access-icon">
+                                    <i class="bi bi-person-workspace"></i>
+                                </div>
+                                <div class="access-label">@WebAppLocalizer[WebAppResource.System_UserPanel]</div>
+                                <div class="access-status">@WebAppLocalizer[WebAppResource.System_UserPanel_Status]</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <div class="system-access-card">
+                            <a href="http://localhost:50001" target="_blank" class="text-decoration-none">
+                                <div class="access-icon">
+                                    <i class="bi bi-speedometer2"></i>
+                                </div>
+                                <div class="access-label">@WebAppLocalizer[WebAppResource.System_AdminPanel]</div>
+                                <div class="access-status">@WebAppLocalizer[WebAppResource.System_AdminPanel_Status]</div>
+                                <div class="mt-1">
+                                    <small class="text-secondary d-block" style="font-size: 0.65rem;">
+                                        username: @Configuration["Identity:AdminUser:Email"]
+                                    </small>
+                                    <small class="text-secondary d-block" style="font-size: 0.65rem;">
+                                        password: @Configuration["Identity:AdminUser:Password"]
+                                    </small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <div class="system-access-card">
+                            <a href="http://localhost:50002" target="_blank" class="text-decoration-none">
+                                <div class="access-icon">
+                                    <i class="bi bi-code-square"></i>
+                                </div>
+                                <div class="access-label">@WebAppLocalizer[WebAppResource.System_API]</div>
+                                <div class="access-status">@WebAppLocalizer[WebAppResource.System_API_Status]</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <div class="system-access-card">
+                            <a href="/ai/bot/chat/" target="_blank" class="text-decoration-none">
+                                <div class="access-icon">
+                                    <i class="bi bi-robot"></i>
+                                </div>
+                                <div class="access-label">@WebAppLocalizer[WebAppResource.System_ChatBot]</div>
+                                <div class="access-status">@WebAppLocalizer[WebAppResource.System_ChatBot_Status]</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title fade-in">@WebAppLocalizer[WebAppResource.Pricing_Section_Title]</h2>
+                <p class="section-subtitle fade-in">@WebAppLocalizer[WebAppResource.Pricing_Section_Description]</p>
+            </div>
+        </div>
+
+        <ActivePlansToOrder />
+
+        <div class="alert alert-info mt-4">
+            <i class="bi bi-currency-dollar"></i> @((MarkupString)string.Format(WebAppLocalizer[WebAppResource.Pricing_Demo_Alert]))
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5" style="background: var(--gradient-primary);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mb-4 text-white">@WebAppLocalizer[WebAppResource.CTA_Final_Title]</h2>
+                <p class="lead text-white mb-4">@((MarkupString)string.Format(WebAppLocalizer[WebAppResource.CTA_Final_Description]))</p>
+                
+                <!-- Steps Guide -->
+                <div class="row g-3 mb-5 text-start">
+                    <div class="col-12 text-center mb-3">
+                        <h5 class="fw-bold startup-steps-title">@WebAppLocalizer[WebAppResource.Steps_Section_Title]</h5>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 rounded-3 h-100 startup-step-card">
+                            <div class="d-flex align-items-start text-white">
+                                <div class="rounded-circle bg-light text-primary fw-bold me-3 d-flex align-items-center justify-content-center flex-shrink-0 step-number-circle">1</div>
+                                <div>
+                                    <h6 class="mb-2">@WebAppLocalizer[WebAppResource.Step_1_Title]</h6>
+                                    <p class="text-white-50 mb-2 step-description">@WebAppLocalizer[WebAppResource.Step_1_Description]</p>
+                                    <a href="https://docs.codeblock.dev/" class="btn btn-outline-light btn-sm" target="_blank">
+                                        <i class="bi bi-book"></i> @WebAppLocalizer[WebAppResource.Step_1_Button]
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 rounded-3 h-100 startup-step-card">
+                            <div class="d-flex align-items-start text-white">
+                                <div class="rounded-circle bg-light text-primary fw-bold me-3 d-flex align-items-center justify-content-center flex-shrink-0 step-number-circle">2</div>
+                                <div>
+                                    <h6 class="mb-2">@WebAppLocalizer[WebAppResource.Step_2_Title]</h6>
+                                    <p class="text-white-50 mb-0 step-description">@WebAppLocalizer[WebAppResource.Step_2_Description]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 rounded-3 h-100 startup-step-card">
+                            <div class="d-flex align-items-start text-white">
+                                <div class="rounded-circle bg-light text-primary fw-bold me-3 d-flex align-items-center justify-content-center flex-shrink-0 step-number-circle">3</div>
+                                <div>
+                                    <h6 class="mb-2">@WebAppLocalizer[WebAppResource.Step_3_Title]</h6>
+                                    <p class="text-white-50 mb-0 step-description">@WebAppLocalizer[WebAppResource.Step_3_Description]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 rounded-3 h-100 startup-step-card">
+                            <div class="d-flex align-items-start text-white">
+                                <div class="rounded-circle bg-light text-primary fw-bold me-3 d-flex align-items-center justify-content-center flex-shrink-0 step-number-circle">4</div>
+                                <div>
+                                    <h6 class="mb-2">@WebAppLocalizer[WebAppResource.Step_4_Title]</h6>
+                                    <p class="text-white-50 mb-0 step-description">@WebAppLocalizer[WebAppResource.Step_4_Description]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 rounded-3 h-100 startup-step-card">
+                            <div class="d-flex align-items-start text-white">
+                                <div class="rounded-circle bg-light text-primary fw-bold me-3 d-flex align-items-center justify-content-center flex-shrink-0 step-number-circle">5</div>
+                                <div>
+                                    <h6 class="mb-2">@WebAppLocalizer[WebAppResource.Step_5_Title]</h6>
+                                    <p class="text-white-50 mb-0 step-description">@WebAppLocalizer[WebAppResource.Step_5_Description]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 rounded-3 h-100 startup-step-card">
+                            <div class="d-flex align-items-start text-white">
+                                <div class="rounded-circle bg-light text-primary fw-bold me-3 d-flex align-items-center justify-content-center flex-shrink-0 step-number-circle">6</div>
+                                <div>
+                                    <h6 class="mb-2">@WebAppLocalizer[WebAppResource.Step_6_Title]</h6>
+                                    <p class="text-white-50 mb-0 step-description">@WebAppLocalizer[WebAppResource.Step_6_Description]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Demo -->
+                <div class="mb-4">
+                    <div class="p-4 rounded-4 position-relative overflow-hidden video-demo-container">
+                        <div class="position-absolute top-0 end-0 mt-2 me-2">
+                            <i class="bi bi-star-fill text-warning video-star-icon"></i>
+                        </div>
+                        <div class="text-center">
+                            <div class="d-flex justify-content-center align-items-center mb-3">
+                                <i class="bi bi-play-circle-fill text-warning me-2 video-play-icon"></i>
+                                <h4 class="mb-0 fw-bold video-title">@WebAppLocalizer[WebAppResource.Video_Section_Title]</h4>
+                            </div>
+                            <p class="text-white mb-4 video-description">
+                                @WebAppLocalizer[WebAppResource.Video_Section_Description]
+                            </p>
+                            <a href="#demo-video-link" class="btn btn-warning btn-lg px-4 py-3 fw-bold shadow-lg video-button" target="_blank">
+                                <i class="bi bi-play-circle-fill me-2"></i> @WebAppLocalizer[WebAppResource.Video_Button_Text]
+                            </a>
+                            <div class="mt-3">
+                                <small class="text-warning">
+                                    <i class="bi bi-clock"></i> @WebAppLocalizer[WebAppResource.Video_Section_Subtitle]
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

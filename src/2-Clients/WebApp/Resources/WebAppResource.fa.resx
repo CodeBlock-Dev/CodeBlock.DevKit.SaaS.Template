@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Hero_Title" xml:space="preserve">
+    <value>ایده SaaS خود را به واقعیت تبدیل کنید</value>
+  </data>
+  <data name="Hero_Tagline" xml:space="preserve">
+    <value>میتونه مال تو باشه!</value>
+  </data>
+  <data name="Hero_Subtitle" xml:space="preserve">
+    <value>این یک نمونه استارتاپ ساخته شده با &lt;strong&gt;CodeBlock.DevKit&lt;/strong&gt; است. تمام آنچه اینجا می‌بینید از ماژول‌های داخلی آمده است - بدون نیاز به کدنویسی. به سادگی طراحی، محتوا و ویژگی‌ها را مطابق با دیدگاه خود سفارشی کنید، سپس استارتاپ خود را راه‌اندازی نمایید.</value>
+  </data>
+  <data name="System_Access_Title" xml:space="preserve">
+    <value>سیستم کامل را کاوش کنید:</value>
+  </data>
+  <data name="System_Access_Subtitle" xml:space="preserve">
+    <value>ابتدا وب اپلیکیشن‌های موجود در src/3-clients را اجرا کنید، سپس روی هر کامپوننت زیر کلیک کنید تا ببینید CodeBlock.DevKit چه چیزی ارائه می‌دهد</value>
+  </data>
+  <data name="System_Website" xml:space="preserve">
+    <value>وب‌سایت</value>
+  </data>
+  <data name="System_Website_Status" xml:space="preserve">
+    <value>فعلی</value>
+  </data>
+  <data name="System_UserPanel" xml:space="preserve">
+    <value>پنل کاربری</value>
+  </data>
+  <data name="System_UserPanel_Status" xml:space="preserve">
+    <value>داشبورد</value>
+  </data>
+  <data name="System_AdminPanel" xml:space="preserve">
+    <value>پنل مدیریت</value>
+  </data>
+  <data name="System_AdminPanel_Status" xml:space="preserve">
+    <value>مدیریت</value>
+  </data>
+  <data name="System_API" xml:space="preserve">
+    <value>مستندات API</value>
+  </data>
+  <data name="System_API_Status" xml:space="preserve">
+    <value>توسعه‌دهنده</value>
+  </data>
+  <data name="System_ChatBot" xml:space="preserve">
+    <value>ربات گفتگوی هوش مصنوعی</value>
+  </data>
+  <data name="System_ChatBot_Status" xml:space="preserve">
+    <value>پشتیبانی</value>
+  </data>
+  <data name="Feature_EnterpriseSecurity" xml:space="preserve">
+    <value>امنیت سطح سازمانی</value>
+  </data>
+  <data name="CTA_TryAI" xml:space="preserve">
+    <value>دستیار هوش مصنوعی ما را امتحان کنید</value>
+  </data>
+  <data name="CTA_GetDevKit" xml:space="preserve">
+    <value>DevKit خود را دریافت کنید</value>
+  </data>
+  <data name="AI_Section_Title" xml:space="preserve">
+    <value>دستیار هوشمند هوش مصنوعی ما را تجربه کنید</value>
+  </data>
+  <data name="AI_Section_Description" xml:space="preserve">
+    <value>در "میتونه مال تو باشه"، ما فناوری پیشرفته هوش مصنوعی را ادغام کرده‌ایم تا پشتیبانی فوری و هوشمند ارائه دهیم. دستیار هوش مصنوعی ما روی پایگاه دانش ما آموزش دیده و می‌تواند به سوالات درباره خدمات، قیمت‌گذاری و موارد دیگر پاسخ دهد.</value>
+  </data>
+  <data name="AI_Status_Online" xml:space="preserve">
+    <value>آنلاین</value>
+  </data>
+  <data name="AI_Service_Info" xml:space="preserve">
+    <value>اطلاعات خدمات و قیمت‌گذاری</value>
+  </data>
+  <data name="AI_Integration_Options" xml:space="preserve">
+    <value>گزینه‌های ادغام و سفارشی‌سازی</value>
+  </data>
+  <data name="AI_User_Question" xml:space="preserve">
+    <value>چطور می‌توانید به توسعه کسب‌وکار من کمک کنید؟</value>
+  </data>
+  <data name="AI_Response" xml:space="preserve">
+    <value>سوال عالی! می‌توانم شما را در خدمات تحول دیجیتال راهنمایی کنم، برنامه مناسب را بر اساس نیازهایتان پیشنهاد دهم و توضیح دهم که پلتفرم ما چگونه با سیستم‌های موجود شما ادغام می‌شود. آیا می‌خواهید درباره هر حوزه خاصی بیشتر بدانید؟</value>
+  </data>
+  <data name="AI_Start_Conversation" xml:space="preserve">
+    <value>شروع گفتگوی زنده</value>
+  </data>
+  <data name="AI_Feature_DocumentProcessing" xml:space="preserve">
+    <value>پردازش هوشمند اسناد</value>
+  </data>
+  <data name="AI_Feature_DocumentProcessing_Desc" xml:space="preserve">
+    <value>هوش مصنوعی آموزش دیده روی کل پایگاه دانش و مستندات ما</value>
+  </data>
+  <data name="AI_Feature_NaturalConversations" xml:space="preserve">
+    <value>گفتگوهای طبیعی</value>
+  </data>
+  <data name="AI_Feature_24x7_Availability_Desc" xml:space="preserve">
+    <value>پاسخ فوری در هر زمان، با ارجاع به کارشناسان انسانی</value>
+  </data>
+  <data name="AI_Feature_ContinuousLearning_Desc" xml:space="preserve">
+    <value>در طول زمان بر اساس تعاملات و بازخوردها هوشمندتر می‌شود</value>
+  </data>
+  <data name="AI_DevKit_Integration_Alert" xml:space="preserve">
+    <value>&lt;strong&gt;ادغام هوش مصنوعی DevKit:&lt;/strong&gt; این قابلیت هوش مصنوعی به صورت پیش‌فرض با CodeBlock.DevKit ارائه می‌شود! فقط کلید API مدل هوش مصنوعی خود را فراهم کنید (OpenAI، Claude، Gemini و غیره)، اسناد خود را تعبیه کنید و یک دستیار هوش مصنوعی کاملاً کارآمد برای استارتاپ خود دریافت کنید. نیازی به تنظیمات پیچیده نیست!</value>
+  </data>
+  <data name="Pricing_Section_Title" xml:space="preserve">
+    <value>طرح‌های قیمت‌گذاری نمونه برای استارتاپ شما</value>
+  </data>
+  <data name="Pricing_Section_Description" xml:space="preserve">
+    <value>این‌ها طرح‌های قیمت‌گذاری نمونه برای نشان دادن نحوه ساختاربندی درآمدزایی استارتاپ شما هستند. به سادگی طرح‌های قیمت‌گذاری متناسب با اهداف و چشم‌انداز خود تعریف کنید - پلتفرم سفارشی‌سازی هر مدل قیمت‌گذاری برای کسب‌وکار شما را آسان می‌کند.</value>
+  </data>
+  <data name="Pricing_Demo_Alert" xml:space="preserve">
+    <value>&lt;strong&gt;نسخه نمایشی قیمت‌گذاری:&lt;/strong&gt; این‌ها نمونه طرح‌های قیمت‌گذاری برای این استارتاپ نمایشی هستند. با استفاده از CodeBlock.DevKit، می‌توانید هر ساختار قیمت‌گذاری، ویژگی‌ها و مدل کسب‌وکاری که با ایده استارتاپی شما سازگار است را ایجاد کنید.</value>
+  </data>
+  <data name="Features_Section_Description" xml:space="preserve">
+    <value>در "میتونه مال تو باشه"، ما همه چیزی که کسب‌وکارها برای تأسیس و رشد حضور دیجیتال خود نیاز دارند ارائه می‌دهیم. پلتفرم جامع ما همه جنبه‌های عملیات تجاری مدرن را پوشش می‌دهد.</value>
+  </data>
+  <data name="Feature_WebsiteCreation_Title" xml:space="preserve">
+    <value>ایجاد وب‌سایت</value>
+  </data>
+  <data name="Feature_CustomerManagement_Title" xml:space="preserve">
+    <value>مدیریت مشتری</value>
+  </data>
+  <data name="Feature_CustomerManagement_Description" xml:space="preserve">
+    <value>مدیریت روابط پیشرفته مشتری با داشبوردهای کاربری، مدیریت حساب و تجربیات شخصی‌سازی شده برای مشتریان شما.</value>
+  </data>
+  <data name="Feature_BusinessAnalytics_Title" xml:space="preserve">
+    <value>تحلیل‌های کسب‌وکار</value>
+  </data>
+  <data name="Feature_BusinessAnalytics_Description" xml:space="preserve">
+    <value>داشبورد جامع تحلیل و گزارش‌گیری برای پیگیری عملکرد کسب‌وکار، رفتار مشتری و متریک‌های رشد در زمان واقعی.</value>
+  </data>
+  <data name="Feature_PaymentProcessing_Title" xml:space="preserve">
+    <value>پردازش پرداخت</value>
+  </data>
+  <data name="Feature_AIPoweredSupport_Title" xml:space="preserve">
+    <value>پشتیبانی قدرت گرفته از هوش مصنوعی</value>
+  </data>
+  <data name="Feature_SystemIntegration_Title" xml:space="preserve">
+    <value>ادغام سیستم</value>
+  </data>
+  <data name="Testimonial_3_Name" xml:space="preserve">
+    <value>دیوید کیم</value>
+  </data>
+  <data name="CTA_Final_Title" xml:space="preserve">
+    <value>آماده ساخت داستان موفقیت خود هستید؟</value>
+  </data>
+  <data name="CTA_Final_Description" xml:space="preserve">
+    <value>شما امکانات "It Can Be Yours" را کشف کردید - یک کسب‌وکار SaaS کامل که کاملاً با CodeBlock.DevKit ساخته شده است. حالا تصور کنید که &lt;strong&gt;استارتاپ خودتان&lt;/strong&gt; را با همان پایه‌ی قدرتمند بسازید، متناسب با دیدگاه و اهداف منحصر‌به‌فرد خودتان.</value>
+  </data>
+  <data name="CTA_GetDevKit_Button" xml:space="preserve">
+    <value>CodeBlock.DevKit را دریافت کنید</value>
+  </data>
+  <data name="CTA_ExploreDemo_Button" xml:space="preserve">
+    <value>این نمایش را کاوش کنید</value>
+  </data>
+  <data name="CTA_DevKit_Info" xml:space="preserve">
+    <value>&lt;strong&gt;CodeBlock.DevKit چیست؟&lt;/strong&gt; یک چارچوب جامع توسعه SaaS که به کارآفرینان کمک می‌کند استارتاپ‌های خود را سریع‌تر راه‌اندازی کنند. مستندات و هر آنچه برای ساختن داستان موفقیت "It Can Be Yours" خود نیاز دارید.</value>
+  </data>
+  <data name="CTA_Features_Info" xml:space="preserve">
+    <value>مستندات کامل و پشتیبانی | آماده برای تولید</value>
+  </data>
+  <data name="Nav_Home" xml:space="preserve">
+    <value>خانه</value>
+  </data>
+  <data name="Nav_Services" xml:space="preserve">
+    <value>خدمات</value>
+  </data>
+  <data name="Nav_Pricing" xml:space="preserve">
+    <value>قیمت گذاری</value>
+  </data>
+  <data name="Nav_SuccessStories" xml:space="preserve">
+    <value>داستان‌های موفقیت</value>
+  </data>
+  <data name="Nav_Contact" xml:space="preserve">
+    <value>تماس</value>
+  </data>
+  <data name="Nav_Dashboard" xml:space="preserve">
+    <value>داشبورد</value>
+  </data>
+  <data name="Nav_GetStarted" xml:space="preserve">
+    <value>شروع کنید</value>
+  </data>
+  <data name="Steps_Section_Title" xml:space="preserve">
+    <value>این ۶ مرحله را برای راه‌اندازی استارتاپ خود دنبال کنید</value>
+  </data>
+  <data name="Step_1_Title" xml:space="preserve">
+    <value>مطالعه مستندات DevKit</value>
+  </data>
+  <data name="Step_1_Button" xml:space="preserve">
+    <value>مطالعه مستندات</value>
+  </data>
+  <data name="Step_2_Title" xml:space="preserve">
+    <value>طراحی وب‌سایت</value>
+  </data>
+  <data name="Step_2_Description" xml:space="preserve">
+    <value>از عوامل هوش مصنوعی مانند Cursor، ChatGPT و غیره برای طراحی وب‌سایت خود استفاده کنید و مستندات را دنبال کنید تا آن را با وب‌سایت فعلی جایگزین کنید.</value>
+  </data>
+  <data name="Step_3_Title" xml:space="preserve">
+    <value>پیاده‌سازی منطق کسب‌وکار</value>
+  </data>
+  <data name="Step_3_Description" xml:space="preserve">
+    <value>از مستندات ما برای یادگیری معماری و الگوهای پیاده‌سازی منطق کسب‌وکار با کیفیت بالا استفاده کنید. کشف کنید که ادغام منطق کسب‌وکار با ماژول‌های موجود DevKit چقدر ساده است.</value>
+  </data>
+  <data name="Step_4_Title" xml:space="preserve">
+    <value>ایجاد طرح‌های قیمت‌گذاری</value>
+  </data>
+  <data name="Step_4_Description" xml:space="preserve">
+    <value>به سادگی از بخش قیمت‌گذاری پنل مدیریت برای تعریف طرح‌ها و تخفیف‌هایتان استفاده کنید. همه چیز برای راه‌اندازی استراتژی کسب درآمد بدون زحمت آماده است.</value>
+  </data>
+  <data name="Step_5_Title" xml:space="preserve">
+    <value>ایجاد ربات گفتگوی هوش مصنوعی</value>
+  </data>
+  <data name="Step_5_Description" xml:space="preserve">
+    <value>فقط یک کلید API از OpenAI، Google یا سایر ارائه‌دهندگان هوش مصنوعی به علاوه چند سند مرتبط با کسب‌وکارتان ارائه دهید و ربات گفتگوی خوش‌طراح و ویجت تعامل با کاربران خواهید داشت.</value>
+  </data>
+  <data name="Step_6_Title" xml:space="preserve">
+    <value>استقرار استارتاپ</value>
+  </data>
+  <data name="Step_6_Description" xml:space="preserve">
+    <value>هر جا که می‌خواهید استقرار دهید. این یک اپلیکیشن .NET چندپلتفرمه است که می‌تواند روی Windows، Linux و سایر پلتفرم‌ها به راحتی استقرار یابد.</value>
+  </data>
+  <data name="Video_Section_Title" xml:space="preserve">
+    <value>می‌خواهید ببینید چطور انجام می‌شود؟</value>
+  </data>
+  <data name="Video_Section_Description" xml:space="preserve">
+    <value>یک راهنمای کامل از ساخت استارتاپ از ابتدا تماشا کنید، سپس همین فرآیند را برای مشروع خودتان دنبال کنید.</value>
+  </data>
+  <data name="Video_Button_Text" xml:space="preserve">
+    <value>تماشای نمونه راه‌اندازی استارتاپ با CodeBlock DevKit</value>
+  </data>
+  <data name="Video_Section_Subtitle" xml:space="preserve">
+    <value>فرآیند توسعه کامل از ابتدا تا انتها</value>
+  </data>
+  <data name="Step_1_Description" xml:space="preserve">
+    <value>CodeBlock مستندات جامعی دارد که هر آنچه را که باید در مورد راه‌اندازی یک استارتاپ با استفاده از DevKit بدانید، پوشش می‌دهد.</value>
+  </data>
+</root>

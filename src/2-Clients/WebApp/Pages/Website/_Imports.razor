@@ -1,0 +1,20 @@
+﻿@using CodeBlock.DevKit.Core.Resources
+@using CodeBlock.DevKit.Pricing.Resources
+@using CodeBlock.DevKit.Pricing.Services.Plans
+@using CodeBlock.DevKit.Pricing.UI.Pages.Plans.Components
+
+@using CodeBlock.DevKit.Web.Blazor.Server.Services
+@using CodeBlock.DevKit.Contracts.Domain
+@using CodeBlock.DevKit.Pricing.Dtos
+@using CodeBlock.DevKit.Pricing.UI.Helpers
+@using CodeBlock.DevKit.Web.Blazor.Server.Attributes
+
+@inject IToastService ToastService
+@inject IModalService ModalService
+@inject IPlanService PlanService
+
+@inject IStringLocalizer<PricingResource> PricingLocalizer
+@inject IStringLocalizer<CoreResource> CoreLocalizer
+
+@inject NavigationManager NavigationManager
+@inject MessageService MessageService

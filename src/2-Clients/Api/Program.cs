@@ -1,6 +1,9 @@
-using CanBeYours.Api;
+// Copyright (c) CodeBlock.Dev. All rights reserved.
+// For more information visit https://codeblock.dev
 
-internal class Program
+namespace CanBeYours.Api;
+
+public class Program
 {
     private static void Main(string[] args)
     {
