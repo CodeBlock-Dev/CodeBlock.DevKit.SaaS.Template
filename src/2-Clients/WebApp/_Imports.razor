@@ -1,0 +1,23 @@
+﻿@using System.Net.Http
+@using Blazored.Modal.Services
+@using Blazored.Toast.Services
+@using CodeBlock.DevKit.Application.Srvices
+@using CodeBlock.DevKit.Web.Blazor.Server.Services
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.WebApp
+@using Microsoft.AspNetCore.Components.WebApp.Virtualization
+@using Microsoft.JSInterop
+@using CanBeYours.WebApp
+@using CanBeYours.WebApp.Pages.Shared
+@using CodeBlock.DevKit.Core.Extensions
+@using CodeBlock.DevKit.Web.Blazor.Server.Extensions
+@using CodeBlock.DevKit.Web.Blazor.Server.Components
+@inject NavigationManager NavigationManager
+@attribute [Authorize]
+@inject IToastService ToastService
+@inject IModalService ModalService
+@inject IRequestDispatcher RequestDispatcher
+@inject MessageService MessageService

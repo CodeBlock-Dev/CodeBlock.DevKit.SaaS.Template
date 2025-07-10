@@ -1,0 +1,50 @@
+name: Build and publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET 6 and .NET 8
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            6.0.x
+            8.0.x
+
+      - name: Build
+        run: ./build.ps1 Compile
+
+      - name: Lint Check
+        run: ./build.ps1 LintCheck --skip Compile
+
+      - name: Unit Test
+        run: ./build.ps1 RunUnitTests --skip LintCheck
+
+      - name: Publish Web project
+        run: dotnet publish ./src/2-Clients/Web/Web.csproj -c Release -o ./output/Web
+
+      - name: Publish AdminPanel project
+        run: dotnet publish ./src/2-Clients/AdminPanel/AdminPanel.csproj -c Release -o ./output/AdminPanel
+
+      - name: Publish Api project
+        run: dotnet publish ./src/2-Clients/Api/Api.csproj -c Release -o ./output/Api
+
+      - name: Create Web.zip
+        run: |
+          Compress-Archive -Path ./output/Web/* -DestinationPath ./output/Web.zip
+
+      - name: Create AdminPanel.zip
+        run: |
+          Compress-Archive -Path ./output/AdminPanel/* -DestinationPath ./output/AdminPanel.zip
+
+      - name: Create Api.zip
+        run: |
+          Compress-Archive -Path ./output/Api/* -DestinationPath ./output/Api.zip

@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Hosting
+@using Microsoft.AspNetCore.Mvc.ViewEngines
+@using CodeBlock.DevKit.Web.Localization
+@inject LocalizationSettings LocalizationSettings
+
+<!DOCTYPE html>
+<html dir="@LocalizationSettings.GetCurrentLanguageDirection()" lang="@LocalizationSettings.GetCurrentLanguageCode()" style="font-family: @LocalizationSettings.GetCurrentLanguageFont() !important">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+    <title>@ViewData["Title"]</title>
+    <base href="~/" />
+    <link href="css/cb.admin.panel.nspa.@(LocalizationSettings.GetCurrentLanguageDirection().ToLower()).min.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body class="bg-primary" style="font-family: @LocalizationSettings.GetCurrentLanguageFont() !important">
+   
+    <div class="fixed-top bg-none p-0 h1">
+        <div class="card-body">
+            <partial name="_SelectLanguage" model="@("btn btn-outline-primary text-white")" />
+        </div>
+    </div>
+
+    <div class="d-flex flex-column min-height-100 justify-content-center align-items-center">
+        @RenderBody()
+    </div>
+
+    <script src="~/js/cb.admin.panel.nspa.min.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

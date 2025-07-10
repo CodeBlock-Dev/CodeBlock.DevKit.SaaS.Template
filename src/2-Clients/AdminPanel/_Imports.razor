@@ -1,0 +1,24 @@
+﻿@using CanBeYours.AdminPanel.Pages
+@using System.Net.Http
+@using Blazored.Modal.Services
+@using Blazored.Toast.Services
+@using Blazored.Modal
+@using CodeBlock.DevKit.Application.Srvices
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.JSInterop
+@using CanBeYours.AdminPanel
+@using CodeBlock.DevKit.Core.Extensions
+@using CodeBlock.DevKit.Web.Blazor.Server.Extensions
+@using CodeBlock.DevKit.Web.Blazor.Server.Components
+@using CodeBlock.DevKit.Web.Blazor.Server.Resources
+@using Microsoft.Extensions.Localization
+@using CodeBlock.DevKit.Web.Security;
+@using CodeBlock.DevKit.Infrastructure.Settings
+
+@attribute [Authorize(Policy = Policies.ADMIN_ROLE)]
+@inject IStringLocalizer<BlazorServerResource> BlazorServerLocalizer

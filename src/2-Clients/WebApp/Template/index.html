@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBlock Dev Kit - SaaS Development Kit for Entrepreneurs</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>CodeBlock Dev</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#modules">Modules</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#demo">Demo</a>
+                <a href="https://docs.codeblock.dev" target="_blank">Documentation</a>
+                <div class="language-selector">
+                    <select class="language-select">
+                        <option value="en">EN</option>
+                        <option value="ar">AR</option>
+                        <option value="es">ES</option>
+                        <option value="fr">FR</option>
+                        <option value="de">DE</option>
+                    </select>
+                </div>
+                <a href="#pricing" class="cta-btn">
+                    <i class="bi bi-rocket-takeoff"></i>
+                    Get Started
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="logo.png" alt="CodeBlock Dev Logo" class="logo-image">
+                </div>
+                <h1 class="hero-title">
+                    <span class="brand-highlight">CodeBlock Dev Kit</span>
+                    <span class="subtitle">SaaS Development Kit for Entrepreneurs</span>
+                </h1>
+                <p class="hero-description">
+                    Skip months of development and launch your SaaS in days.<br />
+                    We handle the core foundation with our
+                    pre-built modules.<br />
+                    You focus only on your idea.
+                </p>
+                <div class="hero-actions">
+                    <button class="video-play-btn" data-video-url="https://www.youtube.com/embed/ScMzIvxBSi4" onclick="playVideo(this)">
+                        <i class="bi bi-play-circle-fill"></i>
+                        Watch Overview (2 min)
+                    </button>
+                    <a href="#pricing" class="cta-primary">
+                        <i class="bi bi-rocket-takeoff-fill"></i>
+                        Start Building Your SaaS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">From purchase to production in minutes, not months</p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="bi bi-credit-card-fill"></i>
+                    </div>
+                    <h3>1. Purchase License</h3>
+                    <p>Get your license, access all modules, and build unlimited SaaS applications.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="bi bi-download"></i>
+                    </div>
+                    <h3>2. Download Template</h3>
+                    <p>Get the ready-to-use application template with the architecture and all modules pre-configured
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h3>3. Customize & Build</h3>
+                    <p>Open the application template in your preferred IDE, customize it as needed, and add your
+                        business logic</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="bi bi-rocket-takeoff-fill"></i>
+                    </div>
+                    <h3>4. Deploy Anywhere</h3>
+                    <p>Deploy to cloud, Windows, Linux, or any environment. It's a fully cross-platform .NET application
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">SaaS Application Template</h2>
+                <p class="section-subtitle">Download, run, and make it yours - your SaaS is up in minutes.</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="demo-card-new">
+                        <div class="demo-header text-center mb-4">
+                            <h3>Get a Complete SaaS Application - Not Just a Starter</h3>
+                            <p class="demo-description">When you get your license, you receive a complete, real-world SaaS application template - not just a starter project. It's fully configured and production-ready, designed to save you months of setup.</p>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="template-section">
+                                    <p class="template-intro"><strong>The template includes:</strong></p>
+                                    <ul class="demo-features-list mb-4">
+                                        <li>A clean architecture structure</li>
+                                        <li>A website, admin panel, and user dashboard</li>
+                                        <li>A REST API client and AI chatbot client</li>
+                                        <li>All pre-built modules already integrated</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="template-section">
+                                    <div id="demoCarousel" class="carousel slide demo-carousel" data-bs-ride="carousel" data-bs-interval="3000">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                            <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="mockup.png" class="d-block w-100 demo-mockup-compact" alt="Admin Dashboard Overview">
+                                                <div class="carousel-caption-custom">
+                                                    <h5>Admin Dashboard Overview</h5>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="mockup.png" class="d-block w-100 demo-mockup-compact" alt="User Management Interface">
+                                                <div class="carousel-caption-custom">
+                                                    <h5>User Management Interface</h5>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="mockup.png" class="d-block w-100 demo-mockup-compact" alt="Payment & Subscription System">
+                                                <div class="carousel-caption-custom">
+                                                    <h5>Payment & Subscription System</h5>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="mockup.png" class="d-block w-100 demo-mockup-compact" alt="API Documentation Portal">
+                                                <div class="carousel-caption-custom">
+                                                    <h5>API Documentation Portal</h5>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="mockup.png" class="d-block w-100 demo-mockup-compact" alt="Analytics & Monitoring">
+                                                <div class="carousel-caption-custom">
+                                                    <h5>Analytics & Monitoring</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#demoCarousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <button class="demo-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                <i class="bi bi-play-circle-fill"></i>
+                                Watch Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Built Modules Overview Section -->
+    <section class="modules-overview-section" id="modules">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Pre-Built Modules</h2>
+                <p class="section-subtitle">Everything you need to build a complete SaaS application</p>
+            </div>
+
+            <!-- Module Categories Overview -->
+            <div class="module-categories">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="bi bi-gear-fill"></i>
+                            </div>
+                            <h4>Core Modules</h4>
+                            <p>Ready-to-use core functionality for subscriptions, payments, monitoring, and more</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="bi bi-window-stack"></i>
+                            </div>
+                            <h4>Web Client Modules</h4>
+                            <p>Complete web interfaces including admin panel, user dashboard, and REST APIs</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="category-card">
+                            <div class="category-icon">
+                                <i class="bi bi-tools"></i>
+                            </div>
+                            <h4>Supporting Modules</h4>
+                            <p>Infrastructure and utility modules for security, optimization, emails, SMS, and more
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Modules Section -->
+    <section class="core-modules-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Core Modules</h2>
+                <p class="section-subtitle">Ready-to-use core functionality for your SaaS application</p>
+            </div>
+            <div class="core-modules">
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="core-module-icon">
+                                        <i class="bi bi-shield-lock-fill"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Identity</h5>
+                                    <p class="card-text">
+                                        Full-featured identity system for secure login and user management.
+                                    </p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>User registration & login</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Password reset & change</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Two-factor auth (email/SMS)</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Email & phone verification</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Account lockout protection</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>User banning</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Social login (Google, ...)</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>JWT & cookie auth</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>One-time passwords (OTP)</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Welcome email on signup</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Profile management</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>User management</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="core-module-icon">
+                                        <i class="bi bi-people-fill"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Administration</h5>
+                                    <p class="card-text">
+                                        Control who can do what in your SaaS with an easy role and permission system.
+                                    </p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Role-based authorization</span>
+                                        </div>
+                                           <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Role management</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Permission-based authorization</span>
+                                        </div>
+                                     
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Permission management</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Operator management</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Policy-based authorization</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="core-module-icon">
+                                        <i class="bi bi-tags-fill"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Pricing</h5>
+                                    <p class="card-text">
+                                   Set up and manage your SaaS pricing with flexible plans, discounts, and features.
+                                    </p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>One-time & recurring plans</span>
+                                        </div>
+                                            <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Plan groups</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Subscription & product types</span>
+                                        </div>
+                                    
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Plan features</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Fixed & % discounts</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Time-based discounts</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Grace periods</span>
+                                        </div>
+                                          <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Custom plan attributes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="core-module-icon">
+                                        <i class="bi bi-credit-card-fill"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Payment</h5>
+                                    <p class="card-text">Handle End-to-end payment flow with Stripe integration and order tracking.</p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Stripe checkout</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Pre-order summary</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>User auto registration</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Payment verification</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Order tracking</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Admin refunds</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Auto-renewals</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Order insights</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Order status emails</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="core-module-icon">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Subscription</h5>
+                                    <p class="card-text">Manage the full subscription lifecycle from purchase to renewal with smart automation.</p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Subscription management</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Refund support</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Order tracking</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Auto-renewal</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Manual renewal</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Email reminders</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Cancellation support</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Reports & insights</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="core-module-icon">
+                                    <i class="bi bi-robot"></i>
+                                </div>
+                                <h5 class="card-title mt-3">AI ChatBot</h5>
+                                <p class="card-text">Build AI chatbots with support for multiple providers, and full access control.</p>
+                                <div class="module-features-list">
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Multi-Provider AI</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>OpenAI, Hugging Face, ...</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Document embedding (RAG)</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Prompt management</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Token tracking</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Credits system</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Access control</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Chatbot UI client</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Chatbot widgets</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Reports & insights</span>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="core-module-icon">
+                                    <i class="bi bi-graph-up"></i>
+                                </div>
+                                <h5 class="card-title mt-3">Monitoring</h5>
+                                <p class="card-text">Monitor everything happening inside your app with real-time logs, metrics, and traces</p>
+                                <div class="module-features-list">
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Application Logs</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Traces & Metrics</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Health Checks</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>User activity tracking</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Scheduled Job Monitoring</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Statistics Dashboard</span>
+                                    </div>
+                                    <div class="feature">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>Monitoring Insights</span>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="core-module-icon">
+                                        <i class="bi bi-clock-history"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Change Tracking</h5>
+                                    <p class="card-text">Track every change in your system with version history and detailed audit logs.</p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Automatic change tracking</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Full audit trail</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Entity change history</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Detailed change items</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>User attribution</span>
+                                        </div>
+
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Entity versioning</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Snapshots of old states</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Audit reports</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="core-module-icon">
+                                        <i class="bi bi-key-fill"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Licensing</h5>
+                                    <p class="card-text">Issue and validate licenses for your software with full tracking, reminders, and offline support.</p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Software Licensing</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>License plans</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Online & offline mode</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Usage tracking</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Public/private key validation</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Expiry reminders</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Regenerate keys</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>License usage guide</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="core-module-icon">
+                                        <i class="bi bi-gear-fill"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Settings</h5>
+                                    <p class="card-text">Manage all system settings from one place with a simple, organized interface.</p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Identity settings</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Payment settings</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Email settings</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>SMS settings</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Monitoring settings</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Change tracking settings</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="coming-soon-badge-top-left">
+                                    <span class="badge bg-warning text-dark px-3 py-2">Coming Soon</span>
+                                </div>
+                                <div class="card-content">
+                                    <div class="core-module-icon">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Blogging</h5>
+                                    <p class="card-text">Create and manage blog posts to share news, updates, and articles with your users.</p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Blog post management</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Categories & tags</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>SEO-friendly</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Publish scheduling</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Draft & publish modes</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Rich text editor</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Comment support</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Insights and analytics</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="coming-soon-badge-top-left">
+                                    <span class="badge bg-warning text-dark px-3 py-2">Coming Soon</span>
+                                </div>
+                                <div class="card-content">
+                                    <div class="core-module-icon">
+                                        <i class="bi bi-envelope-paper-fill"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Email Marketing</h5>
+                                    <p class="card-text">Create, manage, and send email campaigns with ease. Engage your users with newsletters, scheduled emails, and targeted messaging.</p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Email templates</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>User groups</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Scheduled emails</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Manual emails</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Recurring emails</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Newsletter management</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Supporting Modules Section -->
+    <section class="supporting-modules-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Supporting Modules</h2>
+                <p class="section-subtitle">Infrastructure and utility modules that power your SaaS behind the scenes
+                </p>
+            </div>
+            <div class="additional-grid">
+                <div class="additional-card">
+                    <div class="card-content">
+                        <i class="bi bi-envelope-fill"></i>
+                        <h5>Email Service</h5>
+                        <p>Self-hosted & SendGrid integration</p>
+                    </div>
+                    <div class="card-button">
+                        <i class="bi bi-play-circle supporting-demo-icon" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)"></i>
+                    </div>
+                </div>
+                <div class="additional-card">
+                    <div class="card-content">
+                        <i class="bi bi-phone-fill"></i>
+                        <h5>SMS Service</h5>
+                        <p>Twilio integration for notifications</p>
+                    </div>
+                    <div class="card-button">
+                        <i class="bi bi-play-circle supporting-demo-icon" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)"></i>
+                    </div>
+                </div>
+                <div class="additional-card">
+                    <div class="card-content">
+                        <i class="bi bi-shield-check"></i>
+                        <h5>Security</h5>
+                        <p>Data encryption, rate limit, DDoS protection, and more</p>
+                    </div>
+                    <div class="card-button">
+                        <i class="bi bi-play-circle supporting-demo-icon" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)"></i>
+                    </div>
+                </div>
+                <div class="additional-card">
+                    <div class="card-content">
+                        <i class="bi bi-translate"></i>
+                        <h5>Localization</h5>
+                        <p>Multi-language support</p>
+                    </div>
+                    <div class="card-button">
+                        <i class="bi bi-play-circle supporting-demo-icon" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)"></i>
+                    </div>
+                </div>
+                <div class="additional-card">
+                    <div class="card-content">
+                        <i class="bi bi-globe"></i>
+                        <h5>Globalization</h5>
+                        <p>Multi-currency support</p>
+                    </div>
+                    <div class="card-button">
+                        <i class="bi bi-play-circle supporting-demo-icon" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)"></i>
+                    </div>
+                </div>
+                <div class="additional-card">
+                    <div class="card-content">
+                        <i class="bi bi-lightning-fill"></i>
+                        <h5>Caching</h5>
+                        <p>Performance optimization</p>
+                    </div>
+                    <div class="card-button">
+                        <i class="bi bi-play-circle supporting-demo-icon" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)"></i>
+                    </div>
+                </div>
+
+                <div class="additional-card">
+                    <div class="card-content">
+                        <i class="bi bi-calendar3"></i>
+                        <h5>Job Scheduling</h5>
+                        <p>Run scheduled jobs and monitor them</p>
+                    </div>
+                    <div class="card-button">
+                        <i class="bi bi-play-circle supporting-demo-icon" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)"></i>
+                    </div>
+                </div>
+                <div class="additional-card">
+                    <div class="card-content">
+                        <i class="bi bi-speedometer"></i>
+                        <h5>Web Optimization</h5>
+                        <p>Bundle and minify static assets</p>
+                    </div>
+                    <div class="card-button">
+                        <i class="bi bi-play-circle supporting-demo-icon" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)"></i>
+                    </div>
+                </div>
+                <div class="additional-card">
+                    <div class="card-content">
+                        <i class="bi bi-gear-wide-connected"></i>
+                        <h5>Build Automation</h5>
+                        <p>Continuous integration (CI)</p>
+                    </div>
+                    <div class="card-button">
+                        <i class="bi bi-play-circle supporting-demo-icon" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)"></i>
+                    </div>
+                </div>
+                    <div class="additional-card">
+                    <div class="card-content">
+                        <i class="bi bi-bug-fill"></i>
+                        <h5>Testing</h5>
+                        <p>Testing build blocks</p>
+                    </div>
+                    <div class="card-button">
+                        <i class="bi bi-play-circle supporting-demo-icon" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Web Client Modules Section -->
+    <section class="web-client-modules-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Web Client Modules</h2>
+                <p class="section-subtitle">Complete web interfaces and APIs ready to use</p>
+            </div>
+            <div class="web-client-modules">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="client-module-icon">
+                                        <i class="bi bi-speedometer2"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Admin Panel</h5>
+                                    <p class="card-text">Modern, customizable admin panel for managing your SaaS with full control, insights, and seamless module integration.</p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>All modules integrated</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Insights dashboards</span>
+                                        </div>
+                                      
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Multi-language support</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>LTR & RTL support</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Custom module support</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Modern UI / UX</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Fully customizable</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Data management</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn-yellow" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="client-module-icon">
+                                        <i class="bi bi-cloud-arrow-up"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">REST API</h5>
+                                    <p class="card-text">Developer-friendly REST API for accessing all system features, built with best practices, auto docs, and secure authentication.</p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>All modules integrated</span>
+                                        </div>
+                                              <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Developer-friendly</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Custom module support</span>
+                                        </div>
+                                  
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Auto-generated docs</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>API-key protection</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>JWT authentication</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn-yellow" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <div class="client-module-icon">
+                                        <i class="bi bi-globe2"></i>
+                                    </div>
+                                    <h5 class="card-title mt-3">Website & User Panel</h5>
+                                    <p class="card-text">Modern website and user panel for your SaaS with full module integration, responsive design, and complete customization.</p>
+                                    <div class="module-features-list">
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>All modules integrated</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>User dashboard</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Multi-language support</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>LTR & RTL support</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Custom module support</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Modern UI / UX</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Fully customizable</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <span>Website template</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-button">
+                                    <button class="watch-video-btn-yellow" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Fair Pricing</h2>
+            <p class="section-subtitle">One plan, all modules, unlimited applications</p>
+            <div class="pricing-card">
+                <div class="pricing-left">
+                    <div class="pricing-header">
+                        <h3>CodeBlock Dev Kit</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">20</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="billing-note">Billed yearly ($240)</p>
+                        <p class="price-hint">Calculated based on 8 hours of a developer's net salary</p>
+                    </div>
+                    <div class="pricing-guarantee">
+                        <p><strong>Revenue-Based Renewal:</strong> If your applications don't generate revenue, next
+                            year is free. <a href="#" class="learn-more">Learn more</a></p>
+                    </div>
+
+                    <button class="pricing-cta">
+                        <i class="bi bi-download"></i>
+                        Get CodeBlock Dev Kit
+                    </button>
+                </div>
+                <div class="pricing-right">
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>All modules included</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Unlimited applications</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Complete application template</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Full documentation & tutorials</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Future updates included</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>New modules included</span>
+                        </div>
+                        <div class="feature">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>AI Agent access (coming soon)</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Purchase Process Video -->
+                    <div class="purchase-process-video">
+                        <button class="video-preview-btn" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                            <i class="bi bi-play-circle-fill"></i>
+                            Watch Purchase Process (1 min)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Agent Section -->
+    <section class="ai-agent-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-3">AI Agent Coming Soon</h2>
+                    <h4 class="mb-3">Let AI Build Your SaaS for You</h4>
+                    <p class="lead mb-4">
+                        Soon you'll be able to describe your SaaS idea to our trained AI agent, and it will code your
+                        entire application using CodeBlock Dev Kit.
+                    </p>
+                    <div class="ai-features">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="ai-feature-item">
+                                    <i class="bi bi-chat-dots-fill me-2"></i>
+                                    <span>Describe your idea in plain English</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ai-feature-item">
+                                    <i class="bi bi-code-square me-2"></i>
+                                    <span>AI generates complete business logic</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ai-feature-item">
+                                    <i class="bi bi-book-fill me-2"></i>
+                                    <span>Trained on full codebase & docs</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ai-feature-item">
+                                    <i class="bi bi-rocket-takeoff-fill me-2"></i>
+                                    <span>From idea to deployed SaaS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <canvas class="ai-network-canvas" id="aiNetworkCanvas"></canvas>
+                    <div class="ai-visual">
+                        <i class="bi bi-robot" style="font-size: 8rem; opacity: 0.8;"></i>
+                        <div class="coming-soon-badge">
+                            <span class="badge bg-warning text-dark px-3 py-2">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-title">Why CodeBlock Dev Kit?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-stopwatch"></i>
+                    </div>
+                    <h3>Save Months of Development</h3>
+                    <p>Skip the repetitive work. What takes months to build and perfect is ready in minutes. Focus on
+                        your unique business logic instead of reinventing the wheel.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-award-fill"></i>
+                    </div>
+                    <h3>Production-Ready Quality</h3>
+                    <p>Built and maintained by experienced developers. No bugs, no security issues, no maintenance
+                        headaches. Just solid, reliable code you can trust.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <h3>Incredible Value</h3>
+                    <p>The yearly cost equals just 8 hours of a developer's Net salary. You get months of pre-built
+                        functionality that would cost thousands to develop from scratch. Pay once, then pay only from
+                        your startup revenue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Section -->
+    <section class="who-section">
+        <div class="container">
+            <h2 class="section-title">Who Can Benefit?</h2>
+            <div class="who-grid">
+                <div class="who-card">
+                    <div class="who-icon">
+                        <i class="bi bi-lightbulb-fill"></i>
+                    </div>
+                    <h3>Entrepreneurs</h3>
+                    <p>Have an idea but need technical execution? Get CodeBlock Dev Kit and use our upcoming AI agent (or tools like Cursor) to launch your SaaS quickly and affordably.</p>
+                </div>
+                <div class="who-card">
+                    <div class="who-icon">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h3>Backend Developers</h3>
+                    <p>Have a SaaS idea? Skip months of foundation work and jump straight to building your unique
+                        features. Launch faster and beat the competition.</p>
+                </div>
+                <div class="who-card">
+                    <div class="who-icon">
+                        <i class="bi bi-palette-fill"></i>
+                    </div>
+                    <h3>Frontend Developers</h3>
+                    <p>No backend experience? No problem. Use our REST APIs and admin panel to build amazing user
+                        experiences without touching server code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learn by Example Section -->
+    <section class="learn-example-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                                                        <div class="learn-example-card">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <div class="learn-content">
+                                    <h2 class="fw-bold mb-3">Learn by Example</h2>
+                                    <h4 class="mb-3">Watch a Complete SaaS Development Journey</h4>
+                                    <p class="lead mb-4">
+                                        See how we transform an idea into a fully functional SaaS application using CodeBlock Dev Kit. Follow the entire process from concept to deployment.
+                                    </p>
+                                    
+                                    <button class="learn-video-btn mb-3" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <i class="bi bi-play-circle-fill"></i>
+                                        Watch Complete Development Journey
+                                    </button>
+                                    <div class="learn-video-note">
+                                        <i class="bi bi-info-circle"></i>
+                                        Complete end-to-end development process - from idea to launch
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <div class="learn-visual">
+                                    <canvas class="learn-animation-canvas" id="learnAnimationCanvas"></canvas>
+                                    <div class="learn-video-preview" data-video-url="https://www.youtube.com/embed/dQw4w9WgXcQ" onclick="playVideo(this)">
+                                        <div class="video-preview-icon">
+                                            <i class="bi bi-play-fill"></i>
+                                        </div>
+                                        <div class="video-overlay">
+                                            <div class="video-duration">
+                                                <i class="bi bi-clock"></i>
+                                                <span>45 min</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack & Services -->
+    <section class="tech-services-section py-4" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h4>Technology & Services</h4>
+                <p class="text-muted mb-4">Powered by industry-leading tools and platforms you already trust</p>
+            </div>
+            <div class="simple-tech-grid">
+                <div class="simple-tech-item">
+                    <i class="bi bi-microsoft text-primary"></i>
+                    <span>.NET</span>
+                </div>
+                <div class="simple-tech-item">
+                    <i class="bi bi-code-slash text-info"></i>
+                    <span>C#</span>
+                </div>
+                <div class="simple-tech-item">
+                    <i class="bi bi-lightning-fill text-warning"></i>
+                    <span>Blazor</span>
+                </div>
+                <div class="simple-tech-item">
+                    <i class="bi bi-bootstrap-fill text-primary"></i>
+                    <span>Bootstrap</span>
+                </div>
+                <div class="simple-tech-item">
+                    <i class="bi bi-box-seam text-secondary"></i>
+                    <span>NuGet</span>
+                </div>
+                <div class="simple-tech-item">
+                    <i class="bi bi-database-fill text-success"></i>
+                    <span>MongoDB</span>
+                </div>
+                <div class="simple-tech-item">
+                    <i class="bi bi-vector-pen text-info"></i>
+                    <span>QdrantDB</span>
+                </div>
+                <div class="simple-tech-item">
+                    <i class="bi bi-credit-card text-primary"></i>
+                    <span>Stripe</span>
+                </div>
+                <div class="simple-tech-item">
+                    <i class="bi bi-telephone-fill text-success"></i>
+                    <span>Twilio</span>
+                </div>
+                <div class="simple-tech-item">
+                    <i class="bi bi-envelope-fill text-danger"></i>
+                    <span>SendGrid</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://x.com/codeblock_dev"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.linkedin.com/company/codeblock-dev"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/CodeBlock-Dev"><i class="bi bi-github"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CodeBlock Dev. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <span class="video-close">&times;</span>
+            <div class="video-container">
+                <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>

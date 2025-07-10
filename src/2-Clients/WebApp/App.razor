@@ -1,0 +1,22 @@
+﻿
+
+<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
+        <Found Context="routeData">
+            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+                <Authorizing>
+                    <Error ShowIndexLink=false Title="در حال احراز هویت ..." Message="شما به تازگی به سیستم وارد شدی، کمی زمان نیاز داریم که این موضوع رو بررسی کنیم" />
+                </Authorizing>
+                <NotAuthorized>
+                    <RedirectToLogin />
+                </NotAuthorized>
+            </AuthorizeRouteView>
+        </Found>
+        <NotFound>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <Error Title="صفحه ی مورد نظر پیدا نشد!" Message="متاسفیم! صفحه ای که دنبالش بودی پیدا نشد." />
+            </LayoutView>
+        </NotFound>
+    </Router>
+</CascadingAuthenticationState>
+

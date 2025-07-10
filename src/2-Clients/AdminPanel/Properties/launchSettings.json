@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "AdminPanel": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "",
+      "applicationUrl": "http://localhost:5141",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Licensing__PrivateKeyFilePath": "C:/Users/Hamed Shirbandi/OneDrive/Documents/Startups/CodeBlock-Dev/keys/codeblock.dev.license.private.key"
+
+      }
+    }
+  }
+}

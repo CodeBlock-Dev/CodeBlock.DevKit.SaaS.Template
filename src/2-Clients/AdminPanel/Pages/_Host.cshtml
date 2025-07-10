@@ -1,0 +1,31 @@
+﻿@page "/"
+@namespace CanBeYours.AdminPanel.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using CodeBlock.DevKit.Web.Blazor.Server.Components
+@using CodeBlock.DevKit.Web.Localization
+@using Microsoft.AspNetCore.Components.Web
+@inject LocalizationSettings LocalizationSettings
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html dir="@LocalizationSettings.GetCurrentLanguageDirection()" lang="@LocalizationSettings.GetCurrentLanguageCode()" style="font-family: @LocalizationSettings.GetCurrentLanguageFont() !important">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+    <base href="~/" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body style="font-family: @LocalizationSettings.GetCurrentLanguageFont()!important;">
+
+    <component type="typeof(App)" render-mode="ServerPrerendered" />
+
+    <component type="typeof(ConnectionState)" render-mode="Static" />
+
+    <script src="js/cb.admin.panel.spa.min.js" asp-append-version="true"></script>
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>

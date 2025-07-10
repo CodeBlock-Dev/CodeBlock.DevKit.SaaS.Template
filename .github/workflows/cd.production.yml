@@ -1,0 +1,188 @@
+name: Deploy to Production
+
+on:
+  workflow_dispatch: # Trigger for manual deployment
+
+jobs:
+  # Separate job to deploy Web project
+  deploy_web_production:
+    runs-on: self-hosted
+    environment: production
+    steps:
+      - name: Stop IIS App Pool for Web project
+        run: |
+          $appPoolName = "Website"  # Replace with the name of your App Pool
+          Write-Host "Stopping IIS App Pool: $appPoolName"
+          Stop-WebAppPool -Name $appPoolName
+
+          # Wait for the app pool to stop
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Stopped") {
+                  Write-Host "App Pool $appPoolName has successfully stopped."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still stopping. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+          if ($appPoolStatus -ne "Stopped") {
+              throw "App Pool $appPoolName did not stop within the expected time."
+          }
+
+      - name: Deploy Web project to production
+        run: |
+          # Path to the Web.zip file created in the build job
+          $sourcePath = './output/Web.zip'
+          $destinationPath = 'C:\Hosting\CanBeYours\Production\Website\Web.zip'
+          Copy-Item -Path $sourcePath -Destination $destinationPath
+          Expand-Archive -Path $destinationPath -DestinationPath 'C:\Hosting\CanBeYours\Production\Website' -Force
+
+      - name: Start IIS App Pool for Web project
+        run: |
+          $appPoolName = "Website"  # Replace with the name of your App Pool
+          Write-Host "Starting IIS App Pool: $appPoolName"
+          Start-WebAppPool -Name $appPoolName
+
+          # Wait for the app pool to start
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Started") {
+                  Write-Host "App Pool $appPoolName has successfully started."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still starting. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+          if ($appPoolStatus -ne "Started") {
+              throw "App Pool $appPoolName did not start within the expected time."
+          }
+
+  # Separate job to deploy AdminPanel project
+  deploy_web_admin_production:
+    runs-on: self-hosted
+    environment: production
+    steps:
+      - name: Stop IIS App Pool for AdminPanel project
+        run: |
+          $appPoolName = "Admin"  # Replace with the name of your App Pool
+          Write-Host "Stopping IIS App Pool: $appPoolName"
+          Stop-WebAppPool -Name $appPoolName
+
+          # Wait for the app pool to stop
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Stopped") {
+                  Write-Host "App Pool $appPoolName has successfully stopped."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still stopping. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+          if ($appPoolStatus -ne "Stopped") {
+              throw "App Pool $appPoolName did not stop within the expected time."
+          }
+
+      - name: Deploy AdminPanel project to Production
+        run: |
+          # Path to the AdminPanel.zip file created in the build job
+          $sourcePath = './output/AdminPanel.zip'
+          $destinationPath = 'C:\Hosting\CanBeYours\Production\Admin\AdminPanel.zip'
+          Copy-Item -Path $sourcePath -Destination $destinationPath
+          Expand-Archive -Path $destinationPath -DestinationPath 'C:\Hosting\CanBeYours\Production\Admin' -Force
+
+      - name: Start IIS App Pool for AdminPanel project
+        run: |
+          $appPoolName = "Admin"  # Replace with the name of your App Pool
+          Write-Host "Starting IIS App Pool: $appPoolName"
+          Start-WebAppPool -Name $appPoolName
+
+          # Wait for the app pool to start
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Started") {
+                  Write-Host "App Pool $appPoolName has successfully started."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still starting. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+          if ($appPoolStatus -ne "Started") {
+              throw "App Pool $appPoolName did not start within the expected time."
+          }
+
+  # Separate job to deploy AdminPanel project
+  deploy_web_api_production:
+    runs-on: self-hosted
+    environment: production
+    steps:
+      - name: Stop IIS App Pool for Api project
+        run: |
+          $appPoolName = "Api"  # Replace with the name of your App Pool
+          Write-Host "Stopping IIS App Pool: $appPoolName"
+          Stop-WebAppPool -Name $appPoolName
+
+          # Wait for the app pool to stop
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Stopped") {
+                  Write-Host "App Pool $appPoolName has successfully stopped."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still stopping. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+          if ($appPoolStatus -ne "Stopped") {
+              throw "App Pool $appPoolName did not stop within the expected time."
+          }
+
+      - name: Deploy Api project to Production
+        run: |
+          # Path to the Api.zip file created in the build job
+          $sourcePath = './output/Api.zip'
+          $destinationPath = 'C:\Hosting\CanBeYours\Production\Api\Api.zip'
+          Copy-Item -Path $sourcePath -Destination $destinationPath
+          Expand-Archive -Path $destinationPath -DestinationPath 'C:\Hosting\CanBeYours\Production\Api' -Force
+
+      - name: Start IIS App Pool for Api project
+        run: |
+          $appPoolName = "Api"  # Replace with the name of your App Pool
+          Write-Host "Starting IIS App Pool: $appPoolName"
+          Start-WebAppPool -Name $appPoolName
+
+          # Wait for the app pool to start
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Started") {
+                  Write-Host "App Pool $appPoolName has successfully started."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still starting. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+          if ($appPoolStatus -ne "Started") {
+              throw "App Pool $appPoolName did not start within the expected time."
+          }
