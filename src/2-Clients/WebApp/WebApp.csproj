@@ -23,4 +23,10 @@
 			<DependentUpon>WebAppResource.resx</DependentUpon>
 		</Compile>
 	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Update="Resources\WebAppResource.resx">
+	    <Generator>PublicResXFileCodeGenerator</Generator>
+	    <LastGenOutput>WebAppResource.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
 </Project>
