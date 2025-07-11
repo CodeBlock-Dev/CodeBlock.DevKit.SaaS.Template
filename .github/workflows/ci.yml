@@ -1,3 +1,7 @@
+# This workflow is configured for Windows deployment by default.
+# If you're deploying to a different platform (Linux, Cloud, etc.),
+# you'll need to modify this configuration accordingly.
+
 name: Build and publish
 
 on:
@@ -7,6 +11,7 @@ on:
 
 jobs:
   build:
+    # Using Windows runner by default. Change this for different platforms
     runs-on: self-hosted
     steps:
       - name: Check out code
@@ -48,3 +53,10 @@ jobs:
       - name: Create Api.zip
         run: |
           Compress-Archive -Path ./output/Api/* -DestinationPath ./output/Api.zip
+
+# Note: This workflow assumes Windows-based deployment.
+# For other platforms, you might need to:
+# 1. Change the runner (e.g., ubuntu-latest for Linux)
+# 2. Modify the build commands (e.g., use bash scripts instead of PowerShell)
+# 3. Adjust the artifact packaging (e.g., use tar for Linux)
+# 4. Update the deployment steps in your CD workflow

@@ -1,0 +1,269 @@
+name: Deploy to Windows IIS
+
+# This workflow deploys the application to a Windows IIS server
+# Prerequisites:
+# 1. A self-hosted GitHub runner installed on your Windows server
+# 2. IIS installed with the following app pools configured:
+#    - One for WebApp
+#    - One for AdminPanel
+#    - One for API
+# 3. The following secrets configured in your GitHub repository:
+#    - WEBAPP_APP_POOL: Name of the IIS application pool for WebApp
+#    - WEBAPP_SITE_PATH: Physical path where WebApp will be deployed
+#    - ADMIN_APP_POOL: Name of the IIS application pool for AdminPanel
+#    - ADMIN_SITE_PATH: Physical path where AdminPanel will be deployed
+#    - API_APP_POOL: Name of the IIS application pool for API
+#    - API_SITE_PATH: Physical path where API will be deployed
+
+on:
+  workflow_dispatch: # Manual trigger for production deployment
+    inputs:
+      confirm_deployment:
+        description: 'Are you sure you want to deploy to production?'
+        required: true
+        type: boolean
+
+jobs:
+  deploy_webapp:
+    runs-on: self-hosted # Requires a Windows self-hosted runner
+    environment: production
+    steps:
+      - name: Download WebApp artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: webapp
+          path: ./webapp
+
+      - name: Stop IIS App Pool
+        shell: pwsh
+        run: |
+          $appPoolName = "${{ secrets.WEBAPP_APP_POOL }}"
+          Write-Host "Stopping IIS App Pool: $appPoolName"
+          Stop-WebAppPool -Name $appPoolName
+          
+          # Wait for the app pool to stop (max 20 seconds)
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Stopped") {
+                  Write-Host "App Pool $appPoolName has successfully stopped."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still stopping. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+
+      - name: Backup existing deployment
+        shell: pwsh
+        run: |
+          $deployPath = "${{ secrets.WEBAPP_SITE_PATH }}"
+          if (Test-Path $deployPath) {
+              $timestamp = Get-Date -Format "yyyyMMddHHmmss"
+              $backupPath = "${deployPath}_backup_${timestamp}"
+              Move-Item -Path $deployPath -Destination $backupPath -Force
+              Write-Host "Created backup at: $backupPath"
+          }
+
+      - name: Deploy WebApp
+        shell: pwsh
+        run: |
+          $deployPath = "${{ secrets.WEBAPP_SITE_PATH }}"
+          New-Item -ItemType Directory -Force -Path $deployPath
+          Expand-Archive -Path ./webapp/WebApp.zip -DestinationPath $deployPath -Force
+
+      - name: Start IIS App Pool
+        shell: pwsh
+        run: |
+          $appPoolName = "${{ secrets.WEBAPP_APP_POOL }}"
+          Start-WebAppPool -Name $appPoolName
+          
+          # Wait for the app pool to start (max 20 seconds)
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Started") {
+                  Write-Host "App Pool $appPoolName has successfully started."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still starting. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+
+  deploy_admin:
+    runs-on: self-hosted
+    environment: production
+    steps:
+      - name: Download AdminPanel artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: adminpanel
+          path: ./adminpanel
+
+      - name: Stop IIS App Pool
+        shell: pwsh
+        run: |
+          $appPoolName = "${{ secrets.ADMIN_APP_POOL }}"
+          Write-Host "Stopping IIS App Pool: $appPoolName"
+          Stop-WebAppPool -Name $appPoolName
+          
+          # Wait for the app pool to stop (max 20 seconds)
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Stopped") {
+                  Write-Host "App Pool $appPoolName has successfully stopped."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still stopping. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+
+      - name: Backup existing deployment
+        shell: pwsh
+        run: |
+          $deployPath = "${{ secrets.ADMIN_SITE_PATH }}"
+          if (Test-Path $deployPath) {
+              $timestamp = Get-Date -Format "yyyyMMddHHmmss"
+              $backupPath = "${deployPath}_backup_${timestamp}"
+              Move-Item -Path $deployPath -Destination $backupPath -Force
+              Write-Host "Created backup at: $backupPath"
+          }
+
+      - name: Deploy AdminPanel
+        shell: pwsh
+        run: |
+          $deployPath = "${{ secrets.ADMIN_SITE_PATH }}"
+          New-Item -ItemType Directory -Force -Path $deployPath
+          Expand-Archive -Path ./adminpanel/AdminPanel.zip -DestinationPath $deployPath -Force
+
+      - name: Start IIS App Pool
+        shell: pwsh
+        run: |
+          $appPoolName = "${{ secrets.ADMIN_APP_POOL }}"
+          Start-WebAppPool -Name $appPoolName
+          
+          # Wait for the app pool to start (max 20 seconds)
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Started") {
+                  Write-Host "App Pool $appPoolName has successfully started."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still starting. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+
+  deploy_api:
+    runs-on: self-hosted
+    environment: production
+    steps:
+      - name: Download API artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: api
+          path: ./api
+
+      - name: Stop IIS App Pool
+        shell: pwsh
+        run: |
+          $appPoolName = "${{ secrets.API_APP_POOL }}"
+          Write-Host "Stopping IIS App Pool: $appPoolName"
+          Stop-WebAppPool -Name $appPoolName
+          
+          # Wait for the app pool to stop (max 20 seconds)
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Stopped") {
+                  Write-Host "App Pool $appPoolName has successfully stopped."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still stopping. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+
+      - name: Backup existing deployment
+        shell: pwsh
+        run: |
+          $deployPath = "${{ secrets.API_SITE_PATH }}"
+          if (Test-Path $deployPath) {
+              $timestamp = Get-Date -Format "yyyyMMddHHmmss"
+              $backupPath = "${deployPath}_backup_${timestamp}"
+              Move-Item -Path $deployPath -Destination $backupPath -Force
+              Write-Host "Created backup at: $backupPath"
+          }
+
+      - name: Deploy API
+        shell: pwsh
+        run: |
+          $deployPath = "${{ secrets.API_SITE_PATH }}"
+          New-Item -ItemType Directory -Force -Path $deployPath
+          Expand-Archive -Path ./api/Api.zip -DestinationPath $deployPath -Force
+
+      - name: Start IIS App Pool
+        shell: pwsh
+        run: |
+          $appPoolName = "${{ secrets.API_APP_POOL }}"
+          Start-WebAppPool -Name $appPoolName
+          
+          # Wait for the app pool to start (max 20 seconds)
+          $maxRetries = 10
+          $retryInterval = 2
+          $retries = 0
+          while ($retries -lt $maxRetries) {
+              $appPoolStatus = (Get-WebAppPoolState -Name $appPoolName).Value
+              if ($appPoolStatus -eq "Started") {
+                  Write-Host "App Pool $appPoolName has successfully started."
+                  break
+              }
+              Write-Host "App Pool $appPoolName is still starting. Retrying in $retryInterval seconds..."
+              Start-Sleep -Seconds $retryInterval
+              $retries++
+          }
+
+# Setup instructions for users:
+# 1. Install a GitHub self-hosted runner on your Windows server
+#    - Go to repo Settings > Actions > Runners
+#    - Click "New self-hosted runner" and follow the instructions
+#
+# 2. Configure IIS on your Windows server:
+#    - Create three application pools (for WebApp, AdminPanel, and API)
+#    - Create three websites/applications in IIS
+#    - Note down the physical paths and app pool names
+#
+# 3. Add the following secrets to your GitHub repository:
+#    - WEBAPP_APP_POOL: The name of your WebApp's application pool
+#    - WEBAPP_SITE_PATH: The physical path where WebApp files should be deployed
+#    - ADMIN_APP_POOL: The name of your AdminPanel's application pool
+#    - ADMIN_SITE_PATH: The physical path where AdminPanel files should be deployed
+#    - API_APP_POOL: The name of your API's application pool
+#    - API_SITE_PATH: The physical path where API files should be deployed
+#
+# 4. The workflow will:
+#    - Run on the self-hosted runner
+#    - Stop the appropriate app pool
+#    - Backup existing deployment
+#    - Deploy new files
+#    - Start the app pool
+#    - Monitor app pool status
+#
+# Note: This workflow assumes your build process creates zip files named:
+# - WebApp.zip
+# - AdminPanel.zip
+# - Api.zip
