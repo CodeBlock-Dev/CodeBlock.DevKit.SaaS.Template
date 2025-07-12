@@ -11,9 +11,9 @@ namespace CanBeYours.Infrastructure.DbMigrations;
 
 internal class RenameSummaryToDescription : IDbMigration
 {
-    private readonly DemoThingsDbContext _dbContext;
+    private readonly MainDbContext _dbContext;
 
-    public RenameSummaryToDescription(DemoThingsDbContext dbContext)
+    public RenameSummaryToDescription(MainDbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -24,7 +24,7 @@ internal class RenameSummaryToDescription : IDbMigration
 
     public void Up()
     {
-        var settings = _dbContext.GetCollection(nameof(DemoThingsDbContext.DemoThings));
+        var settings = _dbContext.GetCollection(nameof(MainDbContext.DemoThings));
         var filter = Builders<BsonDocument>.Filter.Exists("Summary");
 
         var update = Builders<BsonDocument>.Update.Rename("Summary", nameof(DemoThing.Description));

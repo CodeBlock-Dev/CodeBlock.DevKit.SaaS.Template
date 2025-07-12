@@ -9,12 +9,12 @@ internal static class DemoThingsDbSeeder
     public static void SeedSampleDemoThings(this IServiceProvider serviceProvider)
     {
         using var serviceScope = serviceProvider.CreateScope();
-        var dbContext = serviceScope.ServiceProvider.GetService<DemoThingsDbContext>();
+        var dbContext = serviceScope.ServiceProvider.GetService<MainDbContext>();
 
         serviceScope.SeedDemoThings(dbContext);
     }
 
-    private static void SeedDemoThings(this IServiceScope serviceScope, DemoThingsDbContext dbContext)
+    private static void SeedDemoThings(this IServiceScope serviceScope, MainDbContext dbContext)
     {
         if (dbContext.DemoThings.Find(_ => true).Any())
             return;

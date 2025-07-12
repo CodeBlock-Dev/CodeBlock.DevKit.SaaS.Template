@@ -9,7 +9,7 @@ internal static class DemoThingsDbMigrator
     public static void MigrateDatabes(this IServiceProvider serviceProvider)
     {
         using var serviceScope = serviceProvider.CreateScope();
-        var dbContext = serviceScope.ServiceProvider.GetService<DemoThingsDbContext>();
+        var dbContext = serviceScope.ServiceProvider.GetService<MainDbContext>();
         var dbMigrationRunner = serviceScope.ServiceProvider.GetService<IDbMigrationRunner>();
 
         var migrations = new List<IDbMigration>

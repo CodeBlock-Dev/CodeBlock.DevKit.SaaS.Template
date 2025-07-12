@@ -4,9 +4,9 @@ using MongoDB.Driver;
 
 namespace CanBeYours.Infrastructure.DbContext;
 
-internal class DemoThingsDbContext : MongoDbContext
+internal class MainDbContext : MongoDbContext
 {
-    public DemoThingsDbContext(MongoDbSettings mongoDbSettings)
+    public MainDbContext(MongoDbSettings mongoDbSettings)
         : base(mongoDbSettings) { }
 
     public IMongoCollection<DemoThing> DemoThings { get; private set; }
