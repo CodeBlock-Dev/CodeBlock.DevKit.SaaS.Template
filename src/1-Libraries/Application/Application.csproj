@@ -8,6 +8,6 @@
     <PackageReference Include="CodeBlock.DevKit.Application" Version="1.3.4" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Domain\Core.csproj" />
   </ItemGroup>
 </Project>
