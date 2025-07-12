@@ -64,7 +64,7 @@ $adminEmail = Get-UserInput -prompt "Enter admin user email" -default $defaultSe
 $adminPassword = Get-UserInput -prompt "Enter admin user password" -default $defaultSettings.Identity.AdminUser.Password
 
 # Generate random keys
-$encryptionKey = Get-RandomKey -length 32
+$encryptionKey = Get-RandomKey -length 24  # Fixed length for EncryptionSymmetricKey
 $apiKey = Get-RandomKey -length 32
 $jwtKey = Get-RandomKey -length 32
 
@@ -78,19 +78,28 @@ try {
         $content = Get-Content $_.FullName -Raw
         
         # Update values using string replacement to preserve JSON structure
-        $content = $content -replace '"Name":\s*"[^"]*"', "`"Name`": `"$appName`""
+        # Only replace the application name in specific places
+        $content = $content -replace '"Application":\s*{\s*"Default":\s*{\s*"Name":\s*"[^"]*"', "`"Application`": { `"Default`": { `"Name`": `"$appName`""
         $content = $content -replace '"Url":\s*"[^"]*"', "`"Url`": `"$appUrl`""
-        $content = $content -replace '"Title":\s*"[^"]*"', "`"Title`": `"$appName`""
-        $content = $content -replace '"Issuer":\s*"[^"]*"', "`"Issuer`": `"$appUrl`""
+        
+        # Preserve suffixes when replacing CanBeYours
+        $content = $content -replace '"CookieName":\s*"CanBeYours\.([^"]*)"', "`"CookieName`": `"$solutionName.`$1`""
+        $content = $content -replace '"Name":\s*"CanBeYours\.([^"]*)"', "`"Name`": `"$solutionName.`$1`""
+        $content = $content -replace '"DatabaseName":\s*"CanBeYours_([^"]*)"', "`"DatabaseName`": `"$solutionName_`$1`""
+        $content = $content -replace '"DatabaseName":\s*"CanBeYours"', "`"DatabaseName`": `"$solutionName`""
+        
+        # Update admin user details
         $content = $content -replace '"Mobile":\s*"[^"]*"', "`"Mobile`": `"$adminMobile`""
         $content = $content -replace '"Email":\s*"[^"]*"', "`"Email`": `"$adminEmail`""
         $content = $content -replace '"Password":\s*"[^"]*"', "`"Password`": `"$adminPassword`""
+        
+        # Update security keys
         $content = $content -replace '"EncryptionSymmetricKey":\s*"[^"]*"', "`"EncryptionSymmetricKey`": `"$encryptionKey`""
         $content = $content -replace '"ApiKey":\s*"[^"]*"', "`"ApiKey`": `"$apiKey`""
         $content = $content -replace '"Key":\s*"[^"]*"', "`"Key`": `"$jwtKey`""
-        $content = $content -replace '"DatabaseName":\s*"[^"]*"', "`"DatabaseName`": `"$solutionName`""
-        $content = $content -replace '"Name":\s*"CanBeYours\.[^"]*"', "`"Name`": `"$solutionName.$1`""
-        $content = $content -replace '"CookieName":\s*"CanBeYours\.[^"]*"', "`"CookieName`": `"$solutionName.$1`""
+        
+        # Update Swagger title preserving the suffix
+        $content = $content -replace '"Title":\s*"Can Be Yours([^"]*)"', "`"Title`": `"$appName`$1`""
         
         Set-Content $_.FullName $content
     }
