@@ -1,6 +1,6 @@
 #!/usr/bin/env pwsh
 # Cross-platform setup script for SaaS template. Run with: pwsh setup.ps1
-# This script updates all relevant files for your new solution name and settings.
+# On Windows, double-click setup.bat. On Linux/macOS, double-click setup.sh (or run chmod +x setup.ps1 and ./setup.ps1)
 
 # Function to generate random string
 function Get-RandomKey {
@@ -36,8 +36,8 @@ function Get-UserInput {
 }
 
 # Welcome message
-Write-Host "Welcome to the SaaS Template Setup Script!"
-Write-Host "This script will help you configure your new SaaS application."
+Write-Host "Welcome to CodeBlock Dev Kit - SaaS Template Setup!"
+Write-Host "This script will help you configure your new SaaS application powered by CodeBlock Dev Kit."
 Write-Host "Press Ctrl+C at any time to cancel the setup.`n"
 
 # Get solution name (required)
@@ -72,19 +72,12 @@ Get-ChildItem -Recurse -Filter "*.csproj" | ForEach-Object {
     $content | Set-Content $_.FullName
 }
 
-# Update all .cs files
-Write-Host "Updating C# files..."
-Get-ChildItem -Recurse -Filter "*.cs" | ForEach-Object {
+# Update all .cs, .razor, and .cshtml files
+Write-Host "Updating C#, Razor, and Blazor files..."
+Get-ChildItem -Recurse -Include "*.cs","*.razor","*.cshtml" | ForEach-Object {
     $content = Get-Content $_.FullName
-    $content = $content -replace "namespace CanBeYours\." , "namespace $solutionName."
-    $content = $content -replace "using CanBeYours\." , "using $solutionName."
-    $content | Set-Content $_.FullName
-}
-
-# Update all .razor and .cshtml files
-Write-Host "Updating Razor and Blazor files..."
-Get-ChildItem -Recurse -Include *.razor,*.cshtml | ForEach-Object {
-    $content = Get-Content $_.FullName
+    $content = $content -replace "namespace CanBeYours\.", "namespace $solutionName."
+    $content = $content -replace "using CanBeYours\.", "using $solutionName."
     $content = $content -replace "@using CanBeYours\.", "@using $solutionName."
     $content = $content -replace "@namespace CanBeYours\.", "@namespace $solutionName."
     $content | Set-Content $_.FullName
@@ -93,38 +86,81 @@ Get-ChildItem -Recurse -Include *.razor,*.cshtml | ForEach-Object {
 # Update appsettings.json files
 Write-Host "Updating appsettings.json files..."
 Get-ChildItem -Recurse -Filter "appsettings.json" | ForEach-Object {
-    $json = Get-Content $_.FullName | ConvertFrom-Json -Depth 100
+    $jsonContent = Get-Content $_.FullName -Raw
     
-    # Update application settings
-    $json.Application.Default.Name = $appName
-    $json.Application.Default.Url = $appUrl
-    $json.Swagger.Title = $appName
+    # Convert string to JSON object (compatible with older PowerShell versions)
+    $json = $jsonContent | ConvertFrom-Json
     
-    # Update admin user settings
-    $json.Identity.AdminUser.Mobile = $adminMobile
-    $json.Identity.AdminUser.Email = $adminEmail
-    $json.Identity.AdminUser.Password = $adminPassword
+    # Create a template if the JSON is empty
+    if ($null -eq $json) {
+        $json = @{
+            Application = @{
+                Default = @{
+                    Name = ""
+                    Url = ""
+                }
+            }
+            Swagger = @{
+                Title = ""
+            }
+            Identity = @{
+                AdminUser = @{
+                    Mobile = ""
+                    Email = ""
+                    Password = ""
+                }
+            }
+            Security = @{
+                EncryptionSymmetricKey = ""
+            }
+            ApiKey = ""
+            JwtAuthentication = @{
+                Key = ""
+                Issuer = ""
+            }
+            Hangfire = @{
+                MongoStorage = "mongodb://localhost:27017/CanBeYours-Hangfire"
+            }
+            Monitoring = @{
+                Service = @{
+                    Name = "CanBeYours-Monitoring"
+                }
+            }
+            CookieAuthentication = @{
+                CookieName = "CanBeYours-Auth"
+            }
+            Localization = @{
+                CookieName = "CanBeYours-Language"
+            }
+            MongoDB = @{
+                DatabaseName = "CanBeYours-DB"
+            }
+        }
+    }
+
+    # Update values using string replacement to preserve the JSON structure
+    $jsonContent = $jsonContent -replace '"Name":\s*"[^"]*"', "`"Name`": `"$appName`""
+    $jsonContent = $jsonContent -replace '"Url":\s*"[^"]*"', "`"Url`": `"$appUrl`""
+    $jsonContent = $jsonContent -replace '"Title":\s*"[^"]*"', "`"Title`": `"$appName`""
+    $jsonContent = $jsonContent -replace '"Mobile":\s*"[^"]*"', "`"Mobile`": `"$adminMobile`""
+    $jsonContent = $jsonContent -replace '"Email":\s*"[^"]*"', "`"Email`": `"$adminEmail`""
+    $jsonContent = $jsonContent -replace '"Password":\s*"[^"]*"', "`"Password`": `"$adminPassword`""
+    $jsonContent = $jsonContent -replace '"EncryptionSymmetricKey":\s*"[^"]*"', "`"EncryptionSymmetricKey`": `"$encryptionKey`""
+    $jsonContent = $jsonContent -replace '"ApiKey":\s*"[^"]*"', "`"ApiKey`": `"$apiKey`""
+    $jsonContent = $jsonContent -replace '"Key":\s*"[^"]*"', "`"Key`": `"$jwtKey`""
+    $jsonContent = $jsonContent -replace '"Issuer":\s*"[^"]*"', "`"Issuer`": `"$appUrl`""
     
-    # Update security keys
-    $json.Security.EncryptionSymmetricKey = $encryptionKey
-    $json.ApiKey = $apiKey
-    $json.JwtAuthentication.Key = $jwtKey
-    $json.JwtAuthentication.Issuer = $appUrl
+    # Replace solution name in various settings
+    $jsonContent = $jsonContent -replace "CanBeYours-", "$solutionName-"
     
-    # Update solution name based settings
-    $json.Hangfire.MongoStorage = $json.Hangfire.MongoStorage -replace "CanBeYours", $solutionName
-    $json.Monitoring.Service.Name = $json.Monitoring.Service.Name -replace "CanBeYours", $solutionName
-    $json.CookieAuthentication.CookieName = $json.CookieAuthentication.CookieName -replace "CanBeYours", $solutionName
-    $json.Localization.CookieName = $json.Localization.CookieName -replace "CanBeYours", $solutionName
-    $json.MongoDB.DatabaseName = $json.MongoDB.DatabaseName -replace "CanBeYours", $solutionName
-    
-    $json | ConvertTo-Json -Depth 100 | Set-Content $_.FullName
+    # Save the updated JSON
+    $jsonContent | Set-Content $_.FullName -NoNewline
 }
 
 Write-Host "`nSetup completed successfully!"
-Write-Host "Your SaaS application has been configured with the following settings:"
+Write-Host "Your CodeBlock Dev Kit SaaS application has been configured with the following settings:"
 Write-Host "Solution Name: $solutionName"
 Write-Host "Application Name: $appName"
 Write-Host "Application URL: $appUrl"
 Write-Host "Admin Email: $adminEmail"
-Write-Host "`nYou can now open the solution in your IDE and start developing!" 
+Write-Host "`nYou can now open the solution in your IDE and start developing with CodeBlock Dev Kit!" 
