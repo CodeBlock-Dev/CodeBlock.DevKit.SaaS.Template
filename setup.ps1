@@ -91,9 +91,17 @@ Get-ChildItem -Recurse -Filter "appsettings.json" | ForEach-Object {
 # Update solution file
 Write-Host "Updating solution file..."
 Get-ChildItem -Filter "*.sln" | ForEach-Object {
+    $oldName = $_.Name
+    $newName = $_.Name -replace "CanBeYours", $solutionName
     $content = Get-Content $_.FullName
     $content = $content -replace "CanBeYours", $solutionName
     Set-Content $_.FullName $content
+    
+    # Rename the solution file if name changed
+    if ($oldName -ne $newName) {
+        Write-Host "Renaming solution file from $oldName to $newName"
+        Rename-Item -Path $_.FullName -NewName $newName -Force
+    }
 }
 
 # Update all project files
