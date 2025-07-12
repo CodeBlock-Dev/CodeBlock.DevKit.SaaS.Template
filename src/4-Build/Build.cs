@@ -1,6 +1,3 @@
-// Copyright (c) CodeBlock.Dev. All rights reserved.
-// For more information visit https://codeblock.dev
-
 using CodeBlock.DevKit.Build;
 
 namespace Build;
