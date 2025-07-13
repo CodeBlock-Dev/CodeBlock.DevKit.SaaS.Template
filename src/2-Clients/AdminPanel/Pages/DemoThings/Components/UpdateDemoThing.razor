@@ -1,0 +1,72 @@
+@using CanBeYours.Application.Dtos
+@using CanBeYours.Application.Services.DemoThings
+@using CanBeYours.AdminPanel.Resources
+@using CodeBlock.DevKit.Web.Blazor.Components.Dialogs
+@using CodeBlock.DevKit.Web.Blazor.Components.Forms
+@using Microsoft.Extensions.Localization
+
+@inject IStringLocalizer<AdminPanelResource> L
+@inject IDemoThingService DemoThingService
+
+<EditForm Model="Input" OnValidSubmit="HandleUpdateDemoThing">
+    <DataAnnotationsValidator />
+
+    <div class="form-group p-2">
+        <label class="f-sm text-secondary">
+            @AdminPanelLocalizer[AdminPanelResource.Name]:
+        </label>
+        <InputText @bind-Value="Input.Name" class="form-control f-sm"></InputText>
+        <ValidationMessage For="()=>Input.Name" class="text-danger f-sm"></ValidationMessage>
+    </div>
+
+    <div class="form-group p-2">
+        <label class="f-sm text-secondary">
+            @AdminPanelLocalizer[AdminPanelResource.Description]:
+        </label>
+        <InputTextArea @bind-Value="Input.Description" class="form-control f-sm" rows="3"></InputTextArea>
+        <ValidationMessage For="()=>Input.Description" class="text-danger f-sm"></ValidationMessage>
+    </div>
+
+    <div class="form-group p-2">
+        <button type="submit" class="btn f-sm btn-primary mr-1">
+            @CoreLocalizer[CoreResource.Update]
+        </button>
+    </div>
+</EditForm>
+
+@code {
+    [Parameter]
+    public string DemoThingId { get; set; }
+
+    protected UpdateDemoThingDto Input = new();
+
+    [CascadingParameter]
+    protected BlazoredModalInstance ModalInstance { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetDemoThing();
+    }
+
+    protected virtual async Task GetDemoThing()
+    {
+        var result = await DemoThingService.GetDemoThing(DemoThingId);
+        if (!result.IsSuccess)
+        {
+            result.ShowErrorToast(ToastService);
+            return;
+        }
+
+        Input = new UpdateDemoThingDto
+        {
+            Name = result.Value.Name,
+            Description = result.Value.Description
+        };
+    }
+
+    protected virtual async Task HandleUpdateDemoThing()
+    {
+        var result = await DemoThingService.UpdateDemoThing(DemoThingId, Input);
+        result.ShowToast(ToastService).PublishMessage(MessageService, Constants.DEMOTHING_UPDATED).CloseModal(ModalInstance);
+    }
+} 

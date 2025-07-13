@@ -8,7 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CanBeYours.AdminPanel.Resources {    
+namespace CanBeYours.AdminPanel.Resources {
+    using System;
+    
     
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -59,11 +61,11 @@ namespace CanBeYours.AdminPanel.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Custom.
+        ///   Looks up a localized string similar to Demo Things.
         /// </summary>
-        public static string Nav_Menu_Custom {
+        public static string Nav_Menu_DemoThings {
             get {
-                return ResourceManager.GetString("Nav_Menu_Custom", resourceCulture);
+                return ResourceManager.GetString("Nav_Menu_DemoThings", resourceCulture);
             }
         }
     }

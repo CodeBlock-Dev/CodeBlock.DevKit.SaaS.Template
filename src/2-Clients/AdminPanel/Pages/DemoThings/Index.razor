@@ -1,0 +1,83 @@
+@page "/demo-things"
+@attribute [Authorize]
+@implements IDisposable
+
+<PageTitle>@AdminPanelLocalizer[AdminPanelResource.DemoThings]</PageTitle>
+
+<h1 class="page-title">
+    @AdminPanelLocalizer[AdminPanelResource.DemoThings]
+</h1>
+
+<SearchDemoThings SearchChangedCallback="OnSearchChanged" />
+
+@if (IsLoading)
+{
+    <ComponentLoading />
+}
+else
+{
+    <div class="fade-in-animation">
+        <DemoThings Model="@SearchDemoThingsOutputDto.Items" />
+        <Pagination RecordsPerPage="@SearchDemoThingsInputDto.RecordsPerPage" TotalRecords="@SearchDemoThingsOutputDto.TotalRecords" CurrentPage="@SearchDemoThingsInputDto.PageNumber" PageChangedCallback="OnPageChanged" />
+    </div>
+}
+
+@code {
+    protected SearchDemoThingsInputDto SearchDemoThingsInputDto = new();
+    protected SearchOutputDto<GetDemoThingDto> SearchDemoThingsOutputDto = new();
+    protected bool IsLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        MessageService.OnMessage += HandleReceivedMessage;
+        await GetDemoThings();
+    }
+
+    protected virtual async Task GetDemoThings()
+    {
+        var result = await DemoThingService.SearchDemoThings(SearchDemoThingsInputDto);
+
+        if (result.IsSuccess)
+        {
+            SearchDemoThingsOutputDto = result.Value;
+        }
+        else
+        {
+            result.ShowErrorToast(ToastService);
+        }
+
+        IsLoading = false;
+        StateHasChanged();
+    }
+
+    protected virtual async Task OnPageChanged(int pageNumber)
+    {
+        IsLoading = true;
+        StateHasChanged();
+        SearchDemoThingsInputDto.PageNumber = pageNumber;
+        await GetDemoThings();
+    }
+
+    protected virtual async Task OnSearchChanged(SearchDemoThingsInputDto searchDemoThingsInputDto)
+    {
+        IsLoading = true;
+        StateHasChanged();
+        SearchDemoThingsInputDto = searchDemoThingsInputDto;
+        await GetDemoThings();
+    }
+
+    protected virtual async void HandleReceivedMessage(string messageKey)
+    {
+        if (!messageKey.IsNullOrEmptyOrWhiteSpace())
+        {
+            IsLoading = true;
+            StateHasChanged();
+            await GetDemoThings();
+        }
+    }
+
+    public void Dispose()
+    {
+        MessageService.OnMessage -= HandleReceivedMessage;
+    }
+} 

@@ -1,0 +1,51 @@
+@using CanBeYours.Application.Dtos
+
+<div class="table-responsive text-nowrap">
+    <table class="table table-hover mt-3">
+        <thead>
+            <tr class="f-sm">
+                <th scope="col"></th>
+                <th scope="col">@CoreLocalizer[CoreResource.Row_Number]</th>
+                <th scope="col">@AdminPanelLocalizer[AdminPanelResource.Name]</th>
+                <th scope="col">@AdminPanelLocalizer[AdminPanelResource.Description]</th>
+                <th scope="col">@CoreLocalizer[CoreResource.CreateDateTime]</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model == null || !Model.Any())
+            {
+                <tr>
+                    <td colspan="5" class="text-center text-muted py-5">
+                        @CoreLocalizer[CoreResource.No_Items_Found]
+                    </td>
+                </tr>
+            }
+            else
+            {
+                int row = 0;
+                foreach (var item in Model)
+                {
+                    <tr class="f-sm cursor-pointer" @onclick="@(()=>ShowDemoThingUpdateModal(item.Id))">
+                        <td> <span><i class="bi bi-box-arrow-right text-primary"></i></span></td>
+                        <td>@(++row)</td>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td class="f-xs">@item.CreationTime.FullDateLongTime</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    [Parameter]
+    public IEnumerable<GetDemoThingDto> Model { get; set; }
+
+    protected virtual void ShowDemoThingUpdateModal(string id)
+    {
+        var parameters = new ModalParameters();
+        parameters.Add(nameof(UpdateDemoThing.DemoThingId), id);
+        ModalService.Show<UpdateDemoThing>(AdminPanelLocalizer[AdminPanelResource.UpdateDemoThing], parameters, new ModalOptions { Class = "blazored-modal width-xs-90 width-md-50" });
+    }
+} 

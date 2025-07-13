@@ -1,0 +1,32 @@
+@using CanBeYours.Application.Dtos
+
+<EditForm Model="SearchDemoThingsInputDto" OnSubmit="HandleSearchDemoThings" class="row gy-2 gx-3 align-items-center">
+
+    <div class="col-12">
+        <a class="btn f-sm btn-success" @onclick="@(() => ModalService.Show<CreateDemoThing>(AdminPanelLocalizer[AdminPanelResource.CreateDemoThing], new ModalOptions { Class="blazored-modal width-xs-90 width-md-50"}))">
+            @AdminPanelLocalizer[AdminPanelResource.CreateDemoThing]
+        </a>
+    </div>
+
+    <div class="col-6 col-sm-3">
+        <InputText @bind-Value="SearchDemoThingsInputDto.Term" placeholder="..." class="form-control f-sm"></InputText>
+    </div>
+
+    <div class="col-6 col-sm-3 d-flex align-items-center">
+        <button type="submit" class="btn f-sm btn-primary me-2 w-100">@CoreLocalizer[CoreResource.Search]</button>
+    </div>
+
+</EditForm>
+
+@code {
+    protected SearchDemoThingsInputDto SearchDemoThingsInputDto = new();
+
+    [Parameter]
+    public EventCallback<SearchDemoThingsInputDto> SearchChangedCallback { get; set; }
+
+    protected virtual async Task HandleSearchDemoThings()
+    {
+        SearchDemoThingsInputDto.PageNumber = 1;
+        await SearchChangedCallback.InvokeAsync(SearchDemoThingsInputDto);
+    }
+} 
