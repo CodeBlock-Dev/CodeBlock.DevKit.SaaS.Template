@@ -20,4 +20,4 @@ internal class CreateDemoThingRequest : BaseCommand
     [Display(Name = nameof(SharedResource.DemoThing_Description), ResourceType = typeof(SharedResource))]
     [Required(ErrorMessageResourceName = nameof(CoreResource.Required), ErrorMessageResourceType = typeof(CoreResource))]
     public string Description { get; }
-} 
+}

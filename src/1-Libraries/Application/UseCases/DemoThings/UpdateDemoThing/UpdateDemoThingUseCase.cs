@@ -1,3 +1,4 @@
+using CanBeYours.Application.Exceptions;
 using CanBeYours.Core.Domain.DemoThings;
 using CodeBlock.DevKit.Application.Commands;
 using CodeBlock.DevKit.Application.Srvices;
@@ -11,7 +12,11 @@ internal class UpdateDemoThingUseCase : BaseCommandHandler, IRequestHandler<Upda
 {
     private readonly IDemoThingRepository _demoThingRepository;
 
-    public UpdateDemoThingUseCase(IDemoThingRepository demoThingRepository, IRequestDispatcher requestDispatcher, ILogger<UpdateDemoThingUseCase> logger)
+    public UpdateDemoThingUseCase(
+        IDemoThingRepository demoThingRepository,
+        IRequestDispatcher requestDispatcher,
+        ILogger<UpdateDemoThingUseCase> logger
+    )
         : base(requestDispatcher, logger)
     {
         _demoThingRepository = demoThingRepository;
@@ -21,14 +26,16 @@ internal class UpdateDemoThingUseCase : BaseCommandHandler, IRequestHandler<Upda
     {
         var demoThing = await _demoThingRepository.GetByIdAsync(request.Id);
         if (demoThing == null)
-            return CommandResult.NotFound();
+            throw DemoThingApplicationExceptions.DemoThingNotFound(request.Id);
+
+        var loadedVersion = demoThing.Version;
 
         demoThing.Update(request.Name, request.Description);
 
-        await _demoThingRepository.UpdateAsync(demoThing);
+        await _demoThingRepository.ConcurrencySafeUpdateAsync(demoThing, loadedVersion);
 
         await PublishDomainEventsAsync(demoThing.GetDomainEvents());
 
         return CommandResult.Create(entityId: demoThing.Id);
     }
-} 
+}

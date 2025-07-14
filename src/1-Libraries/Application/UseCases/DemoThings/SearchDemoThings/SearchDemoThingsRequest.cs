@@ -7,7 +7,8 @@ namespace CanBeYours.Application.UseCases.DemoThings.SearchDemoThings;
 
 internal class SearchDemoThingsRequest : BaseQuery<SearchOutputDto<GetDemoThingDto>>
 {
-    public SearchDemoThingsRequest(string term, int pageNumber, int recordsPerPage, SortOrder sortOrder)
+    public SearchDemoThingsRequest(string term, int pageNumber, int recordsPerPage, SortOrder sortOrder, QueryOptions options = null)
+        : base(options)
     {
         Term = term;
         PageNumber = pageNumber;
@@ -19,4 +20,4 @@ internal class SearchDemoThingsRequest : BaseQuery<SearchOutputDto<GetDemoThingD
     public int PageNumber { get; }
     public int RecordsPerPage { get; }
     public SortOrder SortOrder { get; }
-} 
+}

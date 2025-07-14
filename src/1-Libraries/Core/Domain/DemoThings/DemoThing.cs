@@ -43,9 +43,9 @@ public sealed class DemoThing : AggregateRoot
     private void CheckPolicies()
     {
         if (Name.IsNullOrEmptyOrWhiteSpace())
-            throw DemoThingExceptions.NameIsRequired();
+            throw DemoThingDomainExceptions.NameIsRequired();
 
         if (Description.IsNullOrEmptyOrWhiteSpace())
-            throw DemoThingExceptions.DescriptionIsRequired();
+            throw DemoThingDomainExceptions.DescriptionIsRequired();
     }
 }

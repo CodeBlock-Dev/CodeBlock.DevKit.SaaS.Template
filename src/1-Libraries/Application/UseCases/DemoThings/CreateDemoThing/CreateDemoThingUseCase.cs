@@ -11,7 +11,11 @@ internal class CreateDemoThingUseCase : BaseCommandHandler, IRequestHandler<Crea
 {
     private readonly IDemoThingRepository _demoThingRepository;
 
-    public CreateDemoThingUseCase(IDemoThingRepository demoThingRepository, IRequestDispatcher requestDispatcher, ILogger<CreateDemoThingUseCase> logger)
+    public CreateDemoThingUseCase(
+        IDemoThingRepository demoThingRepository,
+        IRequestDispatcher requestDispatcher,
+        ILogger<CreateDemoThingUseCase> logger
+    )
         : base(requestDispatcher, logger)
     {
         _demoThingRepository = demoThingRepository;
@@ -27,4 +31,4 @@ internal class CreateDemoThingUseCase : BaseCommandHandler, IRequestHandler<Crea
 
         return CommandResult.Create(entityId: demoThing.Id);
     }
-} 
+}

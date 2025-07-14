@@ -31,8 +31,6 @@ internal class DemoThingService : ApplicationService, IDemoThingService
 
     public async Task<Result<SearchOutputDto<GetDemoThingDto>>> SearchDemoThings(SearchDemoThingsInputDto input)
     {
-        return await _requestDispatcher.SendQuery(
-            new SearchDemoThingsRequest(input.Term, input.PageNumber, input.RecordsPerPage, input.SortOrder)
-        );
+        return await _requestDispatcher.SendQuery(new SearchDemoThingsRequest(input.Term, input.PageNumber, input.RecordsPerPage, input.SortOrder));
     }
 }

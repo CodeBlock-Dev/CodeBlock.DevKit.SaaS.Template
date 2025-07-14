@@ -61,6 +61,15 @@ namespace CanBeYours.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Demo Thing.
+        /// </summary>
+        public static string DemoThing {
+            get {
+                return ResourceManager.GetString("DemoThing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string DemoThing_Description {

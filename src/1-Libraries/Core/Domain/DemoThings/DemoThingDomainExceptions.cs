@@ -8,7 +8,7 @@ using CodeBlock.DevKit.Domain.Exceptions;
 
 namespace CanBeYours.Core.Domain.DemoThings;
 
-internal static class DemoThingExceptions
+internal static class DemoThingDomainExceptions
 {
     public static DomainException NameIsRequired()
     {
