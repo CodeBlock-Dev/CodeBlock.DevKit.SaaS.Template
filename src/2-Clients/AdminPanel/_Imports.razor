@@ -1,5 +1,6 @@
 ﻿@using CanBeYours.AdminPanel.Pages
 @using CanBeYours.AdminPanel.Pages.Shared
+@using CanBeYours.Core.Resources
 @using CodeBlock.DevKit.Clients.AdminPanel.Pages
 @using CodeBlock.DevKit.Clients.AdminPanel.Pages.Shared
 @using System.Net.Http
@@ -23,7 +24,15 @@
 @using CanBeYours.AdminPanel.Resources
 @using CodeBlock.DevKit.Web.Security;
 @using CodeBlock.DevKit.Contracts.Models
+@using CanBeYours.Application.Dtos
+@using CanBeYours.Application.Services.DemoThings
+@using CanBeYours.AdminPanel.Resources
+
+@using CanBeYours.AdminPanel.Pages.DemoThings.Components
+@using CodeBlock.DevKit.Contracts.Dtos
 
 @attribute [Authorize(Policy = Policies.ADMIN_ROLE)]
 @inject IStringLocalizer<AdminPanelResource> AdminPanelLocalizer
+@inject IStringLocalizer<SharedResource> SharedLocalizer
 @inject IStringLocalizer<CoreResource> CoreLocalizer
+@inject IDemoThingService DemoThingService

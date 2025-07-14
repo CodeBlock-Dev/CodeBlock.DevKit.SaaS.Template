@@ -1,8 +1,9 @@
 using CanBeYours.Application.Dtos;
 using CanBeYours.Application.Services.DemoThings;
 using CodeBlock.DevKit.Contracts.Dtos;
-using CodeBlock.DevKit.Contracts.Helpers;
 using CodeBlock.DevKit.Core.Helpers;
+using CodeBlock.DevKit.Web.Api.Filters;
+using CodeBlock.DevKit.Web.Security;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,7 +11,7 @@ namespace CanBeYours.Api.Controllers;
 
 [Tags("DemoThings")]
 [Route("demo-things")]
-[Authorize]
+[Authorize(Policies.ADMIN_ROLE)]
 public class DemoThingsController : BaseApiController
 {
     private readonly IDemoThingService _demoThingService;
@@ -66,8 +67,8 @@ public class DemoThingsController : BaseApiController
             Term = term,
             PageNumber = pageNumber,
             RecordsPerPage = recordsPerPage,
-            SortOrder = sortOrder
+            SortOrder = sortOrder,
         };
         return await _demoThingService.SearchDemoThings(dto);
     }
-} 
+}

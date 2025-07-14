@@ -1,4 +1,4 @@
-﻿using CanBeYours.Application.Services.DemoThings;
+﻿using CanBeYours.Application;
 using CanBeYours.Core.Domain.DemoThings;
 using CanBeYours.Infrastructure.DbContext;
 using CanBeYours.Infrastructure.Mapping;
@@ -14,12 +14,11 @@ public static class Startup
 {
     public static void AddInfrastructureModule(this IServiceCollection services)
     {
+        services.AddApplicationModule();
         services.RegisterHandlers(typeof(Startup));
         services.AddMongoDbContext();
         services.AddDomainServices();
-        services.AddServices();
         services.AddMappingProfileFromAssemblyContaining<DemoThingMappingProfile>();
-        services.RegisterBaseModule(typeof(Startup).Assembly);
         services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
     }
 
@@ -36,10 +35,5 @@ public static class Startup
     public static void AddDomainServices(this IServiceCollection services)
     {
         services.AddScoped<IDemoThingRepository, DemoThingRepository>();
-    }
-
-    public static void AddServices(this IServiceCollection services)
-    {
-        services.AddScoped<IDemoThingService, DemoThingService>();
     }
 }

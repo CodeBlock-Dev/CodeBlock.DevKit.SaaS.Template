@@ -1,12 +1,4 @@
-@using CanBeYours.Application.Dtos
-@using CanBeYours.Application.Services.DemoThings
-@using CanBeYours.AdminPanel.Resources
-@using CodeBlock.DevKit.Web.Blazor.Components.Dialogs
-@using CodeBlock.DevKit.Web.Blazor.Components.Forms
-@using Microsoft.Extensions.Localization
 
-@inject IStringLocalizer<AdminPanelResource> L
-@inject IDemoThingService DemoThingService
 
 <EditForm Model="Input" OnValidSubmit="HandleCreateDemoThing">
     <DataAnnotationsValidator />
