@@ -1,6 +1,6 @@
 using CanBeYours.Infrastructure;
+using CodeBlock.DevKit.Application.Extensions;
 using CodeBlock.DevKit.Clients.WebApp;
-using CodeBlock.DevKit.Infrastructure.Extensions;
 
 namespace CanBeYours.WebApp;
 

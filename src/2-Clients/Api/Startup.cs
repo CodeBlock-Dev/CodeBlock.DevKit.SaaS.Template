@@ -1,6 +1,6 @@
 using CanBeYours.Infrastructure;
+using CodeBlock.DevKit.Application.Extensions;
 using CodeBlock.DevKit.Clients.Api;
-using CodeBlock.DevKit.Infrastructure.Extensions;
 
 namespace CanBeYours.Api;
 

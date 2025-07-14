@@ -1,6 +1,6 @@
 using CanBeYours.Infrastructure;
+using CodeBlock.DevKit.Application.Extensions;
 using CodeBlock.DevKit.Clients.AdminPanel;
-using CodeBlock.DevKit.Infrastructure.Extensions;
 
 namespace CanBeYours.AdminPanel;
 

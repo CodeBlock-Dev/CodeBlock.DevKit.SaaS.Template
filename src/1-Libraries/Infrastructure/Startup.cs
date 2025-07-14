@@ -3,7 +3,7 @@ using CanBeYours.Core.Domain.DemoThings;
 using CanBeYours.Infrastructure.DbContext;
 using CanBeYours.Infrastructure.Mapping;
 using CanBeYours.Infrastructure.Repositories;
-using CodeBlock.DevKit.Infrastructure.Extensions;
+using CodeBlock.DevKit.Application.Extensions;
 using CodeBlock.DevKit.Infrastructure.Mapping;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;

@@ -7,7 +7,7 @@
     <link href="css/cb.website.spa.@(LocalizationSettings.GetCurrentLanguageDirection().ToLower()).min.css" rel="stylesheet" asp-append-version="true" />
 </HeadContent>
 
-<SplashScreen BrandName="@ApplicationSettings.Localized.Name" BackgroundCssClass="simple-layout-dark-bg" ProgressBarCssClass="simple-layout-title-color" OnStarted="HandleSplashStarted" LogoUrl="@ApplicationSettings.Localized.LogoUrl" />
+<SplashScreen BrandName="@ApplicationSettings.Localized.Name" BackgroundCssClass="simple-layout-dark-bg" ProgressBarCssClass="simple-layout-title-color" OnStarted="HandleSplashStarted" LogoUrl="/images/logs/logo.png" />
 
 @if (SplashScreenStarted)
 {

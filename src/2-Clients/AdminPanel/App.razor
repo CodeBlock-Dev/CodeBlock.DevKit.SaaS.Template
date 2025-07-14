@@ -2,7 +2,7 @@
 @using CodeBlock.DevKit.Infrastructure.Services
 @using CodeBlock.DevKit.Web.Blazor.Server
 @using System.Reflection
-@inject ModuleRegistry ModuleRegistry
+@inject IModuleRegistry ModuleRegistry
 @inherits AppBase
 <CascadingBlazoredModal HideCloseButton="false" ContentScrollable="true" DisableBackgroundCancel="true" Animation="@ModalAnimation.FadeIn(0.2)">
     <CascadingAuthenticationState>
