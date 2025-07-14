@@ -1,18 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
-		<AssemblyName>CanBeYours.Application</AssemblyName>
-		<RootNamespace>CanBeYours.Application</RootNamespace>
-		<ImplicitUsings>enable</ImplicitUsings>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageReference Include="CodeBlock.DevKit.Application" Version="1.3.4" />
-		<PackageReference Include="CodeBlock.DevKit.Contracts" Version="1.3.4" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\Core\Core.csproj" />
-	</ItemGroup>
-	<ItemGroup>
-		<Folder Include="UseCases\" />
-	</ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>CanBeYours.Application</AssemblyName>
+    <RootNamespace>CanBeYours.Application</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CodeBlock.DevKit.Application" Version="1.3.5" />
+    <PackageReference Include="CodeBlock.DevKit.Contracts" Version="1.3.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UseCases\" />
+  </ItemGroup>
 </Project>
