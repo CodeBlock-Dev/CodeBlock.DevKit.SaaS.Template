@@ -1,4 +1,6 @@
-﻿@using WebApp.Pages
+﻿@using CanBeYours.Core.Resources
+@using CodeBlock.DevKit.Web.Blazor.Server.Services
+@using WebApp.Pages
 @using CodeBlock.DevKit.Clients.WebApp.Pages
 @using System.Net.Http
 @using Blazored.Modal.Services
@@ -28,3 +30,9 @@
 
 @inject IStringLocalizer<WebAppResource> WebAppLocalizer
 @inject IStringLocalizer<CoreResource> CoreLocalizer
+@inject IStringLocalizer<SharedResource> SharedLocalizer
+@inject NavigationManager NavigationManager
+@inject MessageService MessageService
+@inject IToastService ToastService
+@inject IModalService ModalService
+@inject ICurrentUser CurrentUser

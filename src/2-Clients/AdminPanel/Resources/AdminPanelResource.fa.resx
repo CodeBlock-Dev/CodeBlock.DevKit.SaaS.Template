@@ -118,10 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Nav_Menu_DemoThings" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="CreateDemoThing" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="Nav_Menu_DemoThings" xml:space="preserve">
-    <value>موارد نمایشی</value>
   </data>
 </root>

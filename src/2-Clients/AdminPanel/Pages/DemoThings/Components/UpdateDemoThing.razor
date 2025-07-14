@@ -1,17 +1,10 @@
-@using CanBeYours.Application.Dtos
-@using CanBeYours.Application.Services.DemoThings
-@using CanBeYours.AdminPanel.Resources
-@using Microsoft.Extensions.Localization
-
-@inject IStringLocalizer<AdminPanelResource> L
-@inject IDemoThingService DemoThingService
-
+@using CanBeYours.AdminPanel.Helpers
 <EditForm Model="Input" OnValidSubmit="HandleUpdateDemoThing">
     <DataAnnotationsValidator />
 
     <div class="form-group p-2">
         <label class="f-sm text-secondary">
-            @AdminPanelLocalizer[AdminPanelResource.Name]:
+            @SharedLocalizer[SharedResource.DemoThing_Name]:
         </label>
         <InputText @bind-Value="Input.Name" class="form-control f-sm"></InputText>
         <ValidationMessage For="()=>Input.Name" class="text-danger f-sm"></ValidationMessage>
@@ -19,7 +12,7 @@
 
     <div class="form-group p-2">
         <label class="f-sm text-secondary">
-            @AdminPanelLocalizer[AdminPanelResource.Description]:
+            @SharedLocalizer[SharedResource.DemoThing_Description]:
         </label>
         <InputTextArea @bind-Value="Input.Description" class="form-control f-sm" rows="3"></InputTextArea>
         <ValidationMessage For="()=>Input.Description" class="text-danger f-sm"></ValidationMessage>
@@ -65,6 +58,6 @@
     protected virtual async Task HandleUpdateDemoThing()
     {
         var result = await DemoThingService.UpdateDemoThing(DemoThingId, Input);
-        result.ShowToast(ToastService).PublishMessage(MessageService, Constants.DEMOTHING_UPDATED).CloseModal(ModalInstance);
+        result.ShowToast(ToastService).PublishMessage(MessageService, Constants.DEMO_THING_UPDATED).CloseModal(ModalInstance);
     }
 } 

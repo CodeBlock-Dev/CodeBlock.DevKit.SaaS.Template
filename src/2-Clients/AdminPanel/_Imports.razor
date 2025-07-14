@@ -8,6 +8,7 @@
 @using Blazored.Toast.Services
 @using Blazored.Modal
 @using CodeBlock.DevKit.Application.Srvices
+@using CodeBlock.DevKit.Web.Blazor.Server.Services
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Components.Authorization
 @using Microsoft.AspNetCore.Components.Forms
@@ -35,4 +36,9 @@
 @inject IStringLocalizer<AdminPanelResource> AdminPanelLocalizer
 @inject IStringLocalizer<SharedResource> SharedLocalizer
 @inject IStringLocalizer<CoreResource> CoreLocalizer
+@inject NavigationManager NavigationManager
+@inject MessageService MessageService
 @inject IDemoThingService DemoThingService
+@inject IToastService ToastService
+@inject IModalService ModalService
+@inject ICurrentUser CurrentUser

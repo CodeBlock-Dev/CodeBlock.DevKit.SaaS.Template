@@ -4,8 +4,8 @@
             <tr class="f-sm">
                 <th scope="col"></th>
                 <th scope="col">@CoreLocalizer[CoreResource.Row_Number]</th>
-                <th scope="col">@AdminPanelLocalizer[AdminPanelResource.Name]</th>
-                <th scope="col">@AdminPanelLocalizer[AdminPanelResource.Description]</th>
+                <th scope="col">@SharedLocalizer[SharedResource.DemoThing_Name]</th>
+                <th scope="col">@SharedLocalizer[SharedResource.DemoThing_Description]</th>
                 <th scope="col">@CoreLocalizer[CoreResource.CreateDateTime]</th>
             </tr>
         </thead>
@@ -23,7 +23,7 @@
                 int row = 0;
                 foreach (var item in Model)
                 {
-                    <tr class="f-sm cursor-pointer" @onclick="@(()=>ShowDemoThingUpdateModal(item.Id))">
+                    <tr class="f-sm cursor-pointer" @onclick="@(()=>ShowUpdateModal(item.Id))">
                         <td> <span><i class="bi bi-box-arrow-right text-primary"></i></span></td>
                         <td>@(++row)</td>
                         <td>@item.Name</td>
@@ -40,7 +40,7 @@
     [Parameter]
     public IEnumerable<GetDemoThingDto> Model { get; set; }
 
-    protected virtual void ShowDemoThingUpdateModal(string id)
+    protected virtual void ShowUpdateModal(string id)
     {
         var parameters = new ModalParameters();
         parameters.Add(nameof(UpdateDemoThing.DemoThingId), id);

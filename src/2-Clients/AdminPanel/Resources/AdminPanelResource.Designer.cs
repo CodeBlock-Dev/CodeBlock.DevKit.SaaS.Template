@@ -61,11 +61,29 @@ namespace CanBeYours.AdminPanel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create Demo Thing.
+        /// </summary>
+        public static string CreateDemoThing {
+            get {
+                return ResourceManager.GetString("CreateDemoThing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Demo Things.
         /// </summary>
-        public static string Nav_Menu_DemoThings {
+        public static string DemoThings {
             get {
-                return ResourceManager.GetString("Nav_Menu_DemoThings", resourceCulture);
+                return ResourceManager.GetString("DemoThings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Demo Thing.
+        /// </summary>
+        public static string UpdateDemoThing {
+            get {
+                return ResourceManager.GetString("UpdateDemoThing", resourceCulture);
             }
         }
     }
