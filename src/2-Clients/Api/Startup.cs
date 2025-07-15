@@ -1,5 +1,4 @@
 using CanBeYours.Infrastructure;
-using CodeBlock.DevKit.Application.Extensions;
 using CodeBlock.DevKit.Clients.Api;
 
 namespace CanBeYours.Api;
@@ -10,8 +9,6 @@ internal static class Startup
     {
         builder.AddApiClientModule(typeof(Startup));
         builder.Services.AddInfrastructureModule();
-        builder.Services.RegisterHandlers(typeof(Startup));
-        builder.Services.RegisterApiModule(typeof(Startup).Assembly);
 
         return builder.Build();
     }

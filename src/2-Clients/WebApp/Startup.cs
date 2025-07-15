@@ -1,5 +1,4 @@
 using CanBeYours.Infrastructure;
-using CodeBlock.DevKit.Application.Extensions;
 using CodeBlock.DevKit.Clients.WebApp;
 
 namespace CanBeYours.WebApp;
@@ -10,8 +9,6 @@ internal static class Startup
     {
         builder.AddWebAppClientModule(typeof(Startup));
         builder.Services.AddInfrastructureModule();
-        builder.Services.RegisterHandlers(typeof(Startup));
-        builder.Services.RegisterUIModule(typeof(Startup).Assembly);
 
         return builder.Build();
     }
