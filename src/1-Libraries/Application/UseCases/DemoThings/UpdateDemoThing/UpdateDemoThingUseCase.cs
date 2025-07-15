@@ -30,7 +30,7 @@ internal class UpdateDemoThingUseCase : BaseCommandHandler, IRequestHandler<Upda
 
         var loadedVersion = demoThing.Version;
 
-        demoThing.Update(request.Name, request.Description);
+        demoThing.Update(request.Name, request.Description, request.Type);
 
         await _demoThingRepository.ConcurrencySafeUpdateAsync(demoThing, loadedVersion);
 

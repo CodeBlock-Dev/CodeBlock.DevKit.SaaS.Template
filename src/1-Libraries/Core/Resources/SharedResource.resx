@@ -120,10 +120,25 @@
   <data name="DemoThing" xml:space="preserve">
     <value>Demo Thing</value>
   </data>
+  <data name="DemoThingType_DemoType1" xml:space="preserve">
+    <value>Demo Type 1</value>
+  </data>
+  <data name="DemoThingType_DemoType2" xml:space="preserve">
+    <value>Demo Type 2</value>
+  </data>
+  <data name="DemoThingType_DemoType3" xml:space="preserve">
+    <value>Demo Type 3</value>
+  </data>
   <data name="DemoThing_Description" xml:space="preserve">
     <value>Description</value>
   </data>
   <data name="DemoThing_Name" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="DemoThing_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="DemoThing_UserId" xml:space="preserve">
+    <value>User Id</value>
   </data>
 </root>

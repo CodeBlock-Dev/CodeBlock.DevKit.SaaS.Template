@@ -86,5 +86,50 @@ namespace CanBeYours.Core.Resources {
                 return ResourceManager.GetString("DemoThing_Name", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type.
+        /// </summary>
+        public static string DemoThing_Type {
+            get {
+                return ResourceManager.GetString("DemoThing_Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Id.
+        /// </summary>
+        public static string DemoThing_UserId {
+            get {
+                return ResourceManager.GetString("DemoThing_UserId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo Type 1.
+        /// </summary>
+        public static string DemoThingType_DemoType1 {
+            get {
+                return ResourceManager.GetString("DemoThingType_DemoType1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo Type 2.
+        /// </summary>
+        public static string DemoThingType_DemoType2 {
+            get {
+                return ResourceManager.GetString("DemoThingType_DemoType2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo Type 3.
+        /// </summary>
+        public static string DemoThingType_DemoType3 {
+            get {
+                return ResourceManager.GetString("DemoThingType_DemoType3", resourceCulture);
+            }
+        }
     }
 }

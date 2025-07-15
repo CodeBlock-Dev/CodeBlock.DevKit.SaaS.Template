@@ -117,10 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DemoThing" xml:space="preserve">
+    <value>مورد دمو</value>
+  </data>
+  <data name="DemoThingType_DemoType1" xml:space="preserve">
+    <value>نوع دموی 1</value>
+  </data>
+  <data name="DemoThingType_DemoType2" xml:space="preserve">
+    <value>نوع دموی 2</value>
+  </data>
+  <data name="DemoThingType_DemoType3" xml:space="preserve">
+    <value>نوع دموی 3</value>
+  </data>
   <data name="DemoThing_Description" xml:space="preserve">
     <value>توضیحات</value>
   </data>
   <data name="DemoThing_Name" xml:space="preserve">
     <value>نام</value>
+  </data>
+  <data name="DemoThing_Type" xml:space="preserve">
+    <value>نوع</value>
+  </data>
+  <data name="DemoThing_UserId" xml:space="preserve">
+    <value>شناسه ی کاربر</value>
   </data>
 </root>

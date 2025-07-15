@@ -21,12 +21,12 @@ internal class DemoThingService : ApplicationService, IDemoThingService
 
     public async Task<Result<CommandResult>> CreateDemoThing(CreateDemoThingDto input)
     {
-        return await _requestDispatcher.SendCommand(new CreateDemoThingRequest(input.Name, input.Description));
+        return await _requestDispatcher.SendCommand(new CreateDemoThingRequest(input.Name, input.Description, input.Type));
     }
 
     public async Task<Result<CommandResult>> UpdateDemoThing(string id, UpdateDemoThingDto input)
     {
-        return await _requestDispatcher.SendCommand(new UpdateDemoThingRequest(id, input.Name, input.Description));
+        return await _requestDispatcher.SendCommand(new UpdateDemoThingRequest(id, input.Name, input.Description, input.Type));
     }
 
     public async Task<Result<SearchOutputDto<GetDemoThingDto>>> SearchDemoThings(SearchDemoThingsInputDto input)

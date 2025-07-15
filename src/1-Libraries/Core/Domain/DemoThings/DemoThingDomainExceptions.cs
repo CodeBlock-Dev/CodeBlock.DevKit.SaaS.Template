@@ -27,4 +27,13 @@ internal static class DemoThingDomainExceptions
             new List<MessagePlaceholder> { MessagePlaceholder.CreateResource(SharedResource.DemoThing_Description, typeof(SharedResource)) }
         );
     }
+
+    public static DomainException UserIdIsRequired()
+    {
+        return new DomainException(
+            nameof(CoreResource.Required),
+            typeof(CoreResource),
+            new List<MessagePlaceholder> { MessagePlaceholder.CreateResource(SharedResource.DemoThing_UserId, typeof(SharedResource)) }
+        );
+    }
 }
