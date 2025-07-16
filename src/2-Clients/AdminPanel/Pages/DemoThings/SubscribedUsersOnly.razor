@@ -1,4 +1,4 @@
-@page "/subscribedusers-only"
+﻿@page "/subscribedusers-only"
 @using CodeBlock.DevKit.Contracts.Services
 @inject ISubscriptionAccessorService SubscriptionService
 
@@ -8,19 +8,28 @@
     @AdminPanelLocalizer[AdminPanelResource.SubscribedUsersOnly]
 </h1>
 
+<p class="mb-4 text-muted">
+    This demo page shows how to check whether the currently logged-in user has an active subscription.
+    You can use this logic to control access to your features, grant access to subscribed users and prompt others to subscribe first.
+    For more details, see the
+    <a href="https://docs.codeblock.dev/" target="_blank" rel="noopener noreferrer">documentation</a>.
+</p>
+
 @if (UserHasAnyActiveSubscription)
 {
-    <div class="alert text-success">
-        You already have an active subscription and that's why you can see this alert :)
+    <div class="alert alert-success">
+        ✅ You have an active subscription, which is why you're seeing this message.
     </div>
 }
 else
 {
-    <div class="alert text-danger">
-        You already don't have any active subscription and that's why you see this alert :)
+    <div class="alert alert-danger">
+        ❌ You don't have an active subscription, which is why you're seeing this message.
+        <div class="mt-3">
+            <a class="btn btn-success" href="/pricing/demo">View Available Plans</a>
+        </div>
     </div>
 }
-
 
 @code {
     private bool UserHasAnyActiveSubscription = false;
@@ -29,4 +38,4 @@ else
     {
         UserHasAnyActiveSubscription = await SubscriptionService.UserHasAnyActiveSubscription(CurrentUser.GetUserId());
     }
-} 
+}
