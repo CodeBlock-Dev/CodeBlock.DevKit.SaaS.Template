@@ -7,7 +7,6 @@ using CodeBlock.DevKit.Test.TestBase;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
 
@@ -19,16 +18,16 @@ public abstract class TestsBaseFixture : IntegrationTestsBase
     public readonly IMapper _mapper;
     public readonly IDemoThingRepository _demoThingRepository;
     public readonly ICurrentUser _currentUser;
-    public readonly ILogger _logger;
 
     protected TestsBaseFixture(string dbNameSuffix)
         : base(dbNameSuffix)
     {
         _demoThingRepository = GetRequiredService<IDemoThingRepository>();
         _mapper = GetRequiredService<IMapper>();
-        _currentUser = GetRequiredService<ICurrentUser>();
-        _logger = GetRequiredService<ILogger>();
         _requestDispatcher = Substitute.For<IRequestDispatcher>();
+
+        _currentUser = Substitute.For<ICurrentUser>();
+        _currentUser.GetUserId().Returns(Guid.NewGuid().ToString());
     }
 
     /// <summary>
@@ -60,32 +59,38 @@ public abstract class TestsBaseFixture : IntegrationTestsBase
         return await _demoThingRepository.GetByIdAsync(id);
     }
 
+    public new T GetRequiredService<T>()
+    {
+        return _serviceProvider.GetRequiredService<T>();
+    }
+
     /// <summary>
     ///
     /// </summary>
     public override IServiceProvider GetServiceProvider(string dbNameSuffix)
     {
-        var services = new ServiceCollection();
-
-        var configuration = new ConfigurationBuilder()
-            //Copy from AdminPanel during the build event
-            .AddJsonFile("appsettings.json", reloadOnChange: true, optional: false)
-            .AddJsonFile("appsettings.Development.json", optional: true)
-            .AddInMemoryCollection([new KeyValuePair<string, string?>("MongoDB:DatabaseName", $"Test_DemoThings_DB_{dbNameSuffix}")])
-            .Build();
-
-        services.AddSingleton<IConfiguration>(provider =>
-        {
-            return configuration;
-        });
-
         var builder = WebApplication.CreateBuilder();
 
-        builder.Services.Add(services);
+        // Configure the test configuration
+        builder
+            .Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile("appsettings.Development.json", optional: true)
+            .AddInMemoryCollection([new("MongoDB:DatabaseName", $"Test_DemoThings_DB_{dbNameSuffix}")]);
 
+        // Add logging services
+        builder.Services.AddLogging(logging =>
+        {
+            logging.AddConsole();
+            logging.SetMinimumLevel(LogLevel.Debug);
+        });
+
+        // Register AdminPanel client module
         builder.AddAdminPanelClientModule(typeof(TestsBaseFixture));
+
+        // Register infrastructure services first
         builder.Services.AddInfrastructureModule();
 
-        return services.BuildServiceProvider();
+        // Build the service provider
+        return builder.Services.BuildServiceProvider();
     }
 }

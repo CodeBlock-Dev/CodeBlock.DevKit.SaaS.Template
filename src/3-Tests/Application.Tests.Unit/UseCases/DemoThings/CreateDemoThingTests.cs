@@ -1,9 +1,11 @@
-﻿using Application.Tests.Unit.Fixtures;
+﻿using CanBeYours.Application.Tests.Unit.Fixtures;
+using CanBeYours.Application.UseCases.DemoThings.CreateDemoThing;
 using CanBeYours.Core.Domain.DemoThings;
 using FluentAssertions;
+using Microsoft.Extensions.Logging;
 using NSubstitute;
 
-namespace Application.Tests.Unit.UseCases.DemoThings;
+namespace CanBeYours.Application.Tests.Unit.UseCases.DemoThings;
 
 public class CreateDemoThingTests : TestsBaseFixture
 {
@@ -12,13 +14,13 @@ public class CreateDemoThingTests : TestsBaseFixture
     public CreateDemoThingTests() { }
 
     [Fact]
-    public async Task DemoThing_is_added()
+    public async Task DemoThing_is_created()
     {
         //Arrange
         var request = new CreateDemoThingRequest(name: "Test Name", description: "Test Description", type: DemoThingType.DemoType1);
 
         //Act
-        var result = await createDemoThingUseCase.Handle(addDemoThingRequest, CancellationToken.None);
+        var result = await createDemoThingUseCase.Handle(request, CancellationToken.None);
 
         //Assert
         result.EntityId.Should().NotBeNull();
@@ -29,6 +31,8 @@ public class CreateDemoThingTests : TestsBaseFixture
 
     protected override void TestClassFixtureSetup()
     {
-        createDemoThingUseCase = new CreateDemoThingUseCase(DemoThingRepository, RequestDispatcher, Logger, CurrentUser);
+        var logger = Substitute.For<ILogger<CreateDemoThingUseCase>>();
+
+        createDemoThingUseCase = new CreateDemoThingUseCase(DemoThingRepository, RequestDispatcher, logger, CurrentUser);
     }
 }

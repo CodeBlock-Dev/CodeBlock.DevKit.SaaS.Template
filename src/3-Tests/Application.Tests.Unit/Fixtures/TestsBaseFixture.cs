@@ -1,18 +1,16 @@
 ﻿using CanBeYours.Core.Domain.DemoThings;
-using Castle.Core.Logging;
 using CodeBlock.DevKit.Application.Srvices;
 using CodeBlock.DevKit.Test.TestBase;
 using NSubstitute;
 
-namespace Application.Tests.Unit.Fixtures;
+namespace CanBeYours.Application.Tests.Unit.Fixtures;
 
 public abstract class TestsBaseFixture : UnitTestsBase
 {
-    protected IRequestDispatcher? RequestDispatcher;
-    protected ILogger? Logger;
-    protected IDemoThingRepository? DemoThingRepository;
+    protected IRequestDispatcher RequestDispatcher;
+    protected IDemoThingRepository DemoThingRepository;
     protected List<DemoThing> DemoThings = new List<DemoThing>();
-    protected ICurrentUser? CurrentUser;
+    protected ICurrentUser CurrentUser;
 
     protected override void FixtureSetup()
     {
@@ -24,8 +22,8 @@ public abstract class TestsBaseFixture : UnitTestsBase
     private void CommonFixtureSetup()
     {
         RequestDispatcher = Substitute.For<IRequestDispatcher>();
-        Logger = Substitute.For<ILogger>();
         CurrentUser = Substitute.For<ICurrentUser>();
+        CurrentUser.GetUserId().Returns(Guid.NewGuid().ToString());
 
         DemoThings = GenerateDemoThingsList();
 
