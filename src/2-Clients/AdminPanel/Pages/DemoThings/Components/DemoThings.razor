@@ -7,6 +7,7 @@
                 <th scope="col">@SharedLocalizer[SharedResource.DemoThing_Name]</th>
                 <th scope="col">@SharedLocalizer[SharedResource.DemoThing_Type]</th>
                 <th scope="col">@SharedLocalizer[SharedResource.DemoThing_Description]</th>
+                <th scope="col">@SharedLocalizer[SharedResource.Email]</th>
                 <th scope="col">@CoreLocalizer[CoreResource.CreateDateTime]</th>
             </tr>
         </thead>
@@ -30,6 +31,7 @@
                         <td>@item.Name</td>
                         <td>@item.Type.GetEnumDisplayName()</td>
                         <td>@item.Description</td>
+                        <td>@item.UserEmail</td>
                         <td class="f-xs">@item.CreationTime.FullDateLongTime</td>
                     </tr>
                 }
