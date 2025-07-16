@@ -1,12 +1,10 @@
-﻿@using CodeBlock.DevKit.Infrastructure.Services
-@using CodeBlock.DevKit.Web.Blazor.Server
+﻿@using CodeBlock.DevKit.Web.Blazor.Server
 @using CodeBlock.DevKit.Web.Blazor.Server.Components
-@using System.Reflection
 @using CanBeYours.WebApp.Pages.Website.Shared
 @inject IModuleRegistry ModuleRegistry
 @inherits AppBase
 
-<CascadingBlazoredModal HideCloseButton="false" ContentScrollable="true" DisableBackgroundCancel="true" Animation="@ModalAnimation.FadeIn(0.2)">
+<CascadingBlazoredModal FocusFirstElement="false" HideCloseButton="false" ContentScrollable="true" DisableBackgroundCancel="true" Animation="@ModalAnimation.FadeIn(0.4)">
     <CascadingAuthenticationState>
         <Router AppAssembly="@typeof(Program).Assembly" AdditionalAssemblies="@ModuleRegistry.GetUIModuleAssemblies()">
             <Found Context="routeData">
