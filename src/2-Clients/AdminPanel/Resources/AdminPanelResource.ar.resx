@@ -124,4 +124,13 @@
   <data name="DemoThings" xml:space="preserve">
     <value>أشياء تجريبية</value>
   </data>
+  <data name="SubscribedUsersOnly" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Demo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SubscribedOnly" xml:space="preserve">
+    <value />
+  </data>
 </root>

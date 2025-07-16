@@ -126,4 +126,13 @@
   <data name="UpdateDemoThing" xml:space="preserve">
     <value>Update Demo Thing</value>
   </data>
+  <data name="SubscribedUsersOnly" xml:space="preserve">
+    <value>Subscribed users only</value>
+  </data>
+  <data name="Demo" xml:space="preserve">
+    <value>Demo</value>
+  </data>
+  <data name="SubscribedOnly" xml:space="preserve">
+    <value>Subscribed Only</value>
+  </data>
 </root>

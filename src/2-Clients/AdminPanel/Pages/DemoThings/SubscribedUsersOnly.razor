@@ -1,0 +1,32 @@
+@page "/subscribedusers-only"
+@using CodeBlock.DevKit.Contracts.Services
+@inject ISubscriptionAccessorService SubscriptionService
+
+<PageTitle>@AdminPanelLocalizer[AdminPanelResource.SubscribedUsersOnly]</PageTitle>
+
+<h1 class="page-title">
+    @AdminPanelLocalizer[AdminPanelResource.SubscribedUsersOnly]
+</h1>
+
+@if (UserHasAnyActiveSubscription)
+{
+    <div class="alert text-success">
+        You already have an active subscription and that's why you can see this alert :)
+    </div>
+}
+else
+{
+    <div class="alert text-danger">
+        You already don't have any active subscription and that's why you see this alert :)
+    </div>
+}
+
+
+@code {
+    private bool UserHasAnyActiveSubscription = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        UserHasAnyActiveSubscription = await SubscriptionService.UserHasAnyActiveSubscription(CurrentUser.GetUserId());
+    }
+} 

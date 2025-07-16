@@ -121,4 +121,13 @@
   <data name="CreateDemoThing" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="SubscribedUsersOnly" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Demo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SubscribedOnly" xml:space="preserve">
+    <value />
+  </data>
 </root>

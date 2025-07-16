@@ -70,11 +70,38 @@ namespace CanBeYours.AdminPanel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Demo.
+        /// </summary>
+        public static string Demo {
+            get {
+                return ResourceManager.GetString("Demo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Demo Things.
         /// </summary>
         public static string DemoThings {
             get {
                 return ResourceManager.GetString("DemoThings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subscribed Only.
+        /// </summary>
+        public static string SubscribedOnly {
+            get {
+                return ResourceManager.GetString("SubscribedOnly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subscribed users only.
+        /// </summary>
+        public static string SubscribedUsersOnly {
+            get {
+                return ResourceManager.GetString("SubscribedUsersOnly", resourceCulture);
             }
         }
         
