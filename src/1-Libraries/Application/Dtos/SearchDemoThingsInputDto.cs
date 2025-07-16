@@ -5,5 +5,5 @@ namespace CanBeYours.Application.Dtos;
 
 public class SearchDemoThingsInputDto : SearchInputDto
 {
-    public DemoThingType Type { get; set; }
+    public DemoThingType? Type { get; set; }
 }

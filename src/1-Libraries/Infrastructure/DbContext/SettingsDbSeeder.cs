@@ -41,6 +41,11 @@ internal static class DemoThingsDbSeeder
         };
 
         foreach (var thing in demoThings)
+        {
+            // We recreate the demo things only to add a delay and have different creation time for each.
+            var demoThing = DemoThing.Create(thing.Name, thing.Description, thing.Type, thing.UserId);
             demoThingRepository.Add(thing);
+            Thread.Sleep(10);
+        }
     }
 }
