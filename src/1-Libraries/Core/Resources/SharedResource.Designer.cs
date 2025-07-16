@@ -140,5 +140,14 @@ namespace CanBeYours.Core.Resources {
                 return ResourceManager.GetString("DemoThingType_DemoType3", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
     }
 }

@@ -144,4 +144,7 @@
   <data name="DemoThingType_All" xml:space="preserve">
     <value>All Demo Types</value>
   </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
 </root>
