@@ -1,5 +1,6 @@
 using CanBeYours.Application.Dtos;
 using CanBeYours.Application.Services.DemoThings;
+using CanBeYours.Core.Domain.DemoThings;
 using CodeBlock.DevKit.Contracts.Dtos;
 using CodeBlock.DevKit.Core.Helpers;
 using CodeBlock.DevKit.Web.Api.Filters;
@@ -59,7 +60,10 @@ public class DemoThingsController : BaseApiController
         int pageNumber,
         int recordsPerPage,
         SortOrder sortOrder,
-        [FromQuery] string term = null
+        [FromQuery] string term = null,
+        [FromQuery] DemoThingType? type = null,
+        [FromQuery] DateTime? fromDateTime = null,
+        [FromQuery] DateTime? toDateTime = null
     )
     {
         var dto = new SearchDemoThingsInputDto
@@ -67,7 +71,10 @@ public class DemoThingsController : BaseApiController
             Term = term,
             PageNumber = pageNumber,
             RecordsPerPage = recordsPerPage,
+            FromDateTime = fromDateTime,
+            ToDateTime = toDateTime,
             SortOrder = sortOrder,
+            Type = type,
         };
         return await _demoThingService.SearchDemoThings(dto);
     }
