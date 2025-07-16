@@ -5,6 +5,7 @@
                 <th scope="col"></th>
                 <th scope="col">@CoreLocalizer[CoreResource.Row_Number]</th>
                 <th scope="col">@SharedLocalizer[SharedResource.DemoThing_Name]</th>
+                <th scope="col">@SharedLocalizer[SharedResource.DemoThing_Type]</th>
                 <th scope="col">@SharedLocalizer[SharedResource.DemoThing_Description]</th>
                 <th scope="col">@CoreLocalizer[CoreResource.CreateDateTime]</th>
             </tr>
@@ -27,6 +28,7 @@
                         <td> <span><i class="bi bi-box-arrow-right text-primary"></i></span></td>
                         <td>@(++row)</td>
                         <td>@item.Name</td>
+                        <td>@item.Type.GetEnumDisplayName()</td>
                         <td>@item.Description</td>
                         <td class="f-xs">@item.CreationTime.FullDateLongTime</td>
                     </tr>

@@ -1,4 +1,5 @@
 @using CanBeYours.AdminPanel.Helpers
+@using CanBeYours.Core.Domain.DemoThings
 
 <EditForm Model="Input" OnValidSubmit="HandleCreateDemoThing">
     <DataAnnotationsValidator />
@@ -8,7 +9,20 @@
             @SharedLocalizer[SharedResource.DemoThing_Name]:
         </label>
         <InputText @bind-Value="Input.Name" class="form-control f-sm"></InputText>
-        <ValidationMessage For="()=>Input.Name" class="text-danger f-sm"></ValidationMessage>
+        <ValidationMessage For="() => Input.Name" class="text-danger f-sm"></ValidationMessage>
+    </div>
+
+    <div class="form-group p-2">
+        <label class="f-sm text-secondary">
+            @SharedLocalizer[SharedResource.DemoThing_Type]:
+        </label>
+        <InputSelect @bind-Value="Input.Type" class="form-control f-sm">
+            @foreach (var type in Enum.GetValues<DemoThingType>())
+            {
+                <option value="@type">@type.GetEnumDisplayName()</option>
+            }
+        </InputSelect>
+        <ValidationMessage For="() => Input.Type" class="text-danger f-sm"></ValidationMessage>
     </div>
 
     <div class="form-group p-2">
@@ -16,7 +30,7 @@
             @SharedLocalizer[SharedResource.DemoThing_Description]:
         </label>
         <InputTextArea @bind-Value="Input.Description" class="form-control f-sm" rows="3"></InputTextArea>
-        <ValidationMessage For="()=>Input.Description" class="text-danger f-sm"></ValidationMessage>
+        <ValidationMessage For="() => Input.Description" class="text-danger f-sm"></ValidationMessage>
     </div>
 
     <div class="form-group p-2">
@@ -37,4 +51,4 @@
         var result = await DemoThingService.CreateDemoThing(Input);
         result.ShowToast(ToastService).PublishMessage(MessageService, Constants.DEMO_THING_CREATED).CloseModal(ModalInstance);
     }
-} 
+}

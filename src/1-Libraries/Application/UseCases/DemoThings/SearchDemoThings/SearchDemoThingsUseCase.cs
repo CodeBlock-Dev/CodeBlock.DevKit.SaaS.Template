@@ -20,16 +20,26 @@ internal class SearchDemoThingsUseCase : BaseQueryHandler, IRequestHandler<Searc
 
     public async Task<SearchOutputDto<GetDemoThingDto>> Handle(SearchDemoThingsRequest request, CancellationToken cancellationToken)
     {
-        var demoThings = await _demoThingRepository.SearchAsync(request.Term, request.PageNumber, request.RecordsPerPage);
-        var totalRecords = await _demoThingRepository.CountAsync(request.Term);
+        var demoThings = await _demoThingRepository.SearchAsync(
+            request.Term,
+            request.Type,
+            request.PageNumber,
+            request.RecordsPerPage,
+            request.SortOrder,
+            request.FromDateTime,
+            request.ToDateTime
+        );
 
-        var demoThingsDto = _mapper.Map<IEnumerable<GetDemoThingDto>>(demoThings);
+        var totalRecords = await _demoThingRepository.CountAsync(request.Term, request.Type, request.FromDateTime, request.ToDateTime);
 
-        //foreach (var dto in demoThingsDto)
+        var demoThingdto = _mapper.Map<IEnumerable<GetDemoThingDto>>(demoThings);
+
+        //foreach (var demoThing in demoThingdto)
         //{
-        //
+        //    demoThing.OrdersCount = await _orderAccessorService.PaidOrdersCountByDemoThingId(demoThing.Id);
+        //    demoThing.PlansCount = await _planRepository.CountByDemoThingId(demoThing.Id);
         //}
 
-        return new SearchOutputDto<GetDemoThingDto> { TotalRecords = totalRecords, Items = demoThingsDto };
+        return new SearchOutputDto<GetDemoThingDto> { TotalRecords = totalRecords, Items = demoThingdto };
     }
 }

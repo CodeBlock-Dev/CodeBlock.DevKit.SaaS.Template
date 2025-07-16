@@ -1,3 +1,5 @@
+@using CanBeYours.Core.Domain.DemoThings
+
 <EditForm Model="SearchDemoThingsInputDto" OnSubmit="HandleSearchDemoThings" class="row gy-2 gx-3 align-items-center">
 
     <div class="col-12">
@@ -10,9 +12,58 @@
         <InputText @bind-Value="SearchDemoThingsInputDto.Term" placeholder="..." class="form-control f-sm"></InputText>
     </div>
 
+
+    <div class="col-6 col-sm-3">
+        <InputSelect @bind-Value="SearchDemoThingsInputDto.Type" class="form-control f-sm form-select">
+            <option value="" selected> @SharedLocalizer[SharedResource.DemoThingType_All]</option>
+            @foreach (Enum item in Enum.GetValues(typeof(DemoThingType)))
+            {
+                <option value="@item">@item.GetEnumDisplayName()</option>
+            }
+        </InputSelect>
+    </div>
+
     <div class="col-6 col-sm-3 d-flex align-items-center">
         <button type="submit" class="btn f-sm btn-primary me-2 w-100">@CoreLocalizer[CoreResource.Search]</button>
+
+        <a class="btn f-sm btn-outline-dark me-2" data-bs-toggle="collapse" href="#more-filters" role="button" aria-expanded="false" aria-controls="more-filters">
+            <i class="bi bi-filter"></i>
+        </a>
     </div>
+
+    <div class="collapse container mb-1 mt-2" id="more-filters">
+        <div class="row">
+
+            <div class="col-6 col-sm-3">
+                <label class="f-sm text-secondary">
+                    @CoreLocalizer[CoreResource.From_Date]:
+                </label>
+                <InputDate @bind-Value="SearchDemoThingsInputDto.FromDateTime" class="form-control f-sm"></InputDate>
+            </div>
+
+            <div class="col-6 col-sm-3">
+                <label class="f-sm text-secondary">
+                    @CoreLocalizer[CoreResource.To_Date]:
+                </label>
+                <InputDate @bind-Value="SearchDemoThingsInputDto.ToDateTime" class="form-control f-sm"> </InputDate>
+
+            </div>
+
+            <div class="col-6 col-sm-3">
+                <label class="f-sm text-secondary">
+                    @CoreLocalizer[CoreResource.SortOrder]:
+                </label>
+                <InputSelect @bind-Value="SearchDemoThingsInputDto.SortOrder" class="form-control f-sm form-select">
+                    @foreach (Enum item in Enum.GetValues(typeof(SortOrder)))
+                    {
+                        <option value="@item">@item.GetEnumDisplayName()</option>
+                    }
+                </InputSelect>
+            </div>
+
+        </div>
+    </div>
+
 
 </EditForm>
 

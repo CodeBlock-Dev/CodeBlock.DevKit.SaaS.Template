@@ -1,4 +1,6 @@
 @using CanBeYours.AdminPanel.Helpers
+@using CanBeYours.Core.Domain.DemoThings
+
 <EditForm Model="Input" OnValidSubmit="HandleUpdateDemoThing">
     <DataAnnotationsValidator />
 
@@ -8,6 +10,19 @@
         </label>
         <InputText @bind-Value="Input.Name" class="form-control f-sm"></InputText>
         <ValidationMessage For="()=>Input.Name" class="text-danger f-sm"></ValidationMessage>
+    </div>
+
+    <div class="form-group p-2">
+        <label class="f-sm text-secondary">
+            @SharedLocalizer[SharedResource.DemoThing_Type]:
+        </label>
+        <InputSelect @bind-Value="Input.Type" class="form-control f-sm">
+            @foreach (var type in Enum.GetValues<DemoThingType>())
+            {
+                <option value="@type">@type.GetEnumDisplayName()</option>
+            }
+        </InputSelect>
+        <ValidationMessage For="() => Input.Type" class="text-danger f-sm"></ValidationMessage>
     </div>
 
     <div class="form-group p-2">
@@ -51,6 +66,7 @@
         Input = new UpdateDemoThingDto
         {
             Name = result.Value.Name,
+            Type = result.Value.Type,
             Description = result.Value.Description
         };
     }

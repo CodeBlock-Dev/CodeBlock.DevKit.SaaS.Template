@@ -141,4 +141,7 @@
   <data name="DemoThing_UserId" xml:space="preserve">
     <value>User Id</value>
   </data>
+  <data name="DemoThingType_All" xml:space="preserve">
+    <value>All Demo Types</value>
+  </data>
 </root>
