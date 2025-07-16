@@ -28,6 +28,13 @@ public static class Startup
         serviceProvider.SeedPermissions();
     }
 
+    public static void DropTestDatabase(this IServiceProvider serviceProvider)
+    {
+        using var serviceScope = serviceProvider.CreateScope();
+        var dbContext = serviceScope.ServiceProvider.GetService<MainDbContext>();
+        dbContext.DropTestDatabase();
+    }
+
     private static void AddMongoDbContext(this IServiceCollection services)
     {
         services.AddScoped<MainDbContext>();

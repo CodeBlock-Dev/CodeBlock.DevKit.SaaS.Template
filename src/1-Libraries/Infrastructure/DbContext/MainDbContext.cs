@@ -20,4 +20,13 @@ internal class MainDbContext : MongoDbContext
             )
         );
     }
+
+    public void DropTestDatabase()
+    {
+        // Only drop the database if it starts with "Test_" to avoid dropping production databases.
+        if (!_mongoDbSettings.DatabaseName.StartsWith("Test_"))
+            return;
+
+        _client.DropDatabase(_mongoDbSettings.DatabaseName);
+    }
 }
