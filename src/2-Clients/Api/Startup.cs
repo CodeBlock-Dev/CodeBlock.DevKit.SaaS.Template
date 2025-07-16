@@ -16,7 +16,7 @@ internal static class Startup
     public static WebApplication ConfigurePipeline(this WebApplication app)
     {
         app.UseApiClientModule();
-        app.Services.UseInfrastructureModule();
+        app.Services.UseInfrastructureModule(app.Environment.IsDevelopment());
 
         return app;
     }

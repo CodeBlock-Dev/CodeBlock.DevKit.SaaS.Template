@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace CanBeYours.Infrastructure.DbContext;
 
-internal static class DemoThingsDbMigrator
+internal static class DbMigrator
 {
     public static void MigrateDatabes(this IServiceProvider serviceProvider)
     {
