@@ -142,7 +142,7 @@ namespace CanBeYours.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email.
+        ///   Looks up a localized string similar to User Email.
         /// </summary>
         public static string Email {
             get {

@@ -1,4 +1,4 @@
-@page "/demo-things"
+﻿@page "/demo-things"
 @using CanBeYours.AdminPanel.Helpers
 @implements IDisposable
 
@@ -7,6 +7,11 @@
 <h1 class="page-title">
     @AdminPanelLocalizer[AdminPanelResource.DemoThings]
 </h1>
+
+<div class="alert alert-info">
+    This demo shows how to implement create, update, search, and pagination for an entity across UI, application, and domain levels. 
+    See the <a href="https://docs.codeblock.dev/" target="_blank" rel="noopener noreferrer">docs</a> for more details.
+</div>
 
 <SearchDemoThings SearchChangedCallback="OnSearchChanged" />
 

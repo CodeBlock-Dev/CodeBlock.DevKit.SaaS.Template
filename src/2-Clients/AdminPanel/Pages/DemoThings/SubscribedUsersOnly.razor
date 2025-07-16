@@ -1,6 +1,6 @@
 ﻿@page "/subscribedusers-only"
-@using CodeBlock.DevKit.Contracts.Services
-@inject ISubscriptionAccessorService SubscriptionService
+@using CodeBlock.DevKit.Subscription.Services.Subscriptions
+@inject ISubscriptionService SubscriptionService
 
 <PageTitle>@AdminPanelLocalizer[AdminPanelResource.SubscribedUsersOnly]</PageTitle>
 
@@ -36,6 +36,16 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        UserHasAnyActiveSubscription = await SubscriptionService.UserHasAnyActiveSubscription(CurrentUser.GetUserId());
+        await CheckIfUserHasAnyActiveSubscription();
+    }
+
+    private async Task CheckIfUserHasAnyActiveSubscription()
+    {
+        var result = await SubscriptionService.UserHasAnyActiveSubscription(CurrentUser.GetUserId());
+
+        if (result.IsSuccess)
+            UserHasAnyActiveSubscription = result.Value;
+        else
+            result.ShowErrorToast(ToastService);
     }
 }

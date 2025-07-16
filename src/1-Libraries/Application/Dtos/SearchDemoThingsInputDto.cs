@@ -5,5 +5,10 @@ namespace CanBeYours.Application.Dtos;
 
 public class SearchDemoThingsInputDto : SearchInputDto
 {
+    public SearchDemoThingsInputDto()
+    {
+        RecordsPerPage = 5;
+    }
+
     public DemoThingType? Type { get; set; }
 }

@@ -1,8 +1,21 @@
 @using CanBeYours.AdminPanel.Helpers
 @using CanBeYours.Core.Domain.DemoThings
+@using CodeBlock.DevKit.Contracts.Helpers
 
 <EditForm Model="Input" OnValidSubmit="HandleUpdateDemoThing">
     <DataAnnotationsValidator />
+
+    <div class="detail-item-enhanced">
+        <div class="detail-icon">
+            <i class="bi bi-person-circle"></i>
+        </div>
+        <div class="detail-content">
+            <label class="detail-label">@SharedLocalizer[SharedResource.Email]</label>
+            <div class="detail-value">
+                <a class="text-decoration-none text-primary" href="/user/details/@DemoThingUserId">@DemoThingUserEmail</a>
+            </div>
+        </div>
+    </div>
 
     <div class="form-group p-2">
         <label class="f-sm text-secondary">
@@ -34,9 +47,16 @@
     </div>
 
     <div class="form-group p-2">
-        <button type="submit" class="btn f-sm btn-primary mr-1">
+        <button type="submit" class="btn f-sm btn-success me-2">
             @CoreLocalizer[CoreResource.Update]
         </button>
+        @if (CurrentUser.HasPermission(Permissions.Tracking.CHANGES))
+        {
+            <a href="/tracking/changes/@DemoThingId" class="btn btn-outline-primary">
+                <i class="bi bi-clock-history me-2"></i>@CoreLocalizer[CoreResource.Changes_History]
+            </a>
+        }
+
     </div>
 </EditForm>
 
@@ -44,7 +64,9 @@
     [Parameter]
     public string DemoThingId { get; set; }
 
-    protected UpdateDemoThingDto Input = new();
+    private UpdateDemoThingDto Input = new();
+    private string DemoThingUserId;
+    private string DemoThingUserEmail;
 
     [CascadingParameter]
     protected BlazoredModalInstance ModalInstance { get; set; }
@@ -63,11 +85,14 @@
             return;
         }
 
+        DemoThingUserId = result.Value.UserId;
+        DemoThingUserEmail = result.Value.UserEmail;
+
         Input = new UpdateDemoThingDto
         {
             Name = result.Value.Name,
             Type = result.Value.Type,
-            Description = result.Value.Description
+            Description = result.Value.Description,
         };
     }
 

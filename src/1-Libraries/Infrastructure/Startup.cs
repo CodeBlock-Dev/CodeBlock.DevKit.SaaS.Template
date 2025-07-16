@@ -22,13 +22,10 @@ public static class Startup
         services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
     }
 
-    public static void UseInfrastructureModule(this IServiceProvider serviceProvider, bool isDevelopmentEnvironment)
+    public static void UseInfrastructureModule(this IServiceProvider serviceProvider)
     {
         serviceProvider.MigrateDatabes();
         serviceProvider.SeedPermissions();
-
-        if (isDevelopmentEnvironment)
-            serviceProvider.SeedSampleDemoThings();
     }
 
     private static void AddMongoDbContext(this IServiceCollection services)
