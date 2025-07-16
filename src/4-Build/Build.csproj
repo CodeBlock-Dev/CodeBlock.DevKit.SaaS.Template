@@ -10,6 +10,6 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CodeBlock.DevKit.Build" Version="1.3.5" />
+    <PackageReference Include="CodeBlock.DevKit.Build" Version="1.3.6" />
   </ItemGroup>
 </Project>
