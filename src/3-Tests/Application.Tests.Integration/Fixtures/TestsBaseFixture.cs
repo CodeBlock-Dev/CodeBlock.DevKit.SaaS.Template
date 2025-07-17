@@ -3,6 +3,7 @@ using CanBeYours.Core.Domain.DemoThings;
 using CanBeYours.Infrastructure;
 using CodeBlock.DevKit.Application.Srvices;
 using CodeBlock.DevKit.Clients.AdminPanel;
+using CodeBlock.DevKit.Contracts.Services;
 using CodeBlock.DevKit.Test.TestBase;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -18,14 +19,15 @@ public abstract class TestsBaseFixture : IntegrationTestsBase
     public readonly IMapper _mapper;
     public readonly IDemoThingRepository _demoThingRepository;
     public readonly ICurrentUser _currentUser;
+    public readonly IUserAccessorService _userAccessorService;
 
     protected TestsBaseFixture(string dbNameSuffix)
         : base(dbNameSuffix)
     {
         _demoThingRepository = GetRequiredService<IDemoThingRepository>();
+        _userAccessorService = GetRequiredService<IUserAccessorService>();
         _mapper = GetRequiredService<IMapper>();
         _requestDispatcher = Substitute.For<IRequestDispatcher>();
-
         _currentUser = Substitute.For<ICurrentUser>();
         _currentUser.GetUserId().Returns(Guid.NewGuid().ToString());
     }
