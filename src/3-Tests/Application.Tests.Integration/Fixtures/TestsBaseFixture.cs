@@ -36,7 +36,7 @@ public abstract class TestsBaseFixture : IntegrationTestsBase
     public override void InitialDatabase() { }
 
     /// <summary>
-    ///
+    /// This is used in the base class to drop the database after each test run.
     /// </summary>
     public override void DropDatabase()
     {

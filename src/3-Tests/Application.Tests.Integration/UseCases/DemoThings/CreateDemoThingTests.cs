@@ -10,12 +10,12 @@ namespace CanBeYours.Application.Tests.Integration.UseCases.DemoThings;
 public class CreateDemoThingTests
 {
     private readonly DemoThingsCollectionFixture _fixture;
-    private readonly ILogger<CreateDemoThingUseCase> _logger;
+    private readonly CreateDemoThingUseCase _createDemoThingUseCase;
 
     public CreateDemoThingTests(DemoThingsCollectionFixture fixture)
     {
         _fixture = fixture;
-        _logger = _fixture.GetRequiredService<ILogger<CreateDemoThingUseCase>>();
+        _createDemoThingUseCase = GetCreateDemoThingUseCase();
     }
 
     [Fact]
@@ -23,17 +23,18 @@ public class CreateDemoThingTests
     {
         //Arrange
         var request = new CreateDemoThingRequest(name: "Test Name", description: "Test Description", type: DemoThingType.DemoType1);
-        var createDemoThingUseCase = new CreateDemoThingUseCase(
-            _fixture._demoThingRepository,
-            _fixture._requestDispatcher,
-            _logger,
-            _fixture._currentUser
-        );
 
         //Act
-        var result = await createDemoThingUseCase.Handle(request, CancellationToken.None);
+        var result = await _createDemoThingUseCase.Handle(request, CancellationToken.None);
 
         //Assert
         result.EntityId.Should().NotBeNull();
+    }
+
+    private CreateDemoThingUseCase GetCreateDemoThingUseCase()
+    {
+        var logger = _fixture.GetRequiredService<ILogger<CreateDemoThingUseCase>>();
+
+        return new CreateDemoThingUseCase(_fixture._demoThingRepository, _fixture._requestDispatcher, logger, _fixture._currentUser);
     }
 }

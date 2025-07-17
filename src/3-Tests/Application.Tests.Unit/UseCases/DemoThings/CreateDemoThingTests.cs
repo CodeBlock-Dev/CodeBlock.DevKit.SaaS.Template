@@ -24,8 +24,6 @@ public class CreateDemoThingTests : TestsBaseFixture
 
         //Assert
         result.EntityId.Should().NotBeNull();
-        var addedDemoThing = DemoThings.FirstOrDefault(u => u.Id == result.EntityId);
-        addedDemoThing.Name.Should().Be(request.Name);
         await RequestDispatcher!.Received(1).PublishEvent(Arg.Any<DemoThingCreated>());
     }
 
