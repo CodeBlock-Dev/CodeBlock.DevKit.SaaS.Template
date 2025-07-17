@@ -130,7 +130,7 @@
     <value>سیستم کامل را کاوش کنید:</value>
   </data>
   <data name="System_Access_Subtitle" xml:space="preserve">
-    <value>ابتدا وب اپلیکیشن‌های موجود در src/3-clients را اجرا کنید، سپس روی هر کامپوننت زیر کلیک کنید تا ببینید CodeBlock.DevKit چه چیزی ارائه می‌دهد</value>
+    <value>ابتدا وب اپلیکیشن‌های موجود در src/2-clients را اجرا کنید، سپس روی هر کامپوننت زیر کلیک کنید تا ببینید CodeBlock.DevKit چه چیزی ارائه می‌دهد</value>
   </data>
   <data name="System_Website" xml:space="preserve">
     <value>وب‌سایت</value>

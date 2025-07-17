@@ -130,7 +130,7 @@
     <value>استكشف النظام الكامل:</value>
   </data>
   <data name="System_Access_Subtitle" xml:space="preserve">
-    <value>أولاً قم بتشغيل تطبيقات الويب من src/3-clients، ثم انقر على أي مكون أدناه لترى ما يوفره CodeBlock.DevKit</value>
+    <value>أولاً قم بتشغيل تطبيقات الويب من src/2-clients، ثم انقر على أي مكون أدناه لترى ما يوفره CodeBlock.DevKit</value>
   </data>
   <data name="System_Website" xml:space="preserve">
     <value>الموقع الإلكتروني</value>

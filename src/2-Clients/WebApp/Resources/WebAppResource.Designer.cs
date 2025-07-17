@@ -9,6 +9,8 @@
 //------------------------------------------------------------------------------
 
 namespace CanBeYours.WebApp.Resources {
+    using System;
+    
     
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -590,7 +592,7 @@ namespace CanBeYours.WebApp.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to First run the web apps from src/3-clients, then click on any component below to see what CodeBlock.DevKit provides.
+        ///   Looks up a localized string similar to First run the web apps from src/2-clients, then click on any component below to see what CodeBlock.DevKit provides.
         /// </summary>
         public static string System_Access_Subtitle {
             get {

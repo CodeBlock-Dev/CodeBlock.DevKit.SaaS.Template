@@ -130,7 +130,7 @@
     <value>Erkunden Sie das Komplette System:</value>
   </data>
   <data name="System_Access_Subtitle" xml:space="preserve">
-    <value>Führen Sie zuerst die Web-Apps aus src/3-clients aus und klicken Sie dann auf eine beliebige Komponente unten, um zu sehen, was CodeBlock.DevKit bietet</value>
+    <value>Führen Sie zuerst die Web-Apps aus src/2-clients aus und klicken Sie dann auf eine beliebige Komponente unten, um zu sehen, was CodeBlock.DevKit bietet</value>
   </data>
   <data name="System_Website" xml:space="preserve">
     <value>Website</value>
