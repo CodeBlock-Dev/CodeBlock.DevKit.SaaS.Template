@@ -124,6 +124,19 @@ Write-Host "Press Ctrl+C at any time to cancel the setup.`n"
 # Get the root directory (one level up from setup folder)
 $rootDir = Split-Path -Parent $PSScriptRoot
 
+# Check if setup has already been run
+$solutionFile = Get-ChildItem -Path $rootDir -Filter "*.sln" | Select-Object -First 1
+if ($solutionFile -and $solutionFile.Name -ne "CanBeYours.sln") {
+    Write-Host "Setup has already been run on this template!" -ForegroundColor Red
+    Write-Host "`nThe solution file has been renamed from 'CanBeYours.sln' to '$($solutionFile.Name)'." -ForegroundColor Yellow
+    Write-Host "This indicates that the setup process has already been executed on this template." -ForegroundColor Yellow
+    Write-Host "`nTo run setup again, you must use a fresh copy of the CodeBlock Dev Kit template." -ForegroundColor Cyan
+    Write-Host "Please download a new copy from: https://github.com/CodeBlock-Dev/CodeBlock.DevKit.Template" -ForegroundColor Cyan
+    Write-Host "`nPress any key to exit..." -ForegroundColor Gray
+    $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+    exit 1
+}
+
 # Read default values from appsettings.json
 $defaultSettingsPath = Join-Path $rootDir "src/2-Clients/AdminPanel/appsettings.json"
 $defaultSettings = Get-Content $defaultSettingsPath -Raw | ConvertFrom-Json
@@ -223,24 +236,37 @@ try {
         # Handle InternalsVisibleTo attributes in AssemblyInfo.cs
         $content = $content -replace 'InternalsVisibleTo\("CanBeYours\.([^"]*)"\)', "InternalsVisibleTo(`"$solutionName.`$1`")"
         
+        # Handle specific patterns in _ViewImports.cshtml files
+        $content = $content -replace "^CanBeYours\.([A-Za-z]+)\.Pages$", "$solutionName.`$1.Pages"
+        
         Set-Content $_.FullName $content
     }
 
     # Update .nuke configuration files and other JSON files
     Write-Host "`nUpdating configuration files..." -ForegroundColor Blue
-    Get-ChildItem -Recurse -Include "*.nuke","parameters.json" | ForEach-Object {
-        $content = Get-Content $_.FullName
-        $content = $content -replace '"Solution":\s*"CanBeYours\.sln"', "`"Solution`": `"$solutionName.sln`""
-        Set-Content $_.FullName $content
+    Get-ChildItem -Recurse -Include "*.nuke","parameters.json" | Where-Object { $_.PSIsContainer -eq $false } | ForEach-Object {
+        try {
+            $content = Get-Content $_.FullName -ErrorAction Stop
+            $content = $content -replace '"Solution":\s*"CanBeYours\.sln"', "`"Solution`": `"$solutionName.sln`""
+            Set-Content $_.FullName $content -ErrorAction Stop
+        }
+        catch {
+            Write-Host "Warning: Could not update $($_.FullName) - $($_.Exception.Message)" -ForegroundColor Yellow
+        }
     }
 
     # Update generated files (test results, logs, etc.)
     Write-Host "`nUpdating generated files..." -ForegroundColor Blue
-    Get-ChildItem -Recurse -Include "*.trx","*.log","*.cache","*.deps.json","*.runtimeconfig.json","*.staticwebassets.*.json","*.resources.dll","*.pdb","*.dll","*.exe" | Where-Object { $_.FullName -like "*CanBeYours*" } | ForEach-Object {
-        $content = Get-Content $_.FullName -Raw -ErrorAction SilentlyContinue
-        if ($content) {
-            $content = $content -replace "CanBeYours\.", "$solutionName."
-            Set-Content $_.FullName $content -NoNewline
+    Get-ChildItem -Recurse -Include "*.trx","*.log","*.cache","*.deps.json","*.runtimeconfig.json","*.staticwebassets.*.json","*.resources.dll","*.pdb","*.dll","*.exe" | Where-Object { $_.PSIsContainer -eq $false -and $_.FullName -like "*CanBeYours*" } | ForEach-Object {
+        try {
+            $content = Get-Content $_.FullName -Raw -ErrorAction Stop
+            if ($content) {
+                $content = $content -replace "CanBeYours\.", "$solutionName."
+                Set-Content $_.FullName $content -NoNewline -ErrorAction Stop
+            }
+        }
+        catch {
+            Write-Host "Warning: Could not update $($_.FullName) - $($_.Exception.Message)" -ForegroundColor Yellow
         }
     }
 }
