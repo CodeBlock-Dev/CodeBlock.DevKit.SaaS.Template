@@ -136,4 +136,22 @@
   <data name="SubscribedOnly" xml:space="preserve">
     <value>Nur für Abonnenten</value>
   </data>
+  <data name="DemoImplementationInfo" xml:space="preserve">
+    <value>Diese Demo zeigt, wie man Erstellen, Aktualisieren, Suchen und Paginierung für eine Entität über UI-, Anwendungs- und Domänenebenen implementiert.</value>
+  </data>
+  <data name="SeeDocs" xml:space="preserve">
+    <value>Siehe Dokumentation</value>
+  </data>
+  <data name="SubscribedUsersOnlyInfo" xml:space="preserve">
+    <value>Diese Demo-Seite zeigt, wie man prüft, ob der aktuell angemeldete Benutzer ein aktives Abonnement hat. Sie können diese Logik verwenden, um den Zugriff auf Ihre Funktionen zu steuern, abonnierten Benutzern Zugriff zu gewähren und andere aufzufordern, sich zuerst zu abonnieren. Weitere Details finden Sie in der Dokumentation.</value>
+  </data>
+  <data name="ActiveSubscriptionMessage" xml:space="preserve">
+    <value>Sie haben ein aktives Abonnement, deshalb sehen Sie diese Nachricht.</value>
+  </data>
+  <data name="NoActiveSubscriptionMessage" xml:space="preserve">
+    <value>Sie haben kein aktives Abonnement, deshalb sehen Sie diese Nachricht.</value>
+  </data>
+  <data name="ViewAvailablePlans" xml:space="preserve">
+    <value>Verfügbare Pläne anzeigen</value>
+  </data>
 </root>

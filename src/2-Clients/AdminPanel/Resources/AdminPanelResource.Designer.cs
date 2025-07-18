@@ -61,6 +61,15 @@ namespace CanBeYours.AdminPanel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have an active subscription, which is why you&apos;re seeing this message..
+        /// </summary>
+        public static string ActiveSubscriptionMessage {
+            get {
+                return ResourceManager.GetString("ActiveSubscriptionMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create Demo Thing.
         /// </summary>
         public static string CreateDemoThing {
@@ -79,11 +88,38 @@ namespace CanBeYours.AdminPanel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This demo shows how to implement create, update, search, and pagination for an entity across UI, application, and domain levels..
+        /// </summary>
+        public static string DemoImplementationInfo {
+            get {
+                return ResourceManager.GetString("DemoImplementationInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Demo Things.
         /// </summary>
         public static string DemoThings {
             get {
                 return ResourceManager.GetString("DemoThings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You don&apos;t have an active subscription, which is why you&apos;re seeing this message..
+        /// </summary>
+        public static string NoActiveSubscriptionMessage {
+            get {
+                return ResourceManager.GetString("NoActiveSubscriptionMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to See the docs.
+        /// </summary>
+        public static string SeeDocs {
+            get {
+                return ResourceManager.GetString("SeeDocs", resourceCulture);
             }
         }
         
@@ -106,11 +142,29 @@ namespace CanBeYours.AdminPanel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This demo page shows how to check whether the currently logged-in user has an active subscription. You can use this logic to control access to your features, grant access to subscribed users and prompt others to subscribe first. For more details, see the documentation..
+        /// </summary>
+        public static string SubscribedUsersOnlyInfo {
+            get {
+                return ResourceManager.GetString("SubscribedUsersOnlyInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update Demo Thing.
         /// </summary>
         public static string UpdateDemoThing {
             get {
                 return ResourceManager.GetString("UpdateDemoThing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View Available Plans.
+        /// </summary>
+        public static string ViewAvailablePlans {
+            get {
+                return ResourceManager.GetString("ViewAvailablePlans", resourceCulture);
             }
         }
     }

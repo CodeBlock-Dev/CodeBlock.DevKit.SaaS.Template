@@ -136,4 +136,22 @@
   <data name="SubscribedOnly" xml:space="preserve">
     <value>Apenas inscritos</value>
   </data>
+  <data name="DemoImplementationInfo" xml:space="preserve">
+    <value>Esta demonstração mostra como implementar criação, atualização, pesquisa e paginação para uma entidade através dos níveis de UI, aplicação e domínio.</value>
+  </data>
+  <data name="SeeDocs" xml:space="preserve">
+    <value>Ver documentação</value>
+  </data>
+  <data name="SubscribedUsersOnlyInfo" xml:space="preserve">
+    <value>Esta página de demonstração mostra como verificar se o usuário atualmente conectado tem uma assinatura ativa. Você pode usar essa lógica para controlar o acesso às suas funcionalidades, conceder acesso a usuários inscritos e solicitar que outros se inscrevam primeiro. Para mais detalhes, consulte a documentação.</value>
+  </data>
+  <data name="ActiveSubscriptionMessage" xml:space="preserve">
+    <value>Você tem uma assinatura ativa, por isso está vendo esta mensagem.</value>
+  </data>
+  <data name="NoActiveSubscriptionMessage" xml:space="preserve">
+    <value>Você não tem uma assinatura ativa, por isso está vendo esta mensagem.</value>
+  </data>
+  <data name="ViewAvailablePlans" xml:space="preserve">
+    <value>Ver Planos Disponíveis</value>
+  </data>
 </root>

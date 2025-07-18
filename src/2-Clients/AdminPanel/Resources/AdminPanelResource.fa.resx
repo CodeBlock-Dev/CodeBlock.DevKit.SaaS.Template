@@ -136,4 +136,22 @@
   <data name="SubscribedOnly" xml:space="preserve">
     <value>فقط مشترکین</value>
   </data>
+  <data name="DemoImplementationInfo" xml:space="preserve">
+    <value>این نسخه نمایشی نحوه پیاده‌سازی ایجاد، به‌روزرسانی، جستجو و صفحه‌بندی برای یک موجودیت در سطوح رابط کاربری، برنامه و دامنه را نشان می‌دهد.</value>
+  </data>
+  <data name="SeeDocs" xml:space="preserve">
+    <value>مشاهده مستندات</value>
+  </data>
+  <data name="SubscribedUsersOnlyInfo" xml:space="preserve">
+    <value>این صفحه نمایشی نشان می‌دهد که چگونه بررسی کنیم آیا کاربر فعلی اشتراک فعال دارد. شما می‌توانید از این منطق برای کنترل دسترسی به ویژگی‌های خود، اعطای دسترسی به کاربران مشترک و درخواست از دیگران برای اشتراک اول استفاده کنید. برای جزئیات بیشتر، مستندات را ببینید.</value>
+  </data>
+  <data name="ActiveSubscriptionMessage" xml:space="preserve">
+    <value>شما اشتراک فعال دارید، به همین دلیل این پیام را می‌بینید.</value>
+  </data>
+  <data name="NoActiveSubscriptionMessage" xml:space="preserve">
+    <value>شما اشتراک فعال ندارید، به همین دلیل این پیام را می‌بینید.</value>
+  </data>
+  <data name="ViewAvailablePlans" xml:space="preserve">
+    <value>مشاهده طرح‌های موجود</value>
+  </data>
 </root>

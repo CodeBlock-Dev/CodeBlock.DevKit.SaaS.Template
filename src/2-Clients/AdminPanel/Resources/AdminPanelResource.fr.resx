@@ -136,4 +136,22 @@
   <data name="SubscribedOnly" xml:space="preserve">
     <value>Abonnés uniquement</value>
   </data>
+  <data name="DemoImplementationInfo" xml:space="preserve">
+    <value>Cette démonstration montre comment implémenter la création, la mise à jour, la recherche et la pagination pour une entité à travers les niveaux UI, application et domaine.</value>
+  </data>
+  <data name="SeeDocs" xml:space="preserve">
+    <value>Voir la documentation</value>
+  </data>
+  <data name="SubscribedUsersOnlyInfo" xml:space="preserve">
+    <value>Cette page de démonstration montre comment vérifier si l'utilisateur actuellement connecté a un abonnement actif. Vous pouvez utiliser cette logique pour contrôler l'accès à vos fonctionnalités, accorder l'accès aux utilisateurs abonnés et inviter les autres à s'abonner d'abord. Pour plus de détails, consultez la documentation.</value>
+  </data>
+  <data name="ActiveSubscriptionMessage" xml:space="preserve">
+    <value>Vous avez un abonnement actif, c'est pourquoi vous voyez ce message.</value>
+  </data>
+  <data name="NoActiveSubscriptionMessage" xml:space="preserve">
+    <value>Vous n'avez pas d'abonnement actif, c'est pourquoi vous voyez ce message.</value>
+  </data>
+  <data name="ViewAvailablePlans" xml:space="preserve">
+    <value>Voir les Plans Disponibles</value>
+  </data>
 </root>

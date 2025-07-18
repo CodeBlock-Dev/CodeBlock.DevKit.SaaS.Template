@@ -135,4 +135,22 @@
   <data name="SubscribedOnly" xml:space="preserve">
     <value>Subscribed Only</value>
   </data>
+  <data name="DemoImplementationInfo" xml:space="preserve">
+    <value>This demo shows how to implement create, update, search, and pagination for an entity across UI, application, and domain levels.</value>
+  </data>
+  <data name="SeeDocs" xml:space="preserve">
+    <value>See the docs</value>
+  </data>
+  <data name="SubscribedUsersOnlyInfo" xml:space="preserve">
+    <value>This demo page shows how to check whether the currently logged-in user has an active subscription. You can use this logic to control access to your features, grant access to subscribed users and prompt others to subscribe first. For more details, see the documentation.</value>
+  </data>
+  <data name="ActiveSubscriptionMessage" xml:space="preserve">
+    <value>You have an active subscription, which is why you're seeing this message.</value>
+  </data>
+  <data name="NoActiveSubscriptionMessage" xml:space="preserve">
+    <value>You don't have an active subscription, which is why you're seeing this message.</value>
+  </data>
+  <data name="ViewAvailablePlans" xml:space="preserve">
+    <value>View Available Plans</value>
+  </data>
 </root>

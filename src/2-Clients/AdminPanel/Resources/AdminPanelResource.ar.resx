@@ -136,4 +136,22 @@
   <data name="SubscribedOnly" xml:space="preserve">
     <value>للمشتركين فقط</value>
   </data>
+  <data name="DemoImplementationInfo" xml:space="preserve">
+    <value>يوضح هذا العرض التجريبي كيفية تنفيذ عمليات الإنشاء والتحديث والبحث والتصفح للكيان عبر مستويات واجهة المستخدم والتطبيق والنطاق.</value>
+  </data>
+  <data name="SeeDocs" xml:space="preserve">
+    <value>راجع الوثائق</value>
+  </data>
+  <data name="SubscribedUsersOnlyInfo" xml:space="preserve">
+    <value>توضح صفحة العرض التجريبي هذه كيفية التحقق مما إذا كان المستخدم المسجل حاليًا لديه اشتراك نشط. يمكنك استخدام هذا المنطق للتحكم في الوصول إلى ميزاتك، ومنح الوصول للمستخدمين المشتركين ومطالبة الآخرين بالاشتراك أولاً. لمزيد من التفاصيل، راجع الوثائق.</value>
+  </data>
+  <data name="ActiveSubscriptionMessage" xml:space="preserve">
+    <value>لديك اشتراك نشط، ولهذا السبب ترى هذه الرسالة.</value>
+  </data>
+  <data name="NoActiveSubscriptionMessage" xml:space="preserve">
+    <value>ليس لديك اشتراك نشط، ولهذا السبب ترى هذه الرسالة.</value>
+  </data>
+  <data name="ViewAvailablePlans" xml:space="preserve">
+    <value>عرض الخطط المتاحة</value>
+  </data>
 </root>
