@@ -345,4 +345,134 @@
   <data name="Step_1_Description" xml:space="preserve">
     <value>CodeBlock مستندات جامعی دارد که هر آنچه را که باید در مورد راه‌اندازی یک استارتاپ با استفاده از DevKit بدانید، پوشش می‌دهد.</value>
   </data>
+  <data name="Privacy_Title" xml:space="preserve">
+    <value>سیاست حفظ حریم خصوصی</value>
+  </data>
+  <data name="Privacy_Introduction" xml:space="preserve">
+    <value>حریم خصوصی شما برای ما مهم است. این سیاست حفظ حریم خصوصی توضیح می‌دهد که ما چگونه اطلاعات شما را هنگام استفاده از برنامه و خدمات ما جمع‌آوری، استفاده و محافظت می‌کنیم.</value>
+  </data>
+  <data name="Privacy_InformationWeCollect_Title" xml:space="preserve">
+    <value>اطلاعاتی که جمع‌آوری می‌کنیم</value>
+  </data>
+  <data name="Privacy_InformationWeCollect_Content" xml:space="preserve">
+    <value><![CDATA[<p>هنگام استفاده از پلتفرم ما، ممکن است اطلاعات زیر را جمع‌آوری کنیم:</p>
+<ul>
+    <li>آدرس ایمیل: برای ایجاد و مدیریت حساب شما و همچنین ارسال ایمیل‌های بازیابی رمز عبور در صورت درخواست استفاده می‌شود.</li>
+    <li>اطلاعات اولیه پروفایل: این ممکن است شامل نام یا تصویر پروفایل شما باشد اگر توسط ارائه‌دهنده ورود خارجی ارائه شده باشد.</li>
+</ul>
+<p>ما فقط اطلاعاتی را که برای ارائه و بهبود خدمات ما ضروری است جمع‌آوری می‌کنیم.</p>]]></value>
+  </data>
+  <data name="Privacy_HowWeUseInfo_Title" xml:space="preserve">
+    <value>نحوه استفاده از اطلاعات شما</value>
+  </data>
+  <data name="Privacy_HowWeUseInfo_Content" xml:space="preserve">
+    <value><![CDATA[<p>ما از اطلاعات شما برای اهداف زیر استفاده می‌کنیم:</p>
+<ul>
+    <li>برای تأیید هویت شما و ورود به پلتفرم ما.</li>
+    <li>برای مدیریت حساب شما و ارائه ارتباطات ضروری مربوط به حساب.</li>
+    <li>برای ارسال ایمیل‌های بازیابی رمز عبور در صورت درخواست شما.</li>
+</ul>
+<p><strong>ما اطلاعات شما را نمی‌فروشیم، به اشتراک نمی‌گذاریم یا برای اهداف بازاریابی استفاده نمی‌کنیم.</strong></p>]]></value>
+  </data>
+  <data name="Privacy_DataSharing_Title" xml:space="preserve">
+    <value>اشتراک‌گذاری داده‌ها</value>
+  </data>
+  <data name="Privacy_DataSharing_Content" xml:space="preserve">
+    <value>ما داده‌های شما را با اشخاص ثالث به اشتراک نمی‌گذاریم، مگر در مواردی که قانون الزام کند یا برای رعایت شرایط ارائه‌دهندگان ورود خارجی (مانند گوگل، مایکروسافت، توییتر، فیسبوک).</value>
+  </data>
+  <data name="Privacy_DataRetention_Title" xml:space="preserve">
+    <value>نگهداری داده‌ها</value>
+  </data>
+  <data name="Privacy_DataRetention_Content" xml:space="preserve">
+    <value>ما اطلاعات شما را تا زمانی که برای ارائه خدمات ما لازم است یا قانون الزام می‌کند نگهداری می‌کنیم. اگر تصمیم به حذف حساب خود بگیرید، داده‌های شما را در مدت زمان معقول از سیستم‌های خود حذف خواهیم کرد.</value>
+  </data>
+  <data name="Privacy_SecurityMeasures_Title" xml:space="preserve">
+    <value>اقدامات امنیتی</value>
+  </data>
+  <data name="Privacy_SecurityMeasures_Content" xml:space="preserve">
+    <value>ما اقدامات امنیتی استاندارد صنعت را برای محافظت از داده‌های شما پیاده‌سازی می‌کنیم. با این حال، هیچ روش انتقال از طریق اینترنت یا ذخیره‌سازی الکترونیکی کاملاً امن نیست و ما نمی‌توانیم امنیت مطلق را تضمین کنیم.</value>
+  </data>
+  <data name="Privacy_YourRights_Title" xml:space="preserve">
+    <value>حقوق شما</value>
+  </data>
+  <data name="Privacy_YourRights_Content" xml:space="preserve">
+    <value><![CDATA[<p>شما حقوق زیر را در رابطه با اطلاعات شخصی خود دارید:</p>
+<ul>
+    <li>دسترسی: می‌توانید درخواست یک نسخه از اطلاعاتی که درباره شما نگهداری می‌کنیم را داشته باشید.</li>
+    <li>تصحیح: می‌توانید درخواست اصلاح اطلاعات نادرست یا ناقص را داشته باشید.</li>
+    <li>حذف: می‌توانید درخواست حذف حساب و داده‌های مرتبط خود را داشته باشید.</li>
+</ul>]]></value>
+  </data>
+  <data name="Privacy_PolicyChanges_Title" xml:space="preserve">
+    <value>تغییرات در سیاست حفظ حریم خصوصی</value>
+  </data>
+  <data name="Privacy_PolicyChanges_Content" xml:space="preserve">
+    <value>ما حق به‌روزرسانی این سیاست حفظ حریم خصوصی را در هر زمان برای خود محفوظ می‌داریم. هرگونه تغییر در این صفحه منتشر خواهد شد و تاریخ اجرا متناسباً به‌روز خواهد شد.</value>
+  </data>
+  <data name="Terms_Title" xml:space="preserve">
+    <value>شرایط خدمات</value>
+  </data>
+  <data name="Terms_Introduction" xml:space="preserve">
+    <value>به پلتفرم ما خوش آمدید! این شرایط خدمات ("شرایط") استفاده شما از برنامه ما و ویژگی‌های مرتبط با آن را تنظیم می‌کند.</value>
+  </data>
+  <data name="Terms_ExternalLogin_Title" xml:space="preserve">
+    <value>ارائه‌دهندگان ورود خارجی</value>
+  </data>
+  <data name="Terms_ExternalLogin_Content" xml:space="preserve">
+    <value>پلتفرم ما به شما امکان ورود با استفاده از ارائه‌دهندگان خارجی، از جمله اما نه محدود به گوگل، مایکروسافت، توییتر و فیسبوک را می‌دهد. با استفاده از این سرویس‌های ورود خارجی، شما با شرایط و سیاست‌های ارائه‌دهنده ورود انتخابی خود موافقت می‌کنید.</value>
+  </data>
+  <data name="Terms_EmailUsage_Title" xml:space="preserve">
+    <value>استفاده از آدرس ایمیل شما</value>
+  </data>
+  <data name="Terms_EmailUsage_Content" xml:space="preserve">
+    <value><![CDATA[<p>هنگام ورود از طریق هر ارائه‌دهنده خارجی، ممکن است ما درخواست دسترسی به آدرس ایمیل شما را داشته باشیم. این آدرس ایمیل برای اهداف زیر استفاده می‌شود:</p>
+<ul>
+    <li>برای ایجاد و مدیریت حساب شما در پلتفرم ما.</li>
+    <li>برای استفاده به عنوان نام کاربری برای اهداف احراز هویت.</li>
+    <li>برای ارسال ایمیل‌های بازیابی رمز عبور، در صورت درخواست شما.</li>
+</ul>
+<p><strong>ما از آدرس ایمیل شما برای اهداف بازاریابی استفاده نمی‌کنیم، آن را با اشخاص ثالث به اشتراک نمی‌گذاریم یا برای اهداف دیگر استفاده نمی‌کنیم.</strong></p>]]></value>
+  </data>
+  <data name="Terms_PrivacyHandling_Title" xml:space="preserve">
+    <value>حریم خصوصی و مدیریت داده‌ها</value>
+  </data>
+  <data name="Terms_PrivacyHandling_Content" xml:space="preserve">
+    <value>ما به حریم خصوصی شما اولویت می‌دهیم و اطلاعات شما را مطابق با سیاست حفظ حریم خصوصی خود مدیریت می‌کنیم. هر داده‌ای که در طول فرآیند ورود به دست می‌آید، تنها برای تسهیل دسترسی شما به پلتفرم ما استفاده خواهد شد.</value>
+  </data>
+  <data name="Terms_ProviderResponsibility_Title" xml:space="preserve">
+    <value>مسئولیت ارائه‌دهندگان خارجی</value>
+  </data>
+  <data name="Terms_ProviderResponsibility_Content" xml:space="preserve">
+    <value>با استفاده از یک ارائه‌دهنده ورود خارجی، شما با شرایط، ضوابط و سیاست‌های حریم خصوصی آن ارائه‌دهنده موافقت می‌کنید. ما مسئول هیچ اقدامی که توسط سرویس‌های ورود خارجی انجام می‌شود نیستیم.</value>
+  </data>
+  <data name="Terms_AccountResponsibility_Title" xml:space="preserve">
+    <value>مسئولیت‌های حساب شما</value>
+  </data>
+  <data name="Terms_AccountResponsibility_Content" xml:space="preserve">
+    <value>شما مسئول حفظ محرمانگی اطلاعات ورود به حساب خود هستید. لطفاً اگر فکر می‌کنید حساب شما به خطر افتاده است، فوراً با ما تماس بگیرید.</value>
+  </data>
+  <data name="Terms_Modifications_Title" xml:space="preserve">
+    <value>تغییرات در شرایط</value>
+  </data>
+  <data name="Terms_Modifications_Content" xml:space="preserve">
+    <value>ما حق تغییر این شرایط را در هر زمان برای خود محفوظ می‌داریم. اگر تغییرات قابل توجهی ایجاد شود، از طریق پلتفرم یا ایمیل به شما اطلاع خواهیم داد.</value>
+  </data>
+  <data name="Terms_EffectiveDate" xml:space="preserve">
+    <value>تاریخ اجرا:</value>
+  </data>
+  <data name="Terms_ContactUs" xml:space="preserve">
+    <value>تماس با ما</value>
+  </data>
+  <data name="Terms_ContactUsInfo" xml:space="preserve">
+    <value>اگر سؤالی درباره سیاست‌های ما یا نحوه مدیریت داده‌های خود دارید، لطفاً با ما تماس بگیرید.</value>
+  </data>
+  <data name="Terms_AgreeToPolicy" xml:space="preserve">
+    <value>با استفاده از پلتفرم ما، شما با این سیاست موافقت می‌کنید.</value>
+  </data>
+  <data name="Terms_AgreeToTerms" xml:space="preserve">
+    <value>با استفاده از پلتفرم ما، شما با این شرایط خدمات موافقت می‌کنید.</value>
+  </data>
+  <data name="Terms_ThankYou" xml:space="preserve">
+    <value>از استفاده از پلتفرم ما متشکریم!</value>
+  </data>
 </root>

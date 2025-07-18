@@ -345,4 +345,134 @@
   <data name="Step_1_Description" xml:space="preserve">
     <value>CodeBlock tem documentação abrangente que cobre tudo que você precisa saber sobre lançar uma startup usando o DevKit.</value>
   </data>
+  <data name="Privacy_Title" xml:space="preserve">
+    <value>Política de Privacidade</value>
+  </data>
+  <data name="Privacy_Introduction" xml:space="preserve">
+    <value>Sua privacidade é importante para nós. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações quando você usa nosso aplicativo e serviços.</value>
+  </data>
+  <data name="Privacy_InformationWeCollect_Title" xml:space="preserve">
+    <value>Informações que Coletamos</value>
+  </data>
+  <data name="Privacy_InformationWeCollect_Content" xml:space="preserve">
+    <value><![CDATA[<p>Quando você usa nossa plataforma, podemos coletar as seguintes informações:</p>
+<ul>
+    <li>Endereço de e-mail: Usado para criar e gerenciar sua conta, bem como para enviar e-mails de recuperação de senha quando solicitado.</li>
+    <li>Informações básicas do perfil: Isso pode incluir seu nome ou foto do perfil se fornecido pelo provedor de login externo.</li>
+</ul>
+<p>Coletamos apenas as informações necessárias para fornecer e melhorar nossos serviços.</p>]]></value>
+  </data>
+  <data name="Privacy_HowWeUseInfo_Title" xml:space="preserve">
+    <value>Como Usamos suas Informações</value>
+  </data>
+  <data name="Privacy_HowWeUseInfo_Content" xml:space="preserve">
+    <value><![CDATA[<p>Usamos suas informações para os seguintes propósitos:</p>
+<ul>
+    <li>Para autenticar sua identidade e fazer login em nossa plataforma.</li>
+    <li>Para gerenciar sua conta e fornecer comunicações essenciais relacionadas à conta.</li>
+    <li>Para enviar e-mails de recuperação de senha quando solicitado por você.</li>
+</ul>
+<p><strong>Não vendemos, compartilhamos ou usamos suas informações para fins de marketing.</strong></p>]]></value>
+  </data>
+  <data name="Privacy_DataSharing_Title" xml:space="preserve">
+    <value>Compartilhamento de Dados</value>
+  </data>
+  <data name="Privacy_DataSharing_Content" xml:space="preserve">
+    <value>Não compartilhamos seus dados com terceiros, exceto quando exigido por lei ou para cumprir com os termos dos provedores de login externos (por exemplo, Google, Microsoft, Twitter, Facebook).</value>
+  </data>
+  <data name="Privacy_DataRetention_Title" xml:space="preserve">
+    <value>Retenção de Dados</value>
+  </data>
+  <data name="Privacy_DataRetention_Content" xml:space="preserve">
+    <value>Mantemos suas informações pelo tempo necessário para fornecer nossos serviços ou conforme exigido por lei. Se você optar por excluir sua conta, removeremos seus dados de nossos sistemas dentro de um prazo razoável.</value>
+  </data>
+  <data name="Privacy_SecurityMeasures_Title" xml:space="preserve">
+    <value>Medidas de Segurança</value>
+  </data>
+  <data name="Privacy_SecurityMeasures_Content" xml:space="preserve">
+    <value>Implementamos medidas de segurança padrão da indústria para proteger seus dados. No entanto, nenhum método de transmissão pela Internet ou armazenamento eletrônico é completamente seguro, e não podemos garantir segurança absoluta.</value>
+  </data>
+  <data name="Privacy_YourRights_Title" xml:space="preserve">
+    <value>Seus Direitos</value>
+  </data>
+  <data name="Privacy_YourRights_Content" xml:space="preserve">
+    <value><![CDATA[<p>Você tem os seguintes direitos em relação às suas informações pessoais:</p>
+<ul>
+    <li>Acesso: Você pode solicitar uma cópia das informações que mantemos sobre você.</li>
+    <li>Correção: Você pode solicitar correções de informações imprecisas ou incompletas.</li>
+    <li>Exclusão: Você pode solicitar a exclusão de sua conta e dados associados.</li>
+</ul>]]></value>
+  </data>
+  <data name="Privacy_PolicyChanges_Title" xml:space="preserve">
+    <value>Alterações na Política de Privacidade</value>
+  </data>
+  <data name="Privacy_PolicyChanges_Content" xml:space="preserve">
+    <value>Reservamo-nos o direito de atualizar esta Política de Privacidade a qualquer momento. Quaisquer alterações serão publicadas nesta página, e a Data de Vigência será atualizada de acordo.</value>
+  </data>
+  <data name="Terms_Title" xml:space="preserve">
+    <value>Termos de Serviço</value>
+  </data>
+  <data name="Terms_Introduction" xml:space="preserve">
+    <value>Bem-vindo à nossa plataforma! Estes Termos de Serviço ("Termos") regem seu uso de nosso aplicativo e seus recursos associados.</value>
+  </data>
+  <data name="Terms_ExternalLogin_Title" xml:space="preserve">
+    <value>Provedores de Login Externos</value>
+  </data>
+  <data name="Terms_ExternalLogin_Content" xml:space="preserve">
+    <value>Nossa plataforma permite que você faça login usando provedores terceiros, incluindo, mas não se limitando a Google, Microsoft, Twitter e Facebook. Ao usar esses serviços de login externos, você concorda com os respectivos termos e políticas do provedor de login que selecionar.</value>
+  </data>
+  <data name="Terms_EmailUsage_Title" xml:space="preserve">
+    <value>Uso do seu Endereço de E-mail</value>
+  </data>
+  <data name="Terms_EmailUsage_Content" xml:space="preserve">
+    <value><![CDATA[<p>Quando você faz login através de qualquer provedor externo, podemos solicitar acesso ao seu endereço de e-mail. Este endereço de e-mail é usado para os seguintes propósitos:</p>
+<ul>
+    <li>Para criar e gerenciar sua conta em nossa plataforma.</li>
+    <li>Para usar como nome de usuário para fins de autenticação.</li>
+    <li>Para enviar e-mails de recuperação de senha, se solicitado por você.</li>
+</ul>
+<p><strong>Não usamos seu endereço de e-mail para fins de marketing, não o compartilhamos com terceiros, nem o utilizamos para quaisquer outros objetivos.</strong></p>]]></value>
+  </data>
+  <data name="Terms_PrivacyHandling_Title" xml:space="preserve">
+    <value>Privacidade e Tratamento de Dados</value>
+  </data>
+  <data name="Terms_PrivacyHandling_Content" xml:space="preserve">
+    <value>Priorizamos sua privacidade e tratamos suas informações de acordo com nossa Política de Privacidade. Quaisquer dados obtidos durante o processo de login serão usados apenas para facilitar seu acesso à nossa plataforma.</value>
+  </data>
+  <data name="Terms_ProviderResponsibility_Title" xml:space="preserve">
+    <value>Responsabilidade dos Provedores Externos</value>
+  </data>
+  <data name="Terms_ProviderResponsibility_Content" xml:space="preserve">
+    <value>Ao usar um provedor de login externo, você concorda com os termos, condições e políticas de privacidade desse provedor. Não somos responsáveis por quaisquer ações tomadas pelos serviços de login externos.</value>
+  </data>
+  <data name="Terms_AccountResponsibility_Title" xml:space="preserve">
+    <value>Suas Responsabilidades de Conta</value>
+  </data>
+  <data name="Terms_AccountResponsibility_Content" xml:space="preserve">
+    <value>Você é responsável por manter a confidencialidade de suas credenciais de conta. Por favor, entre em contato conosco imediatamente se acreditar que sua conta foi comprometida.</value>
+  </data>
+  <data name="Terms_Modifications_Title" xml:space="preserve">
+    <value>Modificações nos Termos</value>
+  </data>
+  <data name="Terms_Modifications_Content" xml:space="preserve">
+    <value>Reservamo-nos o direito de modificar estes Termos a qualquer momento. Se mudanças significativas forem feitas, notificaremos você através de nossa plataforma ou por e-mail.</value>
+  </data>
+  <data name="Terms_EffectiveDate" xml:space="preserve">
+    <value>Data de Vigência:</value>
+  </data>
+  <data name="Terms_ContactUs" xml:space="preserve">
+    <value>Contate-nos</value>
+  </data>
+  <data name="Terms_ContactUsInfo" xml:space="preserve">
+    <value>Se você tiver alguma dúvida sobre nossas políticas ou como tratamos seus dados, por favor entre em contato conosco.</value>
+  </data>
+  <data name="Terms_AgreeToPolicy" xml:space="preserve">
+    <value>Ao usar nossa plataforma, você concorda com esta política.</value>
+  </data>
+  <data name="Terms_AgreeToTerms" xml:space="preserve">
+    <value>Ao usar nossa plataforma, você concorda com estes Termos de Serviço.</value>
+  </data>
+  <data name="Terms_ThankYou" xml:space="preserve">
+    <value>Obrigado por usar nossa plataforma!</value>
+  </data>
 </root> 

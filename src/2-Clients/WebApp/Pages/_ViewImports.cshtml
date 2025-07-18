@@ -1,6 +1,13 @@
+@using CanBeYours.Core.Resources
+@using CanBeYours.WebApp.Resources
+@using CodeBlock.DevKit.Core.Resources
 @using Microsoft.AspNetCore.Authorization
-@using Microsoft.AspNetCore.Identity
+@using Microsoft.Extensions.Localization
 @attribute [AllowAnonymous]
 
 CanBeYours.Website.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@inject IStringLocalizer<WebAppResource> WebAppLocalizer
+@inject IStringLocalizer<CoreResource> CoreLocalizer
+@inject IStringLocalizer<SharedResource> SharedLocalizer

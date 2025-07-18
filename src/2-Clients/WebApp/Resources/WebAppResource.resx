@@ -345,4 +345,134 @@
   <data name="Step_1_Description" xml:space="preserve">
     <value>CodeBlock has comprehensive documentation that covers everything you need to know about launching a startup using the DevKit.</value>
   </data>
+  <data name="Privacy_Title" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="Privacy_Introduction" xml:space="preserve">
+    <value>Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our application and services.</value>
+  </data>
+  <data name="Privacy_InformationWeCollect_Title" xml:space="preserve">
+    <value>Information We Collect</value>
+  </data>
+  <data name="Privacy_InformationWeCollect_Content" xml:space="preserve">
+    <value><![CDATA[<p>When you use our platform, we may collect the following information:</p>
+<ul>
+    <li>Email address: Used to create and manage your account, as well as to send password recovery emails if requested.</li>
+    <li>Basic profile information: This may include your name or profile picture if provided by the external login provider.</li>
+</ul>
+<p>We only collect information that is necessary to provide and improve our services.</p>]]></value>
+  </data>
+  <data name="Privacy_HowWeUseInfo_Title" xml:space="preserve">
+    <value>How We Use Your Information</value>
+  </data>
+  <data name="Privacy_HowWeUseInfo_Content" xml:space="preserve">
+    <value><![CDATA[<p>We use your information for the following purposes:</p>
+<ul>
+    <li>To authenticate your identity and log you into our platform.</li>
+    <li>To manage your account and provide essential account-related communications.</li>
+    <li>To send you password recovery emails if requested by you.</li>
+</ul>
+<p><strong>We do not sell, share, or use your information for marketing purposes.</strong></p>]]></value>
+  </data>
+  <data name="Privacy_DataSharing_Title" xml:space="preserve">
+    <value>Data Sharing</value>
+  </data>
+  <data name="Privacy_DataSharing_Content" xml:space="preserve">
+    <value>We do not share your data with third parties, except when required by law or to comply with the terms of the external login providers (e.g., Google, Microsoft, Twitter, Facebook).</value>
+  </data>
+  <data name="Privacy_DataRetention_Title" xml:space="preserve">
+    <value>Data Retention</value>
+  </data>
+  <data name="Privacy_DataRetention_Content" xml:space="preserve">
+    <value>We retain your information for as long as necessary to provide our services or as required by law. If you choose to delete your account, we will remove your data from our systems within a reasonable timeframe.</value>
+  </data>
+  <data name="Privacy_SecurityMeasures_Title" xml:space="preserve">
+    <value>Security Measures</value>
+  </data>
+  <data name="Privacy_SecurityMeasures_Content" xml:space="preserve">
+    <value>We implement industry-standard security measures to protect your data. However, no method of transmission over the Internet or electronic storage is completely secure, and we cannot guarantee absolute security.</value>
+  </data>
+  <data name="Privacy_YourRights_Title" xml:space="preserve">
+    <value>Your Rights</value>
+  </data>
+  <data name="Privacy_YourRights_Content" xml:space="preserve">
+    <value><![CDATA[<p>You have the following rights regarding your personal information:</p>
+<ul>
+    <li>Access: You can request a copy of the information we hold about you.</li>
+    <li>Correction: You can request corrections to inaccurate or incomplete information.</li>
+    <li>Deletion: You can request the deletion of your account and associated data.</li>
+</ul>]]></value>
+  </data>
+  <data name="Privacy_PolicyChanges_Title" xml:space="preserve">
+    <value>Changes to Privacy Policy</value>
+  </data>
+  <data name="Privacy_PolicyChanges_Content" xml:space="preserve">
+    <value>We reserve the right to update this Privacy Policy at any time. Any changes will be posted on this page, and the Effective Date will be updated accordingly.</value>
+  </data>
+  <data name="Terms_Title" xml:space="preserve">
+    <value>Terms of Service</value>
+  </data>
+  <data name="Terms_Introduction" xml:space="preserve">
+    <value>Welcome to our platform! These Terms of Service ("Terms") govern your use of our application and its associated features.</value>
+  </data>
+  <data name="Terms_ExternalLogin_Title" xml:space="preserve">
+    <value>External Login Providers</value>
+  </data>
+  <data name="Terms_ExternalLogin_Content" xml:space="preserve">
+    <value>Our platform allows you to log in using third-party providers, including but not limited to Google, Microsoft, Twitter, and Facebook. By using these external login services, you agree to the respective terms and policies of the login provider you select.</value>
+  </data>
+  <data name="Terms_EmailUsage_Title" xml:space="preserve">
+    <value>Use of Your Email Address</value>
+  </data>
+  <data name="Terms_EmailUsage_Content" xml:space="preserve">
+    <value><![CDATA[<p>When you log in through any external provider, we may request access to your email address. This email address is used for the following purposes:</p>
+<ul>
+    <li>To create and manage your account on our platform.</li>
+    <li>To use as your username for authentication purposes.</li>
+    <li>To send password recovery emails, if requested by you.</li>
+</ul>
+<p><strong>We do not use your email address for marketing purposes, share it with third parties, or utilize it for any other goals.</strong></p>]]></value>
+  </data>
+  <data name="Terms_PrivacyHandling_Title" xml:space="preserve">
+    <value>Privacy and Data Handling</value>
+  </data>
+  <data name="Terms_PrivacyHandling_Content" xml:space="preserve">
+    <value>We prioritize your privacy and handle your information in compliance with our Privacy Policy. Any data obtained during the login process will only be used to facilitate your access to our platform.</value>
+  </data>
+  <data name="Terms_ProviderResponsibility_Title" xml:space="preserve">
+    <value>Responsibility of External Providers</value>
+  </data>
+  <data name="Terms_ProviderResponsibility_Content" xml:space="preserve">
+    <value>By using an external login provider, you agree to the terms, conditions, and privacy policies of that provider. We are not responsible for any actions taken by external login services.</value>
+  </data>
+  <data name="Terms_AccountResponsibility_Title" xml:space="preserve">
+    <value>Your Account Responsibilities</value>
+  </data>
+  <data name="Terms_AccountResponsibility_Content" xml:space="preserve">
+    <value>You are responsible for maintaining the confidentiality of your account credentials. Please contact us immediately if you believe your account has been compromised.</value>
+  </data>
+  <data name="Terms_Modifications_Title" xml:space="preserve">
+    <value>Modifications to Terms</value>
+  </data>
+  <data name="Terms_Modifications_Content" xml:space="preserve">
+    <value>We reserve the right to modify these Terms at any time. If significant changes are made, we will notify you through our platform or via email.</value>
+  </data>
+  <data name="Terms_EffectiveDate" xml:space="preserve">
+    <value>Effective Date:</value>
+  </data>
+  <data name="Terms_ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="Terms_ContactUsInfo" xml:space="preserve">
+    <value>If you have any questions about our policies or how we handle your data, please contact us.</value>
+  </data>
+  <data name="Terms_AgreeToPolicy" xml:space="preserve">
+    <value>By using our platform, you agree to this policy.</value>
+  </data>
+  <data name="Terms_AgreeToTerms" xml:space="preserve">
+    <value>By using our platform, you agree to these Terms of Service.</value>
+  </data>
+  <data name="Terms_ThankYou" xml:space="preserve">
+    <value>Thank you for using our platform!</value>
+  </data>
 </root>

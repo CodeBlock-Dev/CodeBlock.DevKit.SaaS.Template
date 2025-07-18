@@ -345,4 +345,134 @@
   <data name="Step_1_Description" xml:space="preserve">
     <value>CodeBlock لديه وثائق شاملة تغطي كل ما تحتاج لمعرفته حول إطلاق شركة ناشئة باستخدام DevKit.</value>
   </data>
+  <data name="Privacy_Title" xml:space="preserve">
+    <value>سياسة الخصوصية</value>
+  </data>
+  <data name="Privacy_Introduction" xml:space="preserve">
+    <value>خصوصيتك مهمة بالنسبة لنا. توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك عند استخدام تطبيقنا وخدماتنا.</value>
+  </data>
+  <data name="Privacy_InformationWeCollect_Title" xml:space="preserve">
+    <value>المعلومات التي نجمعها</value>
+  </data>
+  <data name="Privacy_InformationWeCollect_Content" xml:space="preserve">
+    <value><![CDATA[<p>عند استخدام منصتنا، قد نجمع المعلومات التالية:</p>
+<ul>
+    <li>عنوان البريد الإلكتروني: يستخدم لإنشاء وإدارة حسابك، وكذلك لإرسال رسائل استعادة كلمة المرور إذا طلبت ذلك.</li>
+    <li>معلومات الملف الشخصي الأساسية: قد تتضمن اسمك أو صورة ملفك الشخصي إذا قدمها موفر تسجيل الدخول الخارجي.</li>
+</ul>
+<p>نحن نجمع فقط المعلومات الضرورية لتقديم وتحسين خدماتنا.</p>]]></value>
+  </data>
+  <data name="Privacy_HowWeUseInfo_Title" xml:space="preserve">
+    <value>كيف نستخدم معلوماتك</value>
+  </data>
+  <data name="Privacy_HowWeUseInfo_Content" xml:space="preserve">
+    <value><![CDATA[<p>نستخدم معلوماتك للأغراض التالية:</p>
+<ul>
+    <li>للتحقق من هويتك وتسجيل دخولك إلى منصتنا.</li>
+    <li>لإدارة حسابك وتقديم الاتصالات الأساسية المتعلقة بالحساب.</li>
+    <li>لإرسال رسائل استعادة كلمة المرور إذا طلبت ذلك.</li>
+</ul>
+<p><strong>نحن لا نبيع أو نشارك أو نستخدم معلوماتك لأغراض تسويقية.</strong></p>]]></value>
+  </data>
+  <data name="Privacy_DataSharing_Title" xml:space="preserve">
+    <value>مشاركة البيانات</value>
+  </data>
+  <data name="Privacy_DataSharing_Content" xml:space="preserve">
+    <value>نحن لا نشارك بياناتك مع أطراف ثالثة، إلا عندما يكون ذلك مطلوباً بموجب القانون أو للامتثال لشروط موفري تسجيل الدخول الخارجيين (مثل Google وMicrosoft وTwitter وFacebook).</value>
+  </data>
+  <data name="Privacy_DataRetention_Title" xml:space="preserve">
+    <value>الاحتفاظ بالبيانات</value>
+  </data>
+  <data name="Privacy_DataRetention_Content" xml:space="preserve">
+    <value>نحتفظ بمعلوماتك طالما كان ذلك ضرورياً لتقديم خدماتنا أو وفقاً لما يقتضيه القانون. إذا اخترت حذف حسابك، سنقوم بإزالة بياناتك من أنظمتنا خلال فترة زمنية معقولة.</value>
+  </data>
+  <data name="Privacy_SecurityMeasures_Title" xml:space="preserve">
+    <value>التدابير الأمنية</value>
+  </data>
+  <data name="Privacy_SecurityMeasures_Content" xml:space="preserve">
+    <value>نقوم بتنفيذ تدابير أمنية قياسية في الصناعة لحماية بياناتك. ومع ذلك، لا توجد طريقة آمنة تماماً لنقل البيانات عبر الإنترنت أو تخزينها إلكترونياً، ولا يمكننا ضمان الأمان المطلق.</value>
+  </data>
+  <data name="Privacy_YourRights_Title" xml:space="preserve">
+    <value>حقوقك</value>
+  </data>
+  <data name="Privacy_YourRights_Content" xml:space="preserve">
+    <value><![CDATA[<p>لديك الحقوق التالية فيما يتعلق بمعلوماتك الشخصية:</p>
+<ul>
+    <li>الوصول: يمكنك طلب نسخة من المعلومات التي نحتفظ بها عنك.</li>
+    <li>التصحيح: يمكنك طلب تصحيح المعلومات غير الدقيقة أو غير المكتملة.</li>
+    <li>الحذف: يمكنك طلب حذف حسابك والبيانات المرتبطة به.</li>
+</ul>]]></value>
+  </data>
+  <data name="Privacy_PolicyChanges_Title" xml:space="preserve">
+    <value>التغييرات في سياسة الخصوصية</value>
+  </data>
+  <data name="Privacy_PolicyChanges_Content" xml:space="preserve">
+    <value>نحتفظ بالحق في تحديث سياسة الخصوصية هذه في أي وقت. سيتم نشر أي تغييرات على هذه الصفحة، وسيتم تحديث تاريخ السريان وفقاً لذلك.</value>
+  </data>
+  <data name="Terms_Title" xml:space="preserve">
+    <value>شروط الخدمة</value>
+  </data>
+  <data name="Terms_Introduction" xml:space="preserve">
+    <value>مرحباً بك في منصتنا! تحكم شروط الخدمة ("الشروط") هذه استخدامك لتطبيقنا وميزاته المرتبطة به.</value>
+  </data>
+  <data name="Terms_ExternalLogin_Title" xml:space="preserve">
+    <value>موفرو تسجيل الدخول الخارجيون</value>
+  </data>
+  <data name="Terms_ExternalLogin_Content" xml:space="preserve">
+    <value>تتيح منصتنا تسجيل الدخول باستخدام موفري خدمات خارجيين، بما في ذلك على سبيل المثال لا الحصر Google وMicrosoft وTwitter وFacebook. باستخدام خدمات تسجيل الدخول الخارجية هذه، فإنك توافق على الشروط والسياسات الخاصة بموفر تسجيل الدخول الذي تختاره.</value>
+  </data>
+  <data name="Terms_EmailUsage_Title" xml:space="preserve">
+    <value>استخدام عنوان بريدك الإلكتروني</value>
+  </data>
+  <data name="Terms_EmailUsage_Content" xml:space="preserve">
+    <value><![CDATA[<p>عند تسجيل الدخول من خلال أي موفر خارجي، قد نطلب الوصول إلى عنوان بريدك الإلكتروني. يستخدم عنوان البريد الإلكتروني هذا للأغراض التالية:</p>
+<ul>
+    <li>لإنشاء وإدارة حسابك على منصتنا.</li>
+    <li>لاستخدامه كاسم مستخدم لأغراض المصادقة.</li>
+    <li>لإرسال رسائل استعادة كلمة المرور، إذا طلبت ذلك.</li>
+</ul>
+<p><strong>نحن لا نستخدم عنوان بريدك الإلكتروني لأغراض تسويقية، أو نشاركه مع أطراف ثالثة، أو نستخدمه لأي أهداف أخرى.</strong></p>]]></value>
+  </data>
+  <data name="Terms_PrivacyHandling_Title" xml:space="preserve">
+    <value>الخصوصية ومعالجة البيانات</value>
+  </data>
+  <data name="Terms_PrivacyHandling_Content" xml:space="preserve">
+    <value>نحن نعطي الأولوية لخصوصيتك ونتعامل مع معلوماتك وفقاً لسياسة الخصوصية الخاصة بنا. سيتم استخدام أي بيانات يتم الحصول عليها أثناء عملية تسجيل الدخول فقط لتسهيل وصولك إلى منصتنا.</value>
+  </data>
+  <data name="Terms_ProviderResponsibility_Title" xml:space="preserve">
+    <value>مسؤولية الموفرين الخارجيين</value>
+  </data>
+  <data name="Terms_ProviderResponsibility_Content" xml:space="preserve">
+    <value>باستخدام موفر تسجيل دخول خارجي، فإنك توافق على الشروط والأحكام وسياسات الخصوصية الخاصة بذلك الموفر. نحن لسنا مسؤولين عن أي إجراءات تتخذها خدمات تسجيل الدخول الخارجية.</value>
+  </data>
+  <data name="Terms_AccountResponsibility_Title" xml:space="preserve">
+    <value>مسؤوليات حسابك</value>
+  </data>
+  <data name="Terms_AccountResponsibility_Content" xml:space="preserve">
+    <value>أنت مسؤول عن الحفاظ على سرية بيانات اعتماد حسابك. يرجى الاتصال بنا على الفور إذا كنت تعتقد أن حسابك قد تم اختراقه.</value>
+  </data>
+  <data name="Terms_Modifications_Title" xml:space="preserve">
+    <value>التعديلات على الشروط</value>
+  </data>
+  <data name="Terms_Modifications_Content" xml:space="preserve">
+    <value>نحتفظ بالحق في تعديل هذه الشروط في أي وقت. إذا تم إجراء تغييرات مهمة، سنخطرك من خلال منصتنا أو عبر البريد الإلكتروني.</value>
+  </data>
+  <data name="Terms_EffectiveDate" xml:space="preserve">
+    <value>تاريخ السريان:</value>
+  </data>
+  <data name="Terms_ContactUs" xml:space="preserve">
+    <value>اتصل بنا</value>
+  </data>
+  <data name="Terms_ContactUsInfo" xml:space="preserve">
+    <value>إذا كانت لديك أي أسئلة حول سياساتنا أو كيفية تعاملنا مع بياناتك، يرجى الاتصال بنا.</value>
+  </data>
+  <data name="Terms_AgreeToPolicy" xml:space="preserve">
+    <value>باستخدام منصتنا، فإنك توافق على هذه السياسة.</value>
+  </data>
+  <data name="Terms_AgreeToTerms" xml:space="preserve">
+    <value>باستخدام منصتنا، فإنك توافق على شروط الخدمة هذه.</value>
+  </data>
+  <data name="Terms_ThankYou" xml:space="preserve">
+    <value>شكراً لاستخدام منصتنا!</value>
+  </data>
 </root> 

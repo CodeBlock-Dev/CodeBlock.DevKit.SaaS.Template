@@ -466,6 +466,166 @@ namespace CanBeYours.WebApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to We retain your information for as long as necessary to provide our services or as required by law. If you choose to delete your account, we will remove your data from our systems within a reasonable timeframe..
+        /// </summary>
+        public static string Privacy_DataRetention_Content {
+            get {
+                return ResourceManager.GetString("Privacy_DataRetention_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data Retention.
+        /// </summary>
+        public static string Privacy_DataRetention_Title {
+            get {
+                return ResourceManager.GetString("Privacy_DataRetention_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We do not share your data with third parties, except when required by law or to comply with the terms of the external login providers (e.g., Google, Microsoft, Twitter, Facebook)..
+        /// </summary>
+        public static string Privacy_DataSharing_Content {
+            get {
+                return ResourceManager.GetString("Privacy_DataSharing_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data Sharing.
+        /// </summary>
+        public static string Privacy_DataSharing_Title {
+            get {
+                return ResourceManager.GetString("Privacy_DataSharing_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;We use your information for the following purposes:&lt;/p&gt;
+        ///&lt;ul&gt;
+        ///    &lt;li&gt;To authenticate your identity and log you into our platform.&lt;/li&gt;
+        ///    &lt;li&gt;To manage your account and provide essential account-related communications.&lt;/li&gt;
+        ///    &lt;li&gt;To send you password recovery emails if requested by you.&lt;/li&gt;
+        ///&lt;/ul&gt;
+        ///&lt;p&gt;&lt;strong&gt;We do not sell, share, or use your information for marketing purposes.&lt;/strong&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string Privacy_HowWeUseInfo_Content {
+            get {
+                return ResourceManager.GetString("Privacy_HowWeUseInfo_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How We Use Your Information.
+        /// </summary>
+        public static string Privacy_HowWeUseInfo_Title {
+            get {
+                return ResourceManager.GetString("Privacy_HowWeUseInfo_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;When you use our platform, we may collect the following information:&lt;/p&gt;
+        ///&lt;ul&gt;
+        ///    &lt;li&gt;Email address: Used to create and manage your account, as well as to send password recovery emails if requested.&lt;/li&gt;
+        ///    &lt;li&gt;Basic profile information: This may include your name or profile picture if provided by the external login provider.&lt;/li&gt;
+        ///&lt;/ul&gt;
+        ///&lt;p&gt;We only collect information that is necessary to provide and improve our services.&lt;/p&gt;.
+        /// </summary>
+        public static string Privacy_InformationWeCollect_Content {
+            get {
+                return ResourceManager.GetString("Privacy_InformationWeCollect_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information We Collect.
+        /// </summary>
+        public static string Privacy_InformationWeCollect_Title {
+            get {
+                return ResourceManager.GetString("Privacy_InformationWeCollect_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our application and services..
+        /// </summary>
+        public static string Privacy_Introduction {
+            get {
+                return ResourceManager.GetString("Privacy_Introduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We reserve the right to update this Privacy Policy at any time. Any changes will be posted on this page, and the Effective Date will be updated accordingly..
+        /// </summary>
+        public static string Privacy_PolicyChanges_Content {
+            get {
+                return ResourceManager.GetString("Privacy_PolicyChanges_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changes to Privacy Policy.
+        /// </summary>
+        public static string Privacy_PolicyChanges_Title {
+            get {
+                return ResourceManager.GetString("Privacy_PolicyChanges_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We implement industry-standard security measures to protect your data. However, no method of transmission over the Internet or electronic storage is completely secure, and we cannot guarantee absolute security..
+        /// </summary>
+        public static string Privacy_SecurityMeasures_Content {
+            get {
+                return ResourceManager.GetString("Privacy_SecurityMeasures_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Security Measures.
+        /// </summary>
+        public static string Privacy_SecurityMeasures_Title {
+            get {
+                return ResourceManager.GetString("Privacy_SecurityMeasures_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privacy Policy.
+        /// </summary>
+        public static string Privacy_Title {
+            get {
+                return ResourceManager.GetString("Privacy_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;You have the following rights regarding your personal information:&lt;/p&gt;
+        ///&lt;ul&gt;
+        ///    &lt;li&gt;Access: You can request a copy of the information we hold about you.&lt;/li&gt;
+        ///    &lt;li&gt;Correction: You can request corrections to inaccurate or incomplete information.&lt;/li&gt;
+        ///    &lt;li&gt;Deletion: You can request the deletion of your account and associated data.&lt;/li&gt;
+        ///&lt;/ul&gt;.
+        /// </summary>
+        public static string Privacy_YourRights_Content {
+            get {
+                return ResourceManager.GetString("Privacy_YourRights_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Rights.
+        /// </summary>
+        public static string Privacy_YourRights_Title {
+            get {
+                return ResourceManager.GetString("Privacy_YourRights_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Read Docs.
         /// </summary>
         public static string Step_1_Button {
@@ -696,6 +856,192 @@ namespace CanBeYours.WebApp.Resources {
         public static string System_Website_Status {
             get {
                 return ResourceManager.GetString("System_Website_Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You are responsible for maintaining the confidentiality of your account credentials. Please contact us immediately if you believe your account has been compromised..
+        /// </summary>
+        public static string Terms_AccountResponsibility_Content {
+            get {
+                return ResourceManager.GetString("Terms_AccountResponsibility_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Account Responsibilities.
+        /// </summary>
+        public static string Terms_AccountResponsibility_Title {
+            get {
+                return ResourceManager.GetString("Terms_AccountResponsibility_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to By using our platform, you agree to this policy..
+        /// </summary>
+        public static string Terms_AgreeToPolicy {
+            get {
+                return ResourceManager.GetString("Terms_AgreeToPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to By using our platform, you agree to these Terms of Service..
+        /// </summary>
+        public static string Terms_AgreeToTerms {
+            get {
+                return ResourceManager.GetString("Terms_AgreeToTerms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact Us.
+        /// </summary>
+        public static string Terms_ContactUs {
+            get {
+                return ResourceManager.GetString("Terms_ContactUs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you have any questions about our policies or how we handle your data, please contact us..
+        /// </summary>
+        public static string Terms_ContactUsInfo {
+            get {
+                return ResourceManager.GetString("Terms_ContactUsInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Effective Date:.
+        /// </summary>
+        public static string Terms_EffectiveDate {
+            get {
+                return ResourceManager.GetString("Terms_EffectiveDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;When you log in through any external provider, we may request access to your email address. This email address is used for the following purposes:&lt;/p&gt;
+        ///&lt;ul&gt;
+        ///    &lt;li&gt;To create and manage your account on our platform.&lt;/li&gt;
+        ///    &lt;li&gt;To use as your username for authentication purposes.&lt;/li&gt;
+        ///    &lt;li&gt;To send password recovery emails, if requested by you.&lt;/li&gt;
+        ///&lt;/ul&gt;
+        ///&lt;p&gt;&lt;strong&gt;We do not use your email address for marketing purposes, share it with third parties, or utilize it for any other goals.&lt;/strong&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string Terms_EmailUsage_Content {
+            get {
+                return ResourceManager.GetString("Terms_EmailUsage_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use of Your Email Address.
+        /// </summary>
+        public static string Terms_EmailUsage_Title {
+            get {
+                return ResourceManager.GetString("Terms_EmailUsage_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Our platform allows you to log in using third-party providers, including but not limited to Google, Microsoft, Twitter, and Facebook. By using these external login services, you agree to the respective terms and policies of the login provider you select..
+        /// </summary>
+        public static string Terms_ExternalLogin_Content {
+            get {
+                return ResourceManager.GetString("Terms_ExternalLogin_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to External Login Providers.
+        /// </summary>
+        public static string Terms_ExternalLogin_Title {
+            get {
+                return ResourceManager.GetString("Terms_ExternalLogin_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome to our platform! These Terms of Service (&quot;Terms&quot;) govern your use of our application and its associated features..
+        /// </summary>
+        public static string Terms_Introduction {
+            get {
+                return ResourceManager.GetString("Terms_Introduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We reserve the right to modify these Terms at any time. If significant changes are made, we will notify you through our platform or via email..
+        /// </summary>
+        public static string Terms_Modifications_Content {
+            get {
+                return ResourceManager.GetString("Terms_Modifications_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modifications to Terms.
+        /// </summary>
+        public static string Terms_Modifications_Title {
+            get {
+                return ResourceManager.GetString("Terms_Modifications_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We prioritize your privacy and handle your information in compliance with our Privacy Policy. Any data obtained during the login process will only be used to facilitate your access to our platform..
+        /// </summary>
+        public static string Terms_PrivacyHandling_Content {
+            get {
+                return ResourceManager.GetString("Terms_PrivacyHandling_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privacy and Data Handling.
+        /// </summary>
+        public static string Terms_PrivacyHandling_Title {
+            get {
+                return ResourceManager.GetString("Terms_PrivacyHandling_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to By using an external login provider, you agree to the terms, conditions, and privacy policies of that provider. We are not responsible for any actions taken by external login services..
+        /// </summary>
+        public static string Terms_ProviderResponsibility_Content {
+            get {
+                return ResourceManager.GetString("Terms_ProviderResponsibility_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Responsibility of External Providers.
+        /// </summary>
+        public static string Terms_ProviderResponsibility_Title {
+            get {
+                return ResourceManager.GetString("Terms_ProviderResponsibility_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thank you for using our platform!.
+        /// </summary>
+        public static string Terms_ThankYou {
+            get {
+                return ResourceManager.GetString("Terms_ThankYou", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Terms of Service.
+        /// </summary>
+        public static string Terms_Title {
+            get {
+                return ResourceManager.GetString("Terms_Title", resourceCulture);
             }
         }
         

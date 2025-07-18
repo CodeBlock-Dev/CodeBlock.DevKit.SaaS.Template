@@ -3,38 +3,32 @@
     Layout = "_SimpleLayout";
 }
 
-<h1>Terms of Service</h1>
-<p>Effective Date: <strong>@DateTime.Now.ToString("d")</strong></p>
+<h1>@WebAppLocalizer[WebAppResource.Terms_Title]</h1>
+<p>@WebAppLocalizer[WebAppResource.Terms_EffectiveDate] <strong>@DateTime.Now.ToString("d")</strong></p>
 
-<p>Welcome to our platform! These Terms of Service ("Terms") govern your use of our application and its associated features.</p>
+<p>@WebAppLocalizer[WebAppResource.Terms_Introduction]</p>
 
-<h2>1. External Login Providers</h2>
-<p>Our platform allows you to log in using third-party providers, including but not limited to Google, Microsoft, Twitter, and Facebook. By using these external login services, you agree to the respective terms and policies of the login provider you select.</p>
+<h2>@WebAppLocalizer[WebAppResource.Terms_ExternalLogin_Title]</h2>
+<p>@WebAppLocalizer[WebAppResource.Terms_ExternalLogin_Content]</p>
 
-<h2>2. Use of Your Email Address</h2>
-<p>When you log in through any external provider, we may request access to your email address. This email address is used for the following purposes:</p>
-<ul>
-    <li>To create and manage your account on our platform.</li>
-    <li>To use as your username for authentication purposes.</li>
-    <li>To send password recovery emails, if requested by you.</li>
-</ul>
-<p><strong>We do not use your email address for marketing purposes, share it with third parties, or utilize it for any other goals.</strong></p>
+<h2>@WebAppLocalizer[WebAppResource.Terms_EmailUsage_Title]</h2>
+@Html.Raw(WebAppLocalizer[WebAppResource.Terms_EmailUsage_Content])
 
-<h2>3. Privacy and Data Handling</h2>
-<p>We prioritize your privacy and handle your information in compliance with our <a href="/privacy-policy">Privacy Policy</a>. Any data obtained during the login process will only be used to facilitate your access to our platform.</p>
+<h2>@WebAppLocalizer[WebAppResource.Terms_PrivacyHandling_Title]</h2>
+<p>@WebAppLocalizer[WebAppResource.Terms_PrivacyHandling_Content]</p>
 
-<h2>4. Responsibility of External Providers</h2>
-<p>By using an external login provider, you agree to the terms, conditions, and privacy policies of that provider. We are not responsible for any actions taken by external login services.</p>
+<h2>@WebAppLocalizer[WebAppResource.Terms_ProviderResponsibility_Title]</h2>
+<p>@WebAppLocalizer[WebAppResource.Terms_ProviderResponsibility_Content]</p>
 
-<h2>5. Your Account Responsibilities</h2>
-<p>You are responsible for maintaining the confidentiality of your account credentials. Please contact us immediately if you believe your account has been compromised.</p>
+<h2>@WebAppLocalizer[WebAppResource.Terms_AccountResponsibility_Title]</h2>
+<p>@WebAppLocalizer[WebAppResource.Terms_AccountResponsibility_Content]</p>
 
-<h2>6. Modifications to These Terms</h2>
-<p>We reserve the right to modify these Terms at any time. If significant changes are made, we will notify you through our platform or via email.</p>
+<h2>@WebAppLocalizer[WebAppResource.Terms_Modifications_Title]</h2>
+<p>@WebAppLocalizer[WebAppResource.Terms_Modifications_Content]</p>
 
-<h2>7. Contact Us</h2>
-<p>If you have any questions about these Terms or our platform, please contact us.</p>
+<h2>@WebAppLocalizer[WebAppResource.Terms_ContactUs]</h2>
+<p>@WebAppLocalizer[WebAppResource.Terms_ContactUsInfo]</p>
 
-<p>By using our platform, you agree to these Terms of Service.</p>
+<p>@WebAppLocalizer[WebAppResource.Terms_AgreeToTerms]</p>
 
-<p>Thank you for using our platform!</p>
+<p>@WebAppLocalizer[WebAppResource.Terms_ThankYou]</p>
