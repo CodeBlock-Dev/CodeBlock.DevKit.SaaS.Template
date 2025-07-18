@@ -118,16 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CreateDemoThing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="CreateDemoThing" xml:space="preserve">
+    <value>ایجاد شیء نمونه</value>
+  </data>
+  <data name="DemoThings" xml:space="preserve">
+    <value>اشیاء نمونه</value>
+  </data>
+  <data name="UpdateDemoThing" xml:space="preserve">
+    <value>بروزرسانی شیء نمونه</value>
   </data>
   <data name="SubscribedUsersOnly" xml:space="preserve">
-    <value />
+    <value>فقط کاربران مشترک</value>
   </data>
   <data name="Demo" xml:space="preserve">
-    <value />
+    <value>نمونه</value>
   </data>
   <data name="SubscribedOnly" xml:space="preserve">
-    <value />
+    <value>فقط مشترکین</value>
   </data>
 </root>

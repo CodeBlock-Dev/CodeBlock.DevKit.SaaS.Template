@@ -118,16 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CreateDemoThing" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="CreateDemoThing" xml:space="preserve">
+    <value>Demo-Objekt erstellen</value>
+  </data>
+  <data name="DemoThings" xml:space="preserve">
+    <value>Demo-Objekte</value>
+  </data>
+  <data name="UpdateDemoThing" xml:space="preserve">
+    <value>Demo-Objekt aktualisieren</value>
   </data>
   <data name="SubscribedUsersOnly" xml:space="preserve">
-    <value />
+    <value>Nur für abonnierte Benutzer</value>
   </data>
   <data name="Demo" xml:space="preserve">
-    <value />
+    <value>Demo</value>
   </data>
   <data name="SubscribedOnly" xml:space="preserve">
-    <value />
+    <value>Nur für Abonnenten</value>
   </data>
 </root>
