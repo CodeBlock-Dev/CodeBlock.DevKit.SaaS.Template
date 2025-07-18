@@ -596,9 +596,9 @@ namespace CanBeYours.WebApp.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Privacy Policy.
         /// </summary>
-        public static string Privacy_Title {
+        public static string PrivacyPolicy {
             get {
-                return ResourceManager.GetString("Privacy_Title", resourceCulture);
+                return ResourceManager.GetString("PrivacyPolicy", resourceCulture);
             }
         }
         
@@ -1039,9 +1039,9 @@ namespace CanBeYours.WebApp.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Terms of Service.
         /// </summary>
-        public static string Terms_Title {
+        public static string TermsOfService {
             get {
-                return ResourceManager.GetString("Terms_Title", resourceCulture);
+                return ResourceManager.GetString("TermsOfService", resourceCulture);
             }
         }
         

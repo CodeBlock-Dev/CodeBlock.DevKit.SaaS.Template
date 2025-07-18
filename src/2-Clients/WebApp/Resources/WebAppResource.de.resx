@@ -345,7 +345,7 @@
   <data name="Step_1_Description" xml:space="preserve">
     <value>CodeBlock verfügt über umfassende Dokumentation, die alles abdeckt, was Sie über den Start eines Startups mit dem DevKit wissen müssen.</value>
   </data>
-  <data name="Privacy_Title" xml:space="preserve">
+  <data name="PrivacyPolicy" xml:space="preserve">
     <value>Datenschutzerklärung</value>
   </data>
   <data name="Privacy_Introduction" xml:space="preserve">
@@ -409,7 +409,7 @@
   <data name="Privacy_PolicyChanges_Content" xml:space="preserve">
     <value>Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu aktualisieren. Alle Änderungen werden auf dieser Seite veröffentlicht, und das Datum des Inkrafttretens wird entsprechend aktualisiert.</value>
   </data>
-  <data name="Terms_Title" xml:space="preserve">
+  <data name="TermsOfService" xml:space="preserve">
     <value>Nutzungsbedingungen</value>
   </data>
   <data name="Terms_Introduction" xml:space="preserve">

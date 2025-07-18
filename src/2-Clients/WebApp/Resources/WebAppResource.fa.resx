@@ -345,7 +345,7 @@
   <data name="Step_1_Description" xml:space="preserve">
     <value>CodeBlock مستندات جامعی دارد که هر آنچه را که باید در مورد راه‌اندازی یک استارتاپ با استفاده از DevKit بدانید، پوشش می‌دهد.</value>
   </data>
-  <data name="Privacy_Title" xml:space="preserve">
+  <data name="PrivacyPolicy" xml:space="preserve">
     <value>سیاست حفظ حریم خصوصی</value>
   </data>
   <data name="Privacy_Introduction" xml:space="preserve">
@@ -409,7 +409,7 @@
   <data name="Privacy_PolicyChanges_Content" xml:space="preserve">
     <value>ما حق به‌روزرسانی این سیاست حفظ حریم خصوصی را در هر زمان برای خود محفوظ می‌داریم. هرگونه تغییر در این صفحه منتشر خواهد شد و تاریخ اجرا متناسباً به‌روز خواهد شد.</value>
   </data>
-  <data name="Terms_Title" xml:space="preserve">
+  <data name="TermsOfService" xml:space="preserve">
     <value>شرایط خدمات</value>
   </data>
   <data name="Terms_Introduction" xml:space="preserve">

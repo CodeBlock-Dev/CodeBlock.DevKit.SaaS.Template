@@ -1,9 +1,10 @@
 ﻿@page "/terms-of-service"
 @{
     Layout = "_SimpleLayout";
+    ViewData["Title"] = @WebAppLocalizer[WebAppResource.TermsOfService];
 }
 
-<h1>@WebAppLocalizer[WebAppResource.Terms_Title]</h1>
+<h1>@WebAppLocalizer[WebAppResource.TermsOfService]</h1>
 <p>@WebAppLocalizer[WebAppResource.Terms_EffectiveDate] <strong>@DateTime.Now.ToString("d")</strong></p>
 
 <p>@WebAppLocalizer[WebAppResource.Terms_Introduction]</p>

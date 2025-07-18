@@ -1,9 +1,10 @@
 ﻿@page "/privacy-policy"
 @{
     Layout = "_SimpleLayout";
+    ViewData["Title"] = WebAppLocalizer[WebAppResource.PrivacyPolicy];
 }
 
-<h1>@WebAppLocalizer[WebAppResource.Privacy_Title]</h1>
+<h1>@WebAppLocalizer[WebAppResource.PrivacyPolicy]</h1>
 <p>@WebAppLocalizer[WebAppResource.Terms_EffectiveDate] <strong>@DateTime.Now.ToString("d")</strong></p>
 
 <p>@WebAppLocalizer[WebAppResource.Privacy_Introduction]</p>

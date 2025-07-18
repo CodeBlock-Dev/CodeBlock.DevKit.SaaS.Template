@@ -345,7 +345,7 @@
   <data name="Step_1_Description" xml:space="preserve">
     <value>CodeBlock tiene documentación integral que cubre todo lo que necesitas saber sobre lanzar una startup usando el DevKit.</value>
   </data>
-  <data name="Privacy_Title" xml:space="preserve">
+  <data name="PrivacyPolicy" xml:space="preserve">
     <value>Política de Privacidad</value>
   </data>
   <data name="Privacy_Introduction" xml:space="preserve">
@@ -409,7 +409,7 @@
   <data name="Privacy_PolicyChanges_Content" xml:space="preserve">
     <value>Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Cualquier cambio se publicará en esta página y la Fecha de Vigencia se actualizará en consecuencia.</value>
   </data>
-  <data name="Terms_Title" xml:space="preserve">
+  <data name="TermsOfService" xml:space="preserve">
     <value>Términos de Servicio</value>
   </data>
   <data name="Terms_Introduction" xml:space="preserve">
