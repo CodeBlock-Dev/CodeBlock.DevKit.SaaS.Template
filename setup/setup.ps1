@@ -210,13 +210,38 @@ try {
 
     # Update all source files
     Write-Host "`nUpdating source files..." -ForegroundColor Blue
-    Get-ChildItem -Recurse -Include "*.cs","*.razor","*.cshtml" | ForEach-Object {
+    Get-ChildItem -Recurse -Include "*.cs","*.razor","*.cshtml","*.Designer.cs","AssemblyInfo.cs" | ForEach-Object {
         $content = Get-Content $_.FullName
         $content = $content -replace "namespace CanBeYours\.", "namespace $solutionName."
         $content = $content -replace "using CanBeYours\.", "using $solutionName."
         $content = $content -replace "@namespace CanBeYours\.", "@namespace $solutionName."
         $content = $content -replace "@using CanBeYours\.", "@using $solutionName."
+        
+        # Handle specific patterns in Designer.cs files (ResourceManager strings)
+        $content = $content -replace '"CanBeYours\.([^"]*)"', "`"$solutionName.`$1`""
+        
+        # Handle InternalsVisibleTo attributes in AssemblyInfo.cs
+        $content = $content -replace 'InternalsVisibleTo\("CanBeYours\.([^"]*)"\)', "InternalsVisibleTo(`"$solutionName.`$1`")"
+        
         Set-Content $_.FullName $content
+    }
+
+    # Update .nuke configuration files and other JSON files
+    Write-Host "`nUpdating configuration files..." -ForegroundColor Blue
+    Get-ChildItem -Recurse -Include "*.nuke","parameters.json" | ForEach-Object {
+        $content = Get-Content $_.FullName
+        $content = $content -replace '"Solution":\s*"CanBeYours\.sln"', "`"Solution`": `"$solutionName.sln`""
+        Set-Content $_.FullName $content
+    }
+
+    # Update generated files (test results, logs, etc.)
+    Write-Host "`nUpdating generated files..." -ForegroundColor Blue
+    Get-ChildItem -Recurse -Include "*.trx","*.log","*.cache","*.deps.json","*.runtimeconfig.json","*.staticwebassets.*.json","*.resources.dll","*.pdb","*.dll","*.exe" | Where-Object { $_.FullName -like "*CanBeYours*" } | ForEach-Object {
+        $content = Get-Content $_.FullName -Raw -ErrorAction SilentlyContinue
+        if ($content) {
+            $content = $content -replace "CanBeYours\.", "$solutionName."
+            Set-Content $_.FullName $content -NoNewline
+        }
     }
 }
 finally {
