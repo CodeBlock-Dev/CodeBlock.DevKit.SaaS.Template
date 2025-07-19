@@ -26,8 +26,6 @@ cd CodeBlock.Dev Kit.Template
 
 **Note**: All Dev Kit modules are delivered via NuGet packages, so you only need to maintain your own business logic.
 
-
-- 
 # 📋 Purchase a License
 
 To use this template, you need to purchase a license from the CodeBlock Dev Kit website. Here's how to get started:
