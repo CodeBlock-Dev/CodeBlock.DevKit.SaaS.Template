@@ -49,35 +49,29 @@ The template includes automated setup scripts for different operating systems:
 
 ## 🔧 Build, Deploy and Maintenance
 
-This template includes comprehensive build automation using the [NUKE](https://nuke.build/) build system. You can easily user them in your [CI/CD](.github/workflows) pipelines or run them locally.
+This template includes comprehensive build automation that covers compilation, linting, and testing. The build system is already integrated into the CI workflow at `.github/workflows/ci.yml`.
 
+#### Local Build Scripts
 
+For convenience, we've provided scripts to run build tasks locally:
 
-| Location | Purpose |
-|----------------|----------|---------|
+| Script Location | Purpose |
+|----------------|----------|
 | `src/4-Build/scripts/compile/` | Builds the entire solution |
 | `src/4-Build/scripts/lint/` | Runs code quality checks |
 | `src/4-Build/scripts/tests/` | Executes unit and integration tests |
 | `src/4-Build/scripts/packages/` | Updates CodeBlock Dev Kit NuGet packages |
 
-### Running Build Scripts
+For detailed build system documentation, see the [Build README](src/4-Build/README.md).
 
-For detailed information about the build system, see the [Build README](src/4-Build/README.md).
+#### CI/CD Configuration
 
-### Continuous Integration & Deployment
+- **CI Workflow** (`.github/workflows/ci.yml`): Pre-configured to build, test, and package your application
+- **CD Workflow** (`.github/workflows/cd.yml`): Configured for Windows IIS deployment
 
-The template includes pre-configured CI/CD workflows:
+You can modify these workflows based on your deployment environment. The template is not limited to any specific platform - you can deploy to cloud services, Linux servers, Windows servers, or any other environment of your choice.
 
-- **CI Workflow** (`.github/workflows/ci.yml`): Builds, tests, and packages your application
-- **CD Workflow** (`.github/workflows/cd.yml`): Deploys to Windows IIS server
-
-**Customizing for Your Environment:**
-
-1. **Modify CI Workflow**: Update `.github/workflows/ci.yml` to match your build requirements
-2. **Configure CD Workflow**: Customize `.github/workflows/cd.yml` for your deployment target:
-   - For Linux deployment: Change runner to `ubuntu-latest`
-   - For cloud deployment: Update deployment steps for your cloud provider
-   - For different platforms: Modify build commands and artifact packaging
+For detailed CI/CD guidance, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/).
 
 # 🚀 Implement Your Logic and Build Your SaaS
 
