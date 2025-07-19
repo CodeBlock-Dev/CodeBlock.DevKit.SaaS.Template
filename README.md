@@ -77,12 +77,12 @@ This template requires two dependencies to run:
 
 #### MongoDB
 - **Purpose**: Primary database for storing application data
-- **Minimum Version**: 4.4+ (compatible with MongoDB.Driver 3.2.1)
+- **Minimum Version**: 4.4+
 - **Download**: [MongoDB Community Server](https://www.mongodb.com/try/download/community)
 
 #### QdrantDB
 - **Purpose**: Vector database for AI chatbot features (optional)
-- **Minimum Version**: 1.7+ (compatible with Qdrant.Client 1.14.0)
+- **Minimum Version**: 1.7+
 - **Download**: [Qdrant Vector Database](https://qdrant.tech/documentation/guides/installation/)
 - **Note**: Only required if your application includes AI chatbot functionality
 
