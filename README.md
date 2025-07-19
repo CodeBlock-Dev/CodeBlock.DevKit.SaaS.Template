@@ -71,6 +71,23 @@ You can modify these workflows based on your deployment environment. The templat
 
 For detailed CI/CD guidance, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/).
 
+# 🗄️ Prerequisite Dependencies
+
+This template requires two dependencies to run:
+
+#### MongoDB
+- **Purpose**: Primary database for storing application data
+- **Minimum Version**: 4.4+ (compatible with MongoDB.Driver 3.2.1)
+- **Download**: [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+
+#### QdrantDB
+- **Purpose**: Vector database for AI chatbot features (optional)
+- **Minimum Version**: 1.7+ (compatible with Qdrant.Client 1.14.0)
+- **Download**: [Qdrant Vector Database](https://qdrant.tech/documentation/guides/installation/)
+- **Note**: Only required if your application includes AI chatbot functionality
+
+Install these dependencies in your deployment environment before running the template.
+
 # 🚀 Implement Your Logic and Build Your SaaS
 
 The template includes a complete example implementation to help you understand how to build your own features.
@@ -84,7 +101,7 @@ The template includes a complete example implementation to help you understand h
 
 For detailed guidance on implementing features and customizing the template, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/).
 
-# 🐛 Support & Feedback
+# 🛟 Support & Feedback
 
 If you need help, have a question, or want to report a bug, you can create an issue and we will respond as soon as possible.
 
