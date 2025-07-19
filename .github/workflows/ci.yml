@@ -11,8 +11,8 @@ on:
 
 jobs:
   build:
-    # Using Windows runner by default. Change this for different platforms
-    runs-on: self-hosted
+    # Using GitHub-hosted Windows runner
+    runs-on: windows-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v3
