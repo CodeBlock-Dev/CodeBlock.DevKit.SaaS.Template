@@ -81,32 +81,13 @@ The template includes pre-configured CI/CD workflows:
 
 # 🚀 Implement Your Logic and Build Your SaaS
 
-The template includes a complete example implementation to help you understand how to build your own features. Study the demo implementation to learn the patterns:
-
-### Frontend Implementation
-- **Pages**: `/src/2-Clients/AdminPanel/Pages/DemoThings/`
-- **Navigation**: `/src/2-Clients/AdminPanel/Pages/Shared/NavMenu.razor`
-
-### Backend Implementation
-- **API Controllers**: `/src/2-Clients/Api/Controllers/DemoThingsController.cs`
-- **Application Services**: `/src/1-Libraries/Application/Services/DemoThings/`
-- **Use Cases**: `/src/1-Libraries/Application/UseCases/DemoThings/`
-- **Domain Logic**: `/src/1-Libraries/Core/Domain/DemoThings/`
-
-### Testing
-- **Unit Tests**: `/src/3-Tests/Application.Tests.Unit/UseCases/DemoThings/`
-- **Integration Tests**: `/src/3-Tests/Application.Tests.Integration/UseCases/DemoThings/`
-
-### Learning Resources
-- **Dev Kit Documentation**: [https://docs.codeblock.dev/](https://docs.codeblock.dev/)
-- **Architecture Patterns**: Study the demo implementation to understand clean architecture principles
-- **Best Practices**: Follow the established patterns for consistency and maintainability
-
-## 📚 Next Steps
-
-1. **Study the Demo**: Examine the demo implementation to understand the patterns
-2. **Customize Settings**: Update configuration files with your application details
-3. **Add Your Features**: Implement your business logic following the established patterns
-4. **Deploy**: Use the provided CI/CD workflows or customize them for your deployment environment
+The template includes a complete example implementation to help you understand how to build your own features.
+- Run the `src/2-Clients/Api` project and see `DemocThings` APIs.
+- Run the `src/2-Clients/AdminPanel` project and navigate to `Demo` menu item.
+- Look at the code in the `src/1-Libraries/Application/Services/DemoThings` to see how the application services are structured.
+- Look at `src/1-Libraries/Application/UseCases/DemoThings/` to see how the use cases are implemented.
+- Look at the `src/1-Libraries/Core/Domain/DemoThings/` to see how the domain logic is structured.
+- Look at the `src/3-Tests/Application.Tests.Unit/UseCases/DemoThings/` to see how unit tests are written.
+- Look at the `src/3-Tests/Application.Tests.Integration/UseCases/DemoThings/` to see how integration tests are structured.
 
 For detailed guidance on implementing features and customizing the template, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/). 
