@@ -82,4 +82,15 @@ The template includes a complete example implementation to help you understand h
 - Look at the `src/3-Tests/Application.Tests.Unit/UseCases/DemoThings/` to see how unit tests are written.
 - Look at the `src/3-Tests/Application.Tests.Integration/UseCases/DemoThings/` to see how integration tests are structured.
 
-For detailed guidance on implementing features and customizing the template, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/). 
+For detailed guidance on implementing features and customizing the template, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/).
+
+# 🐛 Support & Feedback
+
+If you need help, have a question, or want to report a bug, you can create an issue and we will respond as soon as possible.
+
+1. Visit [GitHub Issues](https://github.com/CodeBlock-Dev/CodeBlock.DevKit.Template/issues)
+2. Click the green "New issue" button
+3. Input a title and explain the issue
+4. Submit your request
+
+Soon, we will provide a Discord server for easier communication and community support. 
