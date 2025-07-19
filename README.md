@@ -6,7 +6,18 @@ A comprehensive SaaS application template built with the [CodeBlock DevKit](http
 
 - **Website**: [https://codeblock.dev/](https://codeblock.dev/)
 - **Documentation**: [https://docs.codeblock.dev/](https://docs.codeblock.dev/)
-- **Demo Video**: [Watch how to use this template](https://codeblock.dev/demo)
+
+### Demo Video
+
+Watch how to use this template and build your SaaS application:
+
+<div align="center">
+  <a href="https://www.youtube.com/embed/dQw4w9WgXcQ" target="_blank">
+    <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="CodeBlock DevKit Template Demo" width="560" height="315" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  </a>
+  <br>
+  <em>Click the image above to watch the demo video</em>
+</div>
 
 ## 📋 Prerequisites: Purchasing a License
 
