@@ -1,40 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<AssemblyName>CanBeYours.Application.Tests.Integration</AssemblyName>
-		<RootNamespace>CanBeYours.Application.Tests.Integration</RootNamespace>
-		<IsPackable>false</IsPackable>
-		<IsTestProject>true</IsTestProject>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<PackageReference Include="coverlet.collector" Version="6.0.0" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
-		<PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
-		<PackageReference Include="CodeBlock.DevKit.Test" Version="1.3.7" />
-		<PackageReference Include="CodeBlock.DevKit.Clients.AdminPanel" Version="1.3.7" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Content Include="..\..\..\codeblock.dev.license.lic">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</Content>
-	</ItemGroup>
-	
-	<ItemGroup>
-	  <ProjectReference Include="..\..\1-Libraries\Application\Application.csproj" />
-	  <ProjectReference Include="..\..\1-Libraries\Infrastructure\Infrastructure.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Using Include="Xunit" />
-	</ItemGroup>
-
-	<Target Name="CopyConfig" AfterTargets="AfterBuild">
-		<Copy SourceFiles="..\..\2-Clients\AdminPanel\appsettings.json" DestinationFolder="$(OutDir)" />
-		<Copy SourceFiles="..\..\2-Clients\AdminPanel\appsettings.Development.json" DestinationFolder="$(OutDir)" />
-	</Target>
-	
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>CanBeYours.Application.Tests.Integration</AssemblyName>
+    <RootNamespace>CanBeYours.Application.Tests.Integration</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+    <PackageReference Include="CodeBlock.DevKit.Test" Version="1.3.8" />
+    <PackageReference Include="CodeBlock.DevKit.Clients.AdminPanel" Version="1.3.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\codeblock.dev.license.lic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\1-Libraries\Application\Application.csproj" />
+    <ProjectReference Include="..\..\1-Libraries\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <Target Name="CopyConfig" AfterTargets="AfterBuild">
+    <Copy SourceFiles="..\..\2-Clients\AdminPanel\appsettings.json" DestinationFolder="$(OutDir)" />
+    <Copy SourceFiles="..\..\2-Clients\AdminPanel\appsettings.Development.json" DestinationFolder="$(OutDir)" />
+  </Target>
 </Project>
