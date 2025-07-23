@@ -255,6 +255,20 @@ try {
         }
     }
 
+    # Update web manifest files
+    Write-Host "`nUpdating web manifest files..." -ForegroundColor Blue
+    Get-ChildItem -Recurse -Include "site.webmanifest" | ForEach-Object {
+        try {
+            $content = Get-Content $_.FullName -ErrorAction Stop
+            $content = $content -replace '"name":\s*"Can Be Yours!"', "`"name`": `"$appName`""
+            $content = $content -replace '"short_name":\s*"Can Be Yours!"', "`"short_name`": `"$appName`""
+            Set-Content $_.FullName $content -ErrorAction Stop
+        }
+        catch {
+            Write-Host "Warning: Could not update $($_.FullName) - $($_.Exception.Message)" -ForegroundColor Yellow
+        }
+    }
+
     # Update generated files (test results, logs, etc.)
     Write-Host "`nUpdating generated files..." -ForegroundColor Blue
     Get-ChildItem -Recurse -Include "*.trx","*.log","*.cache","*.deps.json","*.runtimeconfig.json","*.staticwebassets.*.json","*.resources.dll","*.pdb","*.dll","*.exe" | Where-Object { $_.PSIsContainer -eq $false -and $_.FullName -like "*CanBeYours*" } | ForEach-Object {
