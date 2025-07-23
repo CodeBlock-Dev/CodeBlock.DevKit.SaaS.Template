@@ -15,13 +15,13 @@
 @if (UserHasAnyActiveSubscription)
 {
     <div class="alert alert-success">
-        ✅ @AdminPanelLocalizer[AdminPanelResource.ActiveSubscriptionMessage]
+        @AdminPanelLocalizer[AdminPanelResource.ActiveSubscriptionMessage]
     </div>
 }
 else
 {
     <div class="alert alert-danger">
-        ❌ @AdminPanelLocalizer[AdminPanelResource.NoActiveSubscriptionMessage]
+        @AdminPanelLocalizer[AdminPanelResource.NoActiveSubscriptionMessage]
         <div class="mt-3">
             <a class="btn btn-success" href="/pricing/demo">@AdminPanelLocalizer[AdminPanelResource.ViewAvailablePlans]</a>
         </div>
