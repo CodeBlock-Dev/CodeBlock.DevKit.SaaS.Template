@@ -2,7 +2,7 @@
 # If you're deploying to a different platform (Linux, Cloud, etc.),
 # you'll need to modify this configuration accordingly.
 
-name: Build and publish
+name: Build and Test
 
 on:
   push:
@@ -33,30 +33,5 @@ jobs:
       - name: Unit Test
         run: ./build.ps1 RunUnitTests --skip LintCheck
 
-      - name: Publish WebApp project
-        run: dotnet publish ./src/2-Clients/WebApp/WebApp.csproj -c Release -o ./output/WebApp
-
-      - name: Publish AdminPanel project
-        run: dotnet publish ./src/2-Clients/AdminPanel/AdminPanel.csproj -c Release -o ./output/AdminPanel
-
-      - name: Publish Api project
-        run: dotnet publish ./src/2-Clients/Api/Api.csproj -c Release -o ./output/Api
-
-      - name: Create WebApp.zip
-        run: |
-          Compress-Archive -Path ./output/WebApp/* -DestinationPath ./output/WebApp.zip
-
-      - name: Create AdminPanel.zip
-        run: |
-          Compress-Archive -Path ./output/AdminPanel/* -DestinationPath ./output/AdminPanel.zip
-
-      - name: Create Api.zip
-        run: |
-          Compress-Archive -Path ./output/Api/* -DestinationPath ./output/Api.zip
-
-# Note: This workflow assumes Windows-based deployment.
-# For other platforms, you might need to:
-# 1. Change the runner (e.g., ubuntu-latest for Linux)
-# 2. Modify the build commands (e.g., use bash scripts instead of PowerShell)
-# 3. Adjust the artifact packaging (e.g., use tar for Linux)
-# 4. Update the deployment steps in your CD workflow
+# Note: This workflow focuses on building and testing.
+# The CD workflow will handle publishing and deployment.

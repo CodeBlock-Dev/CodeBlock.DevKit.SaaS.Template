@@ -7,7 +7,7 @@ name: Deploy to Windows IIS
 #    - One for WebApp
 #    - One for AdminPanel
 #    - One for API
-# 3. The following secrets configured in your GitHub repository:
+# 3. The following environment variables configured in your GitHub repository:
 #    - WEBAPP_APP_POOL: Name of the IIS application pool for WebApp
 #    - WEBAPP_SITE_PATH: Physical path where WebApp will be deployed
 #    - ADMIN_APP_POOL: Name of the IIS application pool for AdminPanel
@@ -28,16 +28,37 @@ jobs:
     runs-on: self-hosted # Requires a Windows self-hosted runner
     environment: production
     steps:
-      - name: Download WebApp artifacts
-        uses: actions/download-artifact@v3
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 6 and .NET 8
+        uses: actions/setup-dotnet@v4
         with:
-          name: webapp
-          path: ./webapp
+          dotnet-version: |
+            6.0.x
+            8.0.x
+
+      - name: Publish WebApp project
+        run: dotnet publish ./src/2-Clients/WebApp/WebApp.csproj -c Release -o ./output/WebApp
+
+      - name: Create WebApp.zip
+        run: |
+          Compress-Archive -Path ./output/WebApp/* -DestinationPath ./output/WebApp.zip
+
+      - name: Debug variables
+        shell: powershell
+        run: |
+          Write-Host "WEBAPP_APP_POOL: '${{ vars.WEBAPP_APP_POOL }}'"
+          Write-Host "WEBAPP_SITE_PATH: '${{ vars.WEBAPP_SITE_PATH }}'"
 
       - name: Stop IIS App Pool
-        shell: pwsh
+        shell: powershell
         run: |
-          $appPoolName = "${{ secrets.WEBAPP_APP_POOL }}"
+          $appPoolName = "${{ vars.WEBAPP_APP_POOL }}"
+          if ([string]::IsNullOrEmpty($appPoolName)) {
+              Write-Error "WEBAPP_APP_POOL variable is not configured"
+              exit 1
+          }
           Write-Host "Stopping IIS App Pool: $appPoolName"
           Stop-WebAppPool -Name $appPoolName
           
@@ -57,9 +78,13 @@ jobs:
           }
 
       - name: Backup existing deployment
-        shell: pwsh
+        shell: powershell
         run: |
-          $deployPath = "${{ secrets.WEBAPP_SITE_PATH }}"
+          $deployPath = "${{ vars.WEBAPP_SITE_PATH }}"
+          if ([string]::IsNullOrEmpty($deployPath)) {
+              Write-Error "WEBAPP_SITE_PATH variable is not configured"
+              exit 1
+          }
           if (Test-Path $deployPath) {
               $timestamp = Get-Date -Format "yyyyMMddHHmmss"
               $backupPath = "${deployPath}_backup_${timestamp}"
@@ -68,16 +93,16 @@ jobs:
           }
 
       - name: Deploy WebApp
-        shell: pwsh
+        shell: powershell
         run: |
-          $deployPath = "${{ secrets.WEBAPP_SITE_PATH }}"
+          $deployPath = "${{ vars.WEBAPP_SITE_PATH }}"
           New-Item -ItemType Directory -Force -Path $deployPath
-          Expand-Archive -Path ./webapp/WebApp.zip -DestinationPath $deployPath -Force
+          Expand-Archive -Path ./output/WebApp.zip -DestinationPath $deployPath -Force
 
       - name: Start IIS App Pool
-        shell: pwsh
+        shell: powershell
         run: |
-          $appPoolName = "${{ secrets.WEBAPP_APP_POOL }}"
+          $appPoolName = "${{ vars.WEBAPP_APP_POOL }}"
           Start-WebAppPool -Name $appPoolName
           
           # Wait for the app pool to start (max 20 seconds)
@@ -99,16 +124,37 @@ jobs:
     runs-on: self-hosted
     environment: production
     steps:
-      - name: Download AdminPanel artifacts
-        uses: actions/download-artifact@v3
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 6 and .NET 8
+        uses: actions/setup-dotnet@v4
         with:
-          name: adminpanel
-          path: ./adminpanel
+          dotnet-version: |
+            6.0.x
+            8.0.x
+
+      - name: Publish AdminPanel project
+        run: dotnet publish ./src/2-Clients/AdminPanel/AdminPanel.csproj -c Release -o ./output/AdminPanel
+
+      - name: Create AdminPanel.zip
+        run: |
+          Compress-Archive -Path ./output/AdminPanel/* -DestinationPath ./output/AdminPanel.zip
+
+      - name: Debug variables
+        shell: powershell
+        run: |
+          Write-Host "ADMIN_APP_POOL: '${{ vars.ADMIN_APP_POOL }}'"
+          Write-Host "ADMIN_SITE_PATH: '${{ vars.ADMIN_SITE_PATH }}'"
 
       - name: Stop IIS App Pool
-        shell: pwsh
+        shell: powershell
         run: |
-          $appPoolName = "${{ secrets.ADMIN_APP_POOL }}"
+          $appPoolName = "${{ vars.ADMIN_APP_POOL }}"
+          if ([string]::IsNullOrEmpty($appPoolName)) {
+              Write-Error "ADMIN_APP_POOL variable is not configured"
+              exit 1
+          }
           Write-Host "Stopping IIS App Pool: $appPoolName"
           Stop-WebAppPool -Name $appPoolName
           
@@ -128,9 +174,13 @@ jobs:
           }
 
       - name: Backup existing deployment
-        shell: pwsh
+        shell: powershell
         run: |
-          $deployPath = "${{ secrets.ADMIN_SITE_PATH }}"
+          $deployPath = "${{ vars.ADMIN_SITE_PATH }}"
+          if ([string]::IsNullOrEmpty($deployPath)) {
+              Write-Error "ADMIN_SITE_PATH variable is not configured"
+              exit 1
+          }
           if (Test-Path $deployPath) {
               $timestamp = Get-Date -Format "yyyyMMddHHmmss"
               $backupPath = "${deployPath}_backup_${timestamp}"
@@ -139,16 +189,16 @@ jobs:
           }
 
       - name: Deploy AdminPanel
-        shell: pwsh
+        shell: powershell
         run: |
-          $deployPath = "${{ secrets.ADMIN_SITE_PATH }}"
+          $deployPath = "${{ vars.ADMIN_SITE_PATH }}"
           New-Item -ItemType Directory -Force -Path $deployPath
-          Expand-Archive -Path ./adminpanel/AdminPanel.zip -DestinationPath $deployPath -Force
+          Expand-Archive -Path ./output/AdminPanel.zip -DestinationPath $deployPath -Force
 
       - name: Start IIS App Pool
-        shell: pwsh
+        shell: powershell
         run: |
-          $appPoolName = "${{ secrets.ADMIN_APP_POOL }}"
+          $appPoolName = "${{ vars.ADMIN_APP_POOL }}"
           Start-WebAppPool -Name $appPoolName
           
           # Wait for the app pool to start (max 20 seconds)
@@ -170,16 +220,37 @@ jobs:
     runs-on: self-hosted
     environment: production
     steps:
-      - name: Download API artifacts
-        uses: actions/download-artifact@v3
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 6 and .NET 8
+        uses: actions/setup-dotnet@v4
         with:
-          name: api
-          path: ./api
+          dotnet-version: |
+            6.0.x
+            8.0.x
+
+      - name: Publish Api project
+        run: dotnet publish ./src/2-Clients/Api/Api.csproj -c Release -o ./output/Api
+
+      - name: Create Api.zip
+        run: |
+          Compress-Archive -Path ./output/Api/* -DestinationPath ./output/Api.zip
+
+      - name: Debug variables
+        shell: powershell
+        run: |
+          Write-Host "API_APP_POOL: '${{ vars.API_APP_POOL }}'"
+          Write-Host "API_SITE_PATH: '${{ vars.API_SITE_PATH }}'"
 
       - name: Stop IIS App Pool
-        shell: pwsh
+        shell: powershell
         run: |
-          $appPoolName = "${{ secrets.API_APP_POOL }}"
+          $appPoolName = "${{ vars.API_APP_POOL }}"
+          if ([string]::IsNullOrEmpty($appPoolName)) {
+              Write-Error "API_APP_POOL variable is not configured"
+              exit 1
+          }
           Write-Host "Stopping IIS App Pool: $appPoolName"
           Stop-WebAppPool -Name $appPoolName
           
@@ -199,9 +270,13 @@ jobs:
           }
 
       - name: Backup existing deployment
-        shell: pwsh
+        shell: powershell
         run: |
-          $deployPath = "${{ secrets.API_SITE_PATH }}"
+          $deployPath = "${{ vars.API_SITE_PATH }}"
+          if ([string]::IsNullOrEmpty($deployPath)) {
+              Write-Error "API_SITE_PATH variable is not configured"
+              exit 1
+          }
           if (Test-Path $deployPath) {
               $timestamp = Get-Date -Format "yyyyMMddHHmmss"
               $backupPath = "${deployPath}_backup_${timestamp}"
@@ -210,16 +285,16 @@ jobs:
           }
 
       - name: Deploy API
-        shell: pwsh
+        shell: powershell
         run: |
-          $deployPath = "${{ secrets.API_SITE_PATH }}"
+          $deployPath = "${{ vars.API_SITE_PATH }}"
           New-Item -ItemType Directory -Force -Path $deployPath
-          Expand-Archive -Path ./api/Api.zip -DestinationPath $deployPath -Force
+          Expand-Archive -Path ./output/Api.zip -DestinationPath $deployPath -Force
 
       - name: Start IIS App Pool
-        shell: pwsh
+        shell: powershell
         run: |
-          $appPoolName = "${{ secrets.API_APP_POOL }}"
+          $appPoolName = "${{ vars.API_APP_POOL }}"
           Start-WebAppPool -Name $appPoolName
           
           # Wait for the app pool to start (max 20 seconds)
@@ -247,7 +322,7 @@ jobs:
 #    - Create three websites/applications in IIS
 #    - Note down the physical paths and app pool names
 #
-# 3. Add the following secrets to your GitHub repository:
+# 3. Add the following environment variables to your GitHub repository:
 #    - WEBAPP_APP_POOL: The name of your WebApp's application pool
 #    - WEBAPP_SITE_PATH: The physical path where WebApp files should be deployed
 #    - ADMIN_APP_POOL: The name of your AdminPanel's application pool
@@ -257,13 +332,10 @@ jobs:
 #
 # 4. The workflow will:
 #    - Run on the self-hosted runner
+#    - Publish the projects
+#    - Create zip files
 #    - Stop the appropriate app pool
 #    - Backup existing deployment
 #    - Deploy new files
 #    - Start the app pool
 #    - Monitor app pool status
-#
-# Note: This workflow assumes your build process creates zip files named:
-# - WebApp.zip
-# - AdminPanel.zip
-# - Api.zip
