@@ -671,4 +671,3 @@ fabric.properties
 
 # License files - prevent sensitive license information from being committed
 /codeblock.dev.license.lic
-/*.lic
