@@ -669,5 +669,3 @@ fabric.properties
 /.nuke/temp/execution-plan.html
 /.nuke/build.schema.json
 
-# License files - prevent sensitive license information from being committed
-/codeblock.dev.license.lic
