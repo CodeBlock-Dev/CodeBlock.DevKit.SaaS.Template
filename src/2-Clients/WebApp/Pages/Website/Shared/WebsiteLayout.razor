@@ -4,7 +4,7 @@
 @inject ApplicationSettings ApplicationSettings
 
 <HeadContent>
-    <link href="css/cb.website.spa.@(LocalizationSettings.GetCurrentLanguageDirection().ToLower()).min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="css/cb.website.spa.@(LocalizationSettings.GetCurrentLanguageDirection().ToLower()).min.css" rel="stylesheet" />
 </HeadContent>
 
 <SplashScreen BrandName="@ApplicationSettings.Localized.Name" BackgroundCssClass="simple-layout-dark-bg" ProgressBarCssClass="simple-layout-title-color" OnStarted="HandleSplashStarted" />
