@@ -670,5 +670,5 @@ fabric.properties
 /.nuke/build.schema.json
 
 # License files - prevent sensitive license information from being committed
-codeblock.dev.license.lic
-*.license.lic
+/codeblock.dev.license.lic
+/*.lic
