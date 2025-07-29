@@ -1,0 +1,58 @@
+﻿@using CodeBlock.DevKit.Clients.WebApp.Pages.UserPanel.Shared
+@inherits MainNavMenu
+@attribute [ReplaceBaseComponent]
+@inject ApplicationSettings ApplicationSettings
+
+<nav class="sidebar-nav">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <NavLink @onclick="CloseNavMenu" class="nav-link" href="/dashboard" Match="NavLinkMatch.All">
+                <i class="bi bi-speedometer2"></i>
+                <span>@WebAppClientLocalizer[WebAppClientResource.Overview]</span>
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink @onclick="CloseNavMenu" class="nav-link" href="/user/subscriptions">
+                <i class="bi bi-calendar-check"></i>
+                <span>@WebAppClientLocalizer[WebAppClientResource.Nav_Menu_Subscriptions]</span>
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink @onclick="CloseNavMenu" class="nav-link" href="/user/licenses">
+                <i class="bi bi-shield-check"></i>
+                <span>@WebAppClientLocalizer[WebAppClientResource.Nav_Menu_Licenses]</span>
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink @onclick="CloseNavMenu" class="nav-link" href="/user/bots">
+                <i class="bi bi-robot"></i>
+                <span>@WebAppClientLocalizer[WebAppClientResource.Bots]</span>
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink @onclick="CloseNavMenu" class="nav-link" href="/user/orders">
+                <i class="bi bi-receipt"></i>
+                <span>@WebAppClientLocalizer[WebAppClientResource.Nav_Menu_Orders]</span>
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink @onclick="CloseNavMenu" class="nav-link" href="/user/profile">
+                <i class="bi bi-person"></i>
+                <span>@WebAppClientLocalizer[WebAppClientResource.Nav_Menu_User_Profile]</span>
+            </NavLink>
+        </li>
+        
+        <li class="nav-item mt-auto">
+            <a href="/" target="_blank" class="nav-link">
+                <i class="bi bi-globe"></i>
+                <span>@WebAppClientLocalizer[WebAppClientResource.Nav_Menu_Visit_Website]</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <NavLink @onclick="CloseNavMenu" class="nav-link text-danger" href="/logout">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>@WebAppClientLocalizer[WebAppClientResource.Nav_Menu_Logout]</span>
+            </NavLink>
+        </li>
+    </ul>
+</nav>
