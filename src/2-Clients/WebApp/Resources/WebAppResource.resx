@@ -355,24 +355,24 @@
     <value>Information We Collect</value>
   </data>
   <data name="Privacy_InformationWeCollect_Content" xml:space="preserve">
-    <value><![CDATA[<p>When you use our platform, we may collect the following information:</p>
-<ul>
-    <li>Email address: Used to create and manage your account, as well as to send password recovery emails if requested.</li>
-    <li>Basic profile information: This may include your name or profile picture if provided by the external login provider.</li>
-</ul>
-<p>We only collect information that is necessary to provide and improve our services.</p>]]></value>
+    <value>&lt;p&gt;When you use our platform, we may collect the following information:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Email address: Used to create and manage your account, as well as to send password recovery emails if requested.&lt;/li&gt;
+    &lt;li&gt;Basic profile information: This may include your name or profile picture if provided by the external login provider.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We only collect information that is necessary to provide and improve our services.&lt;/p&gt;</value>
   </data>
   <data name="Privacy_HowWeUseInfo_Title" xml:space="preserve">
     <value>How We Use Your Information</value>
   </data>
   <data name="Privacy_HowWeUseInfo_Content" xml:space="preserve">
-    <value><![CDATA[<p>We use your information for the following purposes:</p>
-<ul>
-    <li>To authenticate your identity and log you into our platform.</li>
-    <li>To manage your account and provide essential account-related communications.</li>
-    <li>To send you password recovery emails if requested by you.</li>
-</ul>
-<p><strong>We do not sell, share, or use your information for marketing purposes.</strong></p>]]></value>
+    <value>&lt;p&gt;We use your information for the following purposes:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;To authenticate your identity and log you into our platform.&lt;/li&gt;
+    &lt;li&gt;To manage your account and provide essential account-related communications.&lt;/li&gt;
+    &lt;li&gt;To send you password recovery emails if requested by you.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;We do not sell, share, or use your information for marketing purposes.&lt;/strong&gt;&lt;/p&gt;</value>
   </data>
   <data name="Privacy_DataSharing_Title" xml:space="preserve">
     <value>Data Sharing</value>
@@ -396,12 +396,12 @@
     <value>Your Rights</value>
   </data>
   <data name="Privacy_YourRights_Content" xml:space="preserve">
-    <value><![CDATA[<p>You have the following rights regarding your personal information:</p>
-<ul>
-    <li>Access: You can request a copy of the information we hold about you.</li>
-    <li>Correction: You can request corrections to inaccurate or incomplete information.</li>
-    <li>Deletion: You can request the deletion of your account and associated data.</li>
-</ul>]]></value>
+    <value>&lt;p&gt;You have the following rights regarding your personal information:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Access: You can request a copy of the information we hold about you.&lt;/li&gt;
+    &lt;li&gt;Correction: You can request corrections to inaccurate or incomplete information.&lt;/li&gt;
+    &lt;li&gt;Deletion: You can request the deletion of your account and associated data.&lt;/li&gt;
+&lt;/ul&gt;</value>
   </data>
   <data name="Privacy_PolicyChanges_Title" xml:space="preserve">
     <value>Changes to Privacy Policy</value>
@@ -425,13 +425,13 @@
     <value>Use of Your Email Address</value>
   </data>
   <data name="Terms_EmailUsage_Content" xml:space="preserve">
-    <value><![CDATA[<p>When you log in through any external provider, we may request access to your email address. This email address is used for the following purposes:</p>
-<ul>
-    <li>To create and manage your account on our platform.</li>
-    <li>To use as your username for authentication purposes.</li>
-    <li>To send password recovery emails, if requested by you.</li>
-</ul>
-<p><strong>We do not use your email address for marketing purposes, share it with third parties, or utilize it for any other goals.</strong></p>]]></value>
+    <value>&lt;p&gt;When you log in through any external provider, we may request access to your email address. This email address is used for the following purposes:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;To create and manage your account on our platform.&lt;/li&gt;
+    &lt;li&gt;To use as your username for authentication purposes.&lt;/li&gt;
+    &lt;li&gt;To send password recovery emails, if requested by you.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;We do not use your email address for marketing purposes, share it with third parties, or utilize it for any other goals.&lt;/strong&gt;&lt;/p&gt;</value>
   </data>
   <data name="Terms_PrivacyHandling_Title" xml:space="preserve">
     <value>Privacy and Data Handling</value>
@@ -474,5 +474,8 @@
   </data>
   <data name="Terms_ThankYou" xml:space="preserve">
     <value>Thank you for using our platform!</value>
+  </data>
+  <data name="Nav_Login" xml:space="preserve">
+    <value>Login</value>
   </data>
 </root>

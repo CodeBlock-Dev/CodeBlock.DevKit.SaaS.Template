@@ -11,6 +11,7 @@
     --text-muted: #6b7280;
     --border-color: #374151;
     --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    --gradient-warning: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
     --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
     --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     --shadow-xl: 0 35px 60px -12px rgba(0, 0, 0, 0.35);
@@ -124,6 +125,17 @@ html {
     background: var(--gradient-primary);
     border: none;
     color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.btn-warning-gradient {
+    background: var(--gradient-warning);
+    border: none;
+    color: black;
     padding: 0.75rem 2rem;
     border-radius: 0.75rem;
     font-weight: 600;

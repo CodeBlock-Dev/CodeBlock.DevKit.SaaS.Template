@@ -355,24 +355,24 @@
     <value>Informações que Coletamos</value>
   </data>
   <data name="Privacy_InformationWeCollect_Content" xml:space="preserve">
-    <value><![CDATA[<p>Quando você usa nossa plataforma, podemos coletar as seguintes informações:</p>
-<ul>
-    <li>Endereço de e-mail: Usado para criar e gerenciar sua conta, bem como para enviar e-mails de recuperação de senha quando solicitado.</li>
-    <li>Informações básicas do perfil: Isso pode incluir seu nome ou foto do perfil se fornecido pelo provedor de login externo.</li>
-</ul>
-<p>Coletamos apenas as informações necessárias para fornecer e melhorar nossos serviços.</p>]]></value>
+    <value>&lt;p&gt;Quando você usa nossa plataforma, podemos coletar as seguintes informações:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Endereço de e-mail: Usado para criar e gerenciar sua conta, bem como para enviar e-mails de recuperação de senha quando solicitado.&lt;/li&gt;
+    &lt;li&gt;Informações básicas do perfil: Isso pode incluir seu nome ou foto do perfil se fornecido pelo provedor de login externo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Coletamos apenas as informações necessárias para fornecer e melhorar nossos serviços.&lt;/p&gt;</value>
   </data>
   <data name="Privacy_HowWeUseInfo_Title" xml:space="preserve">
     <value>Como Usamos suas Informações</value>
   </data>
   <data name="Privacy_HowWeUseInfo_Content" xml:space="preserve">
-    <value><![CDATA[<p>Usamos suas informações para os seguintes propósitos:</p>
-<ul>
-    <li>Para autenticar sua identidade e fazer login em nossa plataforma.</li>
-    <li>Para gerenciar sua conta e fornecer comunicações essenciais relacionadas à conta.</li>
-    <li>Para enviar e-mails de recuperação de senha quando solicitado por você.</li>
-</ul>
-<p><strong>Não vendemos, compartilhamos ou usamos suas informações para fins de marketing.</strong></p>]]></value>
+    <value>&lt;p&gt;Usamos suas informações para os seguintes propósitos:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Para autenticar sua identidade e fazer login em nossa plataforma.&lt;/li&gt;
+    &lt;li&gt;Para gerenciar sua conta e fornecer comunicações essenciais relacionadas à conta.&lt;/li&gt;
+    &lt;li&gt;Para enviar e-mails de recuperação de senha quando solicitado por você.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Não vendemos, compartilhamos ou usamos suas informações para fins de marketing.&lt;/strong&gt;&lt;/p&gt;</value>
   </data>
   <data name="Privacy_DataSharing_Title" xml:space="preserve">
     <value>Compartilhamento de Dados</value>
@@ -396,12 +396,12 @@
     <value>Seus Direitos</value>
   </data>
   <data name="Privacy_YourRights_Content" xml:space="preserve">
-    <value><![CDATA[<p>Você tem os seguintes direitos em relação às suas informações pessoais:</p>
-<ul>
-    <li>Acesso: Você pode solicitar uma cópia das informações que mantemos sobre você.</li>
-    <li>Correção: Você pode solicitar correções de informações imprecisas ou incompletas.</li>
-    <li>Exclusão: Você pode solicitar a exclusão de sua conta e dados associados.</li>
-</ul>]]></value>
+    <value>&lt;p&gt;Você tem os seguintes direitos em relação às suas informações pessoais:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Acesso: Você pode solicitar uma cópia das informações que mantemos sobre você.&lt;/li&gt;
+    &lt;li&gt;Correção: Você pode solicitar correções de informações imprecisas ou incompletas.&lt;/li&gt;
+    &lt;li&gt;Exclusão: Você pode solicitar a exclusão de sua conta e dados associados.&lt;/li&gt;
+&lt;/ul&gt;</value>
   </data>
   <data name="Privacy_PolicyChanges_Title" xml:space="preserve">
     <value>Alterações na Política de Privacidade</value>
@@ -425,13 +425,13 @@
     <value>Uso do seu Endereço de E-mail</value>
   </data>
   <data name="Terms_EmailUsage_Content" xml:space="preserve">
-    <value><![CDATA[<p>Quando você faz login através de qualquer provedor externo, podemos solicitar acesso ao seu endereço de e-mail. Este endereço de e-mail é usado para os seguintes propósitos:</p>
-<ul>
-    <li>Para criar e gerenciar sua conta em nossa plataforma.</li>
-    <li>Para usar como nome de usuário para fins de autenticação.</li>
-    <li>Para enviar e-mails de recuperação de senha, se solicitado por você.</li>
-</ul>
-<p><strong>Não usamos seu endereço de e-mail para fins de marketing, não o compartilhamos com terceiros, nem o utilizamos para quaisquer outros objetivos.</strong></p>]]></value>
+    <value>&lt;p&gt;Quando você faz login através de qualquer provedor externo, podemos solicitar acesso ao seu endereço de e-mail. Este endereço de e-mail é usado para os seguintes propósitos:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Para criar e gerenciar sua conta em nossa plataforma.&lt;/li&gt;
+    &lt;li&gt;Para usar como nome de usuário para fins de autenticação.&lt;/li&gt;
+    &lt;li&gt;Para enviar e-mails de recuperação de senha, se solicitado por você.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Não usamos seu endereço de e-mail para fins de marketing, não o compartilhamos com terceiros, nem o utilizamos para quaisquer outros objetivos.&lt;/strong&gt;&lt;/p&gt;</value>
   </data>
   <data name="Terms_PrivacyHandling_Title" xml:space="preserve">
     <value>Privacidade e Tratamento de Dados</value>
@@ -475,4 +475,7 @@
   <data name="Terms_ThankYou" xml:space="preserve">
     <value>Obrigado por usar nossa plataforma!</value>
   </data>
-</root> 
+  <data name="Nav_Login" xml:space="preserve">
+    <value>Conecte-se</value>
+  </data>
+</root>

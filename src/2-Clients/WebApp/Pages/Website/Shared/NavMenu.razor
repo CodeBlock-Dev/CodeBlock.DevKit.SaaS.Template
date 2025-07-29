@@ -6,7 +6,7 @@
             <img src="images/logos/logo.png" alt="@ApplicationSettings.Localized.Name" height="40" class="me-2" />
             @ApplicationSettings.Localized.Name
         </a>
-        
+
         <!-- Desktop menu (hidden on mobile) -->
         <div class="d-none d-lg-block">
             <ul class="navbar-nav ms-auto">
@@ -20,26 +20,37 @@
                     <a class="nav-link" href="#">@WebAppLocalizer[WebAppResource.Nav_Contact]</a>
                 </li>
                 <li class="nav-item me-2">
-                    <SelectLanguage BtnCssClass="btn btn-outline-light border-0" 
-                                    ShowIcon="true" 
-                                    ShowShortName="true" 
+                    <SelectLanguage BtnCssClass="btn btn-outline-light border-0"
+                                    ShowIcon="true"
+                                    ShowShortName="true"
                                     ShowSelectedItem="true"
                                     IconCssClass="text-secondary"
                                     SelectedItemCssClass="text-secondary ms-1"
                                     WrapperCssClass="language-selector" />
                 </li>
                 <li class="nav-item ms-2">
-                    <a class="btn btn-primary-gradient" href="/dashboard">
-                        <i class="bi bi-box-arrow-in-right"></i> @WebAppLocalizer[WebAppResource.Nav_Dashboard]
-                    </a>
+                    @if (CurrentUser.IsAuthenticated())
+                    {
+                        <a class="btn btn-warning-gradient" href="/dashboard">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            @WebAppLocalizer[WebAppResource.Nav_Dashboard]
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-primary-gradient" href="/dashboard">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            @WebAppLocalizer[WebAppResource.Nav_Login]
+                        </a>
+                    }
                 </li>
             </ul>
         </div>
-        
+
         <!-- Mobile menu button and language selector -->
         <div class="d-lg-none d-flex align-items-center">
-            <SelectLanguage BtnCssClass="btn btn-outline-light border-0 me-2" 
-                            ShowIcon="true" 
+            <SelectLanguage BtnCssClass="btn btn-outline-light border-0 me-2"
+                            ShowIcon="true"
                             ShowShortName="true"
                             ShowSelectedItem="true"
                             IconCssClass="text-secondary fs-5"

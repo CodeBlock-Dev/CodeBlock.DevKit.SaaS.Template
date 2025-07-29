@@ -355,24 +355,24 @@
     <value>Informationen, die wir sammeln</value>
   </data>
   <data name="Privacy_InformationWeCollect_Content" xml:space="preserve">
-    <value><![CDATA[<p>Wenn Sie unsere Plattform nutzen, können wir folgende Informationen sammeln:</p>
-<ul>
-    <li>E-Mail-Adresse: Wird verwendet, um Ihr Konto zu erstellen und zu verwalten sowie um bei Bedarf E-Mails zur Passwortwiederherstellung zu senden.</li>
-    <li>Grundlegende Profilinformationen: Dies kann Ihren Namen oder Ihr Profilbild umfassen, wenn diese vom externen Login-Anbieter bereitgestellt werden.</li>
-</ul>
-<p>Wir sammeln nur Informationen, die für die Bereitstellung und Verbesserung unserer Dienste notwendig sind.</p>]]></value>
+    <value>&lt;p&gt;Wenn Sie unsere Plattform nutzen, können wir folgende Informationen sammeln:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;E-Mail-Adresse: Wird verwendet, um Ihr Konto zu erstellen und zu verwalten sowie um bei Bedarf E-Mails zur Passwortwiederherstellung zu senden.&lt;/li&gt;
+    &lt;li&gt;Grundlegende Profilinformationen: Dies kann Ihren Namen oder Ihr Profilbild umfassen, wenn diese vom externen Login-Anbieter bereitgestellt werden.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wir sammeln nur Informationen, die für die Bereitstellung und Verbesserung unserer Dienste notwendig sind.&lt;/p&gt;</value>
   </data>
   <data name="Privacy_HowWeUseInfo_Title" xml:space="preserve">
     <value>Wie wir Ihre Informationen verwenden</value>
   </data>
   <data name="Privacy_HowWeUseInfo_Content" xml:space="preserve">
-    <value><![CDATA[<p>Wir verwenden Ihre Informationen für folgende Zwecke:</p>
-<ul>
-    <li>Zur Authentifizierung Ihrer Identität und zur Anmeldung auf unserer Plattform.</li>
-    <li>Zur Verwaltung Ihres Kontos und für wesentliche kontobezogene Kommunikation.</li>
-    <li>Zum Senden von E-Mails zur Passwortwiederherstellung, wenn Sie dies anfordern.</li>
-</ul>
-<p><strong>Wir verkaufen, teilen oder verwenden Ihre Informationen nicht für Marketingzwecke.</strong></p>]]></value>
+    <value>&lt;p&gt;Wir verwenden Ihre Informationen für folgende Zwecke:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Zur Authentifizierung Ihrer Identität und zur Anmeldung auf unserer Plattform.&lt;/li&gt;
+    &lt;li&gt;Zur Verwaltung Ihres Kontos und für wesentliche kontobezogene Kommunikation.&lt;/li&gt;
+    &lt;li&gt;Zum Senden von E-Mails zur Passwortwiederherstellung, wenn Sie dies anfordern.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Wir verkaufen, teilen oder verwenden Ihre Informationen nicht für Marketingzwecke.&lt;/strong&gt;&lt;/p&gt;</value>
   </data>
   <data name="Privacy_DataSharing_Title" xml:space="preserve">
     <value>Datenweitergabe</value>
@@ -396,12 +396,12 @@
     <value>Ihre Rechte</value>
   </data>
   <data name="Privacy_YourRights_Content" xml:space="preserve">
-    <value><![CDATA[<p>Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
-<ul>
-    <li>Zugriff: Sie können eine Kopie der Informationen anfordern, die wir über Sie gespeichert haben.</li>
-    <li>Korrektur: Sie können die Berichtigung ungenauer oder unvollständiger Informationen verlangen.</li>
-    <li>Löschung: Sie können die Löschung Ihres Kontos und der zugehörigen Daten beantragen.</li>
-</ul>]]></value>
+    <value>&lt;p&gt;Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Zugriff: Sie können eine Kopie der Informationen anfordern, die wir über Sie gespeichert haben.&lt;/li&gt;
+    &lt;li&gt;Korrektur: Sie können die Berichtigung ungenauer oder unvollständiger Informationen verlangen.&lt;/li&gt;
+    &lt;li&gt;Löschung: Sie können die Löschung Ihres Kontos und der zugehörigen Daten beantragen.&lt;/li&gt;
+&lt;/ul&gt;</value>
   </data>
   <data name="Privacy_PolicyChanges_Title" xml:space="preserve">
     <value>Änderungen der Datenschutzerklärung</value>
@@ -425,13 +425,13 @@
     <value>Verwendung Ihrer E-Mail-Adresse</value>
   </data>
   <data name="Terms_EmailUsage_Content" xml:space="preserve">
-    <value><![CDATA[<p>Wenn Sie sich über einen externen Anbieter anmelden, können wir Zugriff auf Ihre E-Mail-Adresse anfordern. Diese E-Mail-Adresse wird für folgende Zwecke verwendet:</p>
-<ul>
-    <li>Zur Erstellung und Verwaltung Ihres Kontos auf unserer Plattform.</li>
-    <li>Als Benutzername für Authentifizierungszwecke.</li>
-    <li>Zum Senden von E-Mails zur Passwortwiederherstellung, wenn Sie dies anfordern.</li>
-</ul>
-<p><strong>Wir verwenden Ihre E-Mail-Adresse nicht für Marketingzwecke, geben sie nicht an Dritte weiter oder nutzen sie für andere Zwecke.</strong></p>]]></value>
+    <value>&lt;p&gt;Wenn Sie sich über einen externen Anbieter anmelden, können wir Zugriff auf Ihre E-Mail-Adresse anfordern. Diese E-Mail-Adresse wird für folgende Zwecke verwendet:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Zur Erstellung und Verwaltung Ihres Kontos auf unserer Plattform.&lt;/li&gt;
+    &lt;li&gt;Als Benutzername für Authentifizierungszwecke.&lt;/li&gt;
+    &lt;li&gt;Zum Senden von E-Mails zur Passwortwiederherstellung, wenn Sie dies anfordern.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Wir verwenden Ihre E-Mail-Adresse nicht für Marketingzwecke, geben sie nicht an Dritte weiter oder nutzen sie für andere Zwecke.&lt;/strong&gt;&lt;/p&gt;</value>
   </data>
   <data name="Terms_PrivacyHandling_Title" xml:space="preserve">
     <value>Datenschutz und Datenverarbeitung</value>
@@ -475,4 +475,7 @@
   <data name="Terms_ThankYou" xml:space="preserve">
     <value>Vielen Dank für die Nutzung unserer Plattform!</value>
   </data>
-</root> 
+  <data name="Nav_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+</root>

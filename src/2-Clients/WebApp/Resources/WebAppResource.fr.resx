@@ -355,24 +355,24 @@
     <value>Informations que nous Collectons</value>
   </data>
   <data name="Privacy_InformationWeCollect_Content" xml:space="preserve">
-    <value><![CDATA[<p>Lorsque vous utilisez notre plateforme, nous pouvons collecter les informations suivantes :</p>
-<ul>
-    <li>Adresse e-mail : Utilisée pour créer et gérer votre compte, ainsi que pour envoyer des e-mails de récupération de mot de passe si demandé.</li>
-    <li>Informations de profil de base : Cela peut inclure votre nom ou photo de profil si fournis par le fournisseur de connexion externe.</li>
-</ul>
-<p>Nous ne collectons que les informations nécessaires pour fournir et améliorer nos services.</p>]]></value>
+    <value>&lt;p&gt;Lorsque vous utilisez notre plateforme, nous pouvons collecter les informations suivantes :&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Adresse e-mail : Utilisée pour créer et gérer votre compte, ainsi que pour envoyer des e-mails de récupération de mot de passe si demandé.&lt;/li&gt;
+    &lt;li&gt;Informations de profil de base : Cela peut inclure votre nom ou photo de profil si fournis par le fournisseur de connexion externe.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nous ne collectons que les informations nécessaires pour fournir et améliorer nos services.&lt;/p&gt;</value>
   </data>
   <data name="Privacy_HowWeUseInfo_Title" xml:space="preserve">
     <value>Comment nous Utilisons vos Informations</value>
   </data>
   <data name="Privacy_HowWeUseInfo_Content" xml:space="preserve">
-    <value><![CDATA[<p>Nous utilisons vos informations aux fins suivantes :</p>
-<ul>
-    <li>Pour authentifier votre identité et vous connecter à notre plateforme.</li>
-    <li>Pour gérer votre compte et fournir les communications essentielles liées au compte.</li>
-    <li>Pour envoyer des e-mails de récupération de mot de passe si vous le demandez.</li>
-</ul>
-<p><strong>Nous ne vendons pas, ne partageons pas et n'utilisons pas vos informations à des fins marketing.</strong></p>]]></value>
+    <value>&lt;p&gt;Nous utilisons vos informations aux fins suivantes :&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Pour authentifier votre identité et vous connecter à notre plateforme.&lt;/li&gt;
+    &lt;li&gt;Pour gérer votre compte et fournir les communications essentielles liées au compte.&lt;/li&gt;
+    &lt;li&gt;Pour envoyer des e-mails de récupération de mot de passe si vous le demandez.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Nous ne vendons pas, ne partageons pas et n'utilisons pas vos informations à des fins marketing.&lt;/strong&gt;&lt;/p&gt;</value>
   </data>
   <data name="Privacy_DataSharing_Title" xml:space="preserve">
     <value>Partage des Données</value>
@@ -396,12 +396,12 @@
     <value>Vos Droits</value>
   </data>
   <data name="Privacy_YourRights_Content" xml:space="preserve">
-    <value><![CDATA[<p>Vous disposez des droits suivants concernant vos informations personnelles :</p>
-<ul>
-    <li>Accès : Vous pouvez demander une copie des informations que nous détenons sur vous.</li>
-    <li>Correction : Vous pouvez demander la correction d'informations inexactes ou incomplètes.</li>
-    <li>Suppression : Vous pouvez demander la suppression de votre compte et des données associées.</li>
-</ul>]]></value>
+    <value>&lt;p&gt;Vous disposez des droits suivants concernant vos informations personnelles :&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Accès : Vous pouvez demander une copie des informations que nous détenons sur vous.&lt;/li&gt;
+    &lt;li&gt;Correction : Vous pouvez demander la correction d'informations inexactes ou incomplètes.&lt;/li&gt;
+    &lt;li&gt;Suppression : Vous pouvez demander la suppression de votre compte et des données associées.&lt;/li&gt;
+&lt;/ul&gt;</value>
   </data>
   <data name="Privacy_PolicyChanges_Title" xml:space="preserve">
     <value>Modifications de la Politique de Confidentialité</value>
@@ -425,13 +425,13 @@
     <value>Utilisation de votre Adresse E-mail</value>
   </data>
   <data name="Terms_EmailUsage_Content" xml:space="preserve">
-    <value><![CDATA[<p>Lorsque vous vous connectez via un fournisseur externe, nous pouvons demander l'accès à votre adresse e-mail. Cette adresse e-mail est utilisée aux fins suivantes :</p>
-<ul>
-    <li>Pour créer et gérer votre compte sur notre plateforme.</li>
-    <li>Pour l'utiliser comme nom d'utilisateur à des fins d'authentification.</li>
-    <li>Pour envoyer des e-mails de récupération de mot de passe, si vous le demandez.</li>
-</ul>
-<p><strong>Nous n'utilisons pas votre adresse e-mail à des fins marketing, ne la partageons pas avec des tiers, ni ne l'utilisons à d'autres fins.</strong></p>]]></value>
+    <value>&lt;p&gt;Lorsque vous vous connectez via un fournisseur externe, nous pouvons demander l'accès à votre adresse e-mail. Cette adresse e-mail est utilisée aux fins suivantes :&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Pour créer et gérer votre compte sur notre plateforme.&lt;/li&gt;
+    &lt;li&gt;Pour l'utiliser comme nom d'utilisateur à des fins d'authentification.&lt;/li&gt;
+    &lt;li&gt;Pour envoyer des e-mails de récupération de mot de passe, si vous le demandez.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Nous n'utilisons pas votre adresse e-mail à des fins marketing, ne la partageons pas avec des tiers, ni ne l'utilisons à d'autres fins.&lt;/strong&gt;&lt;/p&gt;</value>
   </data>
   <data name="Terms_PrivacyHandling_Title" xml:space="preserve">
     <value>Confidentialité et Traitement des Données</value>
@@ -475,4 +475,7 @@
   <data name="Terms_ThankYou" xml:space="preserve">
     <value>Merci d'utiliser notre plateforme !</value>
   </data>
-</root> 
+  <data name="Nav_Login" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+</root>

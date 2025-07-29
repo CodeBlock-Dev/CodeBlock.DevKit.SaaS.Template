@@ -1,4 +1,5 @@
 ﻿@using CanBeYours.Core.Resources
+@using CodeBlock.DevKit.Clients.WebApp.Resources
 @using CodeBlock.DevKit.Web.Blazor.Server.Services
 @using WebApp.Pages
 @using CodeBlock.DevKit.Clients.WebApp.Pages
@@ -27,8 +28,10 @@
 @using Blazored.Toast.Configuration
 @using CodeBlock.DevKit.AIChatBot.UI.Pages.Client.Components
 @using CodeBlock.DevKit.Web.Localization
+@using CodeBlock.DevKit.Web.Blazor.Server.Attributes
 
 @inject IStringLocalizer<WebAppResource> WebAppLocalizer
+@inject IStringLocalizer<WebAppClientResource> WebAppClientLocalizer
 @inject IStringLocalizer<CoreResource> CoreLocalizer
 @inject IStringLocalizer<SharedResource> SharedLocalizer
 @inject NavigationManager NavigationManager

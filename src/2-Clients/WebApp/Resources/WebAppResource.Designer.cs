@@ -412,6 +412,15 @@ namespace CanBeYours.WebApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string Nav_Login {
+            get {
+                return ResourceManager.GetString("Nav_Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pricing.
         /// </summary>
         public static string Nav_Pricing {
@@ -594,15 +603,6 @@ namespace CanBeYours.WebApp.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Privacy Policy.
-        /// </summary>
-        public static string PrivacyPolicy {
-            get {
-                return ResourceManager.GetString("PrivacyPolicy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;You have the following rights regarding your personal information:&lt;/p&gt;
         ///&lt;ul&gt;
         ///    &lt;li&gt;Access: You can request a copy of the information we hold about you.&lt;/li&gt;
@@ -622,6 +622,15 @@ namespace CanBeYours.WebApp.Resources {
         public static string Privacy_YourRights_Title {
             get {
                 return ResourceManager.GetString("Privacy_YourRights_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privacy Policy.
+        /// </summary>
+        public static string PrivacyPolicy {
+            get {
+                return ResourceManager.GetString("PrivacyPolicy", resourceCulture);
             }
         }
         
@@ -929,7 +938,7 @@ namespace CanBeYours.WebApp.Resources {
         ///    &lt;li&gt;To use as your username for authentication purposes.&lt;/li&gt;
         ///    &lt;li&gt;To send password recovery emails, if requested by you.&lt;/li&gt;
         ///&lt;/ul&gt;
-        ///&lt;p&gt;&lt;strong&gt;We do not use your email address for marketing purposes, share it with third parties, or utilize it for any other goals.&lt;/strong&gt;&lt;/p&gt;.
+        ///&lt;p&gt;&lt;strong&gt;We do not use your email address for marketing purposes, share it with third parties, or utilize it for any other goals.&lt;/strong&gt;&lt;/p [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Terms_EmailUsage_Content {
             get {
