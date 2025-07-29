@@ -150,6 +150,33 @@ $appName = Get-UserInput -prompt "Enter your application name (this will be disp
 # Get application URL
 $appUrl = Get-UserInput -prompt "Enter your application URL" -default $defaultSettings.Application.Default.Url -validationType 'url'
 
+# Function to generate subdomain URLs
+function Get-SubdomainUrl {
+    param (
+        [string]$baseUrl,
+        [string]$subdomain
+    )
+    
+    # Parse the URL to extract protocol and domain
+    if ($baseUrl -match '^(https?://)([^/]+)(.*)$') {
+        $protocol = $matches[1]
+        $domain = $matches[2]
+        $path = $matches[3]
+        
+        # Add subdomain
+        $newDomain = "$subdomain.$domain"
+        
+        return "$protocol$newDomain$path"
+    }
+    
+    return $baseUrl
+}
+
+# Generate URLs for different applications
+$webAppUrl = $appUrl
+$adminPanelUrl = Get-SubdomainUrl -baseUrl $appUrl -subdomain "admin"
+$apiUrl = Get-SubdomainUrl -baseUrl $appUrl -subdomain "api"
+
 # Get admin user details
 $adminMobile = Get-UserInput -prompt "Enter admin user mobile number" -default $defaultSettings.Identity.AdminUser.Mobile -validationType 'mobile'
 $adminEmail = Get-UserInput -prompt "Enter admin user email" -default $defaultSettings.Identity.AdminUser.Email -validationType 'email'
@@ -169,10 +196,26 @@ try {
     Get-ChildItem -Recurse -Filter "appsettings.json" | ForEach-Object {
         $content = Get-Content $_.FullName -Raw
         
+        # Determine which URL to use based on the file path
+        $currentUrl = $webAppUrl  # Default to web app URL
+        $currentIssuer = $apiUrl  # Default issuer for JWT
+        
+        if ($_.FullName -like "*AdminPanel*") {
+            $currentUrl = $adminPanelUrl
+        } elseif ($_.FullName -like "*Api*") {
+            $currentUrl = $apiUrl
+            $currentIssuer = $apiUrl
+        }
+        
         # Update values using string replacement to preserve JSON structure
         # Only replace the application name in specific places
         $content = $content -replace '"Application":\s*{\s*"Default":\s*{\s*"Name":\s*"[^"]*"', "`"Application`": { `"Default`": { `"Name`": `"$appName`""
-        $content = $content -replace '"Url":\s*"[^"]*"', "`"Url`": `"$appUrl`""
+        $content = $content -replace '"Url":\s*"[^"]*"', "`"Url`": `"$currentUrl`""
+        
+        # Update JWT Issuer for API project
+        if ($_.FullName -like "*Api*") {
+            $content = $content -replace '"Issuer":\s*"[^"]*"', "`"Issuer`": `"$currentIssuer`""
+        }
         
         # Preserve suffixes when replacing CanBeYours
         $content = $content -replace '"CookieName":\s*"CanBeYours\.([^"]*)"', "`"CookieName`": `"$solutionName.`$1`""
@@ -295,8 +338,12 @@ Write-Host "Solution Name: " -NoNewline
 Write-Host $solutionName -ForegroundColor Yellow
 Write-Host "Application Name: " -NoNewline
 Write-Host $appName -ForegroundColor Yellow
-Write-Host "Application URL: " -NoNewline
-Write-Host $appUrl -ForegroundColor Yellow
+Write-Host "Web Application URL: " -NoNewline
+Write-Host $webAppUrl -ForegroundColor Yellow
+Write-Host "Admin Panel URL: " -NoNewline
+Write-Host $adminPanelUrl -ForegroundColor Yellow
+Write-Host "API URL: " -NoNewline
+Write-Host $apiUrl -ForegroundColor Yellow
 Write-Host "Admin Email: " -NoNewline
 Write-Host $adminEmail -ForegroundColor Yellow
 
