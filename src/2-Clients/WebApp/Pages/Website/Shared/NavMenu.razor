@@ -1,4 +1,5 @@
 ﻿@inject ApplicationSettings ApplicationSettings
+@inject IJSRuntime JSRuntime
 
 <nav class="navbar navbar-expand-lg">
     <div class="container">
@@ -7,19 +8,32 @@
             @ApplicationSettings.Localized.Name
         </a>
 
-        <!-- Desktop menu (hidden on mobile) -->
-        <div class="d-none d-lg-block">
-            <ul class="navbar-nav ms-auto">
+        <!-- Mobile menu button and language selector -->
+        <div class="d-lg-none d-flex align-items-center">
+            <SelectLanguage BtnCssClass="btn btn-outline-light border-0 me-2"
+                            ShowIcon="true"
+                            ShowShortName="true"
+                            ShowSelectedItem="true"
+                            IconCssClass="text-secondary fs-5"
+                            WrapperCssClass="language-selector-mobile" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <!-- Single Navigation Menu - Works for both desktop and mobile -->
+        <div class="navbar-nav-container">
+            <ul class="navbar-nav responsive-nav" id="singleNavMenu">
                 <li class="nav-item">
-                    <a class="nav-link" href="#home">@WebAppLocalizer[WebAppResource.Nav_Home]</a>
+                    <a class="nav-link" href="#home" data-bs-dismiss="offcanvas" data-scroll-to-section="true">@WebAppLocalizer[WebAppResource.Nav_Home]</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#pricing">@WebAppLocalizer[WebAppResource.Nav_Pricing]</a>
+                    <a class="nav-link" href="#pricing" data-bs-dismiss="offcanvas" data-scroll-to-section="true">@WebAppLocalizer[WebAppResource.Nav_Pricing]</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">@WebAppLocalizer[WebAppResource.Nav_Contact]</a>
+                    <a class="nav-link" href="#" data-bs-dismiss="offcanvas">@WebAppLocalizer[WebAppResource.Nav_Contact]</a>
                 </li>
-                <li class="nav-item me-2">
+                <li class="nav-item language-selector-desktop">
                     <SelectLanguage BtnCssClass="btn btn-outline-light border-0"
                                     ShowIcon="true"
                                     ShowShortName="true"
@@ -28,7 +42,7 @@
                                     SelectedItemCssClass="text-secondary ms-1"
                                     WrapperCssClass="language-selector" />
                 </li>
-                <li class="nav-item ms-2">
+                <li class="nav-item dashboard-btn">
                     @if (CurrentUser.IsAuthenticated())
                     {
                         <a class="btn btn-warning-gradient" href="/dashboard">
@@ -46,19 +60,6 @@
                 </li>
             </ul>
         </div>
-
-        <!-- Mobile menu button and language selector -->
-        <div class="d-lg-none d-flex align-items-center">
-            <SelectLanguage BtnCssClass="btn btn-outline-light border-0 me-2"
-                            ShowIcon="true"
-                            ShowShortName="true"
-                            ShowSelectedItem="true"
-                            IconCssClass="text-secondary fs-5"
-                            WrapperCssClass="language-selector-mobile" />
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
     </div>
 </nav>
 
@@ -72,21 +73,18 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-                <a class="nav-link" href="#home" data-bs-dismiss="offcanvas">@WebAppLocalizer[WebAppResource.Nav_Home]</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#pricing" data-bs-dismiss="offcanvas">@WebAppLocalizer[WebAppResource.Nav_Pricing]</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-dismiss="offcanvas">@WebAppLocalizer[WebAppResource.Nav_Contact]</a>
-            </li>
-            <li class="nav-item mt-3">
-                <a class="btn btn-outline-primary-gradient w-100 mb-2" href="/dashboard" data-bs-dismiss="offcanvas">
-                    <i class="bi bi-box-arrow-in-right"></i> @WebAppLocalizer[WebAppResource.Nav_Dashboard]
-                </a>
-            </li>
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="offcanvasNavMenu">
+            <!-- Navigation items will be cloned here by JavaScript -->
         </ul>
     </div>
 </div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("setupSingleNavMenu");
+        }
+    }
+}

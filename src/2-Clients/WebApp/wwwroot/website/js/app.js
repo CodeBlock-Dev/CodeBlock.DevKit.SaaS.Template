@@ -1,5 +1,67 @@
 ﻿// Modern SaaS Website JavaScript - Super Simple Animations
+
 document.addEventListener('DOMContentLoaded', function() {
+    
+    // Handle navigation menu anchor link clicks using data attribute
+    function setupScrollToSectionLinks() {
+        const scrollLinks = document.querySelectorAll('.nav-link[data-scroll-to-section="true"]');
+        
+        scrollLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                
+                // Skip empty hash
+                if (href === '#') return;
+                
+                // Update URL
+                window.location.hash = href;
+                
+                // Scroll to element
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    }
+    
+    // Setup scroll links when DOM is ready
+    setupScrollToSectionLinks();
+    
+    // Single Navigation Menu Setup - Clones nav items to offcanvas
+    window.setupSingleNavMenu = function() {
+        const singleNavMenu = document.getElementById('singleNavMenu');
+        const offcanvasNavMenu = document.getElementById('offcanvasNavMenu');
+        
+        if (singleNavMenu && offcanvasNavMenu) {
+            // Clone the navigation items
+            const navItems = singleNavMenu.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                // Skip language selector for mobile (it's already in the header)
+                if (item.classList.contains('language-selector-desktop')) {
+                    return;
+                }
+                
+                const clonedItem = item.cloneNode(true);
+                
+                // Add mobile-specific classes
+                if (clonedItem.classList.contains('dashboard-btn')) {
+                    clonedItem.classList.add('mt-3');
+                    const btn = clonedItem.querySelector('.btn');
+                    if (btn) {
+                        btn.classList.add('w-100', 'mb-2');
+                    }
+                }
+                
+                offcanvasNavMenu.appendChild(clonedItem);
+            });
+            
+            // Setup scroll links for cloned items
+            setupScrollToSectionLinks();
+        }
+    };
     
     // Simple animation checker - runs on every scroll
     function checkAnimations() {
@@ -52,21 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateNavbar();
         updateParallax();
     }
-
-    // Smooth scrolling for anchor links (exclude dropdown toggles)
-    document.querySelectorAll('a[href^="#"]:not(.dropdown-toggle):not([data-bs-toggle])').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const offsetTop = target.offsetTop - 80;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
 
     // Button hover effects
     function addHoverEffects() {

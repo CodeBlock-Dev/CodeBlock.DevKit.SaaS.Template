@@ -28,6 +28,7 @@ html {
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
+    scroll-padding-top: 100px; /* Account for fixed navbar */
 }
 
 body {
@@ -119,6 +120,79 @@ html {
 
 .navbar-nav .nav-link:hover::after {
     width: 100%;
+}
+
+/* Responsive Navigation Styles */
+.navbar-nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.responsive-nav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Desktop Styles (lg and up) */
+@media (min-width: 992px) {
+    .navbar-nav-container {
+        margin-left: auto;
+    }
+    
+    .responsive-nav {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+    
+    .responsive-nav .nav-item {
+        margin: 0 0.25rem;
+    }
+    
+    .language-selector-desktop {
+        margin-right: 0.5rem;
+    }
+    
+    .dashboard-btn {
+        margin-left: 0.5rem;
+    }
+    
+    .dashboard-btn .btn {
+        padding: 0.75rem 2rem;
+        border-radius: 0.75rem;
+    }
+}
+
+/* Mobile Styles (below lg) */
+@media (max-width: 991.98px) {
+    .navbar-nav-container {
+        display: none;
+    }
+    
+    .responsive-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .responsive-nav .nav-item {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .language-selector-desktop {
+        display: none;
+    }
+    
+    .dashboard-btn {
+        margin-top: 1rem;
+    }
+    
+    .dashboard-btn .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
 }
 
 .btn-primary-gradient {
