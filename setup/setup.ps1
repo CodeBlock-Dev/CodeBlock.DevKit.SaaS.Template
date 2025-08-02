@@ -220,6 +220,7 @@ try {
         # Preserve suffixes when replacing CanBeYours
         $content = $content -replace '"CookieName":\s*"CanBeYours\.([^"]*)"', "`"CookieName`": `"$solutionName.`$1`""
         $content = $content -replace '"Name":\s*"CanBeYours\.([^"]*)"', "`"Name`": `"$solutionName.`$1`""
+        $content = $content -replace '"DatabaseName":\s*"CanBeYours_ScheduledJobs"', "`"DatabaseName`": `"$solutionName`_ScheduledJobs`""
         $content = $content -replace '"DatabaseName":\s*"CanBeYours_([^"]*)"', "`"DatabaseName`": `"$solutionName_`$1`""
         $content = $content -replace '"DatabaseName":\s*"CanBeYours"', "`"DatabaseName`": `"$solutionName`""
         
