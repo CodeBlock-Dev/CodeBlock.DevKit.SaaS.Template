@@ -1,7 +1,9 @@
 ﻿@using CodeBlock.DevKit.AIChatBot.UI.Models
+@using CodeBlock.DevKit.Contracts.Services
 @inject LocalizationSettings LocalizationSettings
 @inherits LayoutComponentBase
 @inject ApplicationSettings ApplicationSettings
+@inject ISettingAccessorService SettingAccessorService
 
 <HeadContent>
     <link href="css/cb.website.spa.@(LocalizationSettings.GetCurrentLanguageDirection().ToLower()).min.css" rel="stylesheet" />
@@ -29,9 +31,12 @@
 
         <Footer />
 
-        <div class="chat-widget">
-            <ChatBotWidget Theme="ChatBotWidgetTheme.Dark" />
-        </div>
+        @if (SettingAccessorService.Settings.AIChatBot.ShowChatBotWidgetOnWebsite)
+        {
+            <div class="chat-widget">
+                <ChatBotWidget Theme="ChatBotWidgetTheme.Dark" />
+            </div>
+        }
     </div>
 
 }
