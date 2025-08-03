@@ -177,6 +177,20 @@ $webAppUrl = $appUrl
 $adminPanelUrl = Get-SubdomainUrl -baseUrl $appUrl -subdomain "admin"
 $apiUrl = Get-SubdomainUrl -baseUrl $appUrl -subdomain "api"
 
+# Generate support email from the application URL
+function Get-SupportEmail {
+    param ([string]$url)
+    
+    if ($url -match '^(https?://)([^/]+)(.*)$') {
+        $domain = $matches[2]
+        return "support@$domain"
+    }
+    
+    return "support@example.com"
+}
+
+$supportEmail = Get-SupportEmail -url $appUrl
+
 # Get admin user details
 $adminMobile = Get-UserInput -prompt "Enter admin user mobile number" -default $defaultSettings.Identity.AdminUser.Mobile -validationType 'mobile'
 $adminEmail = Get-UserInput -prompt "Enter admin user email" -default $defaultSettings.Identity.AdminUser.Email -validationType 'email'
@@ -211,6 +225,7 @@ try {
         # Only replace the application name in specific places
         $content = $content -replace '"Application":\s*{\s*"Default":\s*{\s*"Name":\s*"[^"]*"', "`"Application`": { `"Default`": { `"Name`": `"$appName`""
         $content = $content -replace '"Url":\s*"[^"]*"', "`"Url`": `"$currentUrl`""
+        $content = $content -replace '"SupportEmail":\s*"[^"]*"', "`"SupportEmail`": `"$supportEmail`""
         
         # Update JWT Issuer for API project
         if ($_.FullName -like "*Api*") {
@@ -347,5 +362,7 @@ Write-Host "API URL: " -NoNewline
 Write-Host $apiUrl -ForegroundColor Yellow
 Write-Host "Admin Email: " -NoNewline
 Write-Host $adminEmail -ForegroundColor Yellow
+Write-Host "Support Email: " -NoNewline
+Write-Host $supportEmail -ForegroundColor Yellow
 
 Write-Host "`nYou can now build and run your application." -ForegroundColor Green 
