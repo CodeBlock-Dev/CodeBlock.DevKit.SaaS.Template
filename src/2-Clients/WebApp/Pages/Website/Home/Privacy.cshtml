@@ -1,4 +1,7 @@
 ﻿@page "/privacy-policy"
+@using CodeBlock.DevKit.Contracts.Models
+@inject ApplicationSettings ApplicationSettings
+
 @{
     Layout = "_SimpleLayout";
     ViewData["Title"] = WebAppLocalizer[WebAppResource.PrivacyPolicy];
@@ -31,6 +34,6 @@
 <p>@WebAppLocalizer[WebAppResource.Privacy_PolicyChanges_Content]</p>
 
 <h2>@WebAppLocalizer[WebAppResource.Terms_ContactUs]</h2>
-<p>@WebAppLocalizer[WebAppResource.Terms_ContactUsInfo]</p>
+<p>@WebAppLocalizer[WebAppResource.Terms_ContactUsInfo] (@ApplicationSettings.Default.SupportEmail)</p>
 
 <p>@WebAppLocalizer[WebAppResource.Terms_AgreeToPolicy]</p>
