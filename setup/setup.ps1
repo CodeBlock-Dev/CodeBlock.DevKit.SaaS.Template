@@ -244,10 +244,11 @@ try {
         $content = $content -replace '"Email":\s*"[^"]*"', "`"Email`": `"$adminEmail`""
         $content = $content -replace '"Password":\s*"[^"]*"', "`"Password`": `"$adminPassword`""
         
-        # Update security keys
-        $content = $content -replace '"EncryptionSymmetricKey":\s*"[^"]*"', "`"EncryptionSymmetricKey`": `"$encryptionKey`""
-        $content = $content -replace '"ApiKey":\s*"[^"]*"', "`"ApiKey`": `"$apiKey`""
-        $content = $content -replace '"Key":\s*"[^"]*"', "`"Key`": `"$jwtKey`""
+	# Update security keys
+	$content = $content -replace '"ApplicationName":\s*"CanBeYours"', "`"ApplicationName`": `"$solutionName`""
+	$content = $content -replace '"EncryptionSymmetricKey":\s*"[^"]*"', "`"EncryptionSymmetricKey`": `"$encryptionKey`""
+	$content = $content -replace '"ApiKey":\s*"[^"]*"', "`"ApiKey`": `"$apiKey`""
+	$content = $content -replace '"Key":\s*"[^"]*"', "`"Key`": `"$jwtKey`""
         
         # Update Swagger title preserving the suffix
         $content = $content -replace '"Title":\s*"Can Be Yours([^"]*)"', "`"Title`": `"$appName`$1`""
