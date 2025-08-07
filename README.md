@@ -24,7 +24,7 @@ git clone https://github.com/CodeBlock-Dev/CodeBlock.Dev Kit.Template.git
 cd CodeBlock.Dev Kit.Template
 ```
 
-**Note**: All Dev Kit modules are delivered via NuGet packages, so you only need to maintain your own business logic.
+**Note**: All Dev Kit modules are delivered via [NuGet packages](https://www.nuget.org/profiles/CodeBlock.Dev), so you only need to maintain your own business logic.
 
 # 📋 Purchase a License
 
