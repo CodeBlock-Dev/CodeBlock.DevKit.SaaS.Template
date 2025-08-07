@@ -33,7 +33,7 @@
 @using CanBeYours.AdminPanel.Pages.DemoThings.Components
 @using CodeBlock.DevKit.Contracts.Dtos
 
-@attribute [Authorize(Policy = Policies.ADMIN_ROLE)]
+@attribute [Authorize(Policies.OPERATOR)]
 @inject IStringLocalizer<AdminPanelResource> AdminPanelLocalizer
 @inject IStringLocalizer<SharedResource> SharedLocalizer
 @inject IStringLocalizer<CoreResource> CoreLocalizer
