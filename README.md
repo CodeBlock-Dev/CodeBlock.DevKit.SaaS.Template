@@ -3,7 +3,7 @@
 A comprehensive SaaS application template built with the [CodeBlock Dev Kit](https://codeblock.dev). This template provides a complete foundation for building modern, scalable SaaS applications with enterprise-grade architecture.
 
 <div align="center">
-  <a href="https://www.youtube.com/embed/pkg5zMn2a6A" target="_blank">
+  <a href="https://www.youtube.com/embed/s5PO1JIE38w" target="_blank">
     <img src="https://codeblock.dev/images/intro.png" alt="CodeBlock Dev Kit Template Demo" width="560" height="315" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </a>
 </div>
