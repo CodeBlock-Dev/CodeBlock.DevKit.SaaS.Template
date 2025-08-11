@@ -3,8 +3,12 @@
 A comprehensive SaaS application template built with the [CodeBlock Dev Kit](https://codeblock.dev). This template provides a complete foundation for building modern, scalable SaaS applications with enterprise-grade architecture.
 
 <div align="center">
-  <a href="https://www.youtube.com/embed/dQw4w9WgXcQ" target="_blank">
-    <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="CodeBlock Dev Kit Template Demo" width="560" height="315" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <a href="https://www.youtube.com/embed/s5PO1JIE38w" target="_blank">
+    <img src="https://codeblock.dev/images/intro.png" alt="Codeblock Dev Kit Introduction" width="280" height="157.5" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  </a>
+<span> . </span>
+  <a href="https://www.youtube.com/embed/wm54wmv-m4c" target="_blank">
+    <img src="https://codeblock.dev/images/saas-template.png" alt="CodeBlock Dev Kit's SaaS application template" width="280" height="157.5" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </a>
 </div>
 
@@ -24,7 +28,7 @@ git clone https://github.com/CodeBlock-Dev/CodeBlock.Dev Kit.Template.git
 cd CodeBlock.Dev Kit.Template
 ```
 
-**Note**: All Dev Kit modules are delivered via NuGet packages, so you only need to maintain your own business logic.
+**Note**: All Dev Kit modules are delivered via [NuGet packages](https://www.nuget.org/profiles/CodeBlock.Dev), so you only need to maintain your own business logic.
 
 # 📋 Purchase a License
 
