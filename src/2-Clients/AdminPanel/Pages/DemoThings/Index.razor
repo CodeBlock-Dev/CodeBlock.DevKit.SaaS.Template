@@ -1,6 +1,8 @@
 ﻿@page "/demo-things"
 @using CanBeYours.AdminPanel.Helpers
+@using CanBeYours.Application.Helpers
 @implements IDisposable
+@attribute [Authorize(Permissions.Demo.DEMO_THINGS)]
 
 <PageTitle>@AdminPanelLocalizer[AdminPanelResource.DemoThings]</PageTitle>
 
