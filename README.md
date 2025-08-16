@@ -17,15 +17,15 @@ A comprehensive SaaS application template built with the [CodeBlock Dev Kit](htt
 You can download this template in two ways:
 
 #### Option 1: Download ZIP File
-1. Go to the [GitHub](https://github.com/CodeBlock-Dev/CodeBlock.DevKit.Template) repository
+1. Go to the [GitHub](https://github.com/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template) repository
 2. Click the green `< > Code` button
 3. Select `Download ZIP`
 4. Extract the ZIP file to your desired location on your PC
 
 #### Option 2: Clone with Git
 ```bash
-git clone https://github.com/CodeBlock-Dev/CodeBlock.Dev Kit.Template.git
-cd CodeBlock.Dev Kit.Template
+git clone https://github.com/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template.git
+cd CodeBlock.DevKit.SaaS.Template
 ```
 
 **Note**: All Dev Kit modules are delivered via [NuGet packages](https://www.nuget.org/profiles/CodeBlock.Dev), so you only need to maintain your own business logic.
@@ -109,7 +109,7 @@ For detailed guidance on implementing features and customizing the template, ref
 
 If you need help, have a question, or want to report a bug, you can create an issue and we will respond as soon as possible.
 
-1. Visit [GitHub Issues](https://github.com/CodeBlock-Dev/CodeBlock.DevKit.Template/issues)
+1. Visit [GitHub Issues](https://github.com/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template/issues)
 2. Click the green "New issue" button
 3. Input a title and explain the issue
 4. Submit your request
