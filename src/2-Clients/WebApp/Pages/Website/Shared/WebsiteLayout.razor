@@ -42,8 +42,17 @@
 }
 
 @code {
+    /// <summary>
+    /// Controls whether the splash screen has finished and the main content should be displayed.
+    /// This demonstrates how to implement a loading state for better user experience.
+    /// </summary>
     bool SplashScreenStarted = false;
 
+    /// <summary>
+    /// Event handler called when the splash screen animation completes.
+    /// Sets the flag to show the main website content and hide the splash screen.
+    /// This demonstrates how to handle component lifecycle events in Blazor.
+    /// </summary>
     private void HandleSplashStarted()
     {
         SplashScreenStarted = true;

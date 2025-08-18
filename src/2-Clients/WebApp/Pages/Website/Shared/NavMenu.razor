@@ -80,6 +80,13 @@
 </div>
 
 @code {
+    /// <summary>
+    /// Lifecycle method called after the component has rendered.
+    /// Sets up the mobile navigation menu functionality using JavaScript interop.
+    /// This demonstrates how to integrate JavaScript functionality with Blazor components
+    /// and handle responsive navigation patterns.
+    /// </summary>
+    /// <param name="firstRender">True if this is the first time the component is rendering</param>
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)

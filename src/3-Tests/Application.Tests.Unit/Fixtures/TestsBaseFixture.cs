@@ -5,13 +5,39 @@ using NSubstitute;
 
 namespace CanBeYours.Application.Tests.Unit.Fixtures;
 
+/// <summary>
+/// Base test fixture for unit tests that provides common setup and mock dependencies.
+/// This class demonstrates how to create a robust test infrastructure for unit testing
+/// with mocked repositories, request dispatchers, and user context. The DemoThing functionality
+/// shown here is just an example to help you learn how to implement your own unique features
+/// into the current codebase. You can use this pattern to test your actual business logic.
+/// </summary>
 public abstract class TestsBaseFixture : UnitTestsBase
 {
+    /// <summary>
+    /// Mock request dispatcher for testing domain event publishing
+    /// </summary>
     protected IRequestDispatcher RequestDispatcher;
+    
+    /// <summary>
+    /// Mock repository for DemoThing entities with in-memory test data
+    /// </summary>
     protected IDemoThingRepository DemoThingRepository;
+    
+    /// <summary>
+    /// In-memory list of DemoThing entities for testing repository operations
+    /// </summary>
     protected List<DemoThing> DemoThings = new List<DemoThing>();
+    
+    /// <summary>
+    /// Mock current user context for testing user-specific operations
+    /// </summary>
     protected ICurrentUser CurrentUser;
 
+    /// <summary>
+    /// Sets up the test fixture by calling common setup and test-specific setup.
+    /// This method is called by the base class to prepare the test environment.
+    /// </summary>
     protected override void FixtureSetup()
     {
         CommonFixtureSetup();
@@ -19,6 +45,11 @@ public abstract class TestsBaseFixture : UnitTestsBase
         TestClassFixtureSetup();
     }
 
+    /// <summary>
+    /// Sets up common test dependencies including mocked services and test data.
+    /// This method configures the mock repository with in-memory test data and
+    /// sets up the request dispatcher and current user mocks.
+    /// </summary>
     private void CommonFixtureSetup()
     {
         RequestDispatcher = Substitute.For<IRequestDispatcher>();
@@ -79,13 +110,17 @@ public abstract class TestsBaseFixture : UnitTestsBase
     }
 
     /// <summary>
-    /// Each test class should setup its own fixture
+    /// Abstract method that each test class must implement to set up its own specific fixture.
+    /// This allows test classes to configure additional dependencies or test data as needed.
     /// </summary>
     protected abstract void TestClassFixtureSetup();
 
     /// <summary>
-    ///
+    /// Generates a list of sample DemoThing entities for testing purposes.
+    /// This method creates test data that demonstrates different DemoThing types and configurations.
+    /// Example usage: var testData = GenerateDemoThingsList();
     /// </summary>
+    /// <returns>A list of DemoThing entities with different types and descriptions</returns>
     private List<DemoThing> GenerateDemoThingsList()
     {
         return new List<DemoThing>

@@ -1,4 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<!--
+  Unit test project for the Application layer that demonstrates how to write comprehensive unit tests
+  for command handlers, use cases, and business logic. This project shows testing patterns including
+  mocking, test fixtures, and validation testing. The DemoThing functionality shown here is just an
+  example to help you learn how to implement your own unique features into the current codebase.
+  You can use this testing pattern to verify your actual business logic works correctly in isolation.
+-->
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
