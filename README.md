@@ -1,4 +1,4 @@
-# CodeBlock Dev Kit Template
+# CodeBlock Dev Kit SaaS Template
 
 A comprehensive SaaS application template built with the [CodeBlock Dev Kit](https://codeblock.dev). This template provides a complete foundation for building modern, scalable SaaS applications with enterprise-grade architecture.
 
