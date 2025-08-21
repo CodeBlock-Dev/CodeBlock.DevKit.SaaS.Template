@@ -48,8 +48,41 @@ The template includes automated setup scripts for different operating systems:
 2. Run the appropriate setup script for your OS:
 3. Configure your application via the setup wizard.
 
+# 🗄️ Prerequisite Dependencies
 
-## 🔧 Build, Deploy and Maintenance
+This template requires two dependencies to run:
+
+#### MongoDB
+- **Purpose**: Primary database for storing application data
+- **Minimum Version**: 4.4+
+- **Download**: [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+- **Connection**: Default connection is `mongodb://localhost:27017` in all `appsettings.json` and `appsettings.Development.json` files. If you change the default port while installing MongoDB server, remember to update the connection in appsettings files as well.
+- **⚠️ Important**: For security reasons, do not use the default connection in production and use username/password authentication for your MongoDB connection
+
+#### QdrantDB
+- **Purpose**: Vector database for AI chatbot features (optional)
+- **Minimum Version**: 1.7+
+- **Download**: [Qdrant Vector Database](https://qdrant.tech/documentation/guides/installation/)
+- **Connection**: Default connection is `http://localhost:6334` in all `appsettings.json` files
+- **⚠️ Important**: Change default connection in production
+- **Note**: Only required if your application includes AI chatbot functionality
+
+**Configuration**: After installation, update connection strings in all client projects (`AdminPanel`, `Api`, `WebApp`) `appsettings.json` files if you change from defaults.
+
+# 🚀 Implement Your Logic and Build Your SaaS
+
+The template includes a complete example implementation to help you understand how to build your own features.
+- Run the `src/2-Clients/Api` project and see `DemocThings` APIs.
+- Run the `src/2-Clients/AdminPanel` project and navigate to `Demo` menu item.
+- Look at the code in the `src/1-Libraries/Application/Services/DemoThings` to see how the application services are structured.
+- Look at `src/1-Libraries/Application/UseCases/DemoThings/` to see how the use cases are implemented.
+- Look at the `src/1-Libraries/Core/Domain/DemoThings/` to see how the domain logic is structured.
+- Look at the `src/3-Tests/Application.Tests.Unit/UseCases/DemoThings/` to see how unit tests are written.
+- Look at the `src/3-Tests/Application.Tests.Integration/UseCases/DemoThings/` to see how integration tests are structured.
+
+For detailed guidance on implementing features and customizing the template, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/).
+
+# 🔧 Build, Deploy and Maintenance
 
 This template includes comprehensive build automation that covers compilation, linting, and testing. The build system is already integrated into the CI workflow at `.github/workflows/ci.yml`.
 
@@ -74,36 +107,6 @@ For detailed build system documentation, see the [Build README](src/4-Build/READ
 You can modify these workflows based on your deployment environment. The template is not limited to any specific platform - you can deploy to cloud services, Linux servers, Windows servers, or any other environment of your choice.
 
 For detailed CI/CD guidance, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/).
-
-# 🗄️ Prerequisite Dependencies
-
-This template requires two dependencies to run:
-
-#### MongoDB
-- **Purpose**: Primary database for storing application data
-- **Minimum Version**: 4.4+
-- **Download**: [MongoDB Community Server](https://www.mongodb.com/try/download/community)
-
-#### QdrantDB
-- **Purpose**: Vector database for AI chatbot features (optional)
-- **Minimum Version**: 1.7+
-- **Download**: [Qdrant Vector Database](https://qdrant.tech/documentation/guides/installation/)
-- **Note**: Only required if your application includes AI chatbot functionality
-
-Install these dependencies in your deployment environment before running the template.
-
-# 🚀 Implement Your Logic and Build Your SaaS
-
-The template includes a complete example implementation to help you understand how to build your own features.
-- Run the `src/2-Clients/Api` project and see `DemocThings` APIs.
-- Run the `src/2-Clients/AdminPanel` project and navigate to `Demo` menu item.
-- Look at the code in the `src/1-Libraries/Application/Services/DemoThings` to see how the application services are structured.
-- Look at `src/1-Libraries/Application/UseCases/DemoThings/` to see how the use cases are implemented.
-- Look at the `src/1-Libraries/Core/Domain/DemoThings/` to see how the domain logic is structured.
-- Look at the `src/3-Tests/Application.Tests.Unit/UseCases/DemoThings/` to see how unit tests are written.
-- Look at the `src/3-Tests/Application.Tests.Integration/UseCases/DemoThings/` to see how integration tests are structured.
-
-For detailed guidance on implementing features and customizing the template, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/).
 
 # 🛟 Support & Feedback
 
