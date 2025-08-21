@@ -6,7 +6,7 @@
     <RootNamespace>CanBeYours.Infrastructure</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CodeBlock.DevKit.Infrastructure" Version="1.4.5" />
+    <PackageReference Include="CodeBlock.DevKit.Infrastructure" Version="1.4.6" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
