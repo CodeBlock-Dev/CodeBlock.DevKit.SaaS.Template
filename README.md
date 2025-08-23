@@ -51,7 +51,16 @@ The template includes automated setup scripts for different operating systems:
 
 # 🗄️ Prerequisite Dependencies
 
-This template requires two dependencies to run:
+This template requires three dependencies to run:
+
+#### .NET 8 SDK
+- **Purpose**: Required to build and run the .NET applications
+- **Version**: .NET 8.0+
+- **Download**: [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- **Installation**: Follow the official installation guide for your operating system
+- **Verification**: Run `dotnet --version` in your terminal to confirm installation
+
+#### MongoDB
 
 #### MongoDB
 - **Purpose**: Primary database for storing application data
