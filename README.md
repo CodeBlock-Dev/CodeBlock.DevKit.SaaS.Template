@@ -93,6 +93,8 @@ The template includes a complete example implementation called 'DemocThings' to 
 
 For detailed guidance on implementing features and customizing the template, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/).
 
+**💡 AI Coding Tip**: When using AI coding agents (like GitHub Copilot, Cursor), you can reference the `DemoThings` sample implementation to help the AI understand your project's architecture and coding patterns. This sample serves as a great example for the AI model to follow when implementing similar features in your SaaS application.
+
 # 🔧 Build, Deploy and Maintenance
 
 This template includes comprehensive build automation that covers compilation, linting, and testing. The build system is already integrated into the CI workflow at `.github/workflows/ci.yml`.
