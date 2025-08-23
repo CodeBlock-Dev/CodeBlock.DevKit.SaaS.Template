@@ -39,6 +39,7 @@ To use this template, you need to purchase a license from the CodeBlock Dev Kit 
 3. Copy the license file to the root directory of this template project
 4. Execute the setup script to configure your SaaS application
 
+- **⚠️ Warning**: Do not share your license publicly. If your repository is public, add the license to your .gitignore file to prevent it from being uploaded.
 
 # ⚙️ Setup the Template
 
@@ -57,6 +58,7 @@ This template requires two dependencies to run:
 - **Minimum Version**: 4.4+
 - **Download**: [MongoDB Community Server](https://www.mongodb.com/try/download/community)
 - **Connection**: Default connection is `mongodb://localhost:27017` in all `appsettings.json` and `appsettings.Development.json` files. If you change the default port while installing MongoDB server, remember to update the connection in appsettings files as well.
+- **Run as service**: The MongoDB server needs to be running as a service on your server or PC.
 - **⚠️ Important**: For security reasons, do not use the default connection in production and use username/password authentication for your MongoDB connection
 
 #### QdrantDB
@@ -71,7 +73,7 @@ This template requires two dependencies to run:
 
 # 🚀 Implement Your Logic and Build Your SaaS
 
-The template includes a complete example implementation to help you understand how to build your own features.
+The template includes a complete example implementation called 'DemocThings' to help you understand how to build your own features.
 - Run the `src/2-Clients/Api` project and see `DemocThings` APIs.
 - Run the `src/2-Clients/AdminPanel` project and navigate to `Demo` menu item.
 - Look at the code in the `src/1-Libraries/Application/Services/DemoThings` to see how the application services are structured.
