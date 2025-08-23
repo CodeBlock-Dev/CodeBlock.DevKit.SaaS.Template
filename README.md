@@ -121,6 +121,37 @@ You can modify these workflows based on your deployment environment. The templat
 
 For detailed CI/CD guidance, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/).
 
+# ⚙️ Configure Required Services
+
+After setting up and running the template, you need to configure essential services in the admin panel to ensure all pre-built modules work correctly and provide a complete user experience.
+
+#### Access the Settings Page
+1. Run the `AdminPanel` project
+2. Navigate to the **Settings** page in the admin panel
+3. Configure the following three service providers:
+
+#### Email Service Configuration
+- **Purpose**: Required for user registration, password reset, and notification emails
+- **Recommended**: [Mailgun](https://www.mailgun.com/) (suggested for production)
+- **Alternatives**: 
+  - [SendGrid](https://sendgrid.com/)
+  - Self-hosted email server
+- **Setup**: Configure email settings with your chosen provider's credentials
+
+#### SMS Service Configuration
+- **Purpose**: Required for two-factor authentication and SMS notifications
+- **Recommended**: [Twilio](https://www.twilio.com/)
+- **Setup**: Add your Twilio Account SID, Auth Token, and phone number
+
+#### Payment Service Configuration
+- **Purpose**: Required for subscription management and payment processing
+- **Recommended**: [Stripe](https://stripe.com/)
+- **Setup**: 
+  1. Create a [Stripe account](https://dashboard.stripe.com/register)
+  2. Configure payment settings with your Stripe API keys (Publishable Key and Secret Key)
+
+**⚠️ Important**: These services are essential for the template to function properly. Without proper configuration, features like user authentication, notifications, and subscription management will not work correctly.
+
 # 🛟 Support & Feedback
 
 If you need help, have a question, or want to report a bug, you can create an issue and we will respond as soon as possible.
