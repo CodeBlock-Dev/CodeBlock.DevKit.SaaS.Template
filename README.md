@@ -1,4 +1,9 @@
 #CodeBlock DevKit SaaS Template
+[![Build Status](https://img.shields.io/github/actions/workflow/status/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template/ci.yml?branch=main&style=flat-square)](https://github.com/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template/actions)
+[![Open Issues](https://img.shields.io/github/issues/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template?style=flat-square)](https://github.com/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template/issues)
+[![All Issues](https://img.shields.io/github/issues-closed-raw/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template?style=flat-square)](https://github.com/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template/issues?q=is%3Aissue)
+[![Latest Release](https://img.shields.io/github/v/release/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template?style=flat-square)](https://github.com/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template/releases/latest)
+[![Docs](https://img.shields.io/badge/Docs-Available-blue?style=flat-square)](https://docs.codeblock.dev/)
 
 A comprehensive SaaS application template built with the [CodeBlock DevKit](https://codeblock.dev). This template provides a complete foundation for building modern, scalable SaaS applications with enterprise-grade architecture.
 
