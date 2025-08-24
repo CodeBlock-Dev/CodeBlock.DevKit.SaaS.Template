@@ -1,4 +1,4 @@
-#CodeBlock DevKit SaaS Template
+# CodeBlock DevKit SaaS Template
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template/ci.yml?branch=main&style=flat-square)](https://github.com/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template/actions)
 [![Open Issues](https://img.shields.io/github/issues/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template?style=flat-square)](https://github.com/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template/issues)
