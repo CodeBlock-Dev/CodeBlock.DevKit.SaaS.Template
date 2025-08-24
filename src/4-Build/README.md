@@ -95,5 +95,5 @@ To run `.sh` files on Windows, you need one of these installed:
 
 ### Packages
 - Location: `scripts/packages/`
-- Purpose: Updates CodeBlock Dev Kit NuGet packages, giving you access to the latest features and bug fixes.
+- Purpose: Updates CodeBlock DevKit NuGet packages, giving you access to the latest features and bug fixes.
 - Files: `UpdateDevKitPackages.bat`, `UpdateDevKitPackages.ps1`, `UpdateDevKitPackages.sh` 

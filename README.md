@@ -1,14 +1,14 @@
-# CodeBlock Dev Kit SaaS Template
+#CodeBlock DevKit SaaS Template
 
-A comprehensive SaaS application template built with the [CodeBlock Dev Kit](https://codeblock.dev). This template provides a complete foundation for building modern, scalable SaaS applications with enterprise-grade architecture.
+A comprehensive SaaS application template built with the [CodeBlock DevKit](https://codeblock.dev). This template provides a complete foundation for building modern, scalable SaaS applications with enterprise-grade architecture.
 
 <div align="center">
   <a href="https://www.youtube.com/embed/s5PO1JIE38w">
-    <img src="https://codeblock.dev/images/intro.png" alt="Codeblock Dev Kit Introduction" width="280" height="157.5" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <img src="https://codeblock.dev/images/intro.png" alt="Codeblock DevKit Introduction" width="280" height="157.5" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </a>
 <span> . </span>
   <a href="https://www.youtube.com/embed/wm54wmv-m4c">
-    <img src="https://codeblock.dev/images/saas-template.png" alt="CodeBlock Dev Kit's SaaS application template" width="280" height="157.5" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <img src="https://codeblock.dev/images/saas-template.png" alt="CodeBlock DevKit's SaaS application template" width="280" height="157.5" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   </a>
 </div>
 
@@ -28,11 +28,11 @@ git clone https://github.com/CodeBlock-Dev/CodeBlock.DevKit.SaaS.Template.git
 cd CodeBlock.DevKit.SaaS.Template
 ```
 
-**Note**: All Dev Kit modules are delivered via [NuGet packages](https://www.nuget.org/profiles/CodeBlock.Dev), so you only need to maintain your own business logic.
+**Note**: All DevKit modules are delivered via [NuGet packages](https://www.nuget.org/profiles/CodeBlock.Dev), so you only need to maintain your own business logic.
 
 # 📋 Purchase a License
 
-To use this template, you need to purchase a license from the CodeBlock Dev Kit website. Here's how to get started:
+To use this template, you need to purchase a license from theCodeBlock DevKit website. Here's how to get started:
 
 1. Visit [codeblock.dev](https://codeblock.dev/#pricing) and purchase a plan.
 2. Go to your [dashboard](https://codeblock.dev/dashboard) and download your license file (`codeblock.dev.license.lic`).
@@ -91,7 +91,7 @@ The template includes a complete example implementation called 'DemocThings' to 
 - Look at the `src/3-Tests/Application.Tests.Unit/UseCases/DemoThings/` to see how unit tests are written.
 - Look at the `src/3-Tests/Application.Tests.Integration/UseCases/DemoThings/` to see how integration tests are structured.
 
-For detailed guidance on implementing features and customizing the template, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/).
+For detailed guidance on implementing features and customizing the template, refer to the [CodeBlock DevKit Documentation](https://docs.codeblock.dev/).
 
 **💡 AI Coding Tip**: When using AI coding agents (like GitHub Copilot, Cursor), you can reference the `DemoThings` sample implementation to help the AI understand your project's architecture and coding patterns. This sample serves as a great example for the AI model to follow when implementing similar features in your SaaS application.
 
@@ -108,7 +108,7 @@ For convenience, we've provided scripts to run build tasks locally:
 | `src/4-Build/scripts/compile/` | Builds the entire solution |
 | `src/4-Build/scripts/lint/` | Runs code quality checks |
 | `src/4-Build/scripts/tests/` | Executes unit and integration tests |
-| `src/4-Build/scripts/packages/` | Updates CodeBlock Dev Kit NuGet packages |
+| `src/4-Build/scripts/packages/` | UpdatesCodeBlock DevKit NuGet packages |
 
 For detailed build system documentation, see the [Build README](src/4-Build/README.md).
 
@@ -119,7 +119,7 @@ For detailed build system documentation, see the [Build README](src/4-Build/READ
 
 You can modify these workflows based on your deployment environment. The template is not limited to any specific platform - you can deploy to cloud services, Linux servers, Windows servers, or any other environment of your choice.
 
-For detailed CI/CD guidance, refer to the [CodeBlock Dev Kit Documentation](https://docs.codeblock.dev/).
+For detailed CI/CD guidance, refer to the [CodeBlock DevKit Documentation](https://docs.codeblock.dev/).
 
 # ⚙️ Configure Required Services
 
