@@ -9,52 +9,31 @@
     <link href="css/cb.website.spa.@(LocalizationSettings.GetCurrentLanguageDirection().ToLower()).min.css" rel="stylesheet" />
 </HeadContent>
 
-<SplashScreen BrandName="@ApplicationSettings.Localized.Name" BackgroundCssClass="simple-layout-dark-bg" ProgressBarCssClass="simple-layout-title-color" OnStarted="HandleSplashStarted" />
+<SplashScreen BrandName="@ApplicationSettings.Localized.Name" BackgroundCssClass="simple-layout-dark-bg" ProgressBarCssClass="simple-layout-title-color" />
 
-@if (SplashScreenStarted)
-{
-    <div class="website-wrapper">
-        <BlazoredToasts Position="ToastPosition.BottomCenter"
-                        Timeout="5"
-                        IconType="IconType.Material"
-                        ErrorIcon=""
-                        InfoIcon=""
-                        SuccessIcon=""
-                        WarningIcon=""
-                        ShowProgressBar="true" />
+<div id="main-layout-wrapper" class="website-wrapper">
+    <BlazoredToasts Position="ToastPosition.BottomCenter"
+                    Timeout="5"
+                    IconType="IconType.Material"
+                    ErrorIcon=""
+                    InfoIcon=""
+                    SuccessIcon=""
+                    WarningIcon=""
+                    ShowProgressBar="true" />
 
-        <NavMenu />
+    <NavMenu />
 
-        <main>
-            @Body
-        </main>
+    <main>
+        @Body
+    </main>
 
-        <Footer />
+    <Footer />
 
-        @if (SettingAccessorService.Settings.AIChatBot.ShowChatBotWidgetOnWebsite)
-        {
-            <div class="chat-widget">
-                <ChatBotWidget Theme="ChatBotWidgetTheme.Dark" />
-            </div>
-        }
-    </div>
-
-}
-
-@code {
-    /// <summary>
-    /// Controls whether the splash screen has finished and the main content should be displayed.
-    /// This demonstrates how to implement a loading state for better user experience.
-    /// </summary>
-    bool SplashScreenStarted = false;
-
-    /// <summary>
-    /// Event handler called when the splash screen animation completes.
-    /// Sets the flag to show the main website content and hide the splash screen.
-    /// This demonstrates how to handle component lifecycle events in Blazor.
-    /// </summary>
-    private void HandleSplashStarted()
+    @if (SettingAccessorService.Settings.AIChatBot.ShowChatBotWidgetOnWebsite)
     {
-        SplashScreenStarted = true;
+        <div class="chat-widget">
+            <ChatBotWidget Theme="ChatBotWidgetTheme.Dark" />
+        </div>
     }
-}
+
+</div>

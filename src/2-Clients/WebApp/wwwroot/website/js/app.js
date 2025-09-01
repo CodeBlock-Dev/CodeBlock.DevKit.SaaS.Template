@@ -166,3 +166,18 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 });
 
+// to remove the white flash screen on page load by hiding the main-layout-wrapper tag and showing it after 1 second
+// during this time the splash screen will be visible
+window.addEventListener("DOMContentLoaded", () => {
+
+    const websiteWrapper = document.getElementById('main-layout-wrapper');
+    if (websiteWrapper) {
+        // Hide immediately
+        websiteWrapper.style.display = "none";
+
+        // Remove style after 1 second
+        setTimeout(() => {
+            websiteWrapper.removeAttribute('style');
+        }, 1000);
+    }
+});
