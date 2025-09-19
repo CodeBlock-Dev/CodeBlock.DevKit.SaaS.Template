@@ -1,4 +1,4 @@
-﻿using CanBeYours.Application.Dtos;
+﻿using CanBeYours.Application.Dtos.DemoThings;
 using CodeBlock.DevKit.Contracts.Dtos;
 using CodeBlock.DevKit.Core.Helpers;
 
@@ -19,14 +19,14 @@ public interface IDemoThingService
     /// <param name="id">The unique identifier of the demo thing</param>
     /// <returns>A result containing the demo thing data or an error</returns>
     Task<Result<GetDemoThingDto>> GetDemoThing(string id);
-    
+
     /// <summary>
     /// Creates a new demo thing with the specified data.
     /// </summary>
     /// <param name="input">The data for creating the new demo thing</param>
     /// <returns>A result containing the command execution result or an error</returns>
     Task<Result<CommandResult>> CreateDemoThing(CreateDemoThingDto input);
-    
+
     /// <summary>
     /// Updates an existing demo thing with new data.
     /// </summary>
@@ -34,7 +34,7 @@ public interface IDemoThingService
     /// <param name="input">The new data for the demo thing</param>
     /// <returns>A result containing the command execution result or an error</returns>
     Task<Result<CommandResult>> UpdateDemoThing(string id, UpdateDemoThingDto input);
-    
+
     /// <summary>
     /// Searches for demo things based on specified criteria.
     /// </summary>

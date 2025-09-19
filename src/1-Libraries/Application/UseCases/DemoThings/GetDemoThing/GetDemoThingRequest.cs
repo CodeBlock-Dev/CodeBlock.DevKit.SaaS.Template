@@ -1,4 +1,4 @@
-using CanBeYours.Application.Dtos;
+using CanBeYours.Application.Dtos.DemoThings;
 using CodeBlock.DevKit.Application.Queries;
 using CodeBlock.DevKit.Core.Helpers;
 

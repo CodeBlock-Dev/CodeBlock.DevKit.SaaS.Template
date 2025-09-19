@@ -1,7 +1,7 @@
 using CanBeYours.Core.Domain.DemoThings;
 using CodeBlock.DevKit.Contracts.Dtos;
 
-namespace CanBeYours.Application.Dtos;
+namespace CanBeYours.Application.Dtos.DemoThings;
 
 /// <summary>
 /// Data Transfer Object for search input parameters when searching DemoThing entities.

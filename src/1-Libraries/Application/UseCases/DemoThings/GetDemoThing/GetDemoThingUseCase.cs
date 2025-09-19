@@ -1,5 +1,5 @@
 using AutoMapper;
-using CanBeYours.Application.Dtos;
+using CanBeYours.Application.Dtos.DemoThings;
 using CanBeYours.Application.Exceptions;
 using CanBeYours.Application.Helpers;
 using CanBeYours.Core.Domain.DemoThings;

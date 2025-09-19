@@ -1,4 +1,4 @@
-using CanBeYours.Application.Dtos;
+using CanBeYours.Application.Dtos.DemoThings;
 using CanBeYours.Application.Services.DemoThings;
 using CanBeYours.Core.Domain.DemoThings;
 using CodeBlock.DevKit.Contracts.Dtos;
@@ -17,7 +17,7 @@ namespace CanBeYours.Api.Controllers;
 /// - Authorization using policies
 /// - Input validation and DTOs
 /// - Service layer integration
-/// 
+///
 /// The current functionality is just for you to learn and understand how to implement
 /// your own unique features into the current codebase.
 /// </summary>

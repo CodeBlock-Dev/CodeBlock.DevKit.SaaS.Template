@@ -1,7 +1,7 @@
 using CanBeYours.Core.Domain.DemoThings;
 using CodeBlock.DevKit.Contracts.Dtos;
 
-namespace CanBeYours.Application.Dtos;
+namespace CanBeYours.Application.Dtos.DemoThings;
 
 /// <summary>
 /// Data Transfer Object for retrieving DemoThing entity data.
@@ -16,23 +16,23 @@ public class GetDemoThingDto : GetEntityDto
     /// The name of the demo thing for display purposes.
     /// </summary>
     public string Name { get; set; }
-    
+
     /// <summary>
     /// The description of the demo thing for display purposes.
     /// </summary>
     public string Description { get; set; }
-    
+
     /// <summary>
     /// The type/category of the demo thing.
     /// </summary>
     public DemoThingType Type { get; set; }
-    
+
     /// <summary>
     /// The email address of the user who owns this demo thing.
     /// This is populated by the service layer for display purposes.
     /// </summary>
     public string UserEmail { get; set; }
-    
+
     /// <summary>
     /// The unique identifier of the user who owns this demo thing.
     /// </summary>

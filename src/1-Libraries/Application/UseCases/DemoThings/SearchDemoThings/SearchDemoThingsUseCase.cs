@@ -1,5 +1,5 @@
 using AutoMapper;
-using CanBeYours.Application.Dtos;
+using CanBeYours.Application.Dtos.DemoThings;
 using CanBeYours.Core.Domain.DemoThings;
 using CodeBlock.DevKit.Application.Queries;
 using CodeBlock.DevKit.Contracts.Dtos;

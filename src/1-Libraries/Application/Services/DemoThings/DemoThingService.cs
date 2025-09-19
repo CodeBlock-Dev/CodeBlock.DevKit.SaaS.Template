@@ -1,4 +1,4 @@
-﻿using CanBeYours.Application.Dtos;
+﻿using CanBeYours.Application.Dtos.DemoThings;
 using CanBeYours.Application.UseCases.DemoThings.CreateDemoThing;
 using CanBeYours.Application.UseCases.DemoThings.GetDemoThing;
 using CanBeYours.Application.UseCases.DemoThings.SearchDemoThings;

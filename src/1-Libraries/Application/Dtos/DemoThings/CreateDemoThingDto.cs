@@ -3,7 +3,7 @@ using CanBeYours.Core.Domain.DemoThings;
 using CanBeYours.Core.Resources;
 using CodeBlock.DevKit.Core.Resources;
 
-namespace CanBeYours.Application.Dtos;
+namespace CanBeYours.Application.Dtos.DemoThings;
 
 /// <summary>
 /// Data Transfer Object for creating a new DemoThing entity.
