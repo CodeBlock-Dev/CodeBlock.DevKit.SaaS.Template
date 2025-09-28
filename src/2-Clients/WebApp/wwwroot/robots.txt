@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: /blog/sitemap
+
+# Allow all search engines to crawl the entire site
+# This robots.txt file allows all web crawlers to access all content
+# while providing the sitemap location for better indexing
