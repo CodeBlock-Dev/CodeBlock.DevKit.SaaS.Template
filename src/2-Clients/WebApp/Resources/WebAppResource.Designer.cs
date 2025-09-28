@@ -376,6 +376,15 @@ namespace CanBeYours.WebApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Blog.
+        /// </summary>
+        public static string Nav_Blog {
+            get {
+                return ResourceManager.GetString("Nav_Blog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contact.
         /// </summary>
         public static string Nav_Contact {

@@ -478,4 +478,7 @@
   <data name="Nav_Login" xml:space="preserve">
     <value>ورود</value>
   </data>
+  <data name="Nav_Blog" xml:space="preserve">
+    <value>وبلاگ</value>
+  </data>
 </root>
