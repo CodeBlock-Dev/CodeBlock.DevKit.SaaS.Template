@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CodeBlock.DevKit.Clients.AdminPanel" Version="1.4.8" />
+    <PackageReference Include="CodeBlock.DevKit.Clients.AdminPanel" Version="1.5.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\1-Libraries\Infrastructure\Infrastructure.csproj" />

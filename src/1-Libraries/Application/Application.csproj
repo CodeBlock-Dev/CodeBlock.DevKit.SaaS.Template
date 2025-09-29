@@ -6,16 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CodeBlock.DevKit.Application" Version="1.4.8" />
-    <PackageReference Include="CodeBlock.DevKit.Contracts" Version="1.4.8" />
-    <PackageReference Include="CodeBlock.DevKit.Identity" Version="1.4.8" />
-    <PackageReference Include="CodeBlock.DevKit.Administration" Version="1.4.8" />
-    <PackageReference Include="CodeBlock.DevKit.AIChatBot" Version="1.4.8" />
-    <PackageReference Include="CodeBlock.DevKit.Licensing" Version="1.4.8" />
-    <PackageReference Include="CodeBlock.DevKit.Payment" Version="1.4.8" />
-    <PackageReference Include="CodeBlock.DevKit.Pricing" Version="1.4.8" />
-    <PackageReference Include="CodeBlock.DevKit.Settings" Version="1.4.8" />
-    <PackageReference Include="CodeBlock.DevKit.Subscription" Version="1.4.8" />
+    <PackageReference Include="CodeBlock.DevKit.Application" Version="1.5.0" />
+    <PackageReference Include="CodeBlock.DevKit.Contracts" Version="1.5.0" />
+    <PackageReference Include="CodeBlock.DevKit.Identity" Version="1.5.0" />
+    <PackageReference Include="CodeBlock.DevKit.Administration" Version="1.5.0" />
+    <PackageReference Include="CodeBlock.DevKit.AIChatBot" Version="1.5.0" />
+    <PackageReference Include="CodeBlock.DevKit.Licensing" Version="1.5.0" />
+    <PackageReference Include="CodeBlock.DevKit.Payment" Version="1.5.0" />
+    <PackageReference Include="CodeBlock.DevKit.Pricing" Version="1.5.0" />
+    <PackageReference Include="CodeBlock.DevKit.Settings" Version="1.5.0" />
+    <PackageReference Include="CodeBlock.DevKit.Subscription" Version="1.5.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj" />

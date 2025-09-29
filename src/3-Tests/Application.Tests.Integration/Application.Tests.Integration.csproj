@@ -11,8 +11,8 @@
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
-    <PackageReference Include="CodeBlock.DevKit.Test" Version="1.4.8" />
-    <PackageReference Include="CodeBlock.DevKit.Clients.AdminPanel" Version="1.4.8" />
+    <PackageReference Include="CodeBlock.DevKit.Test" Version="1.5.0" />
+    <PackageReference Include="CodeBlock.DevKit.Clients.AdminPanel" Version="1.5.0" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\..\codeblock.dev.license.lic">
