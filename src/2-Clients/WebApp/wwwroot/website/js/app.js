@@ -7,23 +7,28 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollLinks = document.querySelectorAll('.nav-link[data-scroll-to-section="true"]');
         
         scrollLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const href = this.getAttribute('href');
-                
-                // Skip empty hash
-                if (href === '#') return;
-                
-                // Update URL
-                window.location.hash = href;
-                
-                // Scroll to element
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+            // Remove any existing event listeners to prevent duplicates
+            link.removeEventListener('click', handleScrollToSection);
+            link.addEventListener('click', handleScrollToSection);
         });
+    }
+    
+    // Separate function for the scroll-to-section handler
+    function handleScrollToSection(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        
+        // Skip empty hash
+        if (href === '#') return;
+        
+        // Update URL
+        window.location.hash = href;
+        
+        // Scroll to element
+        const target = document.querySelector(href);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
     }
     
     // Setup scroll links when DOM is ready
