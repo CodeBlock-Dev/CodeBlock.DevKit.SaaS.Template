@@ -83,19 +83,6 @@ public abstract class TestsBaseFixture : UnitTestsBase
                 return Task.CompletedTask;
             });
 
-        //DemoThingRepository
-        //    .ConcurrencySafeUpdateAsync(Arg.Is<DemoThing>(x => DemoThings.Any(o => o.Id == x.Id)), Arg.Is<string>(x => x.Any()))
-        //    .Returns(args =>
-        //    {
-        //        var existDemoThing = DemoThings.FirstOrDefault(u => u.Id == ((DemoThing)args[0]).Id && u.Version == (string)args[1]);
-        //        if (existDemoThing != null)
-        //        {
-        //            DemoThings.Remove(existDemoThing);
-        //            DemoThings.Add((DemoThing)args[0]);
-        //        }
-
-        //        return Task.CompletedTask;
-        //    });
 
         DemoThingRepository
             .DeleteAsync(Arg.Is<string>(x => DemoThings.Any(o => o.Id == x)))
