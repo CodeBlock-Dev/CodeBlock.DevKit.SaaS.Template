@@ -1,9 +1,15 @@
+# Public marketing site and blog: allow. Authenticated app areas: disallow (also use noindex in layouts).
 User-agent: *
+
+Disallow: /dashboard
+Disallow: /user/
+Disallow: /order/
+Disallow: /subscription/
+Disallow: /license/
+Disallow: /ai/
+Disallow: /payment/
+
 Allow: /
 
-# Sitemap
+# Sitemap (blog module or site-specific endpoint)
 Sitemap: /blog/sitemap
-
-# Allow all search engines to crawl the entire site
-# This robots.txt file allows all web crawlers to access all content
-# while providing the sitemap location for better indexing
