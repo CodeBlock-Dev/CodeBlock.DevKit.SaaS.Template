@@ -6,7 +6,7 @@
     <RootNamespace>CanBeYours.Core</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CodeBlock.DevKit.Domain" Version="1.5.1" />
+    <PackageReference Include="CodeBlock.DevKit.Domain" Version="1.6.0-beta6" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\SharedResource.Designer.cs">

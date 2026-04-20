@@ -6,7 +6,8 @@
 @inject ISettingAccessorService SettingAccessorService
 
 <HeadContent>
-    <link href="css/cb.website.spa.@(LocalizationSettings.GetCurrentLanguageDirection().ToLower()).min.css" rel="stylesheet" />
+    <SeoTags/>
+    <link href="css/cb.website.spa.@(LocalizationSettings.GetCurrentLanguageDirection().ToLower()).min.css?v=1.6.0-beta6" rel="stylesheet" />
 </HeadContent>
 
 <SplashScreen BrandName="@ApplicationSettings.Localized.Name" BackgroundCssClass="simple-layout-dark-bg" ProgressBarCssClass="simple-layout-title-color" />

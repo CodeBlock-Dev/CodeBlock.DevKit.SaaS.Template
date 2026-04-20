@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using CanBeYours.Core.Domain.DemoThings;
 using CanBeYours.Infrastructure;
-using CodeBlock.DevKit.Application.Srvices;
+using CodeBlock.DevKit.Application.Services;
 using CodeBlock.DevKit.Clients.AdminPanel;
 using CodeBlock.DevKit.Contracts.Services;
 using CodeBlock.DevKit.Test.TestBase;

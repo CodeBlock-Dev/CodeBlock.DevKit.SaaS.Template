@@ -1,7 +1,7 @@
 using CanBeYours.Application.Exceptions;
 using CanBeYours.Core.Domain.DemoThings;
 using CodeBlock.DevKit.Application.Commands;
-using CodeBlock.DevKit.Application.Srvices;
+using CodeBlock.DevKit.Application.Services;
 using CodeBlock.DevKit.Core.Helpers;
 using MediatR;
 using Microsoft.Extensions.Logging;

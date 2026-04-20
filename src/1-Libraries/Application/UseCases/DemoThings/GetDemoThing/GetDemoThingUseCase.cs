@@ -4,7 +4,7 @@ using CanBeYours.Application.Exceptions;
 using CanBeYours.Application.Helpers;
 using CanBeYours.Core.Domain.DemoThings;
 using CodeBlock.DevKit.Application.Queries;
-using CodeBlock.DevKit.Application.Srvices;
+using CodeBlock.DevKit.Application.Services;
 using CodeBlock.DevKit.Contracts.Services;
 using MediatR;
 using Microsoft.Extensions.Logging;

@@ -3,7 +3,7 @@ using CanBeYours.Application.UseCases.DemoThings.CreateDemoThing;
 using CanBeYours.Application.UseCases.DemoThings.GetDemoThing;
 using CanBeYours.Application.UseCases.DemoThings.SearchDemoThings;
 using CanBeYours.Application.UseCases.DemoThings.UpdateDemoThing;
-using CodeBlock.DevKit.Application.Srvices;
+using CodeBlock.DevKit.Application.Services;
 using CodeBlock.DevKit.Contracts.Dtos;
 using CodeBlock.DevKit.Core.Helpers;
 

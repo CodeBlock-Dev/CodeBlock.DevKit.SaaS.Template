@@ -1,5 +1,5 @@
 ﻿using CanBeYours.Core.Domain.DemoThings;
-using CodeBlock.DevKit.Application.Srvices;
+using CodeBlock.DevKit.Application.Services;
 using CodeBlock.DevKit.Test.TestBase;
 using NSubstitute;
 

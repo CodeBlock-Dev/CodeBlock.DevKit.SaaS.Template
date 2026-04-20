@@ -15,7 +15,7 @@
 <html dir="@LocalizationSettings.GetCurrentLanguageDirection()" lang="@LocalizationSettings.GetCurrentLanguageCode()" style="font-family: @LocalizationSettings.GetCurrentLanguageFont() !important">
 
 <head>
-    <component type="typeof(HeadTags)" render-mode="ServerPrerendered" />
+    <component type="typeof(HeadTags)" render-mode="Static" />
     <meta name="description" content="@ApplicationSettings.Localized.Description">
     <base href="~/" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
@@ -25,7 +25,7 @@
     <component type="typeof(App)" render-mode="ServerPrerendered" />
     <component type="typeof(ConnectionState)" render-mode="ServerPrerendered" />
 
-    <script src="js/cb.webapp.spa.min.js"></script>
+    <script src="js/cb.webapp.spa.min.js?v=1.6.0-beta6"></script>
     <script src="_framework/blazor.server.js"></script>
 </body>
 </html>
