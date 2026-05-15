@@ -48,7 +48,7 @@ public class CreateDemoThingTests : TestsBaseFixture
 
         //Assert
         result.EntityId.Should().NotBeNull();
-        await RequestDispatcher!.Received(1).PublishEvent(Arg.Any<DemoThingCreated>());
+        await RequestDispatcher.Received(1).PublishEvent(Arg.Any<DemoThingCreated>());
     }
 
     /// <summary>

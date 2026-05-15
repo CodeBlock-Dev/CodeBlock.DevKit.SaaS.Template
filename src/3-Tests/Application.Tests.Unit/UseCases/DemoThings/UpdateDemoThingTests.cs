@@ -50,7 +50,7 @@ public class UpdateDemoThingTests : TestsBaseFixture
 
         //Assert
         result.EntityId.Should().NotBeNull();
-        await RequestDispatcher!.Received(1).PublishEvent(Arg.Any<DemoThingUpdated>());
+        await RequestDispatcher.Received(1).PublishEvent(Arg.Any<DemoThingUpdated>());
     }
 
     /// <summary>
