@@ -18,55 +18,86 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const href = this.getAttribute('href');
         
-        // Skip empty hash
         if (href === '#') return;
-        
-        // Update URL
-        window.location.hash = href;
-        
-        // Scroll to element
-        const target = document.querySelector(href);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+
+        const scrollToTarget = () => {
+            window.location.hash = href;
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+
+        if (typeof window.closeMobileNav === 'function' && window.matchMedia('(max-width: 991.98px)').matches) {
+            window.closeMobileNav();
+            window.setTimeout(scrollToTarget, 300);
+            return;
         }
+
+        scrollToTarget();
     }
     
     // Setup scroll links when DOM is ready
     setupScrollToSectionLinks();
-    
-    // Single Navigation Menu Setup - Clones nav items to offcanvas
-    window.setupSingleNavMenu = function() {
-        const singleNavMenu = document.getElementById('singleNavMenu');
-        const offcanvasNavMenu = document.getElementById('offcanvasNavMenu');
-        
-        if (singleNavMenu && offcanvasNavMenu) {
-            // Clone the navigation items
-            const navItems = singleNavMenu.querySelectorAll('.nav-item');
-            
-            navItems.forEach(item => {
-                // Skip language selector for mobile (it's already in the header)
-                if (item.classList.contains('language-selector-desktop')) {
-                    return;
-                }
-                
-                const clonedItem = item.cloneNode(true);
-                
-                // Add mobile-specific classes
-                if (clonedItem.classList.contains('dashboard-btn')) {
-                    clonedItem.classList.add('mt-3');
-                    const btn = clonedItem.querySelector('.btn');
-                    if (btn) {
-                        btn.classList.add('w-100', 'mb-2');
-                    }
-                }
-                
-                offcanvasNavMenu.appendChild(clonedItem);
-            });
-            
-            // Setup scroll links for cloned items
-            setupScrollToSectionLinks();
+
+    // Mobile side drawer — custom slide toggle (avoids Bootstrap collapse + backdrop stacking bugs)
+    function setupMobileNavDrawer() {
+        const navDrawer = document.getElementById('websiteNavbar');
+        const toggler = document.querySelector('.navbar-toggler');
+        if (!navDrawer || !toggler) return;
+
+        const mobileQuery = window.matchMedia('(max-width: 991.98px)');
+
+        let backdrop = document.getElementById('websiteNavBackdrop');
+        if (!backdrop) {
+            backdrop = document.createElement('div');
+            backdrop.id = 'websiteNavBackdrop';
+            backdrop.className = 'website-nav-backdrop';
+            backdrop.setAttribute('aria-hidden', 'true');
+            document.body.appendChild(backdrop);
         }
-    };
+
+        const isMobile = () => mobileQuery.matches;
+
+        const openMobileNav = () => {
+            navDrawer.classList.add('show');
+            backdrop.classList.add('show');
+            document.body.classList.add('website-nav-open');
+            toggler.setAttribute('aria-expanded', 'true');
+        };
+
+        const closeMobileNav = () => {
+            navDrawer.classList.remove('show');
+            backdrop.classList.remove('show');
+            document.body.classList.remove('website-nav-open');
+            toggler.setAttribute('aria-expanded', 'false');
+        };
+
+        toggler.addEventListener('click', (e) => {
+            if (!isMobile()) return;
+            e.preventDefault();
+            e.stopPropagation();
+            if (navDrawer.classList.contains('show')) {
+                closeMobileNav();
+            } else {
+                openMobileNav();
+            }
+        });
+
+        backdrop.addEventListener('click', closeMobileNav);
+
+        navDrawer.querySelectorAll('a.nav-link, .dashboard-btn a').forEach((link) => {
+            link.addEventListener('click', (e) => {
+                if (!isMobile()) return;
+                if (link.dataset.scrollToSection === 'true') return;
+                closeMobileNav();
+            });
+        });
+
+        window.closeMobileNav = closeMobileNav;
+    }
+
+    setupMobileNavDrawer();
     
     // Simple animation checker - runs on every scroll
     function checkAnimations() {

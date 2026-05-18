@@ -1,13 +1,6 @@
-﻿@* 
- * Main application component for the WebApp client.
- * This component demonstrates how to set up the root application structure using CodeBlock.DevKit.
- * It includes routing, authentication, modal support, and layout management.
- * The current functionality serves as a learning example - you can customize the routing,
- * authentication flow, and error handling while maintaining the same structure.
- *@
+@using CodeBlock.DevKit.Clients.WebApp.Pages.UserPanel.Shared
 @using CodeBlock.DevKit.Web.Blazor.Server
 @using CodeBlock.DevKit.Web.Blazor.Server.Components
-@using CanBeYours.WebApp.Pages.Website.Shared
 @inject IModuleRegistry ModuleRegistry
 @inherits AppBase
 
@@ -15,7 +8,7 @@
     <CascadingAuthenticationState>
         <Router AppAssembly="@typeof(Program).Assembly" AdditionalAssemblies="@ModuleRegistry.GetUIModuleAssemblies()">
             <Found Context="routeData">
-                <CustomAuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(WebsiteLayout)">
+                <CustomAuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(UserPanelLayout)">
                     <Authorizing>
                         <LayoutView Layout="@typeof(SimpleLayout)">
                             <Alert ShowLinkedButtons=false Title="@CoreLocalizer[CoreResource.Error_Authorization_Title]" Message="@CoreLocalizer[CoreResource.Error_Authorization_Message]" />

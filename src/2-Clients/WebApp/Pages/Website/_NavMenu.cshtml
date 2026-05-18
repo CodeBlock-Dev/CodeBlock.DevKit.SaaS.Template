@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#home">
+            <img src="images/logos/logo.png" alt="@ApplicationSettings.Localized.Name" height="40" class="me-2" />
+            @ApplicationSettings.Localized.Name
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                aria-controls="websiteNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="websiteNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home" data-scroll-to-section="true">@WebAppLocalizer[WebAppResource.Nav_Home]</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pricing" data-scroll-to-section="true">@WebAppLocalizer[WebAppResource.Nav_Pricing]</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/posts">@WebAppLocalizer[WebAppResource.Nav_Blog]</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">@WebAppLocalizer[WebAppResource.Nav_Contact]</a>
+                </li>
+                <li class="nav-item">
+                    <partial name="_SelectLanguage" />
+                </li>
+                <li class="nav-item dashboard-btn">
+                    @if (CurrentUser.IsAuthenticated())
+                    {
+                        <a class="btn btn-warning-gradient w-100 w-lg-auto" href="/dashboard">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            @WebAppLocalizer[WebAppResource.Nav_Dashboard]
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-primary-gradient w-100 w-lg-auto" href="/dashboard">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            @WebAppLocalizer[WebAppResource.Nav_Login]
+                        </a>
+                    }
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

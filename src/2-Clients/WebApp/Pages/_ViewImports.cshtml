@@ -1,8 +1,12 @@
 @using CanBeYours.Core.Resources
 @using CanBeYours.WebApp.Resources
+@using CodeBlock.DevKit.Contracts.Models
 @using CodeBlock.DevKit.Core.Resources
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.Extensions.Localization
+@using Microsoft.AspNetCore.Components
+@using CodeBlock.DevKit.Application.Services
+
 @attribute [AllowAnonymous]
 
 CanBeYours.WebApp.Pages
@@ -11,3 +15,6 @@ CanBeYours.WebApp.Pages
 @inject IStringLocalizer<WebAppResource> WebAppLocalizer
 @inject IStringLocalizer<CoreResource> CoreLocalizer
 @inject IStringLocalizer<SharedResource> SharedLocalizer
+@inject ApplicationSettings ApplicationSettings
+@inject IConfiguration Configuration
+@inject ICurrentUser CurrentUser

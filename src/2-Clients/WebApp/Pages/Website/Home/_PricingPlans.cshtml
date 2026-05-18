@@ -1,0 +1,19 @@
+@using CodeBlock.DevKit.Pricing.UI.Pages.Plans.Components
+
+<section id="pricing" class="pricing-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title fade-in">@WebAppLocalizer[WebAppResource.Pricing_Section_Title]</h2>
+                <p class="section-subtitle fade-in">@WebAppLocalizer[WebAppResource.Pricing_Section_Description]</p>
+            </div>
+        </div>
+
+        <component type="typeof(ActivePlansToOrder)" render-mode="ServerPrerendered" />
+
+        <div class="alert alert-info mt-4">
+            <i class="bi bi-currency-dollar"></i>
+            @Html.Raw(WebAppLocalizer[WebAppResource.Pricing_Demo_Alert])
+        </div>
+    </div>
+</section>

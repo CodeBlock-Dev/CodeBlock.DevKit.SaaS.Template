@@ -1,0 +1,11 @@
+@page "/"
+@{
+    Layout = "_WebsiteLayout";
+    ViewData["Title"] = ApplicationSettings.Localized.Name;
+}
+
+<partial name="_HeroSection" />
+
+<partial name="_PricingPlans" />
+
+<partial name="_CTASection" />
