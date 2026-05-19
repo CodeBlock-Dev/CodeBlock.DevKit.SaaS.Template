@@ -1,0 +1,14 @@
+@using CodeBlock.DevKit.Contracts.Services
+@inject ISettingAccessorService SettingAccessorService
+
+@if (SettingAccessorService.Settings.AIChatBot.ShowChatBotWidgetOnWebsite)
+{
+    @* Position: chatbot-widget-bottom-right | chatbot-widget-bottom-left | chatbot-widget-bottom-center *@
+    <a id="website-chatbot-launcher"
+       class="website-chatbot-launcher"
+       href="/ai/bot/chat"
+       data-position="chatbot-widget-bottom-right"
+       aria-label="Open chat">
+        <i class="bi bi-chat-fill" aria-hidden="true"></i>
+    </a>
+}
